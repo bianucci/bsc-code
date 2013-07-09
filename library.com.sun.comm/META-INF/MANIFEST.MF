@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Comm
+Bundle-SymbolicName: library.com.sun.comm
+Bundle-Version: 1.0.0
+Export-Package: com.sun.comm,
+ gnu.io,
+ javax.comm
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

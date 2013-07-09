@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.samson.service.directregleraccess.preferences.DirectReglerEditorPrefPage"
+            id="de.samson.service.directregleraccess.preferencePage"
+            name="Direkter Reglerzugriff">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="de.samson.service.directregleraccess.preferences.DirectReglerEditorInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: DataViewer
+Bundle-SymbolicName: de.samson.ui.dataViewer;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.samson.dataviewer.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.samson.service.database;bundle-version="1.0.0",
+ de.samson.service.directregleraccess;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

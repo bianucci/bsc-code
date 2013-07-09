@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="de.samson.dataviewer.view.ReglerDataExplorer"
+            icon="icons/data view.gif"
+            id="de.samson.dataviewer.views.ReglerDataExplorer"
+            name="Regler Data">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.samson.dataviewer.editor.ReglerDataEditor"
+            default="false"
+            icon="icons/data view.gif"
+            id="de.samson.dataViewer.ReglerDataEditor"
+            name="Regler Data">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.samson.dataviewer.handler.CallEditor"
+            id="de.samson.dataViewer.openEditor"
+            name="Open Editor">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.samson.ui.dataviewer.ReglerDataPrefPage"
+            id="de.samson.ui.dataViewer.preferencePage"
+            name="Regler Daten">
+      </page>
+   </extension>
+
+</plugin>

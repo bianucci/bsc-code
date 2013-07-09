@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.samson.configviewer.editor.regler.ReglerConfEditor"
+            default="false"
+            icon="icons/regler_conf.gif"
+            id="last.editor.configuration.reglerConfEditor"
+            name="Regler Konfiguration">
+      </editor>
+      <editor
+            class="de.samson.configviewer.editor.standort.StandortEditor"
+            default="false"
+            icon="icons/home.gif"
+            id="last.editor.configuration.standortEditor"
+            name="Standort">
+      </editor>
+      <editor
+            class="de.samson.configviewer.editor.gateway.GatewayEditorView"
+            default="false"
+            icon="icons/gateway.gif"
+            id="last.editor.configuration.gatewayConfigEditor"
+            name="Gateway Konfiguration">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.samson.configviewer.handler.CallEditor"
+            id="de.samson.configViewer.openEditor"
+            name="Open ReglerConf Editor">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="de.samson.configviewer.view.View"
+            icon="icons/conf_view.gif"
+            id="de.samson.configViewer.configView"
+            name="Konfiguration"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.samson.ui.configviewer.ReglerConfPrefPage"
+            id="de.samson.ui.configViewer.preferencePage"
+            name="Regler Konfiguration">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:de.samson.configViewer.configView">
+         <command
+               commandId="de.samson.ui.configViewer.pingElements"
+               icon="icons/refresh.gif"
+               label="Ping Elements"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.samson.configviewer.handler.PingHandler"
+            id="de.samson.ui.configViewer.pingElements"
+            name="PingElements">
+      </command>
+   </extension>
+
+
+</plugin>

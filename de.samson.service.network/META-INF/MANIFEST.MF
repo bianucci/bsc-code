@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Network
+Bundle-SymbolicName: de.samson.service.network
+Bundle-Version: 1.0.0.qualifier
+Export-Package: de.samson.service.network.icmp,
+ de.samson.service.nework.modbus
+Require-Bundle: org.eclipse.ui;bundle-version="3.7.0",
+ org.eclipse.core.runtime;bundle-version="3.7.0",
+ library.net.wimpi.modbus;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

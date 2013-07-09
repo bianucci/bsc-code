@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            class="de.samson.ui.descfilemanager.views.DescFileManagerView"
+            icon="icons/share_prj_wiz.gif"
+            id="de.samson.ui.descfiles.descfilemanager"
+            name="DescFile Manager"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.samson.ui.descfiles.DescFileMgmtPrefPage"
+            id="de.samson.ui.descfiles.preferencePage"
+            name="Descfile Manager">
+      </page>
+   </extension>
+
+</plugin>

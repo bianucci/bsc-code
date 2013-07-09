@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.views">
+      <category
+            name="Sample Category"
+            id="de.samson.modbusPHP">
+      </category>
+      <view
+            name="Modbus PHP"
+            icon="icons/jmeth_obj.gif"
+            category="de.samson.modbusPHP"
+            class="de.samson.modbusphp.views.MainView"
+            id="de.samson.modbusphp.views.MainView">
+      </view>
+   </extension>
+   <extension
+         point="org.eclipse.help.contexts">
+      <contexts
+            file="contexts.xml">
+      </contexts>
+   </extension>
+   <extension
+         point="org.eclipse.ui.preferencePages">
+      <page
+            class="de.samson.ui.modbusphp.ModbusPHPPrefPage"
+            id="de.samson.ui.modbusPHP.preferencePage"
+            name="ModbusPHP">
+      </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="de.samson.ui.modbusphp.ModbusPHPInitializer">
+      </initializer>
+   </extension>
+
+</plugin>

@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Composition
+Bundle-SymbolicName: de.samson.application;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: de.samson.application.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ de.samson.service.database;bundle-version="1.0.0",
+ de.samson.ui.configViewer;bundle-version="1.0.0",
+ de.samson.ui.modbusPHP;bundle-version="1.0.0",
+ de.samson.ui.dataViewer;bundle-version="1.0.0",
+ de.samson.ui.descfilemanager;bundle-version="1.0.0",
+ de.samson.service.directregleraccess;bundle-version="1.0.0"
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: de.samson.application.shared
