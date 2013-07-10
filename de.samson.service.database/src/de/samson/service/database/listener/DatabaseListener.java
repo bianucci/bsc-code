@@ -6,6 +6,7 @@ public class DatabaseListener<E> extends Thread {
 	public DatabaseListener(E toObserve) {
 		super();
 		this.toObserve = toObserve;
+		System.out.println();
 	}
 
 	@Override
