@@ -49,12 +49,13 @@ public class RegValueEditingSupport extends EditingSupport {
 		STR_HoldingReg sr = DataConverterUtil.getRegisterDescForData(rd);
 
 		String s = (String) value;
+		if (s.length() == 0)
+			return;
+		
 		double d = Double.valueOf(s);
 		d *= sr.getSkalierungsfaktor();
 		s = String.valueOf((int) d);
 
-		if (s.length() == 0)
-			return;
 
 		String rawData = Integer.toHexString(Integer.valueOf(s));
 		while (rawData.length() < 4) {
@@ -76,7 +77,7 @@ public class RegValueEditingSupport extends EditingSupport {
 
 		String dpNr = String.valueOf(rd.getnRegisternr());
 
-		DataPointWriterService.writeRegValue(ip, station, dpNr, (String) value);
+		DataPointWriterService.writeRegValue(ip, station, dpNr, s);
 		this.viewer.refresh();
 	}
 }

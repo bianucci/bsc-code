@@ -1,7 +1,7 @@
 package de.samson.ui.descfilemanager.views;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.Vector;
 
 import org.eclipse.jface.viewers.CheckboxTreeViewer;
 import org.eclipse.swt.SWT;
@@ -54,12 +54,16 @@ public class DescFilesDBView extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				super.widgetSelected(e);
+				List<STR_Geraet> toDelete = getCheckedElements();
+				for (STR_Geraet s : toDelete)
+					DatabaseService.removeEntity(s);
+				refreshTreeViewer();
 			}
 		});
 	}
 
 	public List<STR_Geraet> getCheckedElements() {
-		List<STR_Geraet> checked = new ArrayList<STR_Geraet>();
+		List<STR_Geraet> checked = new Vector<STR_Geraet>();
 		for (Object o : tv.getCheckedElements()) {
 			if (o instanceof STR_Geraet) {
 				checked.add((STR_Geraet) o);

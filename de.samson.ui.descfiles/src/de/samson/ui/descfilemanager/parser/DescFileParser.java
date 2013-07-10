@@ -190,7 +190,7 @@ public class DescFileParser {
 		tempCoil.setAnzKategorie(parsedData[2]);
 		tempCoil.setBezeichnung(parsedData[3]);
 		tempCoil.setKommentar(parsedData[4]);
-		tempCoil.setRo(parsedData[5] == "1");
+		tempCoil.setRo(parsedData[5].equals("1"));
 		tempCoil.setText0(parsedData[6]);
 		tempCoil.setText1(parsedData[7]);
 
@@ -216,7 +216,7 @@ public class DescFileParser {
 		tempHReg.setAnzKategorie(parsedData[2]);
 		tempHReg.setBezeichnung(parsedData[3]);
 		tempHReg.setKommentar(parsedData[4]);
-		tempHReg.setRo(parsedData[5] == "1");
+		tempHReg.setRo(parsedData[5].equals("1"));
 		tempHReg.setUeBerAnfang(parsedData[6]);
 		tempHReg.setUeBerEnde(parsedData[7]);
 		tempHReg.setaBerAnfang(parsedData[8]);
@@ -244,7 +244,7 @@ public class DescFileParser {
 
 		tempGeraet.setGeraeteTyp(parsedData[1]);
 		tempGeraet.setIndexName(parsedData[3]);
-		tempGeraet.setInCSV(parsedData[4] == "1");
+		tempGeraet.setInCSV(parsedData[4].equals("1"));
 		tempGeraet.setSingleUse(parsedData[6]);
 		tempGeraet.setComment(comment);
 

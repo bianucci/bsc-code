@@ -125,6 +125,17 @@ public class RegisterTableViewerFactory {
 				return String.valueOf(sr.getaBerEnde());
 			}
 		});
+		
+		c = addTVColumn(tv, 50, "RO");
+		c.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				RegisterData rd = (RegisterData) element;
+				STR_HoldingReg sr = DataConverterUtil
+						.getRegisterDescForData(rd);
+				return String.valueOf(sr.isRo());
+			}
+		});
 	}
 
 	private static TableViewerColumn addTVColumn(TableViewer tv, int size,

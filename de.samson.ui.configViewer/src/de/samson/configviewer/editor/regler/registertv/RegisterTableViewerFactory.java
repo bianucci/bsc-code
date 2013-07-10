@@ -9,7 +9,9 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
+import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.STR_HoldingReg;
+import de.samson.service.database.util.DataConverterUtil;
 
 public class RegisterTableViewerFactory {
 
@@ -64,6 +66,14 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				return ((STR_HoldingReg) element).getKommentar();
+			}
+		});
+		
+		c = addTVColumn(tv, 50, "RO");
+		c.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				return String.valueOf(((STR_HoldingReg) element).isRo());
 			}
 		});
 	}

@@ -16,6 +16,8 @@ public class DescFileTreeViewerFactory {
 		tv.setContentProvider(dbDataCP);
 		tv.setLabelProvider(dbDataLP);
 
+		tv.addCheckStateListener(new ReglerTreeCheckStateListener(tv));
+		
 		return tv;
 	}
 
