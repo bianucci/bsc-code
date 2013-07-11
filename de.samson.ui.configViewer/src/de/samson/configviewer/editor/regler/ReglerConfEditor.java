@@ -334,5 +334,9 @@ public class ReglerConfEditor extends EditorPart {
 		s += " - " + rc.getGatewayConfig().getsIP();
 		return s;
 	}
+	
+	public ReglerConfig getRc() {
+		return rc;
+	}
 
 }

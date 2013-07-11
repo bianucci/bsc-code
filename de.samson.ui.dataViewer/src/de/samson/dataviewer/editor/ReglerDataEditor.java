@@ -20,6 +20,7 @@ import org.eclipse.ui.part.EditorPart;
 import de.samson.dataviewer.editor.coiltv.CoilTableViewerFactory;
 import de.samson.dataviewer.editor.registertv.RegisterTableViewerFactory;
 import de.samson.service.database.DatabaseService;
+import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.data.ReglerData;
 
 public class ReglerDataEditor extends EditorPart {
@@ -167,5 +168,9 @@ public class ReglerDataEditor extends EditorPart {
 	public void dispose() {
 		autoRefresh = false;
 		super.dispose();
+	}
+
+	public ReglerConfig getRc() {
+		return rd.getReglerConfig();
 	}
 }

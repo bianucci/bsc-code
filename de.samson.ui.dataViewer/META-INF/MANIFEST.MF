@@ -10,3 +10,4 @@ Require-Bundle: org.eclipse.ui,
  de.samson.service.directregleraccess;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Export-Package: de.samson.dataviewer.editor
