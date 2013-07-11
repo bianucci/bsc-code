@@ -24,8 +24,8 @@ public class ApplicationWorkbenchWindowAdvisor extends WorkbenchWindowAdvisor {
 		configurer.setShowCoolBar(true);
 		configurer.setShowStatusLine(false);
 		configurer.setShowMenuBar(true);
-		configurer.setShowFastViewBars(true);
-		configurer.setShowPerspectiveBar(true);
+		configurer.setShowFastViewBars(false);
+		configurer.setShowPerspectiveBar(false);
 		configurer.setTitle("Samson FH FFM");
 	}
 }
