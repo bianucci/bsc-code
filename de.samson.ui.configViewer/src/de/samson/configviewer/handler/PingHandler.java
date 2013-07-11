@@ -1,5 +1,7 @@
 package de.samson.configviewer.handler;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 
 import org.eclipse.core.commands.AbstractHandler;
@@ -27,18 +29,15 @@ public class PingHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-
+		final SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
+		final Calendar cal = Calendar.getInstance();
+		System.out.println( sdf.format(cal.getTime()) );
+		
 		IWorkbenchWindow window = HandlerUtil.getActiveWorkbenchWindow(event);
 		IWorkbenchPage page = window.getActivePage();
+		
 		View view = (View) page.findView(PartID.View_Regler_Conf_ID);
 		tv = view.getTv();
-
-		try {
-			ModbusNetworkService.pingModbusDevice("37.80.80.67", 1);
-			System.err.println("worked");
-		} catch (Exception e1) {
-			System.err.println("didnt");
-		}
 
 		standortList = DatabaseService.getStandortList();
 		Runnable r = new Runnable() {
@@ -51,7 +50,6 @@ public class PingHandler extends AbstractHandler {
 
 					for (int j = 0; j < s.getGateways().size(); j++) {
 						GatewayConfig g = s.getGateways().get(j);
-						
 						pingHost = PingService.pingHost(g.getsIP());
 						g.setAvailable(true);
 						
@@ -72,6 +70,7 @@ public class PingHandler extends AbstractHandler {
 							for (ReglerConfig r : g.getRegler()) {
 								r.setAvailable(false);
 							}
+							System.out.println( sdf.format(cal.getTime()) );
 						}
 					}
 				}

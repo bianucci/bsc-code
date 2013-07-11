@@ -1,5 +1,8 @@
 package de.samson.dataviewer.editor.coiltv;
 
+import org.eclipse.core.runtime.IStatus;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.jface.dialogs.ErrorDialog;
 import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.ComboBoxViewerCellEditor;
@@ -8,8 +11,11 @@ import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 
+import de.samson.dataviewer.PartID;
 import de.samson.modbusphp.datapointwriter.DataPointWriterService;
+import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.STR_Coil;
 import de.samson.service.database.util.DataConverterUtil;
@@ -68,9 +74,18 @@ public class CoilValueEditingSupport extends EditingSupport {
 
 		String dpNr = String.valueOf(cd.getnCoilnr());
 
-		DataPointWriterService.writeCoilValue(ip, station, dpNr, v);
+		try {
+			DataPointWriterService.writeCoilValue(ip, station, dpNr, v);
+		} catch (WriteDatapointFailedException e) {
+			Status status = new Status(IStatus.ERROR, PartID.PLUGIN_ID, 0,
+					"Wert " + v + "konnte nicht in Register " + dpNr
+							+ "geschrieben werden.", null);
+			ErrorDialog.openError(Display.getCurrent().getActiveShell(),
+					"Datenpunkt Schreiber Fehler",
+					"Datenpunkt konnte nicht beschrieben werden", status);
+			e.printStackTrace();
+		}
 
-		// DBManager.updateCoilValue(cd, v);
 		getViewer().refresh();
 	}
 }

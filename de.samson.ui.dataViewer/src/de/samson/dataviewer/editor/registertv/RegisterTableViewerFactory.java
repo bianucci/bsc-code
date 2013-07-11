@@ -63,9 +63,18 @@ public class RegisterTableViewerFactory {
 
 				double s = sr.getSkalierungsfaktor();
 				if (s == 1) {
-					return String.valueOf((int)rd.getsWert());
+					return String.valueOf((int) rd.getsWert());
 				} else {
-					return String.valueOf(rd.getsWert() / s);
+					String v = String.valueOf(rd.getsWert() / s);
+
+					String[] split = v.split("\\.");
+					if ((s == 100) && (split[1].length() < 2))
+						v += "0";
+
+					else if ((s == 1000) && (split[1].length() < 3))
+						for(int i=0;i<3-split[1].length();i++)
+							v+="=";
+					return v;
 				}
 			}
 		});
@@ -125,7 +134,7 @@ public class RegisterTableViewerFactory {
 				return String.valueOf(sr.getaBerEnde());
 			}
 		});
-		
+
 		c = addTVColumn(tv, 50, "RO");
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override

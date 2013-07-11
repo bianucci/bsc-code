@@ -9,9 +9,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
-import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.STR_HoldingReg;
-import de.samson.service.database.util.DataConverterUtil;
 
 public class RegisterTableViewerFactory {
 

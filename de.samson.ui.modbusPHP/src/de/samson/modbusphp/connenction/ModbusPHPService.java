@@ -107,7 +107,6 @@ public class ModbusPHPService extends Observable implements Observer {
 		try {
 			os.write("info\r\n".getBytes());
 			os.flush();
-			System.out.println("info sent");
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

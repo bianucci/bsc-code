@@ -145,8 +145,6 @@ public class MainView extends ViewPart implements Observer {
 
 	@Override
 	public void update(Observable o, Object arg) {
-		System.out.println(o);
-		System.out.println(arg);
 		txtModbusphpinfo.setTextChars(((String) arg).toCharArray());
 	}
 	

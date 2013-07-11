@@ -32,10 +32,11 @@ public class Activator extends AbstractUIPlugin {
 		try {
 			DatabaseService.start();
 		} catch (Exception e1) {
-			Status status = new Status(IStatus.ERROR, "My Plug-in ID", 0,
+			Status status = new Status(IStatus.ERROR, PLUGIN_ID, 0,
 					"Status Error Message", null);
 			ErrorDialog.openError(Display.getCurrent().getActiveShell(),
-					"JFace Error", "Datenbank konnte geladen werden", status);
+					"Datenbank Fehler",
+					"Datenbank konnte nicht geladen werden", status);
 			e1.printStackTrace();
 		}
 		t = new Timer();
@@ -50,11 +51,11 @@ public class Activator extends AbstractUIPlugin {
 							DatabaseService.start();
 						} catch (Exception e) {
 							Status status = new Status(IStatus.ERROR,
-									"My Plug-in ID", 0, "Status Error Message",
-									null);
+									PLUGIN_ID, 0, "Status Error Message", null);
 							ErrorDialog.openError(Display.getCurrent()
-									.getActiveShell(), "JFace Error",
-									"Datenbank konnte geladen werden", status);
+									.getActiveShell(), "Datenbank Fehler",
+									"Datenbank konnte nicht geladen werden",
+									status);
 							e.printStackTrace();
 						}
 					}

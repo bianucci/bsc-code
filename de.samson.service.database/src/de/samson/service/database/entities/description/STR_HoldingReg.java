@@ -170,10 +170,10 @@ public class STR_HoldingReg {
 	}
 	
 	public double getSkalierungsfaktor(){
-		double uB = Double.valueOf(getUeBerAnfang()
+		double uB = Double.valueOf(getUeBerEnde()
 				.replace(',', '.').replace(".000", ".00"));
 
-		double aB = Double.valueOf(getaBerAnfang().replace(',', '.')
+		double aB = Double.valueOf(getaBerEnde().replace(',', '.')
 				.replace(".000", ".00"));
 
 		if ((aB == 0) && uB == 0) {

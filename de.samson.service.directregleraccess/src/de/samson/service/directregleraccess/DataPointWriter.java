@@ -7,6 +7,8 @@ import java.net.Socket;
 
 import org.eclipse.jface.preference.IPreferenceStore;
 
+import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
+
 public class DataPointWriter {
 
 	private Socket s;
@@ -30,14 +32,14 @@ public class DataPointWriter {
 	}
 
 	public void writeRegValue(String ip, String station, String dpNr,
-			String value) {
+			String value) throws WriteDatapointFailedException {
 		String command = ip + ";" + station + ";" + "register;" + "write;"
 				+ dpNr + ";" + value + System.getProperty("line.separator");
 		writeToDataPoint(command, value);
 	}
 
 	public void writeCoilValue(String ip, String station, String dpNr,
-			boolean value) {
+			boolean value) throws WriteDatapointFailedException {
 		String command = ip + ";" + station + ";" + "coil;" + "write;" + dpNr
 				+ ";" + String.valueOf(value).toUpperCase()
 				+ System.getProperty("line.separator");
@@ -59,7 +61,7 @@ public class DataPointWriter {
 		return readFromDataPoint(command);
 	}
 
-	private void writeToDataPoint(String command, String compareValue) {
+	private void writeToDataPoint(String command, String compareValue) throws WriteDatapointFailedException {
 		if (s.isConnected()) {
 			try {
 				os.write(command.getBytes());
@@ -73,10 +75,10 @@ public class DataPointWriter {
 				} while (in.available() != 0);
 
 				String existingValue = s.split(":")[1].trim();
-				System.out.println("Write result: " + s.trim()
-						+ " value expected: "
-						+ existingValue.equals(compareValue));
+				if(!existingValue.equals(compareValue))
+					throw new WriteDatapointFailedException();
 
+				
 			} catch (IOException e) {
 				e.printStackTrace();
 			}

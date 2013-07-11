@@ -2,6 +2,7 @@ package de.samson.modbusphp.datapointwriter;
 
 import org.eclipse.jface.preference.IPreferenceStore;
 
+import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
 import de.samson.service.directregleraccess.Activator;
 import de.samson.service.directregleraccess.DataPointWriter;
 import de.samson.service.directregleraccess.DataPointWriterProcess;
@@ -41,7 +42,7 @@ public class DataPointWriterService {
 	}
 
 	public static void writeCoilValue(String ip, String station, String dpNr,
-			boolean value) {
+			boolean value) throws WriteDatapointFailedException {
 		dpw.writeCoilValue(ip, station, dpNr, value);
 	}
 
@@ -50,7 +51,7 @@ public class DataPointWriterService {
 	}
 
 	public static void writeRegValue(String ip, String station, String dpNr,
-			String value) {
+			String value) throws WriteDatapointFailedException {
 		dpw.writeRegValue(ip, station, dpNr, value);
 	}
 }

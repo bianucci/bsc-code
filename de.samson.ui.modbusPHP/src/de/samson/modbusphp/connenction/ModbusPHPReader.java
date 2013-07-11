@@ -28,14 +28,13 @@ public class ModbusPHPReader extends Observable implements Runnable {
 			try {
 				int i = in.read(buffer);
 				lastInput += new String(buffer);
-				System.out.println(i);
 				if (i > 9) {
 					setChanged();
 					
 					notifyObservers(lastInput);
 					lastInput = "";
 					
-					Thread.sleep(3000);
+					Thread.sleep(5000);
 					m.sendInfoCommand();//TODO
 				} else if (i == -1) {
 					break;
