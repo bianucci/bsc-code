@@ -72,6 +72,14 @@
             id="de.samson.ui.configViewer.pingElements"
             name="PingElements">
       </command>
+      <command
+            defaultHandler="de.samson.configviewer.handler.DBChangedHandler"
+            id="de.samson.ui.configViewer.dbChanged"
+            name="DB Changed">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
    </extension>
 
 

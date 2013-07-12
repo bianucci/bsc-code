@@ -9,12 +9,17 @@ import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.util.IPropertyChangeListener;
 import org.eclipse.jface.util.PropertyChangeEvent;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.ui.PlatformUI;
+import org.eclipse.ui.handlers.IHandlerService;
 import org.eclipse.ui.plugin.AbstractUIPlugin;
 import org.osgi.framework.BundleContext;
 
 public class Activator extends AbstractUIPlugin {
 
 	private static final String PLUGIN_ID = "de.samson.service.database";
+	public static final String ConfigViewerDbChanged = "de.samson.ui.configViewer.dbChanged";
+	public static final String DataViewerDbChanged = "de.samson.ui.configViewer.dbChanged";
+
 	private Timer t;
 	private static Activator plugin;
 
@@ -49,6 +54,11 @@ public class Activator extends AbstractUIPlugin {
 						DatabaseService.shutDown();
 						try {
 							DatabaseService.start();
+							IHandlerService handlerService = (IHandlerService) PlatformUI
+									.getWorkbench().getActiveWorkbenchWindow()
+									.getService(IHandlerService.class);
+							handlerService.executeCommand(
+									ConfigViewerDbChanged, null);
 						} catch (Exception e) {
 							Status status = new Status(IStatus.ERROR,
 									PLUGIN_ID, 0, "Status Error Message", null);
