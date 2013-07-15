@@ -111,8 +111,8 @@ public class MainView extends ViewPart implements Observer {
 			@Override
 			public void run() {
 				try {
-					mbusPHP.startUp();
 					if (!mbusPHP.isConnected())
+						mbusPHP.startUp();
 						mbusPHP.connect();
 				} catch (Exception e) {
 					e.printStackTrace();
