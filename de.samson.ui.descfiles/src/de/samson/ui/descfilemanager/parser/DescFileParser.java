@@ -6,15 +6,23 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Map;
+
+import com.fasterxml.jackson.core.JsonParseException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import de.samson.service.database.entities.description.STR_Coil;
 import de.samson.service.database.entities.description.STR_Geraet;
 import de.samson.service.database.entities.description.STR_HoldingReg;
+import de.samson.service.database.entities.description.WaermeMengenWert;
+import de.samson.service.database.entities.description.WaermeMengenZähler;
+import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
 import de.samson.ui.descfilemanager.exceptions.DescFileCorruptedException;
 import de.samson.ui.descfilemanager.exceptions.DescFileParsingException;
-import de.samson.ui.descfilemanager.exceptions.NoDescDirectoryNotFoundEception;
 
 public class DescFileParser {
 
@@ -25,7 +33,7 @@ public class DescFileParser {
 	private static File controllerDir = null;
 
 	public static void init(String rootDir)
-			throws NoDescDirectoryNotFoundEception, IOException,
+			throws DescDirectoryNotFoundEception, IOException,
 			DescFileParsingException {
 
 		List<DescFileCorruptedException> allCorruptedFiles = new ArrayList<>();
@@ -42,7 +50,7 @@ public class DescFileParser {
 
 		identifyAllControllerDirectories(controllerDir);
 		if (allControllerDirs.size() <= 0) {
-			throw new NoDescDirectoryNotFoundEception(rootDir);
+			throw new DescDirectoryNotFoundEception(rootDir);
 		}
 
 		Iterator<File> i = allControllerDirs.iterator();
@@ -80,6 +88,10 @@ public class DescFileParser {
 							data, tempGeraet);
 					tempGeraet.getRegisterList().add(tempHReg);
 				}
+
+				// List<WaermeMengenZähler> parsedJSONFile = parseJSONFile(next,
+				// tempGeraet);
+				// tempGeraet.setAllWMZ(parsedJSONFile);
 				controller.add(tempGeraet);
 
 			} catch (DescFileCorruptedException e) {
@@ -88,6 +100,7 @@ public class DescFileParser {
 					e.setCorruptedFile(next);
 				}
 				allCorruptedFiles.add(e);
+				e.printStackTrace();
 			} catch (FileNotFoundException e) {
 				errorOccured = true;
 				allMissingFiles.add(e);
@@ -124,8 +137,11 @@ public class DescFileParser {
 				File c = new File(parent.getAbsolutePath() + "\\"
 						+ EnumDescFileType.HoldingRegister.getFileName());
 
+				File d = new File(parent.getAbsolutePath() + "\\"
+						+ EnumDescFileType.JSON.getFileName());
+
 				if (!allControllerDirs.contains(parent)) {
-					if (a.exists() && b.exists() && c.exists())
+					if (a.exists() && b.exists() && c.exists() && d.exists())
 						allControllerDirs.add(parent);
 				}
 			}
@@ -179,6 +195,91 @@ public class DescFileParser {
 		return parsedObjects;
 	}
 
+	@SuppressWarnings({ "unchecked" })
+	public static List<WaermeMengenZähler> parseJSONFile(File jsonFile,
+			STR_Geraet regler) throws JsonParseException, IOException,
+			DescFileCorruptedException {
+
+		jsonFile = new File(jsonFile.getAbsolutePath() + "\\"
+				+ EnumDescFileType.JSON.getFileName());
+
+		if (!jsonFile.exists())
+			throw new FileNotFoundException(jsonFile.getAbsolutePath());
+
+		ObjectMapper mapper = new ObjectMapper();
+
+		List<WaermeMengenZähler> l = new ArrayList<WaermeMengenZähler>();
+		WaermeMengenZähler wmz;
+		WaermeMengenWert wmw;
+
+		// ALL JSON DATA
+		Map<String, Object> userData = mapper.readValue(jsonFile, Map.class);
+
+		// ALL WMZ
+		Map<String, Object> mapAllWMZ = ((Map<String, Object>) userData
+				.get("TabWMZ"));
+		if (mapAllWMZ == null)
+			throw new DescFileCorruptedException(EnumDescFileType.JSON,
+					new String[] {}, "", jsonFile, 0);
+		Object[] arrayAllWMZ = mapAllWMZ.values().toArray();
+
+		for (int i = 0; i < arrayAllWMZ.length; i++) {
+			wmz = new WaermeMengenZähler();
+
+			// CURRENT WMZ
+			LinkedHashMap<String, Object> mapWMZ = (LinkedHashMap<String, Object>) arrayAllWMZ[i];
+			wmz.setName((String) mapAllWMZ.keySet().toArray()[i]);
+
+			// ALL WMW FOR THIS WMZ
+			Object[] arrayAllWMW = mapWMZ.values().toArray();
+
+			// ITERATE THROUGH ALL WMW
+			for (int j = 0; j < arrayAllWMW.length; j++) {
+				wmw = new WaermeMengenWert();
+
+				// CURRENT WMW
+				Map<String, Object> mapWMW = (Map<String, Object>) arrayAllWMW[j];
+				wmw.setCategory((String) mapWMZ.keySet().toArray()[j]);
+
+				// SET EINHEIT REGISTER FOR WMZ
+				Map<String, Object> einheit = (Map<String, Object>) mapWMW
+						.get("Einheit");
+				int einReg = (int) einheit.get("IntRegister");
+				for (STR_HoldingReg sreg : regler.getRegisterList()) {
+					if (sreg.getHrnr() == einReg) {
+						wmw.setEinheitRegister(sreg);
+						break;
+					}
+				}
+
+				// SET MASzEINHEIT FOR WMZ
+				Map<String, String> tabEinheit = (Map<String, String>) einheit
+						.get("TabEinheiten");
+				wmw.setMassEinheit(tabEinheit);
+
+				// SET WERTE REGISTER FOR WMZ
+				ArrayList<Object> wertigkeiten = (ArrayList<Object>) mapWMW
+						.get("Wertigkeiten");
+				Map<STR_HoldingReg, Double> m = new HashMap<>();
+				for (Object o : wertigkeiten) {
+					Map<String, Object> dp = (Map<String, Object>) o;
+					double faktor = (double) dp.get("DblWertigkeit");
+					int reg = (int) dp.get("IntRegister");
+					for (STR_HoldingReg sreg : regler.getRegisterList()) {
+						if (sreg.getHrnr() == reg) {
+							m.put(sreg, faktor);
+							break;
+						}
+					}
+				}
+				wmw.setWertigkeiten(m);
+				wmz.add(wmw);
+			}
+			l.add(wmz);
+		}
+		return l;
+	}
+
 	private static STR_Coil createCoilFromParsedData(String[] parsedData,
 			STR_Geraet geraet) throws DescFileCorruptedException {
 
@@ -205,9 +306,8 @@ public class DescFileParser {
 	}
 
 	private static STR_HoldingReg createHoldingRegFromParsedData(
-			String[] parsedData,
-
-			STR_Geraet geraet) throws DescFileCorruptedException {
+			String[] parsedData, STR_Geraet geraet)
+			throws DescFileCorruptedException {
 		STR_HoldingReg tempHReg = new STR_HoldingReg();
 
 		tempHReg.setGeraet(geraet);
@@ -232,7 +332,6 @@ public class DescFileParser {
 			throw new DescFileCorruptedException(EnumDescFileType.Coil,
 					parsedData, null, null, 0);
 		}
-
 		return tempHReg;
 	}
 
@@ -260,7 +359,6 @@ public class DescFileParser {
 			throw new DescFileCorruptedException(EnumDescFileType.Coil,
 					parsedData, null, null, 0);
 		}
-
 		return tempGeraet;
 	}
 

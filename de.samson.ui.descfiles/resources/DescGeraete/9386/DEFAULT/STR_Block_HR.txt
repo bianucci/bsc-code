@@ -1,0 +1,4 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"9386"____________;  40001;       40077;     1

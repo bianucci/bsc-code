@@ -1,0 +1,4 @@
+
+REM Gerätekennung     Gerätetyp           IdxAdr     IndexName          InCSV  MaskCSVFilterGruppe SingelUse
+
+"5405-NTC"________;  "5405"____________;  0;        " "______________;  0;     8;                  0

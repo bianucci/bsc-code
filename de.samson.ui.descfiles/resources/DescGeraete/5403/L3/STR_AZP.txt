@@ -1,0 +1,7 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         BerAnfang    BerEnde        WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "5403L3"__________;  "ZP_A1"___________;  0.000;       0.000;         1;      16;        16;          0;            0;          24;          0
+2;      "5403L3"__________;  "ZP_A2"___________;  0.000;       0.000;         1;      16;        16;          0;            0;          24;          0
+3;      "5403L3"__________;  "ZP_A3"___________;  0.000;       0.000;         1;      16;        16;          0;            0;          24;          0
+4;      "5403L3"__________;  "ZP_A4"___________;  0.000;       0.000;         1;      16;        16;          0;            0;          24;          0

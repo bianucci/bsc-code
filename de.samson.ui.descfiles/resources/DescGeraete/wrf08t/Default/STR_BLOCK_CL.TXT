@@ -1,0 +1,7 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"wrf08t"____________;  1;           23;        2
+"wrf08t"____________;  24;          32;        2
+"wrf08t"____________;  257;         265;       2
+"wrf08t"____________;  266;         272;       2

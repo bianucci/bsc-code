@@ -1,0 +1,5 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"5405-PT100"______;  40001;       40040;     1
+"5405-PT100"______;  40041;       40063;     1

@@ -1,0 +1,7 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"WRF06t"____________;  40001;       40052;     2
+"WRF06t"____________;  40257;       40270;     2
+"WRF06t"____________;  40513;       40537;     2
+

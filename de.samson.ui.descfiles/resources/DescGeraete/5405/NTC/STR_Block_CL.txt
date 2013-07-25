@@ -1,0 +1,4 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"5405-NTC"________;  1;           56;        1

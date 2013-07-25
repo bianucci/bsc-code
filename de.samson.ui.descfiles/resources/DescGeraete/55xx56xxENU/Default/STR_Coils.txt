@@ -1,0 +1,332 @@
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "55xx56xxENU"_____;  "ALG-BTR";      "Sammelstoerung"__;  "Collective error, error status register HR40150>0"_;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  42
+2;      "55xx56xxENU"_____;  "ALG-BTR";      "Dateneing_aktiv"_;  "Entering data"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+3;      "55xx56xxENU"_____;  "ALG-BTR";      "Dateneing_stattg";  "Data entered"______________________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+4;      "55xx56xxENU"_____;  "ALG-BTR";      "Sammel_Ebenenbit";  "Collective level bit CL88-CL121"___________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+5;      "55xx56xxENU"_____;  "ALG-BTR";      "Status_Handb_Rk1";  "Man. mode status heating circuit Rk1"______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+6;      "55xx56xxENU"_____;  "ALG-BTR";      "Status_Handb_Rk2";  "Man. mode status heating circuit Rk2"______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+7;      "55xx56xxENU"_____;  "ALG-BTR";      "Status_Handb_Rk3";  "Man. mode status heating circuit Rk3"______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+8;      "55xx56xxENU"_____;  "ALG-BTR";      "Status_Handb_TW"_;  "Man. mode status DHW"______________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+9;      "55xx56xxENU"_____;  "ALG-BTR";      "Sommerbetrieb"___;  "Summer mode active (CO5, Fb04)"____________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+10;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ1_KomStoer"___;  "Communication error, meter bus WMZ1 (CO6, Fb10)"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+11;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ2_KomStoer"___;  "Communication error, meter bus WMZ2 (CO6, Fb10)"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+12;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ3_KomStoer"___;  "Communication error, meter bus WMZ3 (CO6, Fb10)"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+13;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ1_Fehler"_____;  "Error WMZ1 (CO6, Fb10)"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+14;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ2_Fehler"_____;  "Error WMZ2 (CO6, Fb10)"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+15;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ3_Fehler"_____;  "Error WMZ3 (CO6, Fb10)"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+16;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ1-Auslesung"__;  "1 = have WMZ1 read once"___________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+17;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ2-Auslesung"__;  "1 = have WMZ2 read once"___________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+18;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ3-Auslesung"__;  "1 = have WMZ3 read once"___________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+22;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ1_Dfluss_Beg"_;  "Flow limitation1 active (CO5, Fb11)"_______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+23;     "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ1_Leist_Beg"__;   "Capacity limit.1 active (CO5, Fb10)"______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+24;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE01"_;  "Status of binary input BI01"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+25;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE02"_;  "Status of binary input BI01"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+26;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE03"_;  "Status of binary input BI03"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+27;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE04"_;  "Status of binary input BI04"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+28;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE05"_;  "Status of binary input BI05"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+29;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE06"_;  "Status of binary input BI06"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+30;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE07"_;  "Status of binary input BI07"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+32;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE09"_;  "Status of binary input BI09"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+33;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE10"_;  "Status of binary input BI10"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+34;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE11"_;  "Status of binary input BI11"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+35;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE12"_;  "Status of binary input BI12"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+36;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE13"_;  "Status of binary input BI13"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+37;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE14"_;  "Status of binary input BI14"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+38;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE15"_;  "Status of binary input BI15"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+39;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE16"_;  "Status of binary input BI16"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+40;     "55xx56xxENU"_____;  "BEA-BE"_;      "Binaereing_BE17"_;  "Status of binary input BI17"_______________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+57;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA1"__;  "Circulation pump UP1 (network, CL96)"______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+58;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA2"__;  "Circulation pump UP2 (network, CL97)"______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+59;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA3"__;  "Circulation pump UP3 (network, CL98)"______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+60;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA4"__;  "Storage tank charging pump SLP (CL99)"_____________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+61;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA5"__;  "Circulation pump (DHW) ZP (CL100)"_________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+62;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA6"__;  "Rk1_3-step close signal (preset in HR40107)"_______;  0;  "HALT-(0)"________;  "ZU-(1)"__________;  10
+63;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA7"__;  "Rk1_3-step open signal (HR40107), on/off (CL102)"__;  0;  "HALT-(0)"________;  "AUF-(1)"_________;  10
+64;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA8"__;  "Rk2_3-step close signal (preset in HR40109)"_______;  0;  "HALT-(0)"________;  "ZU-(1)"__________;  10
+65;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA9"__;  "Rk2_3-step open signal (HR40109), on/off (CL104)"__;  0;  "HALT-(0)"________;  "AUF-(1)"_________;  10
+66;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA10"_;  "Rk3_3-step close signal (preset in HR40111)"_______;  0;  "HALT-(0)"________;  "ZU-(1)"__________;  10
+67;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA11"_;  "Rk3_3-step open signal (HR40109), on/off (CL106)"__;  0;  "HALT-(0)"________;  "AUF-(1)"_________;  10
+68;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA12"_;  "Pump management UP1 On/Off (CL107)"________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+69;     "55xx56xxENU"_____;  "BEA-BA"_;      "Binaerausg_BA13"_;  "Pump speed management UP1 (CL108)"_________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+88;     "55xx56xxENU"_____;  "EBN-AT"_;      "EBN_AT_AF1"______;  "Outdoor temp. level AF1 (HR40010)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+89;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_BetrArt_Rk1"_;  "Operating mode level Rk1 (HR40106)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+90;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_Stellsig_Rk1";  "Control signal level Rk1 (HR40107)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+91;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_BetrArt_Rk2"_;  "Operating mode level Rk2 (HR40108)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+92;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_Stellsig_Rk2";  "Control signal level Rk2 (HR40109)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+93;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_BetrArt_Rk3"_;  "Operating mode level Rk3 (HR40110)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+94;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_Stellsig_Rk3";  "Control signal level Rk3 (HR40111)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+95;     "55xx56xxENU"_____;  "EBN-BTR";      "EBN_BetrArt_TW"__;  "Operating mode level TW (HR40112)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+96;     "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA1"__;  "Ciculation pump level UP1 (network, CL57)"_________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+97;     "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA2"__;  "Ciculation pump level UP2 (network, CL58)"_________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+98;     "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA3"__;  "Ciculation pump level UP3 (network, CL59)"_________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+99;     "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA4"__;  "Storage tank charging pump level SLP (CL60)"_______;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+100;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA5"__;  "Circulation pump (DHW) level ZP (CL61)"____________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+101;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA6"__;  "Binary level BO6"__________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+102;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA7"__;  "Level Rk1_open/close signal (CL63)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+103;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA8"__;  "Binary level BO8"__________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+104;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA9"__;  "Level Rk2_open/close signal (CL65)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+105;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA10"_;  "Binary level BO10"_________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+106;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA11"_;  "Level Rk3_open/close signal (CL67)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+107;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA12"_;  "Pump management level UP1 On/Off (CL68)"___________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+108;    "55xx56xxENU"_____;  "EBN-BA"_;      "EBN_Binaer_BA13"_;  "Pump speed management level UP1 (CL69)"____________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+109;    "55xx56xxENU"_____;  "EBN-AST";      "EBN_AA1"_________;  "Analog output level 1 (0 to 10 V)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+110;    "55xx56xxENU"_____;  "EBN-AST";      "EBN_AA2"_________;  "Analog output level 2 (0 to 10 V)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+111;    "55xx56xxENU"_____;  "EBN-AST";      "EBN_AA3"_________;  "Analog output level 3 (0 to 10 V)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+112;    "55xx56xxENU"_____;  "EBN-VL"_;      "EBN_Son_TW_Sollw";  "Special DHW set point level (HR41809)"_____________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+113;    "55xx56xxENU"_____;  "EBN-VL"_;      "EBN_SonPuffSollw";  "Special buffer tank set point level (HR41045)"_____;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+116;    "55xx56xxENU"_____;  "EBN-VL"_;      "EBN_VorlSoll_Rk1";  "Flow set point level Rk1 (HR41000)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+117;    "55xx56xxENU"_____;  "EBN-RL"_;      "EBN_RuelSoll_Rk1";  "Return flow set point Rk1 (HR41033)"_______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+118;    "55xx56xxENU"_____;  "EBN-VL"_;      "EBN_VorlSoll_Rk2";  "Flow set point level Rk2 (HR41200)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+119;    "55xx56xxENU"_____;  "EBN-RL"_;      "EBN_RuelSoll_Rk2";  "Return flow set point Rk2 (HR41233)"_______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+120;    "55xx56xxENU"_____;  "EBN-VL"_;      "EBN_VorlSoll_Rk3";  "Flow set point level Rk3 (HR41400)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+121;    "55xx56xxENU"_____;  "EBN-RL"_;      "EBN_RuelSoll_Rk3";  "Return flow set point Rk3 (HR41433)"_______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+130;    "55xx56xxENU"_____;  "CON-SON";      "FB01_Pt1000"_____;  "FB01: Pt 1000 (Pt 100) sensor"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+131;    "55xx56xxENU"_____;  "CON-SON";      "FB02_NTC"________;  "FB02: NTC (Pt 100) sensor"_________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+132;    "55xx56xxENU"_____;  "CON-SON";      "FB03_Pt500"______;  "FB03: Pt 500 (Pt 100) sensor"______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+133;    "55xx56xxENU"_____;  "CON-SON";      "FB04_Sommerbtr"__;  "FB04: Summer mode"_________________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+134;    "55xx56xxENU"_____;  "CON-SON";      "FB05_Verz_AT_Anp";  "FB05: Delayed outdoor temp. adaptation (decr.)"____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+135;    "55xx56xxENU"_____;  "CON-SON";      "FB06_Verz_AT_Anp";  "FB06: Delayed outdoor temp. adaptation (incr.)"____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+136;    "55xx56xxENU"_____;  "CON-SON";      "FB07_Stoerausg"__;  "FB07: Fault alarm output BO13"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+137;    "55xx56xxENU"_____;  "CON-SON";      "FB08_AutSommZeit";  "FB08: Automatic summer/standard time switchover"___;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+138;    "55xx56xxENU"_____;  "CON-SON";      "FB09_Frostschutz";  "FB09: Frost protect. prog. (I=>FB09=0, II=>FB09=1)";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+139;    "55xx56xxENU"_____;  "CON-SON";      "FB10_Leist_Beg"__;  "FB10: Flow rate/capacity limitation with pulses"___;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+140;    "55xx56xxENU"_____;  "CON-SON";      "FB11_DflBeg_mA"__;  "FB11: Flow rate limitation with 0/4-20 mA signal"__;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+141;    "55xx56xxENU"_____;  "CON-SON";      "FB12_Schleichmng";  "FB12: Creep feed rate suppression using BI13"______;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+142;    "55xx56xxENU"_____;  "CON-SON";      "FB13_LeistBeg_mA";  "FB13: Cap. lim. based on flow rate 0/4-20 mA Rk1"__;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+143;    "55xx56xxENU"_____;  "CON-SON";      "FB14_Betr_UP1"___;  "FB14: UP1 operation to cover own demand"___________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+144;    "55xx56xxENU"_____;  "CON-SON";      "FB15_FrgReg_BE15";  "FB15: Release controller at BI15 (standby bE/1.0)"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+145;    "55xx56xxENU"_____;  "CON-SON";      "FB16_Ruecklbegr"_;  "FB16: P-response at return flow temp. lim."________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+146;    "55xx56xxENU"_____;  "CON-SON";      "FB17_UP_Managmt"_;  "FB17: Pump mgmt., switching state of BO13 (>V1.30)";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+147;    "55xx56xxENU"_____;  "CON-SON";      "FB18_Ers_BA9-UP3";  "FB18: BO9 replaced by UP3"_________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+148;    "55xx56xxENU"_____;  "CON-SON";      "FB19_Tempueberw"_;  "FB19: Temp. monitoring"____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  8
+150;    "55xx56xxENU"_____;  "CON-SON";      "FB21_SperrHand"__;  "FB21: Locking manual levels"_______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+151;    "55xx56xxENU"_____;  "CON-SON";      "FB22_SperrDreh"__;  "FB22: Locking rotary switches"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+152;    "55xx56xxENU"_____;  "CON-SON";      "FB23_Testmodus"__;  "FB23: Test mode (internal use only!)"______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+153;    "55xx56xxENU"_____;  "CON-MOD";      "FB01_Modbus"_____;  "FB01: Modbus mode"_________________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+154;    "55xx56xxENU"_____;  "CON-MOD";      "FB02_16bit"______;  "FB02: Modbus 16-bit addressing"____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+155;    "55xx56xxENU"_____;  "CON-MOD";      "FB03_Modem"______;  "FB03: Modem function"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+156;    "55xx56xxENU"_____;  "CON-MOD";      "FB04_Auto_Modem"_;  "FB04: Automatic modem configuration"_______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+157;    "55xx56xxENU"_____;  "CON-MOD";      "FB05_Sperr_Modem";  "FB05: Lock dial-up to building automation sys."____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+158;    "55xx56xxENU"_____;  "CON-MOD";      "FB06_Anw_gehend"_;  "FB06: Dial-up also upon corrected errors"__________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+159;    "55xx56xxENU"_____;  "CON-MOD";      "FB07_Timeout_GLT";  "FB07: Control system monitoring"___________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+160;    "55xx56xxENU"_____;  "CON-MOD";      "FB08_SMS"________;  "FB08: SMS mode"____________________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+162;    "55xx56xxENU"_____;  "CON-VOL";      "FB10_Zaehlerbus"_;  "FB10: Meter bus mode"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+163;    "55xx56xxENU"_____;  "CON-VOL";      "FB11_Dfluss_Beg"_;  "FB11: Flow limitation in Rk1 meter bus"____________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+164;    "55xx56xxENU"_____;  "CON-VOL";      "FB12_Leist_Beg"__;  "FB12: Capacity limitation in Rk1 meter bus"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+176;    "55xx56xxENU"_____;  "CON-SON";      "FB01_Geraetebus"_;  "FB01: Device bus"__________________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+177;    "55xx56xxENU"_____;  "CON-SON";      "FB02_Uhrzeitsync";  "FB02: Clock synchronization"_______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+178;    "55xx56xxENU"_____;  "CON-SON";      "FB03_RaumleitRk1";  "FB03: TROVIS 5570 Room Panel in Rk1"_______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+179;    "55xx56xxENU"_____;  "CON-SON";      "FB04_RaumleitRk2";  "FB04: TROVIS 5570 Room Panel in Rk2"_______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+180;    "55xx56xxENU"_____;  "CON-SON";      "FB05_RaumleitRk3";  "FB05: TROVIS 5570 Room Panel in Rk3"_______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+181;    "55xx56xxENU"_____;  "CON-SON";      "FB06_SendenAF1"__;  "FB06: Send value AF1"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+182;    "55xx56xxENU"_____;  "CON-SON";      "FB07_EmpfangAF1"_;  "FB07: Receive value AF1"___________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+183;    "55xx56xxENU"_____;  "CON-SON";      "FB08_SendenAF2"__;  "FB08: Send value AF2"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+184;    "55xx56xxENU"_____;  "CON-SON";      "FB09_EmpfangAF2"_;  "FB09: Receive value AF2"___________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+185;    "55xx56xxENU"_____;  "CON-SON";      "FB10_SendSollRk1";  "FB10: Send flow set point Rk1"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+186;    "55xx56xxENU"_____;  "CON-SON";      "FB11_SendSollRk2";  "FB11: Send flow set point Rk2"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+187;    "55xx56xxENU"_____;  "CON-SON";      "FB12_SendSollRk3";  "FB12: Send flow set point Rk3"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+188;    "55xx56xxENU"_____;  "CON-SON";      "FB13_SendSollTW"_;  "FB13: Send flow set point TW"______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+189;    "55xx56xxENU"_____;  "CON-SON";      "FB14_SendSollMax";  "FB14: Send max. flow set point"____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+190;    "55xx56xxENU"_____;  "CON-SON";      "FB15_Empfang_Bed";  "FB15: Receive demand"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+191;    "55xx56xxENU"_____;  "CON-SON";      "FB16_Stoerung"___;  "FB16: Error via device bus"________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+194;    "55xx56xxENU"_____;  "CON-SON";      "FB19_Anh_Ruel_GW";  "FB19: Raise return flow temp. limit"_______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+195;    "55xx56xxENU"_____;  "CON-SON";      "FB20_SendTW"_____;  "FB20: Send DHW heating active"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+196;    "55xx56xxENU"_____;  "CON-SON";      "FB21_Frg_Rk1Empf";  "Receive release of Rk1"____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+197;    "55xx56xxENU"_____;  "CON-SON";      "FB22_FRg_Rk2Empf";  "Receive release of Rk2"____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+198;    "55xx56xxENU"_____;  "CON-SON";      "FB23_FRg_Rk3Empf";  "Receive release of Rk3"____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+199;    "55xx56xxENU"_____;  "CON-FSR";      "FB01_BE01"_______;  "FB01: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+200;    "55xx56xxENU"_____;  "CON-FSR";      "FB02_BE02"_______;  "FB02: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+201;    "55xx56xxENU"_____;  "CON-FSR";      "FB03_BE03"_______;  "FB03: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+202;    "55xx56xxENU"_____;  "CON-FSR";      "FB04_BE04"_______;  "FB04: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+203;    "55xx56xxENU"_____;  "CON-FSR";      "FB05_BE05"_______;  "FB05: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+204;    "55xx56xxENU"_____;  "CON-FSR";      "FB06_BE06"_______;  "FB06: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+205;    "55xx56xxENU"_____;  "CON-FSR";      "FB07_BE07"_______;  "FB07: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+207;    "55xx56xxENU"_____;  "CON-FSR";      "FB09_BE09"_______;  "FB09: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+208;    "55xx56xxENU"_____;  "CON-FSR";      "FB10_BE10"_______;  "FB10: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+209;    "55xx56xxENU"_____;  "CON-FSR";      "FB11_BE11"_______;  "FB11: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+210;    "55xx56xxENU"_____;  "CON-FSR";      "FB12_BE12"_______;  "FB12: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+211;    "55xx56xxENU"_____;  "CON-FSR";      "FB13_BE13"_______;  "FB13: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+212;    "55xx56xxENU"_____;  "CON-FSR";      "FB14_BE14"_______;  "FB14: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+213;    "55xx56xxENU"_____;  "CON-FSR";      "FB15_BE15"_______;  "FB15: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+214;    "55xx56xxENU"_____;  "CON-FSR";      "FB16_BE16"_______;  "FB16: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+215;    "55xx56xxENU"_____;  "CON-FSR";      "FB17_BE17"_______;  "FB17: 1=>binary input"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+222;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE01"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+223;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE02"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+224;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE03"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+225;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE04"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+226;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE05"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+227;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE06"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+228;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE07"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+230;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE09"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+231;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE10"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+232;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE11"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+233;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE12"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+234;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE13"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+235;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE14"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+236;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE15"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+237;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE16"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+238;    "55xx56xxENU"_____;  "CON-FSR";      "Meldung_BE17"____;  "1=>message at BI=1"________________________________;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+245;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ1_HTNT-Tarif"_;  "Heat meter tariff switchover HT/NT for WMZ1"_______;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+246;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ4_KomStoer"___;  "Communication error, meter bus WMZ4 (CO6, Fb10)"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+247;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ5_KomStoer"___;  "Communication error, meter bus WMZ5 (CO6, Fb10)"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+248;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ6_KomStoer"___;  "Communication error, meter bus WMZ6 (CO6, Fb10)"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+249;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ4_FehlerWMZ"__;  "Error WMZ4 (CO6, Fb10)"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+250;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ5_FehlerWMZ"__;  "Error WMZ5 (CO6, Fb10)"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+251;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ6_FehlerWMZ"__;  "Error WMZ6 (CO6, Fb10)"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+252;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ4-Auslesung"__;  "1 = have WMZ4 read once"___________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+253;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ5-Auslesung"__;  "1 = have WMZ5 read once"___________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+254;    "55xx56xxENU"_____;  "ALG-WMZ";      "WMZ6-Auslesung"__;  "1 = have WMZ6 read once"___________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+255;    "55xx56xxENU"_____;  "ALG-WMZ";      "SummenBegrenzung";  "Lim. of total capacity/flow rate all heat meters"__;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+300;    "55xx56xxENU"_____;  "CON-SON";      "GLT_Stellsig_Rk3";  "Control signal Rk3 controlled by GLT"______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+301;    "55xx56xxENU"_____;  "CON-SON";      "CO9_FB05"________;  "Ext. flow set point correction (Techem/Adapterm)"__;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+302;    "55xx56xxENU"_____;  "CON-SON";      "CO9_FB01"________;   "NI 1000 sensors by SIEMENS"_______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+303;    "55xx56xxENU"_____;  "CON-SON";      "Zykl_Relaisinit"_;  "Cyclic relay initialization"_______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+304;    "55xx56xxENU"_____;  "CON-SON";      "Fliessdruckschal";  "Flow switch"_______________________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+305;    "55xx56xxENU"_____;  "CON-SON";      "Wirks_Stoeraus"__;  "Action of fault alarm output BO13 (CO5, Fb07)"_____;  0;  "FALL-(0)"________;  "STEIG-(1)"_______;  10
+307;    "55xx56xxENU"_____;  "CON-SON";      "Schleichm_bin"___;  "Creep feed rate using binary input"________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+308;    "55xx56xxENU"_____;  "CON-SON";      "CO9_FB08"________;  "Rk1 as feeder circuit"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+309;    "55xx56xxENU"_____;  "CON-SON";      "CO9_FB09"________;  "Modbus write release"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+322;    "55xx56xxENU"_____;  "CON-FSR";      "FB01_BE01_im_FSR";  "FB01: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+323;    "55xx56xxENU"_____;  "CON-FSR";      "FB02_BE02_im_FSR";  "FB02: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+324;    "55xx56xxENU"_____;  "CON-FSR";      "FB03_BE03_im_FSR";  "FB03: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+325;    "55xx56xxENU"_____;  "CON-FSR";      "FB04_BE04_im_FSR";  "FB04: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+326;    "55xx56xxENU"_____;  "CON-FSR";      "FB05_BE05_im_FSR";  "FB05: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+327;    "55xx56xxENU"_____;  "CON-FSR";      "FB06_BE06_im_FSR";  "FB06: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+328;    "55xx56xxENU"_____;  "CON-FSR";      "FB07_BE07_im_FSR";  "FB07: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+330;    "55xx56xxENU"_____;  "CON-FSR";      "FB09_BE09_im_FSR";  "FB09: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+331;    "55xx56xxENU"_____;  "CON-FSR";      "FB10_BE10_im_FSR";  "FB10: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+332;    "55xx56xxENU"_____;  "CON-FSR";      "FB11_BE11_im_FSR";  "FB11: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+333;    "55xx56xxENU"_____;  "CON-FSR";      "FB12_BE12_im_FSR";  "FB12: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+334;    "55xx56xxENU"_____;  "CON-FSR";      "FB13_BE13_im_FSR";  "FB13: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+335;    "55xx56xxENU"_____;  "CON-FSR";      "FB14_BE14_im_FSR";  "FB14: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+336;    "55xx56xxENU"_____;  "CON-FSR";      "FB15_BE15_im_FSR";  "FB15: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+337;    "55xx56xxENU"_____;  "CON-FSR";      "FB16_BE16_im_FSR";  "FB16: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+338;    "55xx56xxENU"_____;  "CON-FSR";      "FB17_BE17_im_FSR";  "FB17: 1=> message in error status register"________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+998;    "55xx56xxENU"_____;  "ALG-BTR";      "Btr_nicht_Auto"__;  "minimum 1 Rk not Automatic"________________________;  1;  "NEIN-(0)"________;  "Ja-(1)"__________;  10
+999;    "55xx56xxENU"_____;  "ALG-BTR";      "BtrS_nicht_Auto"_;  "mininimum 1 Rk not Auto by operating switch"_______;  1;  "NEIN-(0)"________;  "Ja-(1)"__________;  10
+1000;   "55xx56xxENU"_____;  "ALG-BTR";      "Auto_Rk1"________;  "Time-controlled mode Rk1"__________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1001;   "55xx56xxENU"_____;  "ALG-BTR";      "Tagbetrieb_Rk1"__;  "Day mode Rk1"______________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1002;   "55xx56xxENU"_____;  "ALG-BTR";      "Nachtbetrieb_Rk1";  "Night mode Rk1"____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1003;   "55xx56xxENU"_____;  "ALG-BTR";      "Haltebtr_Rk1"____;  "Holding mode Rk1 (with CO1, Fb07=1)"_______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1004;   "55xx56xxENU"_____;  "ALG-BTR";      "Stuetzbtr_Rk1"___;  "Sustaining mode Rk1 (with CO1, Fb07=1)"____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1005;   "55xx56xxENU"_____;  "ALG-BTR";      "Aufheizbtr_Rk1"__;  "Heating-up mode Rk1 (with CO1, Fb07=1)"____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1006;   "55xx56xxENU"_____;  "ALG-BTR";      "Ruecklbeg_Rk1"___;  "Return flow temp. limitation Rk1 active"___________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1007;   "55xx56xxENU"_____;  "ALG-BTR";      "Heizaus_Rk1"_____;  "OT-dependent heating deactivation Rk1 active"______;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1008;   "55xx56xxENU"_____;  "ALG-BTR";      "Standby_Rk1"_____;  "Stand-by mode Rk1"_________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1009;   "55xx56xxENU"_____;  "ALG-BTR";      "Frostschutz_Rk1"_;  "Frost protection mode Rk1"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1025;   "55xx56xxENU"_____;  "CON-RT"_;      "FB01_RF1"________;  "FB01: Room sensor RF1"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1026;   "55xx56xxENU"_____;  "CON-AT"_;      "FB02_AF1"________;  "FB02: Outdoor sensor AF1"__________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1027;   "55xx56xxENU"_____;  "CON-RL"_;      "FB03_RueF1_Rk1"__;  "FB03: Return flow sensor RueF1 Rk1"________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1029;   "55xx56xxENU"_____;  "CON-SON";      "FB05_FBH_Rk1"____;  "FB05: Underfloor heating Rk1"______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1030;   "55xx56xxENU"_____;  "CON-BTR";      "FB06_ATabhVorRk1";  "FB06: Outdoor temp. dependent pre-heating Rk1"_____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1031;   "55xx56xxENU"_____;  "CON-BTR";      "FB07_OptimierRk1";  "FB07: Optimization Rk1"____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1032;   "55xx56xxENU"_____;  "CON-BTR";      "FB08_Adapt_Rk1"__;  "FB08: Adaptation Rk1"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1033;   "55xx56xxENU"_____;  "CON-BTR";      "FB09_KurzztAdRk1";  "FB09: Flash adaptation Rk1"________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1034;   "55xx56xxENU"_____;  "CON-BTR";      "FB10_UP_Managmt"_;  "FB10: Pump mgmt., switching state of BO13 (<V1.30)";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1035;   "55xx56xxENU"_____;  "CON-BTR";      "FB11_4P_HKL_Rk1"_;  "FB11: 4-point characteristic Rk1"__________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1036;   "55xx56xxENU"_____;  "CON-BTR";      "FB12_3Pkt_RegRk1";  "FB12: Control mode 3-step (Rk1) or 0 to 10 V (Y1)"_;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1037;   "55xx56xxENU"_____;  "CON-BTR";      "FB13_Beg_xd_Rk1"_;  "FB13: Lim. of set point deviation, OPEN signal Rk1";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1038;   "55xx56xxENU"_____;  "CON-BTR";      "FB14_Freig_Rk1"__;  "FB14: Release Rk1 at input BI15"___________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1039;   "55xx56xxENU"_____;  "CON-BTR";      "FB15_Bedarf"_____;  "FB15: Demand processing in Rk1"____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1040;   "55xx56xxENU"_____;  "CON-BTR";      "FB16_10V_Bedarf"_;  "FB16: 0-10 V demand processing in Rk1 (t. 17/19)"__;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1041;   "55xx56xxENU"_____;  "CON-BTR";      "FB17_bin_Bedarf"_;  "FB17: Binary demand processing in Rk1 (t. 17/18)"__;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1042;   "55xx56xxENU"_____;  "CON-BTR";      "FB18_maxVL-Soll"_;  "FB18: Request max. flow set point using 0 to 10 V"_;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1043;   "55xx56xxENU"_____;  "CON-SON";      "FB19_VL-SollFolg";  "FB19: Request max. flow set point in sequence"_____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1044;   "55xx56xxENU"_____;  "CON-SON";      "FB20_ExtWaermean";  "FB20: External demand for heat"____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1200;   "55xx56xxENU"_____;  "ALG-BTR";      "Auto_Rk2"________;  "Time-controlled mode Rk2"__________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1201;   "55xx56xxENU"_____;  "ALG-BTR";      "Tagbetrieb_Rk2"__;  "Day mode Rk2"______________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1202;   "55xx56xxENU"_____;  "ALG-BTR";      "Nachtbetrieb_Rk2";  "Night mode Rk2"____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1203;   "55xx56xxENU"_____;  "ALG-BTR";      "Haltebtr_Rk2"____;  "Holding mode Rk2 (with CO2, Fb07=1)"_______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1204;   "55xx56xxENU"_____;  "ALG-BTR";      "Stuetzbtr_Rk2"___;  "Sustaining mode Rk2 (with CO2, Fb07=1)"____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1205;   "55xx56xxENU"_____;  "ALG-BTR";      "Aufheizbtr_Rk2"__;  "Heating-up mode Rk2 (with CO2, Fb07=1)"____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1206;   "55xx56xxENU"_____;  "ALG-BTR";      "Ruecklbeg_Rk2"___;  "Return flow temp. limitation Rk2 active"___________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1207;   "55xx56xxENU"_____;  "ALG-BTR";      "Heizaus_Rk2"_____;  "OT-dependent heating deactivation Rk2 active"______;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1208;   "55xx56xxENU"_____;  "ALG-BTR";      "Standby_Rk2"_____;  "Stand-by mode Rk2"_________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1209;   "55xx56xxENU"_____;  "ALG-BTR";      "Frostschutz_Rk2"_;  "Frost protection mode Rk2"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1225;   "55xx56xxENU"_____;  "CON-RT"_;      "FB01_RF2"________;  "FB01: Room sensor RF2"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1226;   "55xx56xxENU"_____;  "CON-AT"_;      "FB02_AF2"________;  "FB02: Outdoor sensor AF2"__________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1227;   "55xx56xxENU"_____;  "CON-RL"_;      "FB03_RueF2_Rk2"__;  "FB03: Return flow sensor RueF2 Rk2"________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1229;   "55xx56xxENU"_____;  "CON-SON";      "FB05_FBH_Rk2"____;  "FB05: Underfloor heating Rk2"______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1230;   "55xx56xxENU"_____;  "CON-BTR";      "FB06_ATabhVorRk2";  "FB06: Outdoor temp. dependent pre-heating Rk2"_____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1231;   "55xx56xxENU"_____;  "CON-BTR";      "FB07_OptimierRk2";  "FB07: Optimization Rk2"____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1232;   "55xx56xxENU"_____;  "CON-BTR";      "FB08_Adapt_Rk2"__;  "FB08: Adaptation Rk2"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1233;   "55xx56xxENU"_____;  "CON-BTR";      "FB09_KurzztAdRk2";  "FB09: Flash adaptation Rk2"________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1235;   "55xx56xxENU"_____;  "CON-BTR";      "FB11_4P_HKL_Rk2"_;  "FB11: 4-point characteristic Rk2"__________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1236;   "55xx56xxENU"_____;  "CON-BTR";      "FB12_3Pkt_RegRk2";  "FB12: Control mode 3-step (Rk2) or 0 to 10 V (Y2)"_;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1237;   "55xx56xxENU"_____;  "CON-BTR";      "FB13_Beg_xd_Rk2"_;  "FB13: Lim. of set point deviation, OPEN signal Rk2";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1238;   "55xx56xxENU"_____;  "CON-BTR";      "FB14_Freig_Rk2"__;  "FB14: Release Rk2 at input BI16"___________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1400;   "55xx56xxENU"_____;  "ALG-BTR";      "Auto_Rk3"________;  "Time-controlled mode Rk3"__________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1401;   "55xx56xxENU"_____;  "ALG-BTR";      "Tagbetrieb_Rk3"__;  "Day mode Rk3"______________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1402;   "55xx56xxENU"_____;  "ALG-BTR";      "Nachtbetrieb_Rk3";  "Night mode Rk3"____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1403;   "55xx56xxENU"_____;  "ALG-BTR";      "Haltebtr_Rk3"____;  "Holding mode Rk3 (with CO3, Fb07=1)"_______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1404;   "55xx56xxENU"_____;  "ALG-BTR";      "Stuetzbtr_Rk3"___;  "Sustaining mode Rk3 (with CO3, Fb07=1)"____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1405;   "55xx56xxENU"_____;  "ALG-BTR";      "Aufheizbtr_Rk3"__;  "Heating-up mode Rk3 (with CO3, Fb07=1)"____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1406;   "55xx56xxENU"_____;  "ALG-BTR";      "Ruecklbeg_Rk3"___;  "Return flow temp. limitation Rk3 active"___________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1407;   "55xx56xxENU"_____;  "ALG-BTR";      "Heizaus_Rk3"_____;  "OT-dependent heating deactivation Rk3 active"______;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1408;   "55xx56xxENU"_____;  "ALG-BTR";      "Standby_Rk3"_____;  "Stand-by mode Rk3"_________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1409;   "55xx56xxENU"_____;  "ALG-BTR";      "Frostschutz_Rk3"_;  "Frost protection mode Rk3"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1425;   "55xx56xxENU"_____;  "CON-RT"_;      "FB01_RF3"________;  "FB01: Room sensor RF3"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1426;   "55xx56xxENU"_____;  "CON-AT"_;      "FB02_AF2_Rk3"____;  "FB02: Outdoor sensor AF2 (Rk3)"____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1427;   "55xx56xxENU"_____;  "CON-RL"_;      "FB03_RueF3_Rk3"__;  "FB03: Return flow sensor RueF3 Rk3"________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+
+REM CLNr Geraetekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1429;   "55xx56xxENU"_____;  "CON-SON";      "FB05_FBH_Rk3"____;  "FB05: Underfloor heating Rk3"______________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1430;   "55xx56xxENU"_____;  "CON-BTR";      "FB06_ATabhVorRk3";  "FB06: Outdoor temp. dependent pre-heating Rk3"_____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1431;   "55xx56xxENU"_____;  "CON-BTR";      "FB07_OptimierRk3";  "FB07: Optimization Rk3"____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1432;   "55xx56xxENU"_____;  "CON-BTR";      "FB08_Adapt_Rk3"__;  "FB08: Adaptation Rk3"______________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1433;   "55xx56xxENU"_____;  "CON-BTR";      "FB09_KurzztAdRk3";  "FB09: Flash adaptation Rk3"________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1435;   "55xx56xxENU"_____;  "CON-BTR";      "FB11_4P_HKL_Rk3"_;  "FB11: 4-point characteristic Rk3"__________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1436;   "55xx56xxENU"_____;  "CON-BTR";      "FB12_3Pkt_RegRk3";  "FB12: Control mode 3-step (Rk3) or 0 to 10 V (Y3)"_;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1437;   "55xx56xxENU"_____;  "CON-BTR";      "FB13_Beg_xd_Rk3"_;  "FB13: Lim. of set point deviation, OPEN signal Rk3";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1438;   "55xx56xxENU"_____;  "CON-BTR";      "FB14_Freig_Rk3"__;  "FB14: Release Rk3 at input BI17"___________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1800;   "55xx56xxENU"_____;  "ALG-BTR";      "Auto_TW"_________;  "Time-controlled mode DHW"__________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1801;   "55xx56xxENU"_____;  "ALG-BTR";      "Therm_Des_TW"____;  "Thermal disinfection of DHW circuit active"________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1802;   "55xx56xxENU"_____;  "ALG-BTR";      "Vorrang_TW"______;  "Priority mode of DHW circuit active"_______________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1803;   "55xx56xxENU"_____;  "ALG-BTR";      "MaxLadetempbg_TW";  "Max. charging temp. limitation active"_____________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1804;   "55xx56xxENU"_____;  "ALG-BTR";      "Ruecklbeg_TW"____;  "Return flow temp. lim. of DHW circuit active"______;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1805;   "55xx56xxENU"_____;  "ALG-BTR";      "Standby_TW"______;  "Stand-by mode DHW"_________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1806;   "55xx56xxENU"_____;  "ALG-BTR";      "Frostschutz_TW"__;  "Frost protection mode DHW"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1807;   "55xx56xxENU"_____;  "ALG-BTR";      "Zwangslad_TW"____;  "Forced charging of DHW storage tank"_______________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1808;   "55xx56xxENU"_____;  "ALG-BTR";      "Solar_UP_TW"_____;  "Solar circuit circulation pump (heating) active"___;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1809;   "55xx56xxENU"_____;  "ALG-BTR";      "SF2_anstatt_SF1"_;  "Forced charging by switching from SF1 to SF2"______;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1825;   "55xx56xxENU"_____;  "CON-WW"_;      "FB01_SF1"________;  "FB01: Storage tank sensor SF1"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1826;   "55xx56xxENU"_____;  "CON-WW"_;      "FB02_SF2"________;  "FB02: Storage tank sensor SF2"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1827;   "55xx56xxENU"_____;  "CON-WW"_;      "FB03_RueF2"______;  "FB03: Return flow sensor RueF2"____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1829;   "55xx56xxENU"_____;  "CON-WW"_;      "FB05_VF4"________;  "FB05: Flow sensor VF4"_____________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1830;   "55xx56xxENU"_____;  "CON-WW"_;      "FB06_Parallel_TW";  "FB06: Parallel pump operation"_____________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1831;   "55xx56xxENU"_____;  "CON-WW"_;      "FB07_Zwischenhzg";  "FB07: Intermediate heating mode"___________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1832;   "55xx56xxENU"_____;  "CON-WW"_;      "FB08_Vorrang_Inv";  "FB08: Priority through reverse control"____________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1833;   "55xx56xxENU"_____;  "CON-WW"_;      "FB09_Vorrang_Abs";  "FB09: Priority through set-back operation"_________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1834;   "55xx56xxENU"_____;  "CON-WW"_;      "FB10_ZP_in_WT"___;  "FB10: ZP integrated into heat exchanger"___________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1835;   "55xx56xxENU"_____;  "CON-WW"_;      "FB11_ZPbeimLaden";  "FB11: ZP operation during storage tank charging"___;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1836;   "55xx56xxENU"_____;  "CON-WW"_;      "FB12_3Pkt_Reg_TW";  "FB12: Control mode 3-step (Rk2)/0 to 10 V (Y2) DHW";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1837;   "55xx56xxENU"_____;  "CON-WW"_;      "FB13_Beg_Regdiff";  "FB13: Lim. of set point deviation, OPEN signal DHW";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1838;   "55xx56xxENU"_____;  "CON-WW"_;      "FB14_ThermDes"___;  "FB14: Thermal disinfection"________________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1839;   "55xx56xxENU"_____;  "CON-WW"_;      "FB15_SLP_ab_Ruel";  "FB15: SLP ON depending on return flow temperature"_;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1840;   "55xx56xxENU"_____;  "CON-WW"_;      "FB16_Bed_Prio"___;  "FB16: Priority for external demand"________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1841;   "55xx56xxENU"_____;  "CON-WW"_;      "FB17_BA12_Desinf";  "FB17: BO12 ON during thermal disinfection"_________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1842;   "55xx56xxENU"_____;  "CON-WW"_;      "FB18_BA12_TWAnf"_;  "FB18: BA12 ON during DHW request"__________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1843;   "55xx56xxENU"_____;  "CON-WW"_;      "FB19_ZP_SFumsch"_;  "FB19: Time-contr. switchover of storage tank sens.";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1844;   "55xx56xxENU"_____;  "CON-WW"_;      "FB20_Durchgngreg";  "FB20: DHW circuit add. controlled by globe valve"__;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1845;   "55xx56xxENU"_____;  "CON-WW"_;      "FB21_Drehz_Ladep";  "FB21: Speed control of charging pump"______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10

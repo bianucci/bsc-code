@@ -1,0 +1,76 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "6495-2"__________;  "ALG-ERO";      "Sammelstörung"___;  "Störung/Timeout AIx,SPC,Kommunikat./Int.Temp.-Fühl";  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+2;      "6495-2"__________;  "ALG-ERO";      "AI1_Unterschreit";  "AI1 Messbereichs-Unterschreitung"__________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+3;      "6495-2"__________;  "ALG-ERO";      "AI1_Überschreit"_;  "AI1 Messbereichs-Überschreitung"___________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+4;      "6495-2"__________;  "ALG-ERO";      "AI2_Unterschreit";  "AI2 Messbereichs-Unterschreitung"__________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+5;      "6495-2"__________;  "ALG-ERO";      "AI2_Überschreit"_;  "AI2 Messbereichs-Überschreitung"___________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+6;      "6495-2"__________;  "ALG-ERO";      "AI3_Unterschreit";  "AI3 Messbereichs-Unterschreitung"__________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+7;      "6495-2"__________;  "ALG-ERO";      "AI3_Überschreit"_;  "AI3 Messbereichs-Überschreitung"___________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+8;      "6495-2"__________;  "ALG-ERO";      "AI4_Unterschreit";  "AI4 Messbereichs-Unterschreitung"__________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+9;      "6495-2"__________;  "ALG-ERO";      "AI4_Überschreit"_;  "AI4 Messbereichs-Überschreitung"___________________;  1;  "OK (0)"__________;  "Störung! (1)"____;  2
+
+12;     "6495-2"__________;  "ALG-BTR";      "AO1_Stellw_Rampe";  "AO1 Stellwertrampe"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+13;     "6495-2"__________;  "ALG-BTR";      "AO2_Stellw_Rampe";  "AO2 Stellwertrampe"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+14;     "6495-2"__________;  "ALG-BTR";      "AO3_Stellw_Rampe";  "AO3 Stellwertrampe"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+15;     "6495-2"__________;  "ALG-BTR";      "SO1_Stellw_Rampe";  "SO1 Stellwertrampe"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+16;     "6495-2"__________;  "ALG-BTR";      "SO2_Stellw_Rampe";  "SO2 Stellwertrampe"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+17;     "6495-2"__________;  "ALG-BTR";      "AO1_Geschw_Begr"_;  "AO1 Stellgeschwindigkeitsbegrenzung"_______________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+18;     "6495-2"__________;  "ALG-BTR";      "AO2_Geschw_Begr"_;  "AO2 Stellgeschwindigkeitsbegrenzung"_______________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+19;     "6495-2"__________;  "ALG-BTR";      "AO3_Geschw_Begr"_;  "AO3 Stellgeschwindigkeitsbegrenzung"_______________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+20;     "6495-2"__________;  "ALG-BTR";      "AO1_Konst_AO1_K1";  "AO1 Konstanter Stellwert AO1.K1 (Auto)"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+21;     "6495-2"__________;  "ALG-BTR";      "AO2_Konst_AO2_K1";  "AO2 Konstanter Stellwert AO2.K1 (Auto)"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+22;     "6495-2"__________;  "ALG-BTR";      "AO3_Konst_AO3_K1";  "AO3 Konstanter Stellwert AO3.K1 (Auto)"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+23;     "6495-2"__________;  "ALG-BTR";      "SO1_Konst_SO1_K1";  "SO1 Konstanter Stellwert SO1.K1 (Auto)"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+24;     "6495-2"__________;  "ALG-BTR";      "SO2_Konst_SO2_K1";  "SO2 Konstanter Stellwert SO2.K1 (Auto)"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+25;     "6495-2"__________;  "ALG-BTR";      "AO1_Konst_AO1_K2";  "AO1 Konstanter Stellwert AO1.K2 (Hand/Auto)"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+26;     "6495-2"__________;  "ALG-BTR";      "AO2_Konst_AO2_K2";  "AO2 Konstanter Stellwert AO2.K2 (Hand/Auto)"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+27;     "6495-2"__________;  "ALG-BTR";      "AO3_Konst_AO3_K2";  "AO3 Konstanter Stellwert AO3.K2 (Hand/Auto)"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+28;     "6495-2"__________;  "ALG-BTR";      "SO1_Konst_SO1_K2";  "SO1 Konstanter Stellwert SO1.K2 (Hand/Auto)"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+29;     "6495-2"__________;  "ALG-BTR";      "SO2_Konst_SO2_K2";  "SO2 Konstanter Stellwert SO2.K2 (Hand/Auto)"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+
+31;     "6495-2"__________;  "ALG-BTR";      "BegrenzReg_aktiv";  "Begrenzungsregler [2] (Regelungsart M.1-4)"________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+
+40;     "6495-2"__________;  "BEA-BE"_;      "DI1"_____________;  "Digitaleingang DI1"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+41;     "6495-2"__________;  "BEA-BE"_;      "DI2"_____________;  "Digitaleingang DI2"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+42;     "6495-2"__________;  "BEA-BE"_;      "DI3"_____________;  "Digitaleingang DI3"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+43;     "6495-2"__________;  "BEA-BE"_;      "DI4"_____________;  "Digitaleingang DI4"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+44;     "6495-2"__________;  "BEA-BA"_;      "DO1"_____________;  "Digitalausgang DO1"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+45;     "6495-2"__________;  "BEA-BA"_;      "DO2"_____________;  "Digitalausgang DO2"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+46;     "6495-2"__________;  "BEA-BA"_;      "DO3"_____________;  "Digitalausgang DO3"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+47;     "6495-2"__________;  "BEA-BA"_;      "DO4"_____________;  "Digitalausgang DO4"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+48;     "6495-2"__________;  "BEA-BA"_;      "DO5"_____________;  "Digitalausgang DO5"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+49;     "6495-2"__________;  "BEA-BA"_;      "DO6"_____________;  "Digitalausgang DO6"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+50;     "6495-2"__________;  "BEA-BA"_;      "DO7"_____________;  "Digitalausgang DO7"________________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+
+60;     "6495-2"__________;  "ALG-BTR";      "C1_Hand_Auto"____;  "Regler [1]: Hand-/Automatikbetrieb"________________;  1;  "Automatik (0)"___;  "Hand (1)"________;  2
+61;     "6495-2"__________;  "ALG-BTR";      "C1_Sollw_int_ext";  "Regler [1]: Sollwert intern/extern"________________;  1;  "extern (0)"______;  "intern (1)"______;  2
+62;     "6495-2"__________;  "ALG-BTR";      "C1_Kaskade"______;  "Regler [1]: Kaskade öffnen/schließen"______________;  1;  "geschlossen (0)"_;  "geöffnet (1)"____;  2
+63;     "6495-2"__________;  "ALG-BTR";      "C1_StellNachführ";  "Regler [1]: Stellungsnachführung"__________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+64;     "6495-2"__________;  "ALG-BTR";      "C1_SPC_Timeout"__;  "Regler [1]: Signalstörung SPC (Timeout)"___________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+65;     "6495-2"__________;  "ALG-BTR";      "C1_Sollw_anheb"__;  "Regler [1]: Sollwert mit Konstante anheben/absenk.";  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+67;     "6495-2"__________;  "ALG-BTR";      "C1_Sollw_Rampe"__;  "Regler [1]: Sollwertrampe läuft"___________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+68;     "6495-2"__________;  "ALG-BTR";      "C1_SollwRamp_anh";  "Regler [1]: Sollwertrampe anhalten"________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+69;     "6495-2"__________;  "ALG-BTR";      "C1_Istwert_Track";  "Regler [1]: Istwert-Tracking (siehe C.2.3.1)"______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+70;     "6495-2"__________;  "ALG-BTR";      "C1_Regeldiff_inv";  "Regler [1]: Regeldifferenz invertieren"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+71;     "6495-2"__________;  "ALG-BTR";      "C1_Strukturumsch";  "Regler [1]: Strukturumschaltung (I-Anteil aktiv)"__;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+72;     "6495-2"__________;  "ALG-BTR";      "C1_Arbeitspkt_1"_;  "Regler [1]: Arbeitspunkt 1 mit DI"_________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+73;     "6495-2"__________;  "ALG-BTR";      "C1_Arbeitspkt_2"_;  "Regler [1]: Arbeitspunkt 2 mit DI"_________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+74;     "6495-2"__________;  "ALG-BTR";      "C1_YPID_anhalten";  "Regler [1]: Stellsignal YPID anhalten"_____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+75;     "6495-2"__________;  "ALG-BTR";      "C1_Istwert_anheb";  "Regler [1]: Istwert anheben/absenken mit DI"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+
+100;    "6495-2"__________;  "ALG-BTR";      "C2_Hand_Auto"____;  "Regler [2]: Hand-/Automatikbetrieb"________________;  1;  "Automatik (0)"___;  "Hand (1)"________;  2
+101;    "6495-2"__________;  "ALG-BTR";      "C2_Sollw_int_ext";  "Regler [2]: Sollwert intern/extern"________________;  1;  "extern (0)"______;  "intern (1)"______;  2
+103;    "6495-2"__________;  "ALG-BTR";      "C2_StellNachführ";  "Regler [2]: Stellungsnachführung"__________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+104;    "6495-2"__________;  "ALG-BTR";      "C2_SPC_Timeout"__;  "Regler [2]: Signalstörung SPC (Timeout)"___________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+106;    "6495-2"__________;  "ALG-BTR";      "C2_Sollw_anheb"__;  "Regler [2]: Sollwert mit Konstante anheben/absenk.";  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+107;    "6495-2"__________;  "ALG-BTR";      "C2_Sollw_Rampe"__;  "Regler [2]: Sollwertrampe läuft"___________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+108;    "6495-2"__________;  "ALG-BTR";      "C2_SollwRamp_anh";  "Regler [2]: Sollwertrampe anhalten"________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+109;    "6495-2"__________;  "ALG-BTR";      "C2_Istwert_Track";  "Regler [2]: Istwert-Tracking (siehe C.2.3.1)"______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+110;    "6495-2"__________;  "ALG-BTR";      "C2_Regeldiff_inv";  "Regler [2]: Regeldifferenz invertieren"____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+111;    "6495-2"__________;  "ALG-BTR";      "C2_Strukturumsch";  "Regler [1]: Strukturumschaltung (I-Anteil aktiv)"__;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+112;    "6495-2"__________;  "ALG-BTR";      "C2_Arbeitspkt_1"_;  "Regler [2]: Arbeitspunkt 1 mit DI"_________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+113;    "6495-2"__________;  "ALG-BTR";      "C2_Arbeitspkt_2"_;  "Regler [2]: Arbeitspunkt 2 mit DI"_________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+114;    "6495-2"__________;  "ALG-BTR";      "C2_YPID_anhalten";  "Regler [2]: Stellsignal YPID anhalten"_____________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2
+115;    "6495-2"__________;  "ALG-BTR";      "C2_Istwert_anheb";  "Regler [2]: Istwert anheben/absenken mit DI"_______;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  2

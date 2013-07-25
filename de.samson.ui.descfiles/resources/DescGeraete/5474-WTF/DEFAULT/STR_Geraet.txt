@@ -1,0 +1,4 @@
+
+REM Gerätekennung     Gerätetyp           IdxAdr     IndexName          InCSV  MaskCSVFilterGruppe SingelUse
+
+"5474-WTF"________;  "5474-WTF"________;  244;      "IND74"__________;  1;     9;                  0

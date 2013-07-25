@@ -1,0 +1,5 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         BerAnfang    BerEnde        WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "5405-NTC"________;  "ZP_RK1"__________;  0.000;       0.000;         1;      16;        16;          0;            0;          24;          0
+2;      "5405-NTC"________;  "ZP_RK2"__________;  0.000;       0.000;         1;      16;        16;          0;            0;          24;          0

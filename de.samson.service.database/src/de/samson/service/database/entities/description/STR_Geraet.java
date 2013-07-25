@@ -1,4 +1,5 @@
 package de.samson.service.database.entities.description;
+
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -10,9 +11,9 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import de.samson.service.database.entities.config.ReglerConfig;
-
 
 @Entity
 @Table(name = "description.str_geraet")
@@ -48,6 +49,9 @@ public class STR_Geraet {
 	int revision;
 
 	String singleUse;
+
+	@Transient
+	private List<WaermeMengenZähler> wmzList;
 
 	public STR_Geraet() {
 	}
@@ -148,4 +152,11 @@ public class STR_Geraet {
 		this.singleUse = singleUse;
 	}
 
+	public void setAllWMZ(List<WaermeMengenZähler> parsedJSONFile) {
+		this.wmzList = parsedJSONFile;
+	}
+
+	public List<WaermeMengenZähler> getWmzList() {
+		return wmzList;
+	}
 }

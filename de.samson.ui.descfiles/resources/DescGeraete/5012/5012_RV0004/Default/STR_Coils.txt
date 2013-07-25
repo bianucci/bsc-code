@@ -1,0 +1,22 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+10;     "5012"____________;  "ALG-WMZ";      "WMZ_KomStör_#1"__;  "Kommunikationsstörung Zählerbus WMZ #1 (CO6, Fb10)";  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+11;     "5012"____________;  "ALG-WMZ";      "WMZ_KomStör_#2"__;  "Kommunikationsstörung Zählerbus WMZ #2 (CO6, Fb10)";  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+12;     "5012"____________;  "ALG-WMZ";      "WMZ_KomStör_#3"__;  "Kommunikationsstörung Zählerbus WMZ #3 (CO6, Fb10)";  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+13;     "5012"____________;  "ALG-WMZ";      "WMZ_FehlerWMZ_#1";  "Fehler WMZ #1 (CO6, Fb10)"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+14;     "5012"____________;  "ALG-WMZ";      "WMZ_FehlerWMZ_#2";  "Fehler WMZ #2 (CO6, Fb10)"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+15;     "5012"____________;  "ALG-WMZ";      "WMZ_FehlerWMZ_#3";  "Fehler WMZ #3 (CO6, Fb10)"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+16;     "5012"____________;  "ALG-WMZ";      "#1WMZ-Auslesung"_;  "1 = 1xAuslesung WMZ #1 veranlassen"________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+17;     "5012"____________;  "ALG-WMZ";      "#2WMZ-Auslesung"_;  "1 = 1xAuslesung WMZ #2 veranlassen"________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+18;     "5012"____________;  "ALG-WMZ";      "#3WMZ-Auslesung"_;  "1 = 1xAuslesung WMZ #3 veranlassen"________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+246;    "5012"____________;  "ALG-WMZ";      "WMZ_KomStör_#4"__;  "Kommunikationsstörung Zählerbus WMZ #4 (CO6, Fb10)";  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+247;    "5012"____________;  "ALG-WMZ";      "WMZ_KomStör_#5"__;  "Kommunikationsstörung Zählerbus WMZ #5 (CO6, Fb10)";  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+248;    "5012"____________;  "ALG-WMZ";      "WMZ_KomStör_#6"__;  "Kommunikationsstörung Zählerbus WMZ #6 (CO6, Fb10)";  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+249;    "5012"____________;  "ALG-WMZ";      "WMZ_FehlerWMZ_#4";  "Fehler WMZ #4 (CO6, Fb10)"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+250;    "5012"____________;  "ALG-WMZ";      "WMZ_FehlerWMZ_#5";  "Fehler WMZ #5 (CO6, Fb10)"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+251;    "5012"____________;  "ALG-WMZ";      "WMZ_FehlerWMZ_#6";  "Fehler WMZ #6 (CO6, Fb10)"_________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+252;    "5012"____________;  "ALG-WMZ";      "#4WMZ-Auslesung"_;  "1 = 1xAuslesung WMZ #4 veranlassen"________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+253;    "5012"____________;  "ALG-WMZ";      "#5WMZ-Auslesung"_;  "1 = 1xAuslesung WMZ #5 veranlassen"________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+254;    "5012"____________;  "ALG-WMZ";      "#6WMZ-Auslesung"_;  "1 = 1xAuslesung WMZ #6 veranlassen"________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+255;    "5012"____________;  "ALG-WMZ";      "summarische_Begr";  "1 = P und V' aller WMZ_Adr!=0 werden addiert f. B.";  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10

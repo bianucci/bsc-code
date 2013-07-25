@@ -1,0 +1,5 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"6412/42"_________;  1;           66;        1
+"6412/42"_________;  10001;       10008;     3

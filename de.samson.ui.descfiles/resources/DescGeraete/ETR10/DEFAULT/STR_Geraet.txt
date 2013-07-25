@@ -1,0 +1,4 @@
+
+REM Gerätekennung     Gerätetyp           IdxAdr     IndexName          InCSV  MaskCSVFilterGruppe SingelUse
+
+"ETR10"___________;  "ETR10"___________;    0;      "IND_ETR10"______;  1;     9;                  0

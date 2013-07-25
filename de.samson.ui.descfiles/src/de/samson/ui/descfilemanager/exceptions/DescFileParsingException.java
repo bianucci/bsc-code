@@ -47,4 +47,9 @@ public class DescFileParsingException extends Exception {
 
 		return message;
 	}
+	
+	@Override
+	public void printStackTrace() {
+		System.err.println(getMessage());
+	}
 }

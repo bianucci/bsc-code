@@ -1,0 +1,120 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "5477"____________;  "ALG-BTR";      "Sammelstörung"___;  "Sammelstörung"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  42
+2;      "5477"____________;  "ALG-BTR";      "Dateneing_aktiv"_;  "Programmierung aktiv"______________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+3;      "5477"____________;  "ALG-BTR";      "Dateneing_erfolg";  "Programmierung stattgefunden"______________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+4;      "5477"____________;  "ALG-SON";      "Sammel-Ebenenbit";  "CL041..46: Sammel-Ebenenbit"_______________________;  0;  "GLT-(0)"_________;  "AUTARK"__________;  10
+5;      "5477"____________;  "ALG-BTR";      "Status_Handbetr"_;  "Status Hand"_______________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+10;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE01"__;  "BE 1"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+11;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE02"__;  "BE 2"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+12;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE03"__;  "BE 3"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+13;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE04"__;  "BE 4"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+14;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE05"__;  "BE 5"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+15;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE06"__;  "BE 6"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+16;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE07"__;  "BE 7"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+17;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE08"__;  "BE 8"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+18;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE09"__;  "BE 9"______________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+19;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE10"__;  "BE 10"_____________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+20;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE11"__;  "BE 11"_____________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+21;     "5477"____________;  "BEA-BE"_;      "Binäreing_BE12"__;  "BE 12"_____________________________________________;  1;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+26;     "5477"____________;  "BEA-BA"_;      "BA1_UP_Heizreg"__;  "CL050: BA 1 UP Heizregister"_______________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+27;     "5477"____________;  "BEA-BA"_;      "BA2_VentStufe1"__;  "CL051: BA 2 Ventilator_Stufe 1"____________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+28;     "5477"____________;  "BEA-BA"_;      "BA3_VentStufe2"__;  "CL052: BA 3 Ventilator_Stufe 2"____________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+29;     "5477"____________;  "BEA-BA"_;      "Binärausgang_BA4";  "CL053: BA 4"_______________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+30;     "5477"____________;  "BEA-BA"_;      "Binärausgang_BA5";  "CL054: BA 5"_______________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+31;     "5477"____________;  "ALG-BTR";      "Zeitabh_Betrieb"_;  "Zeitabhängiger Betrieb"____________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+32;     "5477"____________;  "ALG-BTR";      "Nennbetrieb"_____;  "Nutzungsbetrieb"___________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+33;     "5477"____________;  "ALG-BTR";      "Nichtnutzung"____;  "Nichtnutzungsbetrieb"______________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+34;     "5477"____________;  "ALG-BTR";      "Nachtkühlbetrieb";  "Nachtkühlbetrieb"__________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+35;     "5477"____________;  "ALG-BTR";      "Stützbetrieb"____;  "Stützbetrieb"______________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+36;     "5477"____________;  "ALG-BTR";      "Anfahrbetrieb"___;  "Anfahrbetrieb"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+37;     "5477"____________;  "ALG-BTR";      "StillstandsRegel";  "Stillstandsregelung"_______________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+38;     "5477"____________;  "ALG-BTR";      "RücklauftempBegr";  "Rücklauftemperaturbegrenzung"______________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+39;     "5477"____________;  "ALG-BTR";      "Sommerabschalt"__;  "Sommerabschaltung"_________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+40;     "5477"____________;  "ALG-BTR";      "MiluftSommerb"___;  "Sommerbetrieb"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+41;     "5477"____________;  "EBN-ZLU";      "EBN_ZuluTempSoll";  "HR041: Ebene Zulufttemperatursollwert"_____________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+42;     "5477"____________;  "EBN-ALU";      "EBN_AbluTempSoll";  "HR042: Ebene Ablufttemperatursollwert"_____________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+43;     "5477"____________;  "EBN-RT"_;      "EBN_RaumTempSoll";  "HR043: Ebene Raumtemperatursollwert"_______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+44;     "5477"____________;  "EBN-RL"_;      "EBN_RückltempMax";  "HR044: Ebene Rücklauftemperaturbegrenzung Max"_____;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+45;     "5477"____________;  "EBN-ZLU";      "EBN_ZuluFeuSoll"_;  "HR046: Ebene Zuluftfeuchtesollwert"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+46;     "5477"____________;  "EBN-ALU";      "EBN_Ab-RaFeuSo"__;  "HR047: Ebene Abluft-/Raumfeuchtesollwert"__________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+47;     "5477"____________;  "EBN-ZLU";      "EBN_LuftqualSoll";  "HR048: Ebene Luftqualitätssollwert"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+48;     "5477"____________;  "EBN-AT"_;      "EBN_Außentemp"___;  "HR003: Ebene Außentemperatur"______________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+49;     "5477"____________;  "EBN-SON";      "EBN_VentilatorSt";  "HR049: Ebene Ventilatorsteuerung"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+50;     "5477"____________;  "EBN-BPU";      "EBN_BA1_UP-Heizr";  "CL026: Ebene BA 1 UP Heizregister"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+51;     "5477"____________;  "EBN-BST";      "EBN_BA2_VentSt1"_;  "CL027: Ebene BA 2 Ventilator Stufe 1"______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+52;     "5477"____________;  "EBN-BST";      "EBN_BA3_VentSt2"_;  "CL028: Ebene BA 3 Ventilator Stufe 2"______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+53;     "5477"____________;  "EBN-BA"_;      "EBN_BA4"_________;  "CL029: Ebene BA 4"_________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+54;     "5477"____________;  "EBN-BA"_;      "EBN_BA5"_________;  "CL030: Ebene BA 5"_________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+60;     "5477"____________;  "EBN-AST";      "EBN_Y1"__________;  "HR050: Ebene Y1"___________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+61;     "5477"____________;  "EBN-AST";      "EBN_Y2"__________;  "HR051: Ebene Y2"___________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+62;     "5477"____________;  "EBN-AST";      "EBN_Y3"__________;  "HR052: Ebene Y3"___________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+63;     "5477"____________;  "EBN-AST";      "EBN_Y4"__________;  "HR053: Ebene AA"___________________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+64;     "5477"____________;  "EBN-BTR";      "EBN_BetrArt"_____;  "HR039: Ebene Betriebsschalter"_____________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+66;     "5477"____________;  "CON-ZLU";      "FB01_Zulutemp_F1";  "FB 01, Zulufttemperaturfühler"_____________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+67;     "5477"____________;  "CON-ALU";      "FB02_Ablutemp_F2";  "FB 02, Ablufttemperaturfühler"_____________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+68;     "5477"____________;  "CON-AT"_;      "FB03_Außentem_F3";  "FB 03, Außentemperaturfühler"______________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+69;     "5477"____________;  "CON-RL"_;      "FB04_Rücktemp_F4";  "FB 04, Rücklauftemperaturfühler"___________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+70;     "5477"____________;  "CON-RT"_;      "FB05_Raumtemp_F5";  "FB 05, Raumtemperaturfühler"_______________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+71;     "5477"____________;  "CON-SON";      "FB06_Fühler_F6"__;  "FB 06, F6"_________________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+72;     "5477"____________;  "CON-SON";      "FB07_Fühler_F7"__;  "FB 07, F7"_________________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+73;     "5477"____________;  "CON-SON";      "FB08_Ferngeb_F8"_;  "FB 08, Fernverstellung Temperatursollwert"_________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+74;     "5477"____________;  "CON-SON";      "FB09_Fernver_F9"_;  "FB 09, F9"_________________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+75;     "5477"____________;  "CON-BTR";      "FB10_Nachtkühlg"_;  "FB 10, Freie Nachtkühlung"_________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+76;     "5477"____________;  "CON-SON";      "FB11_Ventila_2St";  "FB 11, 2-stufige Ventilatoren"_____________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+77;     "5477"____________;  "CON-SON";      "FB12_BA4_gem_Y3"_;  "FB 12, BA 4 in Abhängigkeit von Y3"________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+78;     "5477"____________;  "CON-BTR";      "FB13_FernEinAus"_;  "FB 13, Anlage ein über BE 1"_______________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+79;     "5477"____________;  "CON-SON";      "FB14_VentRü_BE1"_;  "FB 14, Ventilatorbetriebsmeldung über BE 2"________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+80;     "5477"____________;  "CON-BTR";      "FB15_Frost_BE3"__;  "FB 15, Frostschutz über BE 3"______________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+81;     "5477"____________;  "CON-BTR";      "FB16_AutSommZeit";  "FB 16, Automatische Sommerzeitumschaltung"_________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+82;     "5477"____________;  "CON-SON";      "FB17_PTC--Pt1000";  "FB 17, Pt1000-Fühler"______________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+83;     "5477"____________;  "CON-SON";      "FB18_AE1---AE4"__;  "FB 18, AE 1...AE 4"________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+84;     "5477"____________;  "CON-SON";      "FB19_FernVent2St";  "FB 19, Ventilatorstufe 2 über BE 4 bzw. BE 7"______;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+85;     "5477"____________;  "CON-BTR";      "FB20_ExtBedarf"__;  "FB 20, Externe Bedarfsanforderung"_________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+86;     "5477"____________;  "CON-SON";      "FB21_Wirkrich_Y1";  "FB 21, Wirkrichtung Y1"____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+87;     "5477"____________;  "CON-SON";      "FB22_Wirkrich_Y2";  "FB 22, Wirkrichtung Y2"____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+88;     "5477"____________;  "CON-SON";      "FB23_Wirkrich_Y3";  "FB 23, Wirkrichtung Y3"____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+89;     "5477"____________;  "CON-SON";      "FB24_Wirkr_Lqual";  "FB 24, Wirkrichtung L"_____________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+90;     "5477"____________;  "CON-FSR";      "FB25_BE1_im-FSR"_;  "FB 25, BE 1 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+91;     "5477"____________;  "CON-FSR";      "FB26_BE2_im-FSR"_;  "FB 26, BE 2 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+92;     "5477"____________;  "CON-FSR";      "FB27_BE3_im-FSR"_;  "FB 27, BE 3 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+93;     "5477"____________;  "CON-FSR";      "FB28_BE4_im-FSR"_;  "FB 28, BE 4 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+94;     "5477"____________;  "CON-FSR";      "FB29_BE5_im-FSR"_;  "FB 29, BE 5 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+95;     "5477"____________;  "CON-FSR";      "FB30_BE6_im-FSR"_;  "FB 30, BE 6 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+96;     "5477"____________;  "CON-FSR";      "FB31_BE7_im-FSR"_;  "FB 31, BE 7 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+97;     "5477"____________;  "CON-FSR";      "FB32_BE8_im-FSR"_;  "FB 32, BE 8 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+98;     "5477"____________;  "CON-FSR";      "FB33_BE9_im-FSR"_;  "FB 33, BE 9 im Fehlerstatusregister"_______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+99;     "5477"____________;  "CON-FSR";      "FB34_BE10_im-FSR";  "FB 34, BE 10 im Fehlerstatusregister"______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+100;    "5477"____________;  "CON-FSR";      "FB35_BE11_im-FSR";  "FB 35, BE 11 im Fehlerstatusregister"______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+101;    "5477"____________;  "CON-FSR";      "FB36_BE12_im-FSR";  "FB 36, BE 12 im Fehlerstatusregister"______________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+102;    "5477"____________;  "CON-SON";      "FB37_Verriegeln"_;  "FB 37, Verriegelung von Einstellungen"_____________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+103;    "5477"____________;  "CON-SON";      "FB38_BA5_gem_Y1"_;  "FB 38, BA 5 in Abhängigkeit von Y1"________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+109;    "5477"____________;  "CON-MOD";      "FB44_ModemFunktn";  "FB 44, Modembetrieb"_______________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+110;    "5477"____________;  "CON-MOD";      "FB45_Störanwahl"_;  "FB 45, Modbus Störanwahl"__________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+111;    "5477"____________;  "CON-MOD";      "FB46_Altern_Ruf"_;  "FB 46, Alternative Rufnummer"______________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+112;    "5477"____________;  "CON-MOD";      "FB47_Sperr_Modem";  "FB 47, Sperrung der Modemanwahl"___________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+138;    "5477"____________;  "ALG-BTR";      "SEQ-_Mi-At-_Betr";  "SEQ-Betr. bzw. Mi o. At-Betr., mit o. ohneF7"______;  0;  "Mi--At-(0)"______;  "SEQ-(1)"_________;  10
+139;    "5477"____________;  "BEA-BE"_;      "BE4--BE7"________;  "bE4 oder bE7, mit FB 19=ein"_______________________;  0;  "BE4-(0)"_________;  "BE7-(1)"_________;  10
+140;    "5477"____________;  "BEA-BE"_;      "St2_BA2_BA3"_____;  "Stufe2->BA2=aus,BA3=ein o. Stufe2->BA2=ein,..."____;  0;  "BE4-(0)"_________;  "BE7-(1)"_________;  10
+146;    "5477"____________;  "CON-FSR";      "Flanke_BE1_st-fa";  "Flanke BE 1 steigend / fallend, mit FB 25=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+147;    "5477"____________;  "CON-FSR";      "Flanke_BE2_st-fa";  "Flanke BE 2 steigend / fallend, mit FB 26=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+148;    "5477"____________;  "CON-FSR";      "Flanke_BE3_st-fa";  "Flanke BE 3 steigend / fallend, mit FB 27=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+149;    "5477"____________;  "CON-FSR";      "Flanke_BE4_st-fa";  "Flanke BE 4 steigend / fallend, mit FB 28=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+150;    "5477"____________;  "CON-FSR";      "Flanke_BE5_st-fa";  "Flanke BE 5 steigend / fallend, mit FB 29=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+151;    "5477"____________;  "CON-FSR";      "Flanke_BE6_st-fa";  "Flanke BE 6 steigend / fallend, mit FB 30=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+152;    "5477"____________;  "CON-FSR";      "Flanke_BE7_st-fa";  "Flanke BE 7 steigend / fallend, mit FB 31=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+153;    "5477"____________;  "CON-FSR";      "Flanke_BE8_st-fa";  "Flanke BE 8 steigend / fallend, mit FB 32=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+154;    "5477"____________;  "CON-FSR";      "Flanke_BE9_st-fa";  "Flanke BE 9 steigend / fallend, mit FB 33=ein"_____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+155;    "5477"____________;  "CON-FSR";      "Flanke_BE10_st-f";  "Flanke BE 10 steigend / fallend, mit FB 34=ein"____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+156;    "5477"____________;  "CON-FSR";      "Flanke_BE11_st-f";  "Flanke BE 11 steigend / fallend, mit FB 35=ein"____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10
+157;    "5477"____________;  "CON-FSR";      "Flanke_BE12_st-f";  "Flanke BE 12 steigend / fallend, mit FB 36=ein"____;  0;  "STEIG-(0)"_______;  "FALLEND-(1)"_____;  10

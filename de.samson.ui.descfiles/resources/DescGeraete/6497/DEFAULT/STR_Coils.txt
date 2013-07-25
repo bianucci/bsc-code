@@ -1,0 +1,17 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "6497"____________;  "ALG-BTR";      "Sammelstörung"___;  "Sammelstörung"_____________________________________;  1;  "0=keine"_________;  "1=Aktiv"_________;  34
+2;      "6497"____________;  "ALG-BTR";      "Stellgröße_aktiv";  "Stellgröße aktiv"__________________________________;  1;  "0=Inaktiv"_______;  "1=Aktiv"_________;  2
+3;      "6497"____________;  "ALG-BTR";      "Parametr_aktiv"__;  "Parametrierung aktiv"______________________________;  1;  "0=Inaktiv"_______;  "1=Aktiv"_________;  2
+4;      "6497"____________;  "ALG-BTR";      "Konfig_aktiv"____;  "Konfigurierung aktiv"______________________________;  1;  "0=Inaktiv"_______;  "1=Aktiv"_________;  2
+5;      "6497"____________;  "ALG-BTR";      "GW_Schaltausg-Y1";  "Grenzwert / Schaltausgang Y1"______________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+6;      "6497"____________;  "ALG-BTR";      "GW_Schaltausg-Y2";  "Grenzwert / Schatausgang Y2"_______________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+7;      "6497"____________;  "ALG-BTR";      "GW3"_____________;  "Grenzwert GW3"_____________________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+8;      "6497"____________;  "ALG-BTR";      "GW4"_____________;  "Grenzwert GW4"_____________________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+9;      "6497"____________;  "ALG-BTR";      "Parametr_sperren";  "Parametrierung sperren"____________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+10;     "6497"____________;  "ALG-BTR";      "Parametr_quit"___;  "Parametrierung quittieren"_________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+11;     "6497"____________;  "ALG-BTR";      "Konfig_sperren"__;  "Konfigurierung sperren"____________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+12;     "6497"____________;  "ALG-BTR";      "Konfig_quit"_____;  "Konfigurierung quittieren"_________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+13;     "6497"____________;  "ALG-BTR";      "Umsch_Handbtr"___;  "Umschaltung Handbetrieb"___________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2
+14;     "6497"____________;  "ALG-BTR";      "Umsch_WE"________;  "Umschaltung WE"____________________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  2

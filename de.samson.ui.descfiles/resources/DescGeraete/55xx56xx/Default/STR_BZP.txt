@@ -1,0 +1,5 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "55xx56xx"_______;  "ZP_ZirkulatPump"_;  1;      10;        16;          0;            0;          3;           520
+3;      "55xx56xx"_______;  "ZP_WMZ_HT-NT"____;  1;      0;         0;           0;            0;          3;           520

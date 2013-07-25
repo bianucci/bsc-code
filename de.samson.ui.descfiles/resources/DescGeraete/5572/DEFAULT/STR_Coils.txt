@@ -1,0 +1,152 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "5572"____________;  "ALG-BTR";      "Sammelstörung"___;  "Sammelstörung"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  42
+2;      "5572"____________;  "ALG-BTR";      "Dateneing_aktiv"_;  "Dateneingabe aktiv"________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+3;      "5572"____________;  "ALG-BTR";      "Dateneing_stattg";  "Dateneingabe stattgefunden"________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+4;      "5572"____________;  "ALG-BTR";      "Sammel-Ebenenbit";  "Sammel-Ebenenbit CL 050-091"_______________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+10;     "5572"____________;  "BEA-BE"_;      "Binäreing_BE01"__;  "Status Binäreingang BE 01 (Ebenenbit: CL 050)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+11;     "5572"____________;  "BEA-BE"_;      "Binäreing_BE02"__;  "Status Binäreingang BE 02 (Ebenenbit: CL 051)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+20;     "5572"____________;  "BEA-BA"_;      "Binärausg_BA01"__;  "Status Binärausgang BA 01 (Ebenenbit: CL 060)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+21;     "5572"____________;  "BEA-BA"_;      "Binärausg_BA02"__;  "Status Binärausgang BA 02 (Ebenenbit: CL 061)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+30;     "5572"____________;  "ALG-BTR";      "Handbetrieb"_____;  "Handbetrieb"_______________________________________;  1;  "Auto-(0)"________;  "Hand-(1)"________;  10
+31;     "5572"____________;  "ALG-BTR";      "Kühlbetrieb"_____;  "Kühlbetrieb"_______________________________________;  1;  "AUS-(0)"_________;  "Kühlen-(1)"______;  10
+32;     "5572"____________;  "ALG-BTR";      "Heizbetrieb"_____;  "Heizbetrieb"_______________________________________;  1;  "AUS-(0)"_________;  "Heizen-(1)"______;  10
+33;     "5572"____________;  "ALG-BTR";      "Aufheizbetrieb"__;  "Aufheizbetrieb"____________________________________;  1;  "AUS-(0)"_________;  "Aufheizen-(1)"___;  10
+34;     "5572"____________;  "ALG-BTR";      "Regelbetrieb"____;  "Regelbetrieb"______________________________________;  1;  "AUS-(0)"_________;  "Regeln-(1)"______;  10
+35;     "5572"____________;  "ALG-BTR";      "Stützbetrieb"____;  "Stützbetrieb"______________________________________;  1;  "AUS-(0)"_________;  "Stützen-(1)"_____;  10
+36;     "5572"____________;  "ALG-BTR";      "Zeitprogramm"____;  "Zustand des Zeitprogramms bei der akt. Systemzeit"_;  1;  "Stützen-(0)"_____;  "Regeln-(1)"______;  10
+37;     "5572"____________;  "ALG-BTR";      "Frostgefahr"_____;  "wird gesetzt, wenn RT < 5°C"_______________________;  1;  "AUS-(0)"_________;  "Frost-(1)"_______;  10
+38;     "5572"____________;  "ALG-BTR";      "Zimmer_unbelegt"_;  "bei 1 wird Raum zwangsweise in Stützbetrieb vers."_;  0;  "Belegt-(0)"______;  "Unbelegt-(1)"____;  10
+42;     "5572"____________;  "ALG-BTR";      "Taupunktüberwach";  "gesetzt, wenn Regler inf. Taupunktübw. nicht kühlt";  1;  "AUS-(0)"_________;  "Taupunkt-(1)"____;  10
+
+45;     "5572"____________;  "ALG-BTR";      "Kühlbereich"_____;  "Heiz-/Kühlbereichsanzeiger"________________________;  1;  "Heizbereich-(0)"_;  "Kühlbereich-(1)"_;  10
+
+50;     "5572"____________;  "EBN-SON";      "EBN_Binär_BE01"__;  "Ebene Binäreingang BE 1 (CL 010)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+51;     "5572"____________;  "EBN-SON";      "EBN_Binär_BE02"__;  "Ebene Binäreingang BE 2 (CL 011)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+60;     "5572"____________;  "EBN-BA"_;      "EBN_Binär_BA01"__;  "Ebene Binärausgang BA 1 (CL 020)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+61;     "5572"____________;  "EBN-BA"_;      "EBN_Binär_BA02"__;  "Ebene Binärausgang BA 2 (CL 021)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+70;     "5572"____________;  "EBN-SON";      "EBN_Kühlbetrieb"_;  "Ebene Kühlbetrieb (CL 031)"________________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+80;     "5572"____________;  "EBN-AST";      "EBN_Analog_AA1"__;  "Ebene Analogausgang AA1 (HR 40030)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+81;     "5572"____________;  "EBN-AST";      "EBN_Analog_AA2"__;  "Ebene Analogausgang AA2 (HR 40031)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+90;     "5572"____________;  "EBN-RT"_;      "EBN_RaumIst"_____;  "Ebene der Raumtemperatur (HR 40020)"_______________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+91;     "5572"____________;  "EBN-RT"_;      "EBN_RaumOffs"____;  "Ebene RaumSoll_Offset (HR 40043)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+100;    "5572"____________;  "CON-SON";      "FB01_BE2_TaupktF";  "FB 01: BE 2 Taupunktfunktion"______________________;  0;  "Präsensmelde-(0)";  "Taupkt Überw-(1)";  10
+101;    "5572"____________;  "CON-SON";      "FB02_RückBetrArt";  "FB 02: Rücksetzen der Betriebsart gemäß Zeitprogr.";  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+102;    "5572"____________;  "CON-SON";      "FB03_Optimierung";  "FB 03: Optimierung"________________________________;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+103;    "5572"____________;  "CON-SON";      "FB04_KühlNiNutzg";  "FB 04: Kühlbetrieb bei Nicht-Nutzung"______________;  0;  "nicht kühlen-(0)";  "Kühlen-(1)"______;  10
+104;    "5572"____________;  "CON-SON";      "FB05_Tastensperr";  "FB 05: Komplette Tastensperrung"___________________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+105;    "5572"____________;  "CON-SON";      "FB06_AutSommZeit";  "FB 06: Automatische Sommer-/Winterzeitumschaltung"_;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+106;    "5572"____________;  "CON-SON";      "FB07_16Bit_Modb"_;  "FB 07: Modbus 16-bit-Adressierung"_________________;  0;  "8Bit Adresse-(0)";  "16Bit Adress-(1)";  10
+
+
+REM   Erweiterungsmodul 1    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1001;   "5572"____________;  "ALG-BTR";      "EW1_Sammelstörun";  "Sammelstörung"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  42
+1002;   "5572"____________;  "ALG-BTR";      "EW1_Dateneing_ak";  "Dateneingabe aktiv"________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1003;   "5572"____________;  "ALG-BTR";      "EW1_Dateneing_st";  "Dateneingabe stattgefunden"________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+1004;   "5572"____________;  "ALG-BTR";      "EW1_Sammel-Ebene";  "Sammel-Ebenenbit CL 1050-1095"_____________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1005;   "5572"____________;  "ALG-BTR";      "EW1_Counter_read";  "wird gelöscht, wenn Flanke an Zähleingang erkannt"_;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+
+1010;   "5572"____________;  "BEA-BE"_;      "EW1_BE01"________;  "Status Binäreingang BE 01 (Ebenenbit: CL 1050)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1011;   "5572"____________;  "BEA-BE"_;      "EW1_BE02"________;  "Status Binäreingang BE 02 (Ebenenbit: CL 1051)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1012;   "5572"____________;  "BEA-BE"_;      "EW1_BE03"________;  "Status Binäreingang BE 03 (Ebenenbit: CL 1052)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1013;   "5572"____________;  "BEA-BE"_;      "EW1_BE04"________;  "Status Binäreingang BE 04 (Ebenenbit: CL 1053)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1014;   "5572"____________;  "BEA-BE"_;      "EW1_BE05"________;  "Status Binäreingang BE 05 (Ebenenbit: CL 1054)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1015;   "5572"____________;  "BEA-BE"_;      "EW1_BE06"________;  "Status Binäreingang BE 06 (Ebenenbit: CL 1055)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+1020;   "5572"____________;  "BEA-BA"_;      "EW1_BA01"________;  "Status Binärausgang BA 01 (Ebenenbit: CL 1060)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1021;   "5572"____________;  "BEA-BA"_;      "EW1_BA02"________;  "Status Binärausgang BA 02 (Ebenenbit: CL 1061)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1022;   "5572"____________;  "BEA-BA"_;      "EW1_BA03"________;  "Status Binärausgang BA 03 (Ebenenbit: CL 1062)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1023;   "5572"____________;  "BEA-BA"_;      "EW1_BA04"________;  "Status Binärausgang BA 04 (Ebenenbit: CL 1063)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+1050;   "5572"____________;  "EBN-SON";      "EW1_EBN_BE01"____;  "Ebene Binäreingang BE 1 (CL 1010)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1051;   "5572"____________;  "EBN-SON";      "EW1_EBN_BE02"____;  "Ebene Binäreingang BE 2 (CL 1011)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1052;   "5572"____________;  "EBN-SON";      "EW1_EBN_BE03"____;  "Ebene Binäreingang BE 3 (CL 1012)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1053;   "5572"____________;  "EBN-SON";      "EW1_EBN_BE04"____;  "Ebene Binäreingang BE 4 (CL 1013)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1054;   "5572"____________;  "EBN-SON";      "EW1_EBN_BE05"____;  "Ebene Binäreingang BE 5 (CL 1014)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1055;   "5572"____________;  "EBN-SON";      "EW1_EBN_BE06"____;  "Ebene Binäreingang BE 6 (CL 1015)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+1060;   "5572"____________;  "EBN-BA"_;      "EW1_EBN_BA01"____;  "Ebene Binärausgang BA 1 (CL 1020)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1061;   "5572"____________;  "EBN-BA"_;      "EW1_EBN_BA02"____;  "Ebene Binärausgang BA 2 (CL 1021)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1062;   "5572"____________;  "EBN-BA"_;      "EW1_EBN_BA03"____;  "Ebene Binärausgang BA 3 (CL 1022)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1063;   "5572"____________;  "EBN-BA"_;      "EW1_EBN_BA04"____;  "Ebene Binärausgang BA 4 (CL 1023)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+1080;   "5572"____________;  "EBN-AST";      "EW1_EBN_AA1"_____;  "Ebene Analogausgang AA1 (HR 40030)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1081;   "5572"____________;  "EBN-AST";      "EW1_EBN_AA2"_____;  "Ebene Analogausgang AA2 (HR 40031)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+1090;   "5572"____________;  "EBN-UE"_;      "EW1_EBN_AE1"_____;  "Ebene Analogeingang AE1 (HR 40020)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1091;   "5572"____________;  "EBN-UE"_;      "EW1_EBN_AE2"_____;  "Ebene Analogeingang AE2 (HR 40021)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1092;   "5572"____________;  "EBN-UE"_;      "EW1_EBN_AE3"_____;  "Ebene Analogeingang AE3 (HR 40022)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1093;   "5572"____________;  "EBN-UE"_;      "EW1_EBN_AE4"_____;  "Ebene Analogeingang AE4 (HR 40023)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1094;   "5572"____________;  "EBN-UE"_;      "EW1_EBN_AE5"_____;  "Ebene Analogeingang AE5 (HR 40024)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+1095;   "5572"____________;  "EBN-UE"_;      "EW1_EBN_AE6"_____;  "Ebene Analogeingang AE6 (HR 40025)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+1120;   "5572"____________;  "BEA-BA"_;      "EW1_EE_def_BA01"_;  "Soll-Status Binärausgang BA 01 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1121;   "5572"____________;  "BEA-BA"_;      "EW1_EE_def_BA02"_;  "Soll-Status Binärausgang BA 02 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1122;   "5572"____________;  "BEA-BA"_;      "EW1_EE_def_BA03"_;  "Soll-Status Binärausgang BA 03 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+1123;   "5572"____________;  "BEA-BA"_;      "EW1_EE_def_BA04"_;  "Soll-Status Binärausgang BA 04 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+
+REM   Erweiterungsmodul 2    +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+2001;   "5572"____________;  "ALG-BTR";      "EW2_Sammelstörun";  "Sammelstörung"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  42
+2002;   "5572"____________;  "ALG-BTR";      "EW2_Dateneing_ak";  "Dateneingabe aktiv"________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+2003;   "5572"____________;  "ALG-BTR";      "EW2_Dateneing_st";  "Dateneingabe stattgefunden"________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+2004;   "5572"____________;  "ALG-BTR";      "EW2_Sammel-Ebene";  "Sammel-Ebenenbit CL 2050-2095"_____________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2005;   "5572"____________;  "ALG-BTR";      "EW2_Counter_read";  "wird gelöscht, wenn Flanke an Zähleingang erkannt"_;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+
+2010;   "5572"____________;  "BEA-BE"_;      "EW2_BE01"________;  "Status Binäreingang BE 01 (Ebenenbit: CL 2050)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2011;   "5572"____________;  "BEA-BE"_;      "EW2_BE02"________;  "Status Binäreingang BE 02 (Ebenenbit: CL 2051)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2012;   "5572"____________;  "BEA-BE"_;      "EW2_BE03"________;  "Status Binäreingang BE 03 (Ebenenbit: CL 2052)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2013;   "5572"____________;  "BEA-BE"_;      "EW2_BE04"________;  "Status Binäreingang BE 04 (Ebenenbit: CL 2053)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2014;   "5572"____________;  "BEA-BE"_;      "EW2_BE05"________;  "Status Binäreingang BE 05 (Ebenenbit: CL 2054)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2015;   "5572"____________;  "BEA-BE"_;      "EW2_BE06"________;  "Status Binäreingang BE 06 (Ebenenbit: CL 2055)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+2020;   "5572"____________;  "BEA-BA"_;      "EW2_BA01"________;  "Status Binärausgang BA 01 (Ebenenbit: CL 2060)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2021;   "5572"____________;  "BEA-BA"_;      "EW2_BA02"________;  "Status Binärausgang BA 02 (Ebenenbit: CL 2061)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2022;   "5572"____________;  "BEA-BA"_;      "EW2_BA03"________;  "Status Binärausgang BA 03 (Ebenenbit: CL 2062)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2023;   "5572"____________;  "BEA-BA"_;      "EW2_BA04"________;  "Status Binärausgang BA 04 (Ebenenbit: CL 2063)"____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+2050;   "5572"____________;  "EBN-SON";      "EW2_EBN_BE01"____;  "Ebene Binäreingang BE 1 (CL 2010)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2051;   "5572"____________;  "EBN-SON";      "EW2_EBN_BE02"____;  "Ebene Binäreingang BE 2 (CL 2011)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2052;   "5572"____________;  "EBN-SON";      "EW2_EBN_BE03"____;  "Ebene Binäreingang BE 3 (CL 2012)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2053;   "5572"____________;  "EBN-SON";      "EW2_EBN_BE04"____;  "Ebene Binäreingang BE 4 (CL 2013)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2054;   "5572"____________;  "EBN-SON";      "EW2_EBN_BE05"____;  "Ebene Binäreingang BE 5 (CL 2014)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2055;   "5572"____________;  "EBN-SON";      "EW2_EBN_BE06"____;  "Ebene Binäreingang BE 6 (CL 2015)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+2060;   "5572"____________;  "EBN-BA"_;      "EW2_EBN_BA01"____;  "Ebene Binärausgang BA 1 (CL 2020)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2061;   "5572"____________;  "EBN-BA"_;      "EW2_EBN_BA02"____;  "Ebene Binärausgang BA 2 (CL 2021)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2062;   "5572"____________;  "EBN-BA"_;      "EW2_EBN_BA03"____;  "Ebene Binärausgang BA 3 (CL 2022)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2063;   "5572"____________;  "EBN-BA"_;      "EW2_EBN_BA04"____;  "Ebene Binärausgang BA 4 (CL 2023)"_________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+2080;   "5572"____________;  "EBN-AST";      "EW2_EBN_AA1"_____;  "Ebene Analogausgang AA1 (HR 40030)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2081;   "5572"____________;  "EBN-AST";      "EW2_EBN_AA2"_____;  "Ebene Analogausgang AA2 (HR 40031)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+2090;   "5572"____________;  "EBN-UE"_;      "EW2_EBN_AE1"_____;  "Ebene Analogeingang AE1 (HR 40020)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2091;   "5572"____________;  "EBN-UE"_;      "EW2_EBN_AE2"_____;  "Ebene Analogeingang AE2 (HR 40021)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2092;   "5572"____________;  "EBN-UE"_;      "EW2_EBN_AE3"_____;  "Ebene Analogeingang AE3 (HR 40022)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2093;   "5572"____________;  "EBN-UE"_;      "EW2_EBN_AE4"_____;  "Ebene Analogeingang AE4 (HR 40023)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2094;   "5572"____________;  "EBN-UE"_;      "EW2_EBN_AE5"_____;  "Ebene Analogeingang AE5 (HR 40024)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+2095;   "5572"____________;  "EBN-UE"_;      "EW2_EBN_AE6"_____;  "Ebene Analogeingang AE6 (HR 40025)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+2120;   "5572"____________;  "BEA-BA"_;      "EW2_EE_def_BA01"_;  "Soll-Status Binärausgang BA 01 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2121;   "5572"____________;  "BEA-BA"_;      "EW2_EE_def_BA02"_;  "Soll-Status Binärausgang BA 02 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2122;   "5572"____________;  "BEA-BA"_;      "EW2_EE_def_BA03"_;  "Soll-Status Binärausgang BA 03 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+2123;   "5572"____________;  "BEA-BA"_;      "EW2_EE_def_BA04"_;  "Soll-Status Binärausgang BA 04 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+
+
+

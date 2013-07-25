@@ -1,0 +1,5 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"5403H2"__________;  1;           56;        1
+"5403H2"__________;  57;          80;        2

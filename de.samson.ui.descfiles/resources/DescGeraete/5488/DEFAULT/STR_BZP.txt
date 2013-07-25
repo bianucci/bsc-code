@@ -1,0 +1,4 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+2;      "5488"____________;  "ZP_WMZ_HT-NT"____;  1;      0;         0;           0;            0;          2;           520

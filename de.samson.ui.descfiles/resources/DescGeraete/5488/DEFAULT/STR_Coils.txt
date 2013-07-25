@@ -1,0 +1,160 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "5488"____________;  "ALG-BTR";      "Sammelstörung"___;  "Sammelstörung"_____________________________________;  1;  "NEIN (0)"________;  "JA (1)"__________;  34
+2;      "5488"____________;  "ALG-BTR";      "ProgAktiv"_______;  "Programmierung aktiv"______________________________;  1;  "NEIN (0)"________;  "JA (1)"__________;  2
+3;      "5488"____________;  "ALG-BTR";      "ProgStattgef"____;  "Programmierung hat stattgefunden"__________________;  1;  "NEIN (0)"________;  "JA (1)"__________;  2
+4;      "5488"____________;  "ALG-BTR";      "EBSammelebene"___;  "Sammelebenenbit"___________________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  2
+5;      "5488"____________;  "ALG-WMZ";      "#1CoilAbfrage"___;  "WMZ1 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+6;      "5488"____________;  "ALG-WMZ";      "#2CoilAbfrage"___;  "WMZ2 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+7;      "5488"____________;  "ALG-WMZ";      "#3CoilAbfrage"___;  "WMZ3 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+8;      "5488"____________;  "ALG-WMZ";      "WMZ1_HTNT-Tarif"_;  "WMZ-Tarifumschaltung HT/NT für WMZ #1"_____________;  0;  "Aktiv-(0)"_______;  "Inaktiv-(1)"_____;  2
+321;    "5488"____________;  "CON-MOD";      "CO9FB00"_________;  "Modbus aktivieren"_________________________________;  0;  "Inaktiv (0)"_____;  "Modbus (1)"______;  2
+322;    "5488"____________;  "CON-MOD";      "CO9FB01"_________;  "Modem aktivieren"__________________________________;  0;  "Inaktiv (0)"_____;  "Modem (1)"_______;  2
+323;    "5488"____________;  "CON-MOD";      "CO9FB02"_________;  "Modem Wahlverfahren Ton/Puls"______________________;  0;  "Ton (0)"_________;  "Puls (1)"________;  2
+324;    "5488"____________;  "CON-MOD";      "CO9FB03"_________;  "Modem Keine Anwahl bei Störung"____________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+325;    "5488"____________;  "CON-MOD";      "CO9FB04"_________;  "16-Bit-Adressierung Modbus"________________________;  0;  "8-Bit (0)"_______;  "16-Bit (1)"______;  2
+327;    "5488"____________;  "CON-MOD";      "CO9FB06"_________;  "Fehler-SMS senden"_________________________________;  0;  "Inaktiv (0)"_____;  "SMS (1)"_________;  2
+328;    "5488"____________;  "CON-MOD";      "CO9FB07"_________;  "Wahlverfahren SMS Ton/Puls"________________________;  0;  "Ton (0)"_________;  "Puls (1)"________;  2
+331;    "5488"____________;  "CON-MOD";      "CO9FB10"_________;  "Fehler-Fax senden"_________________________________;  0;  "Inaktiv (0)"_____;  "Fax (1)"_________;  2
+332;    "5488"____________;  "CON-MOD";      "CO9FB11"_________;  "Wahlverfahren Fax Ton/Puls"________________________;  0;  "Ton (0)"_________;  "Puls (1)"________;  2
+342;    "5488"____________;  "CON-WMZ";      "PA10_WMZ1"_______;  "Wärmemengenzähler 1 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-1 (1)"_______;  2
+343;    "5488"____________;  "CON-WMZ";      "PA10_WMZ2"_______;  "Wärmemengenzähler 2 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-2 (1)"_______;  2
+344;    "5488"____________;  "CON-WMZ";      "PA10_WMZ3"_______;  "Wärmemengenzähler 3 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-3 (1)"_______;  2
+550;    "5488"____________;  "ALG-WMZ";      "#4CoilAbfrage"___;  "WMZ4 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+551;    "5488"____________;  "ALG-WMZ";      "#5CoilAbfrage"___;  "WMZ5 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+552;    "5488"____________;  "ALG-WMZ";      "#6CoilAbfrage"___;  "WMZ6 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+553;    "5488"____________;  "ALG-WMZ";      "#7CoilAbfrage"___;  "WMZ7 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+554;    "5488"____________;  "ALG-WMZ";      "#8CoilAbfrage"___;  "WMZ8 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+555;    "5488"____________;  "ALG-WMZ";      "#9CoilAbfrage"___;  "WMZ9 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+556;    "5488"____________;  "ALG-WMZ";      "#10CoilAbfrage"__;  "WMZ10 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+557;    "5488"____________;  "ALG-WMZ";      "#11CoilAbfrage"__;  "WMZ11 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+558;    "5488"____________;  "ALG-WMZ";      "#12CoilAbfrage"__;  "WMZ12 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+559;    "5488"____________;  "ALG-WMZ";      "#13CoilAbfrage"__;  "WMZ13 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+560;    "5488"____________;  "ALG-WMZ";      "#14CoilAbfrage"__;  "WMZ14 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+561;    "5488"____________;  "ALG-WMZ";      "#15CoilAbfrage"__;  "WMZ15 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+562;    "5488"____________;  "ALG-WMZ";      "#16CoilAbfrage"__;  "WMZ16 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+563;    "5488"____________;  "ALG-WMZ";      "#17CoilAbfrage"__;  "WMZ17 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+564;    "5488"____________;  "ALG-WMZ";      "#18CoilAbfrage"__;  "WMZ18 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+565;    "5488"____________;  "ALG-WMZ";      "#19CoilAbfrage"__;  "WMZ19 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+566;    "5488"____________;  "ALG-WMZ";      "#20CoilAbfrage"__;  "WMZ20 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+567;    "5488"____________;  "ALG-WMZ";      "#21CoilAbfrage"__;  "WMZ21 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+568;    "5488"____________;  "ALG-WMZ";      "#22CoilAbfrage"__;  "WMZ22 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+569;    "5488"____________;  "ALG-WMZ";      "#23CoilAbfrage"__;  "WMZ23 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+570;    "5488"____________;  "ALG-WMZ";      "#24CoilAbfrage"__;  "WMZ24 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+571;    "5488"____________;  "ALG-WMZ";      "#25CoilAbfrage"__;  "WMZ25 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+572;    "5488"____________;  "ALG-WMZ";      "#26CoilAbfrage"__;  "WMZ26 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+573;    "5488"____________;  "ALG-WMZ";      "#27CoilAbfrage"__;  "WMZ27 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+574;    "5488"____________;  "ALG-WMZ";      "#28CoilAbfrage"__;  "WMZ28 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+575;    "5488"____________;  "ALG-WMZ";      "#29CoilAbfrage"__;  "WMZ29 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+576;    "5488"____________;  "ALG-WMZ";      "#30CoilAbfrage"__;  "WMZ30 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+577;    "5488"____________;  "ALG-WMZ";      "#31CoilAbfrage"__;  "WMZ31 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+578;    "5488"____________;  "ALG-WMZ";      "#32CoilAbfrage"__;  "WMZ32 Coil-Abfrage"________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  2
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+580;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ1"_;  "Fehler WMZ 1"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+581;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ1"_;  "Fehler Zählerbus WMZ 1"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+582;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ2"_;  "Fehler WMZ 2"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+583;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ2"_;  "Fehler Zählerbus WMZ 2"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+584;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ3"_;  "Fehler WMZ 3"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+585;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ3"_;  "Fehler Zählerbus WMZ 3"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+586;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ4"_;  "Fehler WMZ 4"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+587;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ4"_;  "Fehler Zählerbus WMZ 4"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+588;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ5"_;  "Fehler WMZ 5"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+589;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ5"_;  "Fehler Zählerbus WMZ 5"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+590;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ6"_;  "Fehler WMZ 6"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+591;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ6"_;  "Fehler Zählerbus WMZ 6"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+592;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ7"_;  "Fehler WMZ 7"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+593;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ7"_;  "Fehler Zählerbus WMZ 7"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+594;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ8"_;  "Fehler WMZ 8"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+595;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ8"_;  "Fehler Zählerbus WMZ 8"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+596;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ9"_;  "Fehler WMZ 9"______________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+597;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ9"_;  "Fehler Zählerbus WMZ 9"____________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+598;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ10";  "Fehler WMZ 10"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+599;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ10";  "Fehler Zählerbus WMZ 10"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+600;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ11";  "Fehler WMZ 11"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+601;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ11";  "Fehler Zählerbus WMZ 11"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+602;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ12";  "Fehler WMZ 12"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+603;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ12";  "Fehler Zählerbus WMZ 12"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+604;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ13";  "Fehler WMZ 13"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+605;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ13";  "Fehler Zählerbus WMZ 13"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+606;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ14";  "Fehler WMZ 14"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+607;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ14";  "Fehler Zählerbus WMZ 14"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+608;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ15";  "Fehler WMZ 15"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+609;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ15";  "Fehler Zählerbus WMZ 15"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+610;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ16";  "Fehler WMZ 16"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+611;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ16";  "Fehler Zählerbus WMZ 16"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+612;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ17";  "Fehler WMZ 17"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+613;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ17";  "Fehler Zählerbus WMZ 17"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+614;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ18";  "Fehler WMZ 18"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+615;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ18";  "Fehler Zählerbus WMZ 18"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+616;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ19";  "Fehler WMZ 19"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+617;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ19";  "Fehler Zählerbus WMZ 19"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+618;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ20";  "Fehler WMZ 20"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+619;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ20";  "Fehler Zählerbus WMZ 20"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+620;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ21";  "Fehler WMZ 21"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+621;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ21";  "Fehler Zählerbus WMZ 21"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+622;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ22";  "Fehler WMZ 22"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+623;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ22";  "Fehler Zählerbus WMZ 22"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+624;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ23";  "Fehler WMZ 23"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+625;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ23";  "Fehler Zählerbus WMZ 23"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+626;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ24";  "Fehler WMZ 24"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+627;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ24";  "Fehler Zählerbus WMZ 24"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+628;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ25";  "Fehler WMZ 25"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+629;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ25";  "Fehler Zählerbus WMZ 25"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+630;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ26";  "Fehler WMZ 26"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+631;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ26";  "Fehler Zählerbus WMZ 26"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+632;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ27";  "Fehler WMZ 27"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+633;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ27";  "Fehler Zählerbus WMZ 27"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+634;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ28";  "Fehler WMZ 28"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+635;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ28";  "Fehler Zählerbus WMZ 28"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+636;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ29";  "Fehler WMZ 29"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+637;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ29";  "Fehler Zählerbus WMZ 29"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+638;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ30";  "Fehler WMZ 30"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+639;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ30";  "Fehler Zählerbus WMZ 30"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+640;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ31";  "Fehler WMZ 31"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+641;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ31";  "Fehler Zählerbus WMZ 31"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+642;    "5488"____________;  "ALG-WMZ";      "MBUS_FehlerWMZ32";  "Fehler WMZ 32"_____________________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+643;    "5488"____________;  "ALG-WMZ";      "MBUS_KomStrWMZ32";  "Fehler Zählerbus WMZ 32"___________________________;  1;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  2
+653;    "5488"____________;  "CON-WMZ";      "PA10_WMZ4"_______;  "Wärmemengenzähler 4 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-4 (1)"_______;  2
+654;    "5488"____________;  "CON-WMZ";      "PA10_WMZ5"_______;  "Wärmemengenzähler 5 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-5 (1)"_______;  2
+655;    "5488"____________;  "CON-WMZ";      "PA10_WMZ6"_______;  "Wärmemengenzähler 6 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-6 (1)"_______;  2
+656;    "5488"____________;  "CON-WMZ";      "PA10_WMZ7"_______;  "Wärmemengenzähler 7 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-7 (1)"_______;  2
+657;    "5488"____________;  "CON-WMZ";      "PA10_WMZ8"_______;  "Wärmemengenzähler 8 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-8 (1)"_______;  2
+658;    "5488"____________;  "CON-WMZ";      "PA10_WMZ9"_______;  "Wärmemengenzähler 9 Aktiv/Inaktiv"_________________;  0;  "Inaktiv (0)"_____;  "WMZ-9 (1)"_______;  2
+659;    "5488"____________;  "CON-WMZ";      "PA10_WMZ10"______;  "Wärmemengenzähler 10 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-10 (1)"______;  2
+660;    "5488"____________;  "CON-WMZ";      "PA10_WMZ11"______;  "Wärmemengenzähler 11 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-11 (1)"______;  2
+661;    "5488"____________;  "CON-WMZ";      "PA10_WMZ12"______;  "Wärmemengenzähler 12 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-12 (1)"______;  2
+662;    "5488"____________;  "CON-WMZ";      "PA10_WMZ13"______;  "Wärmemengenzähler 13 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-13 (1)"______;  2
+663;    "5488"____________;  "CON-WMZ";      "PA10_WMZ14"______;  "Wärmemengenzähler 14 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-14 (1)"______;  2
+664;    "5488"____________;  "CON-WMZ";      "PA10_WMZ15"______;  "Wärmemengenzähler 15 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-15 (1)"______;  2
+665;    "5488"____________;  "CON-WMZ";      "PA10_WMZ16"______;  "Wärmemengenzähler 16 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-16 (1)"______;  2
+666;    "5488"____________;  "CON-WMZ";      "PA10_WMZ17"______;  "Wärmemengenzähler 17 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-17 (1)"______;  2
+667;    "5488"____________;  "CON-WMZ";      "PA10_WMZ18"______;  "Wärmemengenzähler 18 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-18 (1)"______;  2
+668;    "5488"____________;  "CON-WMZ";      "PA10_WMZ19"______;  "Wärmemengenzähler 19 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-19 (1)"______;  2
+669;    "5488"____________;  "CON-WMZ";      "PA10_WMZ20"______;  "Wärmemengenzähler 20 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-20 (1)"______;  2
+670;    "5488"____________;  "CON-WMZ";      "PA10_WMZ21"______;  "Wärmemengenzähler 21 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-21 (1)"______;  2
+671;    "5488"____________;  "CON-WMZ";      "PA10_WMZ22"______;  "Wärmemengenzähler 22 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-22 (1)"______;  2
+672;    "5488"____________;  "CON-WMZ";      "PA10_WMZ23"______;  "Wärmemengenzähler 23 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-23 (1)"______;  2
+673;    "5488"____________;  "CON-WMZ";      "PA10_WMZ24"______;  "Wärmemengenzähler 24 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-24 (1)"______;  2
+674;    "5488"____________;  "CON-WMZ";      "PA10_WMZ25"______;  "Wärmemengenzähler 25 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-25 (1)"______;  2
+675;    "5488"____________;  "CON-WMZ";      "PA10_WMZ26"______;  "Wärmemengenzähler 26 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-26 (1)"______;  2
+676;    "5488"____________;  "CON-WMZ";      "PA10_WMZ27"______;  "Wärmemengenzähler 27 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-27 (1)"______;  2
+677;    "5488"____________;  "CON-WMZ";      "PA10_WMZ28"______;  "Wärmemengenzähler 28 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-28 (1)"______;  2
+678;    "5488"____________;  "CON-WMZ";      "PA10_WMZ29"______;  "Wärmemengenzähler 29 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-29 (1)"______;  2
+679;    "5488"____________;  "CON-WMZ";      "PA10_WMZ30"______;  "Wärmemengenzähler 30 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-30 (1)"______;  2
+680;    "5488"____________;  "CON-WMZ";      "PA10_WMZ30"______;  "Wärmemengenzähler 31 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-31 (1)"______;  2
+681;    "5488"____________;  "CON-WMZ";      "PA10_WMZ32"______;  "Wärmemengenzähler 32 Aktiv/Inaktiv"________________;  0;  "Inaktiv (0)"_____;  "WMZ-32 (1)"______;  2

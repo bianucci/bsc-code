@@ -1,0 +1,41 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+ 1;"WRF06t";"ALG-CL";"AnzRaum";"Aktivierung_Anzeige_Raumtemperatur";0;"NEIN";"JA";0
+ 2;"WRF06t";"ALG-CL";"AnzMW1";"Aktivierung_Anzeige_Messwert_1";0;"NEIN";"JA";0
+ 3;"WRF06t";"ALG-CL";"AnzMW2";"Aktivierung_Anzeige_Messwert_2";0;"NEIN";"JA";0
+ 4;"WRF06t";"ALG-CL";"AnzMW3";"Aktivierung_Anzeige_Messwert_3";0;"NEIN";"JA";0
+ 5;"WRF06t";"ALG-CL";"AnzMW4";"Aktivierung_Anzeige_Messwert_4";0;"NEIN";"JA";0
+ 6;"WRF06t";"ALG-CL";"AnzSWoff1";"Aktivierung_Anzeige_Soll_offset_1";0;"NEIN";"JA";0
+ 7;"WRF06t";"ALG-CL";"AnzSWeff1";"Aktivierung_Anzeige_Soll_effektiv_1";0;"NEIN";"JA";0
+ 8;"WRF06t";"ALG-CL";"AnzSWoff2";"Aktivierung_Anzeige_Soll_offset_2";0;"NEIN";"JA";0
+ 9;"WRF06t";"ALG-CL";"AnzSWeff2";"Aktivierung_Anzeige_Soll_effektiv_2";0;"NEIN";"JA";0
+ 10;"WRF06t";"ALG-CL";"AnzUhrzeit";"Aktivierung_Anzeige_Uhrzeit";0;"NEIN";"JA";0
+ 11;"WRF06t";"ALG-CL";"AnzDatum";"Aktivierung_Anzeige_Datum";0;"NEIN";"JA";0
+ 12;"WRF06t";"ALG-CL";"AnzRaumbeleg";"Aktivierung_Anzeige_Raumbelegung";0;"NEIN";"JA";0
+ 13;"WRF06t";"ALG-CL";"AnzLftSt";"Aktivierung_Anzeige_Lüfterstufe";0;"NEIN";"JA";0
+ 14;"WRF06t";"ALG-CL";"AnzReserve1";"Reserver_1";1;"AUS";"EIN";0
+ 15;"WRF06t";"ALG-CL";"AnzReserve2";"Reserver_2";1;"AUS";"EIN";0
+ 16;"WRF06t";"ALG-CL";"AnzReserve3";"Reserver_3";1;"AUS";"EIN";0
+ 17;"WRF06t";"ALG-CL";"AnzRaum_NK";"Aktivierung_Anzeige_Raumtemp_Nachkomma";0;"NEIN";"JA";0
+ 18;"WRF06t";"ALG-CL";"AnzMW1_NK";"Aktivierung_Anzeige_MW_1_Nachkomma";0;"NEIN";"JA";0
+ 19;"WRF06t";"ALG-CL";"AnzMW2_NK";"Aktivierung_Anzeige_MW_2_Nachkomma";0;"NEIN";"JA";0
+ 20;"WRF06t";"ALG-CL";"AnzMW3_NK";"Aktivierung_Anzeige_MW_3_Nachkomma";0;"NEIN";"JA";0
+ 21;"WRF06t";"ALG-CL";"AnzMW4_NK";"Aktivierung_Anzeige_MW_4_Nachkomma";0;"NEIN";"JA";0
+ 22;"WRF06t";"ALG-CL";"AnzSW1_NK";"Aktivierung_Anzeige_SW_1_Nachkomma";0;"NEIN";"JA";0
+ 23;"WRF06t";"ALG-CL";"AnzSW2_NK";"Aktivierung_Anzeige_SW_2_Nachkomma";0;"NEIN";"JA";0
+ 24;"WRF06t";"ALG-CL";"AnzSW_Typ";"Anzeige_Sollwert_mit_Offset";0;"NEIN";"JA";0
+ 25;"WRF06t";"ALG-CL";"AnzEinh";"Aktivierung_Anzeige_C_oder_F";0;"F";"C";0
+ 26;"WRF06t";"ALG-CL";"AnzSW1_Art";"Anzeige_SW1_Eff_oder_Off";0;"Offset";"Effektiv";0
+ 27;"WRF06t";"ALG-CL";"AnzSW2_Art";"Anzeige_SW2_Eff_oder_Off";0;"Offset";"Effektiv";0
+ 28;"WRF06t";"ALG-CL";"Akt_YMin";"Aktivierung_YMin_bei_Y_gleich_0";0;"NEIN";"JA";0
+ 29;"WRF06t";"ALG-CL";"RaumAkt_Reset";"Raumbelegung_nach_Reset";0;"Unbelegt";"Belegt";0
+ 30;"WRF06t";"ALG-CL";"AnzReserve4";"Reserver_4";1;"AUS";"EIN";0
+ 31;"WRF06t";"ALG-CL";"AnzReserve5";"Reserver_5";1;"AUS";"EIN";0
+ 32;"WRF06t";"ALG-CL";"AnzReserve6";"Reserver_6";1;"AUS";"EIN";0
+ 257;"WRF06t";"ALG-CL";"AnzSymStr";"Anzeige_Symbol_Stoerung";0;"AUS";"EIN";0
+ 258;"WRF06t";"ALG-CL";"AnzSymHZ";"Anzeige_Symbol_Heizen";0;"AUS";"EIN";0
+ 259;"WRF06t";"ALG-CL";"AnzSymKuehl";"Anzeige_Symbol_Kuehlen";0;"AUS";"EIN";0
+ 260;"WRF06t";"ALG-CL";"AnzSymFenster";"Anzeige_Symbol_Fenster";0;"AUS";"EIN";0
+ 261;"WRF06t";"ALG-CL";"AnzSymTP";"Anzeige_Symbol_Taupunkt";0;"AUS";"EIN";0
+ 262;"WRF06t";"ALG-CL";"AnzSymOff";"Anzeige_Symbol_regler_Aus";0;"AUS";"EIN";0

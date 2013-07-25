@@ -1,0 +1,5 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "5177"____________;  "ZP_VentStufe2"___;  1;      0;         16;          0;            0;          2;           520
+

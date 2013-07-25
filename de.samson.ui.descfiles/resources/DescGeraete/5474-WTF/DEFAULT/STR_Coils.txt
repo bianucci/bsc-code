@@ -1,0 +1,185 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "5474-WTF"________;  "ALG-BTR";      "Sammelstörung"___;  "Sammelstörung"_____________________________________;  1;  "Nein (0)"________;  "Störung (1)"_____;  42
+2;      "5474-WTF"________;  "ALG-BTR";      "ProgAktiv"_______;  "Programmierung aktiv"______________________________;  1;  "inaktiv (0)"_____;  "aktiv (1)"_______;  10
+3;      "5474-WTF"________;  "ALG-BTR";      "ProgStattgef"____;  "Programmierung hat stattgefunden"__________________;  0;  "Nein (0)"________;  "Ja (1)"__________;  10
+4;      "5474-WTF"________;  "ALG-BTR";      "EBSammelebene"___;  "Sammelebenenbit"___________________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+5;      "5474-WTF"________;  "ALG-WMZ";      "#1CoilAbfrage"___;  "WMZ1 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  10
+6;      "5474-WTF"________;  "ALG-WMZ";      "#2CoilAbfrage"___;  "WMZ2 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  10
+7;      "5474-WTF"________;  "ALG-WMZ";      "#3CoilAbfrage"___;  "WMZ3 Coil-Abfrage"_________________________________;  0;  "Inaktiv (0)"_____;  "Coil (1)"________;  10
+8;      "5474-WTF"________;  "ALG-WMZ";      "WMZ1_HTNT-Tarif"_;  "WMZ-Tarifumschaltung HT/NT für WMZ #1"_____________;  0;  "Aktiv-(0)"_______;  "Inaktiv-(1)"_____;  10
+17;     "5474-WTF"________;  "BEA-BE"_;      "BE01"____________;  "BE01/nicht belegt"_________________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+18;     "5474-WTF"________;  "BEA-BE"_;      "BE02"____________;  "BE02/WW-Anforderung"_______________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+19;     "5474-WTF"________;  "BEA-BE"_;      "BE03"____________;  "BE03/Vorlauffühler gesamt"_________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+20;     "5474-WTF"________;  "BEA-BE"_;      "BE04"____________;  "BE04/WT2 Stellungsrückmeldung"_____________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+21;     "5474-WTF"________;  "BEA-BE"_;      "BE05"____________;  "BE05/WT1 Stellungsrückmeldung"_____________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+22;     "5474-WTF"________;  "BEA-BE"_;      "BE06"____________;  "BE06/WT2 Vorlauffühler"____________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+23;     "5474-WTF"________;  "BEA-BE"_;      "BE07"____________;  "BE07/WT1 Vorlauffühler"____________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+24;     "5474-WTF"________;  "BEA-BE"_;      "BE08"____________;  "BE08/WT2 Rücklauffühler"___________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+25;     "5474-WTF"________;  "BEA-BE"_;      "BE09"____________;  "BE09/WT1 Rücklauffühler"___________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+26;     "5474-WTF"________;  "BEA-BE"_;      "BE10"____________;  "BE10/nicht belegt"_________________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+27;     "5474-WTF"________;  "BEA-BE"_;      "BE11"____________;  "BE11/Außenfühler"__________________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+28;     "5474-WTF"________;  "BEA-BE"_;      "BE12"____________;  "BE12/WT2 Störung Pumpe"____________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+29;     "5474-WTF"________;  "BEA-BE"_;      "BE13"____________;  "BE13/WT1 Störung Pumpe"____________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+30;     "5474-WTF"________;  "BEA-BE"_;      "BE14"____________;  "BE14/WT2 Störung"__________________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+31;     "5474-WTF"________;  "BEA-BE"_;      "BE15"____________;  "BE15/WT1 Störung"__________________________________;  1;  "Aus (0)"_________;  "Ein (1)"_________;  10
+32;     "5474-WTF"________;  "BEA-BE"_;      "BE16"____________;  "BE16/WT2 Freigabe"_________________________________;  1;  "gesperrt (0)"____;  "Freigabe (1)"____;  10
+33;     "5474-WTF"________;  "BEA-BE"_;      "BE17"____________;  "BE17/WT1 Freigabe"_________________________________;  1;  "gesperrt (0)"____;  "Freigabe (1)"____;  10
+41;     "5474-WTF"________;  "BEA-SON";      "BA01"____________;  "BA01/Sammelstörmeldung/Führungsanzeige"____________;  1;  "Aus (0)"_________;  "Störung (1)"_____;  10
+42;     "5474-WTF"________;  "BEA-SON";      "BA02"____________;  "BA02/Sollwert fest"________________________________;  0;  "Aus (0)"_________;  "Sollwert (1)"____;  10
+43;     "5474-WTF"________;  "BEA-BST";      "BA03"____________;  "BA03/WT1 Ventil ZU/HALT"___________________________;  0;  "Halt (0)"________;  "Zu (1)"__________;  10
+44;     "5474-WTF"________;  "BEA-BST";      "BA04"____________;  "BA04/WT1 Ventil AUF/HALT"__________________________;  0;  "Halt (0)"________;  "Auf (1)"_________;  10
+45;     "5474-WTF"________;  "BEA-BST";      "BA05"____________;  "BA05/WT2 Ventil ZU/HALT"___________________________;  0;  "Halt (0)"________;  "Zu (1)"__________;  10
+46;     "5474-WTF"________;  "BEA-BST";      "BA06"____________;  "BA06/WT2 Ventil AUF/HALT"__________________________;  0;  "Halt (0)"________;  "Auf (1)"_________;  10
+47;     "5474-WTF"________;  "BEA-BPU";      "BA07"____________;  "BA07/WT1 Pumpe EIN/AUS"____________________________;  0;  "Aus (0)"_________;  "Ein (1)"_________;  10
+48;     "5474-WTF"________;  "BEA-BPU";      "BA08"____________;  "BA08/WT2 Pumpe EIN/AUS"____________________________;  0;  "Aus (0)"_________;  "Ein (1)"_________;  10
+49;     "5474-WTF"________;  "BEA-SON";      "BA09"____________;  "BA09/WT1 Klappe ZU"________________________________;  0;  "Aus (0)"_________;  "Ein (1)"_________;  10
+50;     "5474-WTF"________;  "BEA-SON";      "BA10"____________;  "BA10/WT1 Klappe AUF"_______________________________;  0;  "Aus (0)"_________;  "Ein (1)"_________;  10
+51;     "5474-WTF"________;  "BEA-SON";      "BA11"____________;  "BA11/WT2 Klappe ZU"________________________________;  0;  "Aus (0)"_________;  "Ein (1)"_________;  10
+52;     "5474-WTF"________;  "BEA-SON";      "BA12"____________;  "BA12/WT2 Klappe AUF"_______________________________;  0;  "Aus (0)"_________;  "Ein (1)"_________;  10
+57;     "5474-WTF"________;  "EBN-SON";      "EBNSammelstör"___;  "Ebenenbit Sammelstörung/Führungsanzeige"___________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+58;     "5474-WTF"________;  "EBN-SON";      "EBNWWZwang"______;  "Ebenenbit Sollwert fest ausregeln"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+59;     "5474-WTF"________;  "EBN-BST";      "EBNBA03"_________;  "Ebenenbit BA03/WT1 Ventil ZU/HALT"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+60;     "5474-WTF"________;  "EBN-BST";      "EBNBA04"_________;  "Ebenenbit BA04/WT1 Ventil AUF/HALT"________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+61;     "5474-WTF"________;  "EBN-BST";      "EBNBA05"_________;  "Ebenenbit BA05/WT2 Ventil ZU/HALT"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+62;     "5474-WTF"________;  "EBN-BST";      "EBNBA06"_________;  "Ebenenbit BA06/WT2 Ventil AUF/HALT"________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+63;     "5474-WTF"________;  "EBN-BST";      "EBNBA07"_________;  "Ebenenbit BA07/WT1 Pumpe Ein/Aus"__________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+64;     "5474-WTF"________;  "EBN-BST";      "EBNBA08"_________;  "Ebenenbit BA08/WT2 Pumpe Ein/Aus"__________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+65;     "5474-WTF"________;  "EBN-SON";      "EBNBA09"_________;  "Ebenenbit BA09/WT1 Klappe ZU"______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+66;     "5474-WTF"________;  "EBN-SON";      "EBNBA10"_________;  "Ebenenbit BA10/WT1 Klappe AUF"_____________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+67;     "5474-WTF"________;  "EBN-SON";      "EBNBA11"_________;  "Ebenenbit BA11/WT2 Klappe ZU"______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+68;     "5474-WTF"________;  "EBN-SON";      "EBNBA12"_________;  "Ebenenbit BA12/WT2 Klappe AUF"_____________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+73;     "5474-WTF"________;  "EBN-AST";      "EBNAA01"_________;  "Ebenenbit Analogausgang 1 (0-10V)"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+74;     "5474-WTF"________;  "EBN-AST";      "EBNAA02"_________;  "Ebenenbit Analogausgang 2 (0-10V)"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+81;     "5474-WTF"________;  "EBN-SON";      "EBNUE01"_________;  "Ebenenbit UE01/nicht belegt"_______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+82;     "5474-WTF"________;  "EBN-SON";      "EBNUE02"_________;  "Ebenenbit UE02/Sollwert fest"______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+83;     "5474-WTF"________;  "EBN-VL"_;      "EBNUE03"_________;  "Ebenenbit UE03/Vorlauffühler gesamt"_______________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+84;     "5474-WTF"________;  "EBN-SON";      "EBNUE04"_________;  "Ebenenbit UE04/WT2 Stellungsrückmeldung"___________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+85;     "5474-WTF"________;  "EBN-SON";      "EBNUE05"_________;  "Ebenenbit UE05/WT1 Stellungsrückmeldung"___________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+86;     "5474-WTF"________;  "EBN-VL"_;      "EBNUE06"_________;  "Ebenenbit UE06/WT2 Vorlauffühler"__________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+87;     "5474-WTF"________;  "EBN-VL"_;      "EBNUE07"_________;  "Ebenenbit UE07/WT1 Vorlauffühler"__________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+88;     "5474-WTF"________;  "EBN-RL"_;      "EBNUE08"_________;  "Ebenenbit UE08/WT2 Rücklauffühler"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+89;     "5474-WTF"________;  "EBN-RL"_;      "EBNUE09"_________;  "Ebenenbit UE09/WT1 Rücklauffühler"_________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+90;     "5474-WTF"________;  "EBN-RL"_;      "EBNUE10"_________;  "Ebenenbit UE10/nicht belegt"_______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+91;     "5474-WTF"________;  "EBN-AT"_;      "EBNUE11"_________;  "Ebenenbit UE11/Außenfühler"________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+92;     "5474-WTF"________;  "EBN-SON";      "EBNUE12"_________;  "Ebenenbit UE12/WT2 Störung Pumpe"__________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+93;     "5474-WTF"________;  "EBN-SON";      "EBNUE13"_________;  "Ebenenbit UE13/WT1 Störung Pumpe"__________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+94;     "5474-WTF"________;  "EBN-SON";      "EBNUE14"_________;  "Ebenenbit UE14/WT2 Störung"________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+95;     "5474-WTF"________;  "EBN-SON";      "EBNUE15"_________;  "Ebenenbit UE15/WT1 Störung"________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+96;     "5474-WTF"________;  "EBN-SON";      "EBNUE16"_________;  "Ebenenbit UE16/WT2 Freigabe"_______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+97;     "5474-WTF"________;  "EBN-SON";      "EBNUE17"_________;  "Ebenenbit UE17/WT1 Freigabe"_______________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+98;     "5474-WTF"________;  "EBN-SON";      "EBNAE01"_________;  "Ebenenbit Analogeingang 1"_________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+99;     "5474-WTF"________;  "EBN-SON";      "EBNAE02"_________;  "Ebenenbit Analogeingang 2"_________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+105;    "5474-WTF"________;  "EBN-BTR";      "EBN_BetrArt_RK1"_;  "Ebenenbit, Betriebsartenschalter RK1 (HR049)"______;  0;  "GLT-(0)"_________;  "Autark-(1)"______;  10
+106;    "5474-WTF"________;  "EBN-BTR";      "EBN_BetrArt_RK2"_;  "Ebenenbit, Betriebsartenschalter RK2 (HR050)"______;  0;  "GLT-(0)"_________;  "Autark-(1)"______;  10
+107;    "5474-WTF"________;  "EBN-BTR";      "EBN_BetrArt_RK3"_;  "Ebenenbit, Betriebsartenschalter RK3 (HR051)"______;  0;  "GLT-(0)"_________;  "Autark-(1)"______;  10
+129;    "5474-WTF"________;  "CON-SON";      "CO1FB00"_________;  "WT1 Freigabe"______________________________________;  0;  "gesperrt (0)"____;  "Freigabe (1)"____;  10
+131;    "5474-WTF"________;  "CON-SON";      "CO1FB02"_________;  "WT1 Betriebsstundenzähler"_________________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+132;    "5474-WTF"________;  "CON-VL"_;      "CO1FB03"_________;  "WT1 Übertemperatur (nicht abwählbar)"______________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+133;    "5474-WTF"________;  "CON-RL"_;      "CO1FB04"_________;  "WT1 Rücklauftemperaturbegrenzung"__________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+134;    "5474-WTF"________;  "CON-RPA";      "CO1FB05"_________;  "WT1 Regelung stetig/3-Punkt"_______________________;  0;  "3-Punkt(0)"______;  "stetig-(1)"______;  10
+136;    "5474-WTF"________;  "CON-RPA";      "CO1FB07"_________;  "WT1 Stellungsrückmeldung"__________________________;  0;  "intern (0)"______;  "extern (1)"______;  10
+153;    "5474-WTF"________;  "CON-SON";      "CO2FB00"_________;  "WT2 Freigabe"______________________________________;  0;  "gesperrt (0)"____;  "Freigabe (1)"____;  10
+155;    "5474-WTF"________;  "CON-SON";      "CO2FB02"_________;  "WT2 Betriebsstundenzähler"_________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+156;    "5474-WTF"________;  "CON-VL"_;      "CO2FB03"_________;  "WT2 Übertemperatur"________________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+157;    "5474-WTF"________;  "CON-RL"_;      "CO2FB04"_________;  "WT2 Rücklauftemperaturbegrenzung"__________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+158;    "5474-WTF"________;  "CON-RPA";      "CO2FB05"_________;  "WT2 Regelung stetig/3-Punkt"_______________________;  0;  "3-Punkt (0)"_____;  "stetig (1)"______;  10
+160;    "5474-WTF"________;  "CON-RPA";      "CO2FB07"_________;  "WT2 Stellungsrückmeldung"__________________________;  0;  "intern (0)"______;  "extern (1)"______;  10
+225;    "5474-WTF"________;  "CON-AT"_;      "CO5FB00"_________;  "AT-Messart"________________________________________;  0;  "Inaktiv-(0)"_____;  "Fühler (1)"______;  10
+226;    "5474-WTF"________;  "CON-AT"_;      "CO5FB01"_________;  "Verzögerte Außentemperaturanpassung"_______________;  0;  "AT mess (0)"_____;  "AT verzögert (1)";  10
+228;    "5474-WTF"________;  "CON-SON";      "CO5FB03"_________;  "Kennlinie/Festwert"________________________________;  0;  "Festwert (0)"____;  "Kennlinie (1)"___;  10
+229;    "5474-WTF"________;  "CON-BTR";      "CO5FB04"_________;  "Konfiguration sperren"_____________________________;  0;  "frei (0)"________;  "gesperrt (1)"____;  10
+230;    "5474-WTF"________;  "CON-SON";      "CO5FB05"_________;  "Automatische Sommer-/Winterzeitumschaltung"________;  0;  "inaktiv (0)"_____;  "Umstellung (1)"__;  10
+231;    "5474-WTF"________;  "CON-SON";      "CO5FB06"_________;  "Sommerbetrieb"_____________________________________;  0;  "inaktiv (0)"_____;  "Sommer (1)"______;  10
+232;    "5474-WTF"________;  "CON-SON";      "CO5FB07"_________;  "Folgefreigabe nach Außentemperatur"________________;  0;  "AT-abhängig (0)"_;  "Folge frei (1)"__;  10
+233;    "5474-WTF"________;  "CON-SON";      "CO5FB08"_________;  "Leistungsausgleich"________________________________;  0;  "inaktiv (0)"_____;  "P-Ausgleich (1)"_;  10
+234;    "5474-WTF"________;  "CON-SON";      "CO5FB09"_________;  "Automatische Führungsumschaltung"__________________;  0;  "bei Störung (0)"_;  "automatisch (1)"_;  10
+235;    "5474-WTF"________;  "CON-SON";      "CO5FB10"_________;  "Führungsumschaltung nach Zeit/Außentemperatur"_____;  0;  "ATGW/Leistung(0)";  "Zeit (1)"________;  10
+236;    "5474-WTF"________;  "CON-SON";      "CO5FB11"_________;  "Anzeige Führung/Sammelstörung"_____________________;  0;  "Störung (0)"_____;  "Führung (1)"_____;  10
+238;    "5474-WTF"________;  "CON-SON";      "CO5FB13"_________;  "Kondensat-Anstau-Regelung"_________________________;  0;  "Wasser (0)"______;  "Kondensat (1)"___;  10
+239;    "5474-WTF"________;  "CON-SON";      "CO5FB14"_________;  "Pumpendauerlauf"___________________________________;  0;  "Inaktiv (0)"_____;  "Dauerlauf (1)"___;  10
+240;    "5474-WTF"________;  "CON-SON";      "CO5FB15"_________;  "Externer Bedarf"___________________________________;  0;  "Inaktiv (0)"_____;  "Ext. Bedarf (1)"_;  10
+241;    "5474-WTF"________;  "CON-SON";      "CO5FB16"_________;  "Stellsignalabschaltung"____________________________;  0;  "Inaktiv (0)"_____;  "Signal limit (1)";  10
+244;    "5474-WTF"________;  "CON-SON";      "CO5FB19"_________;  "Parallelbetrieb"___________________________________;  0;  "Inaktiv (0)"_____;  "Parallelbetrb(1)";  10
+249;    "5474-WTF"________;  "CON-SON";      "CO6FB00"_________;  "Universaleingänge global konfigurieren"____________;  0;  "Pt100/PTC (0)"___;  "Pt100/1000 (1)"__;  10
+250;    "5474-WTF"________;  "CON-SON";      "CO6FB01"_________;  "Universaleingang 1 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+251;    "5474-WTF"________;  "CON-SON";      "CO6FB02"_________;  "Universaleingang 2 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+252;    "5474-WTF"________;  "CON-SON";      "CO6FB03"_________;  "Universaleingang 3 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+253;    "5474-WTF"________;  "CON-SON";      "CO6FB04"_________;  "Universaleingang 4 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+254;    "5474-WTF"________;  "CON-SON";      "CO6FB05"_________;  "Universaleingang 5 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+255;    "5474-WTF"________;  "CON-SON";      "CO6FB06"_________;  "Universaleingang 6 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+256;    "5474-WTF"________;  "CON-SON";      "CO6FB07"_________;  "Universaleingang 7 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+257;    "5474-WTF"________;  "CON-SON";      "CO6FB08"_________;  "Universaleingang 8 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+258;    "5474-WTF"________;  "CON-SON";      "CO6FB09"_________;  "Universaleingang 9 separat konfigurieren"__________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+259;    "5474-WTF"________;  "CON-SON";      "CO6FB10"_________;  "Universaleingang 10 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+260;    "5474-WTF"________;  "CON-SON";      "CO6FB11"_________;  "Universaleingang 11 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+261;    "5474-WTF"________;  "CON-SON";      "CO6FB12"_________;  "Universaleingang 12 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+262;    "5474-WTF"________;  "CON-SON";      "CO6FB13"_________;  "Universaleingang 13 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+263;    "5474-WTF"________;  "CON-SON";      "CO6FB14"_________;  "Universaleingang 14 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+264;    "5474-WTF"________;  "CON-SON";      "CO6FB15"_________;  "Universaleingang 15 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+265;    "5474-WTF"________;  "CON-SON";      "CO6FB16"_________;  "Universaleingang 16 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+266;    "5474-WTF"________;  "CON-SON";      "CO6FB17"_________;  "Universaleingang 17 separat konfigurieren"_________;  0;  "Global (0)"______;  "separat (1)"_____;  10
+267;    "5474-WTF"________;  "ALG-FÜH";      "CO6FB18"_________;  "Universaleingang (0-10)V aktiv"____________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+297;    "5474-WTF"________;  "CON-WW"_;      "CO8FB00"_________;  "GLT-Anwahl auch bei gehenden Störungen"____________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+298;    "5474-WTF"________;  "CON-WW"_;      "CO8FB01"_________;  "BE01 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+299;    "5474-WTF"________;  "CON-WW"_;      "CO8FB02"_________;  "BE02 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+300;    "5474-WTF"________;  "CON-WW"_;      "CO8FB03"_________;  "BE03 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+301;    "5474-WTF"________;  "CON-WW"_;      "CO8FB04"_________;  "BE04 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+302;    "5474-WTF"________;  "CON-WW"_;      "CO8FB05"_________;  "BE05 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+303;    "5474-WTF"________;  "CON-WW"_;      "CO8FB06"_________;  "BE06 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+304;    "5474-WTF"________;  "CON-WW"_;      "CO8FB07"_________;  "BE07 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+305;    "5474-WTF"________;  "CON-WW"_;      "CO8FB08"_________;  "BE08 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+306;    "5474-WTF"________;  "CON-WW"_;      "CO8FB09"_________;  "BE09 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+307;    "5474-WTF"________;  "CON-WW"_;      "CO8FB10"_________;  "BE10 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+308;    "5474-WTF"________;  "CON-WW"_;      "CO8FB11"_________;  "BE11 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+309;    "5474-WTF"________;  "CON-WW"_;      "CO8FB12"_________;  "BE12 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+310;    "5474-WTF"________;  "CON-WW"_;      "CO8FB13"_________;  "BE13 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+311;    "5474-WTF"________;  "CON-WW"_;      "CO8FB14"_________;  "BE14 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+312;    "5474-WTF"________;  "CON-WW"_;      "CO8FB15"_________;  "BE15 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+313;    "5474-WTF"________;  "CON-WW"_;      "CO8FB16"_________;  "BE16 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+314;    "5474-WTF"________;  "CON-WW"_;      "CO8FB17"_________;  "BE17 im Fehlerstatusregister"______________________;  0;  "Inaktiv (0)"_____;  "Aktiv (1)"_______;  10
+319;    "5474-WTF"________;  "CON-SOK";      "CO8-FB22_GW_HRCL";  "Grenzwertüberwachung HR/CL allg. alle 5100 Geräte"_;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+320;    "5474-WTF"________;  "CON-SOK";      "CO8-FB23_BEinFSR";  "Binäreingang im Fehlerstatusregister (FSR1-D11)"___;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+321;    "5474-WTF"________;  "CON-MOD";      "CO9-FB00_Modbus"_;  "Modbus aktiv"______________________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+322;    "5474-WTF"________;  "CON-MOD";      "CO9-FB01_ModeAkt";  "Modem aktiv"_______________________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+323;    "5474-WTF"________;  "CON-MOD";      "CO9-FB02_TonPuls";  "Modem Wahlverfahren Ton/Puls"______________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+324;    "5474-WTF"________;  "CON-MOD";      "CO9-FB03_StAnWah";  "Sperrung der Störanwahl"___________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+325;    "5474-WTF"________;  "CON-MOD";      "CO9-FB04_16Bit"__;  "16-Bit-Adressierung Modbus aktiv"__________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+327;    "5474-WTF"________;  "CON-MOD";      "CO9-FB06_SMS"____;  "Fehlersignalisierung über SMS auf ein Handy"_______;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+328;    "5474-WTF"________;  "CON-MOD";      "CO9-FB07_TonPuls";  "Wahlverfahren SMS Ton/Puls"________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+331;    "5474-WTF"________;  "CON-MOD";      "CO9-FB10_Fax"____;  "Fehlersignalisierung über Fax"_____________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+332;    "5474-WTF"________;  "CON-MOD";      "CO9-FB11_TonPuls";  "Wahlverfahren Fax Ton/Puls"________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+342;    "5474-WTF"________;  "CON-VOL";      "CO9-FB21_WMZ1"___;  "Wärmemengenzähler 1"_______________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+343;    "5474-WTF"________;  "CON-VOL";      "CO9-FB22_WMZ2"___;  "Wärmemengenzähler 2"_______________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+344;    "5474-WTF"________;  "CON-VOL";      "CO9-FB23_WMZ3"___;  "Wärmemengenzähler 3"_______________________________;  0;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+513;    "5474-WTF"________;  "EBN-SON";      "EBNVLSoll"_______;  "Ebenenbit Vorlaufsollwert"_________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+514;    "5474-WTF"________;  "EBN-SON";      "EBNFührung"______;  "Ebenenbit Führung"_________________________________;  0;  "GLT (0)"_________;  "Autark (1)"______;  10
+550;    "5474-WTF"________;  "ALG-BTR";      "Führung"_________;  "Führungstauscher"__________________________________;  0;  "WT 1 (0)"________;  "WT 2 (1)"________;  10
+595;    "5474-WTF"________;  "ALG-BTR";      "BtrAutomatik"____;  "Zeitabhängiger Betrieb (Automatik)"________________;  1;  "Aus (0)"_________;  "Automatik (1)"___;  10
+596;    "5474-WTF"________;  "ALG-BTR";      "BtrNenn"_________;  "Nennbetrieb"_______________________________________;  1;  "Aus (0)"_________;  "Nennbetrieb (1)"_;  10
+597;    "5474-WTF"________;  "ALG-BTR";      "BtrRed"__________;  "Reduzierbetrieb"___________________________________;  1;  "Aus (0)"_________;  "Reduziert (1)"___;  10
+598;    "5474-WTF"________;  "ALG-BTR";      "BtrStandby"______;  "Stand-by-Betrieb"__________________________________;  1;  "Aus (0)"_________;  "Stand-by (1)"____;  10
+601;    "5474-WTF"________;  "ALG-BTR";      "BtrFrost"________;  "Frostschutz"_______________________________________;  1;  "Aus (0)"_________;  "Frostschutz (1)"_;  10
+602;    "5474-WTF"________;  "ALG-BTR";      "BtrWartung"______;  "Wartungsbetrieb"___________________________________;  1;  "Aus (0)"_________;  "Wartung (1)"_____;  10
+603;    "5474-WTF"________;  "ALG-BTR";      "BtrSommer"_______;  "Sommerbetrieb"_____________________________________;  1;  "Aus (0)"_________;  "Sommer (1)"______;  10
+611;    "5474-WTF"________;  "ALG-BTR";      "WWAnfordern"_____;  "Anforderung externe TWE mit BE"____________________;  1;  "Aus (0)"_________;  "Sollwert ext (1)";  10
+630;    "5474-WTF"________;  "ALG-WMZ";      "MBUS_FehlerWMZ1"_;  "Fehler WMZ 1"______________________________________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+631;    "5474-WTF"________;  "ALG-WMZ";      "MBUS_KomStrWMZ1"_;  "Fehler Zählerbus WMZ 1"____________________________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+632;    "5474-WTF"________;  "ALG-WMZ";      "MBUS_FehlerWMZ2"_;  "Fehler WMZ 2"______________________________________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+633;    "5474-WTF"________;  "ALG-WMZ";      "MBUS_KomStrWMZ2"_;  "Fehler Zählerbus WMZ 2"____________________________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+634;    "5474-WTF"________;  "ALG-WMZ";      "MBUS_FehlerWMZ3"_;  "Fehler WMZ 3"______________________________________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+635;    "5474-WTF"________;  "ALG-WMZ";      "MBUS_KomStrWMZ3"_;  "Fehler Zählerbus WMZ 3"____________________________;  1;  "Inaktiv-(0)"_____;  "Aktiv-(1)"_______;  10
+

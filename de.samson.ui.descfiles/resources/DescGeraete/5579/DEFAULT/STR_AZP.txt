@@ -1,0 +1,7 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         BerAnfang    BerEnde        WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "5579"____________;  "ZP_Heizkreis1"___;  0,000;       0,000;         1;      10;        16;          0;            0;          3;           520
+2;      "5579"____________;  "ZP_Heizkreis2"___;  0,000;       0,000;         1;      10;        16;          0;            0;          3;           520
+3;      "5579"____________;  "ZP_Trinkwasser"__;  0,000;       0,000;         1;      10;        16;          0;            0;          3;           520
+4;      "5579"____________;  "ZP_Heizkreis3"___;  0,000;       0,000;         1;      10;        16;          0;            0;          3;           520

@@ -1,0 +1,2 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         BerAnfang    BerEnde        WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV

@@ -1,0 +1,4 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "5407-NTC"________;  "ZP_ZirkulatPump"_;  1;      16;        16;          0;            0;          24;          0

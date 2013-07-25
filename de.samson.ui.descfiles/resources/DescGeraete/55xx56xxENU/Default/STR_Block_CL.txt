@@ -1,0 +1,12 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"55xx56xxENU"____;  1;           121;       1
+"55xx56xxENU"____;  130;         338;       2
+"55xx56xxENU"____;  998;         1044;      1
+"55xx56xxENU"____;  1200;        1238;      2
+"55xx56xxENU"____;  1400;        1438;      2
+"55xx56xxENU"____;  1800;        1845;      2
+
+
+

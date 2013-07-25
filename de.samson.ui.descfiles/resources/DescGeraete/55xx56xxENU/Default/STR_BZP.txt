@@ -1,0 +1,5 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "55xx56xxENU"____;  "ZP_sched_CP_DHW"_;  1;      10;        16;          0;            0;          3;           520
+3;      "55xx56xxENU"____;  "ZP_sched_WMZHTNT";  1;      0;         0;           0;            0;          3;           520

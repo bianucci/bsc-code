@@ -4,7 +4,6 @@ import java.io.File;
 
 import de.samson.ui.descfilemanager.parser.EnumDescFileType;
 
-
 public class DescFileCorruptedException extends Exception {
 	private static final long serialVersionUID = -2463869273503605750L;
 
@@ -54,6 +53,15 @@ public class DescFileCorruptedException extends Exception {
 
 	public void setCorruptedFile(File corruptedFile) {
 		this.corruptedFile = corruptedFile;
+	}
+
+	@Override
+	public void printStackTrace() {
+		System.err.println("Error occured parsing File "
+				+ getCorruptedFile().getAbsolutePath() + " on line "
+				+ getLineCount() + " with following data: "
+				+ getUnparsedDataset());
+		System.err.println("This could be parsed: " + getResultDatasetAsLine());
 	}
 
 }

@@ -1,0 +1,796 @@
+﻿{
+  "TabWMZ": {
+    "WMZ1": {
+      "Volumen_": {
+        "Einheit": {
+          "IntRegister": 40270,
+          "StrKommentar": "Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Leistung_": {
+        "Einheit": {
+          "IntRegister": 40274,
+          "StrKommentar": "Leistung, Einheit: 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Arbeit_": {
+        "Einheit": {
+          "IntRegister": 40278,
+          "StrKommentar": "Arbeit, Einheit: 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "Vorltemp_": {
+        "Einheit": {
+          "IntRegister": 40282,
+          "StrKommentar": "Vorlauftemperatur, Einheit: 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "Rückltemp_": {
+        "Einheit": {
+          "IntRegister": 40286,
+          "StrKommentar": "Rücklauftemperatur, Einheit: 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40295,
+          "StrKommentar": "WMZ 1, Sp/Stag1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp1Vol_": {
+        "Einheit": {
+          "IntRegister": 40301,
+          "StrKommentar": "WMZ 1, Sp/Stag1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40305,
+          "StrKommentar": "WMZ 1, Sp/Stag2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp2Vol_": {
+        "Einheit": {
+          "IntRegister": 40311,
+          "StrKommentar": "WMZ 1, Sp/Stag2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40315,
+          "StrKommentar": "WMZ 1, Sub-Dev 1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD1Vol_": {
+        "Einheit": {
+          "IntRegister": 40319,
+          "StrKommentar": "WMZ 1, Sub-Dev1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40323,
+          "StrKommentar": "WMZ 1, Sub-Dev 2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD2Vol_": {
+        "Einheit": {
+          "IntRegister": 40327,
+          "StrKommentar": "WMZ 1, Sub-Dev2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40331,
+          "StrKommentar": "WMZ 1, Tarif 1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta1Vol_": {
+        "Einheit": {
+          "IntRegister": 40335,
+          "StrKommentar": "WMZ 1, Tarif 1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40339,
+          "StrKommentar": "WMZ 1, Tarif 2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta2Vol_": {
+        "Einheit": {
+          "IntRegister": 40343,
+          "StrKommentar": "WMZ 1, Tarif 2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      }
+    },
+    "WMZ2": {
+      "Volumen_": {
+        "Einheit": {
+          "IntRegister": 40526,
+          "StrKommentar": "Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Arbeit_": {
+        "Einheit": {
+          "IntRegister": 40534,
+          "StrKommentar": "Arbeit, Einheit: 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "Rückltemp_": {
+        "Einheit": {
+          "IntRegister": 40542,
+          "StrKommentar": "Rücklauftemperatur, Einheit: 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40551,
+          "StrKommentar": "WMZ 2, Sp/Stag1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp1Vol_": {
+        "Einheit": {
+          "IntRegister": 40557,
+          "StrKommentar": "WMZ 2, Sp/Stag1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40561,
+          "StrKommentar": "WMZ 2, Sp/Stag2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp2Vol_": {
+        "Einheit": {
+          "IntRegister": 40567,
+          "StrKommentar": "WMZ 2, Sp/Stag2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40571,
+          "StrKommentar": "WMZ 2, Sub-Dev 1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40579,
+          "StrKommentar": "WMZ 2, Sub-Dev 2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD2Vol_": {
+        "Einheit": {
+          "IntRegister": 40583,
+          "StrKommentar": "WMZ 2, Sub-Dev2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40587,
+          "StrKommentar": "WMZ 2, Tarif 1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta1Vol_": {
+        "Einheit": {
+          "IntRegister": 40591,
+          "StrKommentar": "WMZ 2, Tarif 1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40595,
+          "StrKommentar": "WMZ 2, Tarif 2 Arbeit, Einheit: 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta2Vol_": {
+        "Einheit": {
+          "IntRegister": 40599,
+          "StrKommentar": "WMZ 2, Tarif 2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      }
+    },
+    "WMZ3": {
+      "Volumen_": {
+        "Einheit": {
+          "IntRegister": 40782,
+          "StrKommentar": "Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Leistung_": {
+        "Einheit": {
+          "IntRegister": 40786,
+          "StrKommentar": "Leistung, Einheit: 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Arbeit_": {
+        "Einheit": {
+          "IntRegister": 40790,
+          "StrKommentar": "Arbeit, Einheit: 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "Vorltemp_": {
+        "Einheit": {
+          "IntRegister": 40794,
+          "StrKommentar": "Vorlauftemperatur, Einheit: 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "Rückltemp_": {
+        "Einheit": {
+          "IntRegister": 40798,
+          "StrKommentar": "Rücklauftemperatur, Einheit: 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40807,
+          "StrKommentar": "WMZ 3, Sp/Stag1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp1Vol_": {
+        "Einheit": {
+          "IntRegister": 40813,
+          "StrKommentar": "WMZ 3, Sp/Stag1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40817,
+          "StrKommentar": "WMZ 3, Sp/Stag2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Sp2Vol_": {
+        "Einheit": {
+          "IntRegister": 40823,
+          "StrKommentar": "WMZ 3, Sp/Stag2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40827,
+          "StrKommentar": "WMZ 3, Sub-Dev 1 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD1Vol_": {
+        "Einheit": {
+          "IntRegister": 40831,
+          "StrKommentar": "WMZ 3, Sub-Dev1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40835,
+          "StrKommentar": "WMZ 3, Sub-Dev 2 Arbeit, Einheit: 0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_SD2Vol_": {
+        "Einheit": {
+          "IntRegister": 40839,
+          "StrKommentar": "WMZ 3, Sub-Dev2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta1Arbeit": {
+        "Einheit": {
+          "IntRegister": 40843,
+          "StrKommentar": "WMZ 3, Tarif 1 Arbeit, Einheit: 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta1Vol_": {
+        "Einheit": {
+          "IntRegister": 40847,
+          "StrKommentar": "WMZ 3, Tarif 1 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta2Arbeit": {
+        "Einheit": {
+          "IntRegister": 40851,
+          "StrKommentar": "WMZ 3, Tarif 2 Arbeit, Einheit: 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": []
+      },
+      "_Ta2Vol_": {
+        "Einheit": {
+          "IntRegister": 40855,
+          "StrKommentar": "WMZ 3, Tarif 2 Volumen, Einheit: 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": []
+      }
+    }
+  },
+  "NavWMZ": {
+    "40270": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Volumen_",
+      "NodeName": "Einheit"
+    },
+    "40274": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Leistung_",
+      "NodeName": "Einheit"
+    },
+    "40278": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Arbeit_",
+      "NodeName": "Einheit"
+    },
+    "40282": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Vorltemp_",
+      "NodeName": "Einheit"
+    },
+    "40286": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Rückltemp_",
+      "NodeName": "Einheit"
+    },
+    "40295": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Sp1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40301": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Sp1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40305": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Sp2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40311": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Sp2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40315": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_SD1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40319": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_SD1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40323": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_SD2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40327": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_SD2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40331": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Ta1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40335": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Ta1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40339": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Ta2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40343": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "_Ta2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40526": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Volumen_",
+      "NodeName": "Einheit"
+    },
+    "40534": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Arbeit_",
+      "NodeName": "Einheit"
+    },
+    "40542": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Rückltemp_",
+      "NodeName": "Einheit"
+    },
+    "40551": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Sp1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40557": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Sp1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40561": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Sp2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40567": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Sp2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40571": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_SD1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40579": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_SD2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40583": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_SD2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40587": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Ta1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40591": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Ta1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40595": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Ta2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40599": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "_Ta2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40782": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Volumen_",
+      "NodeName": "Einheit"
+    },
+    "40786": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Leistung_",
+      "NodeName": "Einheit"
+    },
+    "40790": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Arbeit_",
+      "NodeName": "Einheit"
+    },
+    "40794": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Vorltemp_",
+      "NodeName": "Einheit"
+    },
+    "40798": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Rückltemp_",
+      "NodeName": "Einheit"
+    },
+    "40807": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Sp1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40813": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Sp1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40817": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Sp2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40823": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Sp2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40827": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_SD1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40831": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_SD1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40835": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_SD2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40839": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_SD2Vol_",
+      "NodeName": "Einheit"
+    },
+    "40843": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Ta1Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40847": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Ta1Vol_",
+      "NodeName": "Einheit"
+    },
+    "40851": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Ta2Arbeit",
+      "NodeName": "Einheit"
+    },
+    "40855": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "_Ta2Vol_",
+      "NodeName": "Einheit"
+    }
+  }
+}

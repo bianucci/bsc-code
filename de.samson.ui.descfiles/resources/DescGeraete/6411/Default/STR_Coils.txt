@@ -1,0 +1,48 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "6411"____________;  "ALG-BTR";      "Sammelstörung"___; "siehe HR26_27_28_29"_______________________________;  1;  "0=keine"_________;  "1=Aktiv"_________;  0
+2;      "6411"____________;  "ALG-BTR";      "Messumfstörung"__; "Messumformerstörung"_______________________________;  1;  "0=keine"_________;  "1=Aktiv"_________;  0
+3;      "6411"____________;  "ALG-BTR";      "Kaltstart_stattg"; "Kaltstart hat stattgefunden (mit 0 bestätigen)"____;  0;  "0=Rücksetzen"____;  "1=stattgefunden"_;  0
+4;      "6411"____________;  "ALG-BTR";      "QuittiergStörung"; "Quittierung rücksetzbarer Störungen (mit 0)"_______;  0;  "0=keine"_________;  "1=Aktiv"_________;  0
+5;      "6411"____________;  "ALG-BTR";      "StellgrBlockiert"; "Stellgröße blockiert"______________________________;  1;  "0=Automatik"_____;  "1=Hand"__________;  0
+6;      "6411"____________;  "ALG-BTR";      "SollwBegr_aktiv"_; "Stellwertbegrenzung aktiv"_________________________;  1;  "0=Führungsregler";  "1=Folgeregler"___;  0
+7;      "6411"____________;  "ALG-BTR";      "SichStellw_aktiv"; "Sicherheitsstellwert aktiv"________________________;  1;  "0=Interne"_______;  "1=Externe"_______;  0
+8;      "6411"____________;  "ALG-BTR";      "ExtRechSig_aktiv"; "Externes Rechnerbereitschaftssignal aktiv"_________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+9;      "6411"____________;  "ALG-BTR";      "ParamGLT_freigeg"; "Parametrierung über Leitsystem freigegeben"________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+10;     "6411"____________;  "ALG-BTR";      "Parametrg_stattg"; "Parametrierung  hat stattgefunden (quitt. mit 0)"__;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+11;     "6411"____________;  "ALG-BTR";      "KonfgGLT_freigeg"; "Konfiguration über Leitsystem freigegeben"_________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+12;     "6411"____________;  "ALG-BTR";      "Konfigur_stattg"_; "Konfiguration hat stattgefunden (quitt. mit 0)"____;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+13;     "6411"____________;  "ALG-BTR";      "Konfigur_Fehler"_; "Konfigurationsfehler"______________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+14;     "6411"____________;  "ALG-BTR";      "UmschPrio_System"; "Umschalten auf LS-Priorität mit 0 (CON50 = 3)"_____;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+15;     "6411"____________;  "ALG-BTR";      "ReglerPrio_aktiv"; "Regler Priorität, CON50=2; CON50=3&CON17=16&BE1 ..";  1;  "0=Aus"___________;  "1=Ein"___________;  0
+16;     "6411"____________;  "ALG-BTR";      "SystemPrio_aktiv"; "Leitsystem Priorität, CON50=3&CON17=16&BE1 ..."____;  1;  "0=Aus"___________;  "1=Aktiviert"_____;  0
+17;     "6411"____________;  "ALG-BTR";      "Handbedien_aktiv"; "Handbedienung aktiv"_______________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+18;     "6411"____________;  "ALG-BTR";      "Automatik_aktiv"_; "Automatik aktiv"___________________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+19;     "6411"____________;  "ALG-BTR";      "BetrArt_Hand_Aut"; "Betriebsartenumschaltung (Hand=0, Automatik=1)"____;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+20;     "6411"____________;  "ALG-BTR";      "DDC-Backup-Betrb"; "DDC Back Up - Betrieb"_____________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+21;     "6411"____________;  "ALG-BTR";      "DDC-Norm-Betrb"__; "Normalbetrieb/DDC Back Up (Normal=1, DDC=0)"_______;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+22;     "6411"____________;  "ALG-BTR";      "KgIntSollw_aktiv"; "interner Sollwert aktiv, Kaskade geschlossen"______;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+23;     "6411"____________;  "ALG-BTR";      "KoExtSollw_aktiv"; "externer Sollwert aktiv, Kaskade offen"____________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+24;     "6411"____________;  "ALG-BTR";      "UmschSollw_Kaskd"; "Sollwertumschaltung oder Kaskade"__________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+25;     "6411"____________;  "ALG-BTR";      "SichhSollw_aktiv"; "Sicherheitssollwert aktiv"_________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+26;     "6411"____________;  "ALG-BTR";      "X-Tracking_aktiv"; "X - Tracking aktiv"________________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+27;     "6411"____________;  "ALG-BTR";      "SollwRampe_aktiv"; "Sollwertrampe aktiv"_______________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+28;     "6411"____________;  "BEA-BE"_;      "BinEin_Schnittst"; "Binäreingang der Schnittstelle"____________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+29;     "6411"____________;  "BEA-BE"_;      "BinEing1_Softw"__; "Software Binäreingang 1"___________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+30;     "6411"____________;  "BEA-BE"_;      "BinEing2_Softw"__; "Software Binäreingang 2"___________________________;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+31;     "6411"____________;  "BEA-BE"_;      "BinEing1_Hardw"__; "Hardware Binäreingang 1 am Regler"_________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+32;     "6411"____________;  "BEA-BE"_;      "BinEing2_Hardw"__; "Hardware Binäreingang 2 am Regler"_________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+33;     "6411"____________;  "BEA-BA"_;      "BinAus1_CON44-7"_; "Binärausgang 1 (schreibbar wenn CON44=7)"__________;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+34;     "6411"____________;  "BEA-BA"_;      "BinAus2_CON45-7"_; "Binärausgang 2 (schreibbar wenn CON45=7)"__________;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+35;     "6411"____________;  "BEA-SON";      "SoftGW1_CON40-1"_; "Software GW1 (schreibbar wenn CON40=1)"____________;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+36;     "6411"____________;  "BEA-SON";      "SoftGW2_CON41-1"_; "Software GW2 (schreibbar wenn CON41=1)"____________;  0;  "0=Aus"___________;  "1=Ein"___________;  0
+37;     "6411"____________;  "BEA-BA"_;      "Stellausg_Yneg"__; "Stellausgang Y-"___________________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+38;     "6411"____________;  "BEA-BA"_;      "Stellausg_Ypos"__; "Stellausgang Y+"___________________________________;  1;  "0=Aus"___________;  "1=Ein"___________;  0
+39;     "6411"____________;  "ALG-SON";      "Grenzwertrelais1"; "Grenzwertrelais 1 (Hardwarezustand von GW1)"_______;  1;  "0=Rücksetzen"____;  "1=keinenEinfluß"_;  0
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+40;     "6411"____________;  "ALG-SON";      "Grenzwertrelais2"; "Grenzwertrelais 2 (Hardwarezustand von GW2)"_______;  1;  "0=Rücksetzen"____;  "1=keinenEinfluß"_;  0
+41;     "6411"____________;  "ALG-SON";      "BinEing1_Regler"_; "Binäreingang 1 (im Regler verwendeter BE1)"________;  1;  "0=Rücksetzen"____;  "1=keinenEinfluß"_;  0
+42;     "6411"____________;  "ALG-SON";      "BinEing2_Regler"_; "Binäreingang 2 (im Regler verwendeter BE2)"________;  1;  "0=Rücksetzen"____;  "1=keinenEinfluß"_;  0

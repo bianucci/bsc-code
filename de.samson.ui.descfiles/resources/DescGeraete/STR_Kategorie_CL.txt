@@ -1,0 +1,53 @@
+
+REM HauptKategorieName         HauptKategorie   UnterKategorieName            UnterKategorie   KategorieKurz  InCSV
+
+"Allgemeines"______________;   "ALG";          "Betriebsarten"____________;  "BTR";           "ALG-BTR";      0
+"Allgemeines"______________;   "ALG";          "CLAllgemein"______________;  "CL"_;           "ALG-CL"_;      0
+"Allgemeines"______________;   "ALG";          "INAllgemein"______________;  "IN"_;           "ALG-IN"_;      0
+"Allgemeines"______________;   "ALG";          "Error"____________________;  "ERO";           "ALG-ERO";      0
+"Allgemeines"______________;   "ALG";          "Fühlereingänge"___________;  "FÜH";           "ALG-FÜH";      0
+"Allgemeines"______________;   "ALG";          "Modem"____________________;  "MOD";           "ALG-MOD";      0
+"Allgemeines"______________;   "ALG";          "Regelparameter"___________;  "RPA";           "ALG-RPA";      0
+"Allgemeines"______________;   "ALG";          "Sonderklemmen"____________;  "SOK";           "ALG-SOK";      0
+"Allgemeines"______________;   "ALG";          "Sonstige"_________________;  "SON";           "ALG-SON";      0
+"Allgemeines"______________;   "ALG";          "Wärmemengenzähler"________;  "WMZ";           "ALG-WMZ";      0
+"Allgemeines"______________;   "ALG";          "Zeitprogramm"_____________;  "ZPG";           "ALG-ZPG";      0
+"Ein/Ausgänge"_____________;   "BEA";          "Binäre_Ausgänge"__________;  "BA"_;           "BEA-BA"_;      0
+"Ein/Ausgänge"_____________;   "BEA";          "Binäre_Eingänge"__________;  "BE"_;           "BEA-BE"_;      0
+"Ein/Ausgänge"_____________;   "BEA";          "Binäre_Pumpenausgänge"____;  "BPU";           "BEA-BPU";      0
+"Ein/Ausgänge"_____________;   "BEA";          "Binäre_Stellausgänge"_____;  "BST";           "BEA-BST";      0
+"Ein/Ausgänge"_____________;   "BEA";          "Sonstige"_________________;  "SON";           "BEA-SON";      0
+"Configurationsblöcke"_____;   "CON";          "2-Punkt"__________________;  "2P"_;           "CON-2P"_;      0
+"Configurationsblöcke"_____;   "CON";          "Abluft"___________________;  "ALU";           "CON-ALU";      0
+"Configurationsblöcke"_____;   "CON";          "Außentemperatur"__________;  "AT"_;           "CON-AT"_;      0
+"Configurationsblöcke"_____;   "CON";          "Betriebsart"______________;  "BTR";           "CON-BTR";      0
+"Configurationsblöcke"_____;   "CON";          "Fehlerstatusregister"_____;  "FSR";           "CON-FSR";      0
+"Configurationsblöcke"_____;   "CON";          "LON"______________________;  "LON";           "CON-LON";      0
+"Configurationsblöcke"_____;   "CON";          "Modem"____________________;  "MOD";           "CON-MOD";      0
+"Configurationsblöcke"_____;   "CON";          "Primärregeldatendaten"____;  "PRI";           "CON-PRI";      0
+"Configurationsblöcke"_____;   "CON";          "Rücklauf"_________________;  "RL"_;           "CON-RL"_;      0
+"Configurationsblöcke"_____;   "CON";          "Regelparameter"___________;  "RPA";           "CON-RPA";      0
+"Configurationsblöcke"_____;   "CON";          "Raumtemperatur"___________;  "RT"_;           "CON-RT"_;      0
+"Configurationsblöcke"_____;   "CON";          "Sonderklemmen"____________;  "SOK";           "CON-SOK";      0
+"Configurationsblöcke"_____;   "CON";          "Sonstige"_________________;  "SON";           "CON-SON";      0
+"Configurationsblöcke"_____;   "CON";          "Vorlauf"__________________;  "VL"_;           "CON-VL"_;      0
+"Configurationsblöcke"_____;   "CON";          "Volumen/Leistung"_________;  "VOL";           "CON-VOL";      0
+"Configurationsblöcke"_____;   "CON";          "Warmwasser"_______________;  "WW"_;           "CON-WW"_;      0
+"Configurationsblöcke"_____;   "CON";          "Wärmemengenzähler"________;  "WMZ";           "CON-WMZ";      0
+"Configurationsblöcke"_____;   "CON";          "Zuluft"___________________;  "ZLU";           "CON-ZLU";      0
+"Ebenen"___________________;   "EBN";          "Abluft"___________________;  "ALU";           "EBN-ALU";      0
+"Ebenen"___________________;   "EBN";          "Analoge_Stellausgänge"____;  "AST";           "EBN-AST";      0
+"Ebenen"___________________;   "EBN";          "Außentemperatur"__________;  "AT"_;           "EBN-AT"_;      0
+"Ebenen"___________________;   "EBN";          "Binäre_Ausgänge"__________;  "BA"_;           "EBN-BA"_;      0
+
+REM HauptKategorieName         HauptKategorie   UnterKategorieName            UnterKategorie   KategorieKurz  InCSV
+
+"Ebenen"___________________;   "EBN";          "Binäre_Pumpenausgänge"____;  "BPU";           "EBN-BPU";      0
+"Ebenen"___________________;   "EBN";          "Binäre_Stellausgänge"_____;  "BST";           "EBN-BST";      0
+"Ebenen"___________________;   "EBN";          "Betriebsart"______________;  "BTR";           "EBN-BTR";      0
+"Ebenen"___________________;   "EBN";          "Rücklauf"_________________;  "RL"_;           "EBN-RL"_;      0
+"Ebenen"___________________;   "EBN";          "Raumtemperatur"___________;  "RT"_;           "EBN-RT"_;      0
+"Ebenen"___________________;   "EBN";          "Sonstige"_________________;  "SON";           "EBN-SON";      0
+"Ebenen"___________________;   "EBN";          "Universaleingänge"________;  "UE"_;           "EBN-UE"_;      0
+"Ebenen"___________________;   "EBN";          "Vorlauf"__________________;  "VL"_;           "EBN-VL"_;      0
+"Ebenen"___________________;   "EBN";          "Zuluft"___________________;  "ZLU";           "EBN-ZLU";      0

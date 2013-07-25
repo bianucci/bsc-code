@@ -32,6 +32,7 @@
    <plugins>
       <plugin id="com.ibm.icu"/>
       <plugin id="de.samson.application"/>
+      <plugin id="de.samson.libraries"/>
       <plugin id="de.samson.service.database"/>
       <plugin id="de.samson.service.directregleraccess"/>
       <plugin id="de.samson.service.network"/>

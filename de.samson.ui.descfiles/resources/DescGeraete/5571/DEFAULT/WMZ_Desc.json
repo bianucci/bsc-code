@@ -1,0 +1,3708 @@
+﻿{
+  "TabWMZ": {
+    "WMZ1": {
+      "Q": {
+        "Einheit": {
+          "IntRegister": 46509,
+          "StrKommentar": "WMZ1 Einheit Durchfluß, 0=m³/h, 1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46506,
+            "StrKommentar": "WMZ1 Durchfluß (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46507,
+            "StrKommentar": "WMZ1 Durchfluß (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46508,
+            "StrKommentar": "WMZ1 Durchfluß (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "V": {
+        "Einheit": {
+          "IntRegister": 46513,
+          "StrKommentar": "WMZ1 Einheit Volumen, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46510,
+            "StrKommentar": "WMZ1 Volumen (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46511,
+            "StrKommentar": "WMZ1 Volumen (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46512,
+            "StrKommentar": "WMZ1 Volumen (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "P": {
+        "Einheit": {
+          "IntRegister": 46517,
+          "StrKommentar": "WMZ1 Einheit Leistung, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46514,
+            "StrKommentar": "WMZ1 Leistung (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46515,
+            "StrKommentar": "WMZ1 Leistung (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46516,
+            "StrKommentar": "WMZ1 Leistung (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "W": {
+        "Einheit": {
+          "IntRegister": 46521,
+          "StrKommentar": "WMZ1 Einheit Arbeit, 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46518,
+            "StrKommentar": "WMZ1 Arbeit (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46519,
+            "StrKommentar": "WMZ1 Arbeit (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46520,
+            "StrKommentar": "WMZ1 Arbeit (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VL": {
+        "Einheit": {
+          "IntRegister": 46525,
+          "StrKommentar": "WMZ1 Einheit Vorlauftemperatur, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46523,
+            "StrKommentar": "WMZ1 Vorlauftemperatur (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46524,
+            "StrKommentar": "WMZ1 Vorlauftemperatur (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "RL": {
+        "Einheit": {
+          "IntRegister": 46529,
+          "StrKommentar": "WMZ1 Einheit Rücklauftemperatur, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46527,
+            "StrKommentar": "WMZ1 Rücklauftemperatur (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46528,
+            "StrKommentar": "WMZ1 Rücklauftemperatur (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WSTag1": {
+        "Einheit": {
+          "IntRegister": 46541,
+          "StrKommentar": "WMZ1 Einheit Arbeit Stichtag 1,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46538,
+            "StrKommentar": "WMZ1 Arbeit Stichtag1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46539,
+            "StrKommentar": "WMZ1 Arbeit Stichtag1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46540,
+            "StrKommentar": "WMZ1 Arbeit Stichtag1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VSTag1": {
+        "Einheit": {
+          "IntRegister": 46547,
+          "StrKommentar": "WMZ1 Einheit Volumen Stichtag1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46544,
+            "StrKommentar": "WMZ1 Volumen Stichtag1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46545,
+            "StrKommentar": "WMZ1 Volumen Stichtag1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46546,
+            "StrKommentar": "WMZ1 Volumen Stichtag1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WSTag2": {
+        "Einheit": {
+          "IntRegister": 46551,
+          "StrKommentar": "WMZ1 Einheit Arbeit Stichtag 2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46548,
+            "StrKommentar": "WMZ1 Arbeit Stichtag2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46549,
+            "StrKommentar": "WMZ1 Arbeit Stichtag2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46550,
+            "StrKommentar": "WMZ1 Arbeit Stichtag2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VSTag2": {
+        "Einheit": {
+          "IntRegister": 46557,
+          "StrKommentar": "WMZ1 Einheit Volumen Stichtag2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46554,
+            "StrKommentar": "WMZ1 Volumen Stichtag2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46555,
+            "StrKommentar": "WMZ1 Volumen Stichtag2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46556,
+            "StrKommentar": "WMZ1 Volumen Stichtag2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WDev1": {
+        "Einheit": {
+          "IntRegister": 46561,
+          "StrKommentar": "WMZ1 Device1-Arbeit Einheit,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46558,
+            "StrKommentar": "WMZ1 Arbeit Device1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46559,
+            "StrKommentar": "WMZ1 Arbeit Device1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46560,
+            "StrKommentar": "WMZ1 Arbeit Device1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VDev1": {
+        "Einheit": {
+          "IntRegister": 46565,
+          "StrKommentar": "WMZ1 Einheit Volumen Device1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46562,
+            "StrKommentar": "WMZ1 Volumen Device1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46563,
+            "StrKommentar": "WMZ1 Volumen Device1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46564,
+            "StrKommentar": "WMZ1 Volumen Device1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WDev2": {
+        "Einheit": {
+          "IntRegister": 46569,
+          "StrKommentar": "WMZ1 Einheit Arbeit Device2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46566,
+            "StrKommentar": "WMZ1 Arbeit Device2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46567,
+            "StrKommentar": "WMZ1 Arbeit Device2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46568,
+            "StrKommentar": "WMZ1 Arbeit Device2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VDev2": {
+        "Einheit": {
+          "IntRegister": 46573,
+          "StrKommentar": "WMZ1 Einheit Volumen Device2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46570,
+            "StrKommentar": "WMZ1 Volumen Device2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46571,
+            "StrKommentar": "WMZ1 Volumen Device2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46572,
+            "StrKommentar": "WMZ1 Volumen Device2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WTa1": {
+        "Einheit": {
+          "IntRegister": 46577,
+          "StrKommentar": "WMZ1 Einheit Arbeit Tarif1,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46574,
+            "StrKommentar": "WMZ1 Arbeit Tarif1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46575,
+            "StrKommentar": "WMZ1 Arbeit Tarif1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46576,
+            "StrKommentar": "WMZ1 Arbeit Tarif1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa1": {
+        "Einheit": {
+          "IntRegister": 46581,
+          "StrKommentar": "WMZ1 Einheit Volumen Tarif1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46578,
+            "StrKommentar": "WMZ1 Volumen Tarif1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46579,
+            "StrKommentar": "WMZ1 Volumen Tarif1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46580,
+            "StrKommentar": "WMZ1 Volumen Tarif1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WTa2": {
+        "Einheit": {
+          "IntRegister": 46585,
+          "StrKommentar": "WMZ1 Einheit Arbeit Tarif2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46582,
+            "StrKommentar": "WMZ1 Arbeit Tarif2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46583,
+            "StrKommentar": "WMZ1 Arbeit Tarif2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46584,
+            "StrKommentar": "WMZ1 Arbeit Tarif2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa2": {
+        "Einheit": {
+          "IntRegister": 46589,
+          "StrKommentar": "WMZ1 Einheit Volumen Tarif2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46586,
+            "StrKommentar": "WMZ1 Volumen Tarif2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46587,
+            "StrKommentar": "WMZ1 Volumen Tarif2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46588,
+            "StrKommentar": "WMZ1 Volumen Tarif2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "QDev1Nr5": {
+        "Einheit": {
+          "IntRegister": 46604,
+          "StrKommentar": "WMZ1 Einheit Q_maxDev1Spnr5,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46601,
+            "StrKommentar": "WMZ1 Qmax Dev1 Speichernr5 10^4",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46602,
+            "StrKommentar": "WMZ1 Qmax Dev1 Speichernr5 10^0",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46603,
+            "StrKommentar": "WMZ1 Qmax Dev1 Speichernr5 10^-3",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "PDev1Nr1": {
+        "Einheit": {
+          "IntRegister": 46611,
+          "StrKommentar": "WMZ1 Einheit PmaxDev1StorNr1, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46608,
+            "StrKommentar": "WMZ1 Pmax für Dev1StorNr1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46609,
+            "StrKommentar": "WMZ1 Pmax für Dev1StorNr1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46610,
+            "StrKommentar": "WMZ1 Pmax für Dev1StorNr1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "Pmax": {
+        "Einheit": {
+          "IntRegister": 46618,
+          "StrKommentar": "WMZ1 Einheit Leistung max, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46615,
+            "StrKommentar": "WMZ1 Leistung max (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46616,
+            "StrKommentar": "WMZ1 Leistung max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46617,
+            "StrKommentar": "WMZ1 Leistung max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "Qmax": {
+        "Einheit": {
+          "IntRegister": 46622,
+          "StrKommentar": "WMZ1 Einheit Durchfluß max,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46619,
+            "StrKommentar": "WMZ1 Durchfluß max (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46620,
+            "StrKommentar": "WMZ1 Durchfluß max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46621,
+            "StrKommentar": "WMZ1 Durchfluß max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VLmax": {
+        "Einheit": {
+          "IntRegister": 46626,
+          "StrKommentar": "WMZ1 Einheit Vorlauftemperatur max, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46624,
+            "StrKommentar": "WMZ1 Vorlauftemperatur max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46625,
+            "StrKommentar": "WMZ1 Vorlauftemperatur max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "RLmax": {
+        "Einheit": {
+          "IntRegister": 46630,
+          "StrKommentar": "WMZ1 Einheit Rücklauftemperatur max, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46628,
+            "StrKommentar": "WMZ1 Rücklauftemperatur max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46629,
+            "StrKommentar": "WMZ1 Rücklauftemperatur max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa3": {
+        "Einheit": {
+          "IntRegister": 46637,
+          "StrKommentar": "WMZ1 Einheit Volumen Tarif3, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46634,
+            "StrKommentar": "WMZ1 Volumen Tarif3 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46635,
+            "StrKommentar": "WMZ1 Volumen Tarif3 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46636,
+            "StrKommentar": "WMZ1 Volumen Tarif3 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "PTa1Nr24": {
+        "Einheit": {
+          "IntRegister": 46641,
+          "StrKommentar": "WMZ1 Einheit PTarif1StorNr24, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46638,
+            "StrKommentar": "WMZ1 P Tarif1StorNr24 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46639,
+            "StrKommentar": "WMZ1 P Tarif1StorNr24 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46640,
+            "StrKommentar": "WMZ1 P Tarif1StorNr24 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "QTa1Nr24": {
+        "Einheit": {
+          "IntRegister": 46645,
+          "StrKommentar": "WMZ1 EinheitQTarif1StorNr24,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 46642,
+            "StrKommentar": "WMZ1 Q Tarif1StorNr24 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 46643,
+            "StrKommentar": "WMZ1 Q Tarif1StorNr24 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 46644,
+            "StrKommentar": "WMZ1 Q Tarif1StorNr24 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      }
+    },
+    "WMZ2": {
+      "Q": {
+        "Einheit": {
+          "IntRegister": 47009,
+          "StrKommentar": "WMZ2 Einheit Durchfluß, 0=m³/h, 1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47006,
+            "StrKommentar": "WMZ2 Durchfluß (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47007,
+            "StrKommentar": "WMZ2 Durchfluß (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47008,
+            "StrKommentar": "WMZ2 Durchfluß (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "V": {
+        "Einheit": {
+          "IntRegister": 47013,
+          "StrKommentar": "WMZ2 Einheit Volumen, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47010,
+            "StrKommentar": "WMZ2 Volumen (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47011,
+            "StrKommentar": "WMZ2 Volumen (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47012,
+            "StrKommentar": "WMZ2 Volumen (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "P": {
+        "Einheit": {
+          "IntRegister": 47017,
+          "StrKommentar": "WMZ2 Einheit Leistung, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47014,
+            "StrKommentar": "WMZ2 Leistung (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47015,
+            "StrKommentar": "WMZ2 Leistung (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47016,
+            "StrKommentar": "WMZ2 Leistung (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "W": {
+        "Einheit": {
+          "IntRegister": 47021,
+          "StrKommentar": "WMZ2 Einheit Arbeit, 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47018,
+            "StrKommentar": "WMZ2 Arbeit (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47019,
+            "StrKommentar": "WMZ2 Arbeit (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47020,
+            "StrKommentar": "WMZ2 Arbeit (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VL": {
+        "Einheit": {
+          "IntRegister": 47025,
+          "StrKommentar": "WMZ2 Einheit Vorlauftemperatur, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47023,
+            "StrKommentar": "WMZ2 Vorlauftemperatur (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47024,
+            "StrKommentar": "WMZ2 Vorlauftemperatur (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "RL": {
+        "Einheit": {
+          "IntRegister": 47029,
+          "StrKommentar": "WMZ2 Einheit Rücklauftemperatur, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47027,
+            "StrKommentar": "WMZ2 Rücklauftemperatur (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47028,
+            "StrKommentar": "WMZ2 Rücklauftemperatur (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WSTag1": {
+        "Einheit": {
+          "IntRegister": 47041,
+          "StrKommentar": "WMZ2 Einheit Arbeit Stichtag 1,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47038,
+            "StrKommentar": "WMZ2 Arbeit Stichtag1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47039,
+            "StrKommentar": "WMZ2 Arbeit Stichtag1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47040,
+            "StrKommentar": "WMZ2 Arbeit Stichtag1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VSTag1": {
+        "Einheit": {
+          "IntRegister": 47047,
+          "StrKommentar": "WMZ2 Einheit Volumen Stichtag1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47044,
+            "StrKommentar": "WMZ2 Volumen Stichtag1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47045,
+            "StrKommentar": "WMZ2 Volumen Stichtag1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47046,
+            "StrKommentar": "WMZ2 Volumen Stichtag1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WSTag2": {
+        "Einheit": {
+          "IntRegister": 47051,
+          "StrKommentar": "WMZ2 Einheit Arbeit Stichtag 2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47048,
+            "StrKommentar": "WMZ2 Arbeit Stichtag2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47049,
+            "StrKommentar": "WMZ2 Arbeit Stichtag2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47050,
+            "StrKommentar": "WMZ2 Arbeit Stichtag2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VSTag2": {
+        "Einheit": {
+          "IntRegister": 47057,
+          "StrKommentar": "WMZ2 Einheit Volumen Stichtag2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47054,
+            "StrKommentar": "WMZ2 Volumen Stichtag2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47055,
+            "StrKommentar": "WMZ2 Volumen Stichtag2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47056,
+            "StrKommentar": "WMZ2 Volumen Stichtag2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WDev1": {
+        "Einheit": {
+          "IntRegister": 47061,
+          "StrKommentar": "WMZ2 Device1-Arbeit Einheit,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47058,
+            "StrKommentar": "WMZ2 Arbeit Device1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47059,
+            "StrKommentar": "WMZ2 Arbeit Device1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47060,
+            "StrKommentar": "WMZ2 Arbeit Device1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VDev1": {
+        "Einheit": {
+          "IntRegister": 47065,
+          "StrKommentar": "WMZ2 Einheit Volumen Device1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47062,
+            "StrKommentar": "WMZ2 Volumen Device1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47063,
+            "StrKommentar": "WMZ2 Volumen Device1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47064,
+            "StrKommentar": "WMZ2 Volumen Device1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WDev2": {
+        "Einheit": {
+          "IntRegister": 47069,
+          "StrKommentar": "WMZ2 Einheit Arbeit Device2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47066,
+            "StrKommentar": "WMZ2 Arbeit Device2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47067,
+            "StrKommentar": "WMZ2 Arbeit Device2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47068,
+            "StrKommentar": "WMZ2 Arbeit Device2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VDev2": {
+        "Einheit": {
+          "IntRegister": 47073,
+          "StrKommentar": "WMZ2 Einheit Volumen Device2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47070,
+            "StrKommentar": "WMZ2 Volumen Device2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47071,
+            "StrKommentar": "WMZ2 Volumen Device2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47072,
+            "StrKommentar": "WMZ2 Volumen Device2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WTa1": {
+        "Einheit": {
+          "IntRegister": 47077,
+          "StrKommentar": "WMZ2 Einheit Arbeit Tarif1,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47074,
+            "StrKommentar": "WMZ2 Arbeit Tarif1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47075,
+            "StrKommentar": "WMZ2 Arbeit Tarif1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47076,
+            "StrKommentar": "WMZ2 Arbeit Tarif1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa1": {
+        "Einheit": {
+          "IntRegister": 47081,
+          "StrKommentar": "WMZ2 Einheit Volumen Tarif1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47078,
+            "StrKommentar": "WMZ2 Volumen Tarif1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47079,
+            "StrKommentar": "WMZ2 Volumen Tarif1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47080,
+            "StrKommentar": "WMZ2 Volumen Tarif1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WTa2": {
+        "Einheit": {
+          "IntRegister": 47085,
+          "StrKommentar": "WMZ2 Einheit Arbeit Tarif2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47082,
+            "StrKommentar": "WMZ2 Arbeit Tarif2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47083,
+            "StrKommentar": "WMZ2 Arbeit Tarif2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47084,
+            "StrKommentar": "WMZ2 Arbeit Tarif2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa2": {
+        "Einheit": {
+          "IntRegister": 47089,
+          "StrKommentar": "WMZ2 Einheit Volumen Tarif2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47086,
+            "StrKommentar": "WMZ2 Volumen Tarif2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47087,
+            "StrKommentar": "WMZ2 Volumen Tarif2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47088,
+            "StrKommentar": "WMZ2 Volumen Tarif2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "QDev1Nr5": {
+        "Einheit": {
+          "IntRegister": 47104,
+          "StrKommentar": "WMZ2 Einheit Q_maxDev1Spnr5,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47101,
+            "StrKommentar": "WMZ2 Qmax Dev1 Speichernr5 10^4",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47102,
+            "StrKommentar": "WMZ2 Qmax Dev1 Speichernr5 10^0",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47103,
+            "StrKommentar": "WMZ2 Qmax Dev1 Speichernr5 10^-3",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "PDev1Nr1": {
+        "Einheit": {
+          "IntRegister": 47111,
+          "StrKommentar": "WMZ2 Einheit PmaxDev1StorNr1, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47108,
+            "StrKommentar": "WMZ2 Pmax für Dev1StorNr1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47109,
+            "StrKommentar": "WMZ2 Pmax für Dev1StorNr1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47110,
+            "StrKommentar": "WMZ2 Pmax für Dev1StorNr1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "Pmax": {
+        "Einheit": {
+          "IntRegister": 47118,
+          "StrKommentar": "WMZ2 Einheit Leistung max, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47115,
+            "StrKommentar": "WMZ2 Leistung max (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47116,
+            "StrKommentar": "WMZ2 Leistung max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47117,
+            "StrKommentar": "WMZ2 Leistung max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "Qmax": {
+        "Einheit": {
+          "IntRegister": 47122,
+          "StrKommentar": "WMZ2 Einheit Durchfluß max,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47119,
+            "StrKommentar": "WMZ2 Durchfluß max (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47120,
+            "StrKommentar": "WMZ2 Durchfluß max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47121,
+            "StrKommentar": "WMZ2 Durchfluß max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VLmax": {
+        "Einheit": {
+          "IntRegister": 47126,
+          "StrKommentar": "WMZ2 Einheit Vorlauftemperatur max, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47124,
+            "StrKommentar": "WMZ2 Vorlauftemperatur max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47125,
+            "StrKommentar": "WMZ2 Vorlauftemperatur max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "RLmax": {
+        "Einheit": {
+          "IntRegister": 47130,
+          "StrKommentar": "WMZ2 Einheit Rücklauftemperatur max, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47128,
+            "StrKommentar": "WMZ2 Rücklauftemperatur max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47129,
+            "StrKommentar": "WMZ2 Rücklauftemperatur max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa3": {
+        "Einheit": {
+          "IntRegister": 47137,
+          "StrKommentar": "WMZ2 Einheit Volumen Tarif3, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47134,
+            "StrKommentar": "WMZ2 Volumen Tarif3 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47135,
+            "StrKommentar": "WMZ2 Volumen Tarif3 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47136,
+            "StrKommentar": "WMZ2 Volumen Tarif3 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "PTa1Nr24": {
+        "Einheit": {
+          "IntRegister": 47141,
+          "StrKommentar": "WMZ2 Einheit PTarif1StorNr24, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47138,
+            "StrKommentar": "WMZ2 P Tarif1StorNr24 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47139,
+            "StrKommentar": "WMZ2 P Tarif1StorNr24 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47140,
+            "StrKommentar": "WMZ2 P Tarif1StorNr24 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "QTa1Nr24": {
+        "Einheit": {
+          "IntRegister": 47145,
+          "StrKommentar": "WMZ2 EinheitQTarif1StorNr24,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47142,
+            "StrKommentar": "WMZ2 Q Tarif1StorNr24 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47143,
+            "StrKommentar": "WMZ2 Q Tarif1StorNr24 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47144,
+            "StrKommentar": "WMZ2 Q Tarif1StorNr24 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      }
+    },
+    "WMZ3": {
+      "Q": {
+        "Einheit": {
+          "IntRegister": 47509,
+          "StrKommentar": "WMZ3 Einheit Durchfluß, 0=m³/h, 1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47506,
+            "StrKommentar": "WMZ3 Durchfluß (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47507,
+            "StrKommentar": "WMZ3 Durchfluß (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47508,
+            "StrKommentar": "WMZ3 Durchfluß (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "V": {
+        "Einheit": {
+          "IntRegister": 47513,
+          "StrKommentar": "WMZ3 Einheit Volumen, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47510,
+            "StrKommentar": "WMZ3 Volumen (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47511,
+            "StrKommentar": "WMZ3 Volumen (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47512,
+            "StrKommentar": "WMZ3 Volumen (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "P": {
+        "Einheit": {
+          "IntRegister": 47517,
+          "StrKommentar": "WMZ3 Einheit Leistung, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47514,
+            "StrKommentar": "WMZ3 Leistung (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47515,
+            "StrKommentar": "WMZ3 Leistung (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47516,
+            "StrKommentar": "WMZ3 Leistung (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "W": {
+        "Einheit": {
+          "IntRegister": 47521,
+          "StrKommentar": "WMZ3 Einheit Arbeit, 0=MWh, 1=kWh, 2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47518,
+            "StrKommentar": "WMZ3 Arbeit (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47519,
+            "StrKommentar": "WMZ3 Arbeit (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47520,
+            "StrKommentar": "WMZ3 Arbeit (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VL": {
+        "Einheit": {
+          "IntRegister": 47525,
+          "StrKommentar": "WMZ3 Einheit Vorlauftemperatur, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47523,
+            "StrKommentar": "WMZ3 Vorlauftemperatur (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47524,
+            "StrKommentar": "WMZ3 Vorlauftemperatur (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "RL": {
+        "Einheit": {
+          "IntRegister": 47529,
+          "StrKommentar": "WMZ3 Einheit Rücklauftemperatur, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47527,
+            "StrKommentar": "WMZ3 Rücklauftemperatur (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47528,
+            "StrKommentar": "WMZ3 Rücklauftemperatur (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WSTag1": {
+        "Einheit": {
+          "IntRegister": 47541,
+          "StrKommentar": "WMZ3 Einheit Arbeit Stichtag 1,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47538,
+            "StrKommentar": "WMZ3 Arbeit Stichtag1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47539,
+            "StrKommentar": "WMZ3 Arbeit Stichtag1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47540,
+            "StrKommentar": "WMZ3 Arbeit Stichtag1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VSTag1": {
+        "Einheit": {
+          "IntRegister": 47547,
+          "StrKommentar": "WMZ3 Einheit Volumen Stichtag1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47544,
+            "StrKommentar": "WMZ3 Volumen Stichtag1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47545,
+            "StrKommentar": "WMZ3 Volumen Stichtag1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47546,
+            "StrKommentar": "WMZ3 Volumen Stichtag1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WSTag2": {
+        "Einheit": {
+          "IntRegister": 47551,
+          "StrKommentar": "WMZ3 Einheit Arbeit Stichtag 2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47548,
+            "StrKommentar": "WMZ3 Arbeit Stichtag2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47549,
+            "StrKommentar": "WMZ3 Arbeit Stichtag2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47550,
+            "StrKommentar": "WMZ3 Arbeit Stichtag2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VSTag2": {
+        "Einheit": {
+          "IntRegister": 47557,
+          "StrKommentar": "WMZ3 Einheit Volumen Stichtag2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47554,
+            "StrKommentar": "WMZ3 Volumen Stichtag2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47555,
+            "StrKommentar": "WMZ3 Volumen Stichtag2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47556,
+            "StrKommentar": "WMZ3 Volumen Stichtag2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WDev1": {
+        "Einheit": {
+          "IntRegister": 47561,
+          "StrKommentar": "WMZ3 Device1-Arbeit Einheit,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47558,
+            "StrKommentar": "WMZ3 Arbeit Device1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47559,
+            "StrKommentar": "WMZ3 Arbeit Device1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47560,
+            "StrKommentar": "WMZ3 Arbeit Device1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VDev1": {
+        "Einheit": {
+          "IntRegister": 47565,
+          "StrKommentar": "WMZ3 Einheit Volumen Device1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47562,
+            "StrKommentar": "WMZ3 Volumen Device1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47563,
+            "StrKommentar": "WMZ3 Volumen Device1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47564,
+            "StrKommentar": "WMZ3 Volumen Device1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WDev2": {
+        "Einheit": {
+          "IntRegister": 47569,
+          "StrKommentar": "WMZ3 Einheit Arbeit Device2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47566,
+            "StrKommentar": "WMZ3 Arbeit Device2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47567,
+            "StrKommentar": "WMZ3 Arbeit Device2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47568,
+            "StrKommentar": "WMZ3 Arbeit Device2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VDev2": {
+        "Einheit": {
+          "IntRegister": 47573,
+          "StrKommentar": "WMZ3 Einheit Volumen Device2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47570,
+            "StrKommentar": "WMZ3 Volumen Device2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47571,
+            "StrKommentar": "WMZ3 Volumen Device2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47572,
+            "StrKommentar": "WMZ3 Volumen Device2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WTa1": {
+        "Einheit": {
+          "IntRegister": 47577,
+          "StrKommentar": "WMZ3 Einheit Arbeit Tarif1,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47574,
+            "StrKommentar": "WMZ3 Arbeit Tarif1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47575,
+            "StrKommentar": "WMZ3 Arbeit Tarif1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47576,
+            "StrKommentar": "WMZ3 Arbeit Tarif1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa1": {
+        "Einheit": {
+          "IntRegister": 47581,
+          "StrKommentar": "WMZ3 Einheit Volumen Tarif1, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47578,
+            "StrKommentar": "WMZ3 Volumen Tarif1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47579,
+            "StrKommentar": "WMZ3 Volumen Tarif1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47580,
+            "StrKommentar": "WMZ3 Volumen Tarif1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "WTa2": {
+        "Einheit": {
+          "IntRegister": 47585,
+          "StrKommentar": "WMZ3 Einheit Arbeit Tarif2,0=MWh,1=kWh,2=GJ",
+          "TabEinheiten": {
+            "0": "MWh",
+            "1": "kWh",
+            "2": "GJ"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47582,
+            "StrKommentar": "WMZ3 Arbeit Tarif2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47583,
+            "StrKommentar": "WMZ3 Arbeit Tarif2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47584,
+            "StrKommentar": "WMZ3 Arbeit Tarif2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa2": {
+        "Einheit": {
+          "IntRegister": 47589,
+          "StrKommentar": "WMZ3 Einheit Volumen Tarif2, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47586,
+            "StrKommentar": "WMZ3 Volumen Tarif2 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47587,
+            "StrKommentar": "WMZ3 Volumen Tarif2 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47588,
+            "StrKommentar": "WMZ3 Volumen Tarif2 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "QDev1Nr5": {
+        "Einheit": {
+          "IntRegister": 47604,
+          "StrKommentar": "WMZ3 Einheit Q_maxDev1Spnr5,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47601,
+            "StrKommentar": "WMZ3 Qmax Dev1 Speichernr5 10^4",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47602,
+            "StrKommentar": "WMZ3 Qmax Dev1 Speichernr5 10^0",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47603,
+            "StrKommentar": "WMZ3 Qmax Dev1 Speichernr5 10^-3",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "PDev1Nr1": {
+        "Einheit": {
+          "IntRegister": 47611,
+          "StrKommentar": "WMZ3 Einheit PmaxDev1StorNr1, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47608,
+            "StrKommentar": "WMZ3 Pmax für Dev1StorNr1 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47609,
+            "StrKommentar": "WMZ3 Pmax für Dev1StorNr1 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47610,
+            "StrKommentar": "WMZ3 Pmax für Dev1StorNr1 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "Pmax": {
+        "Einheit": {
+          "IntRegister": 47618,
+          "StrKommentar": "WMZ3 Einheit Leistung max, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47615,
+            "StrKommentar": "WMZ3 Leistung max (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47616,
+            "StrKommentar": "WMZ3 Leistung max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47617,
+            "StrKommentar": "WMZ3 Leistung max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "Qmax": {
+        "Einheit": {
+          "IntRegister": 47622,
+          "StrKommentar": "WMZ3 Einheit Durchfluß max,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47619,
+            "StrKommentar": "WMZ3 Durchfluß max (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47620,
+            "StrKommentar": "WMZ3 Durchfluß max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47621,
+            "StrKommentar": "WMZ3 Durchfluß max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VLmax": {
+        "Einheit": {
+          "IntRegister": 47626,
+          "StrKommentar": "WMZ3 Einheit Vorlauftemperatur max, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47624,
+            "StrKommentar": "WMZ3 Vorlauftemperatur max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47625,
+            "StrKommentar": "WMZ3 Vorlauftemperatur max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "RLmax": {
+        "Einheit": {
+          "IntRegister": 47630,
+          "StrKommentar": "WMZ3 Einheit Rücklauftemperatur max, 0=°C",
+          "TabEinheiten": {
+            "0": "°C"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47628,
+            "StrKommentar": "WMZ3 Rücklauftemperatur max (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47629,
+            "StrKommentar": "WMZ3 Rücklauftemperatur max (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "VTa3": {
+        "Einheit": {
+          "IntRegister": 47637,
+          "StrKommentar": "WMZ3 Einheit Volumen Tarif3, 0=m³, 1=l",
+          "TabEinheiten": {
+            "0": "m³",
+            "1": "l"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47634,
+            "StrKommentar": "WMZ3 Volumen Tarif3 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47635,
+            "StrKommentar": "WMZ3 Volumen Tarif3 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47636,
+            "StrKommentar": "WMZ3 Volumen Tarif3 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "PTa1Nr24": {
+        "Einheit": {
+          "IntRegister": 47641,
+          "StrKommentar": "WMZ3 Einheit PTarif1StorNr24, 0=kW, 1=MW",
+          "TabEinheiten": {
+            "0": "kW",
+            "1": "MW"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47638,
+            "StrKommentar": "WMZ3 P Tarif1StorNr24 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47639,
+            "StrKommentar": "WMZ3 P Tarif1StorNr24 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47640,
+            "StrKommentar": "WMZ3 P Tarif1StorNr24 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      },
+      "QTa1Nr24": {
+        "Einheit": {
+          "IntRegister": 47645,
+          "StrKommentar": "WMZ3 EinheitQTarif1StorNr24,0=m³/h,1=l/h",
+          "TabEinheiten": {
+            "0": "m³/h",
+            "1": "l/h"
+          }
+        },
+        "Wertigkeiten": [
+          {
+            "IntRegister": 47642,
+            "StrKommentar": "WMZ3 Q Tarif1StorNr24 (10^4)",
+            "DblWertigkeit": 10000.0
+          },
+          {
+            "IntRegister": 47643,
+            "StrKommentar": "WMZ3 Q Tarif1StorNr24 (10^0)",
+            "DblWertigkeit": 1.0
+          },
+          {
+            "IntRegister": 47644,
+            "StrKommentar": "WMZ3 Q Tarif1StorNr24 (10^-3)",
+            "DblWertigkeit": 0.0010000000474974513
+          }
+        ]
+      }
+    }
+  },
+  "NavWMZ": {
+    "46506": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "46507": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "46508": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "46509": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Q",
+      "NodeName": "Einheit"
+    },
+    "46510": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "46511": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "46512": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "46513": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "V",
+      "NodeName": "Einheit"
+    },
+    "46514": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "46515": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "46516": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "46517": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "P",
+      "NodeName": "Einheit"
+    },
+    "46518": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "46519": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "46520": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "46521": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "W",
+      "NodeName": "Einheit"
+    },
+    "46523": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VL",
+      "NodeName": "Wertigkeiten"
+    },
+    "46524": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VL",
+      "NodeName": "Wertigkeiten"
+    },
+    "46525": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VL",
+      "NodeName": "Einheit"
+    },
+    "46527": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "RL",
+      "NodeName": "Wertigkeiten"
+    },
+    "46528": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "RL",
+      "NodeName": "Wertigkeiten"
+    },
+    "46529": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "RL",
+      "NodeName": "Einheit"
+    },
+    "46538": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46539": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46540": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46541": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Einheit"
+    },
+    "46544": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46545": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46546": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46547": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Einheit"
+    },
+    "46548": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46549": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46550": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46551": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Einheit"
+    },
+    "46554": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46555": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46556": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46557": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Einheit"
+    },
+    "46558": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46559": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46560": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46561": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev1",
+      "NodeName": "Einheit"
+    },
+    "46562": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46563": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46564": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46565": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev1",
+      "NodeName": "Einheit"
+    },
+    "46566": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46567": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46568": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46569": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WDev2",
+      "NodeName": "Einheit"
+    },
+    "46570": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46571": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46572": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46573": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VDev2",
+      "NodeName": "Einheit"
+    },
+    "46574": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46575": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46576": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46577": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa1",
+      "NodeName": "Einheit"
+    },
+    "46578": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46579": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46580": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46581": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa1",
+      "NodeName": "Einheit"
+    },
+    "46582": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46583": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46584": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46585": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "WTa2",
+      "NodeName": "Einheit"
+    },
+    "46586": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46587": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46588": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "46589": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa2",
+      "NodeName": "Einheit"
+    },
+    "46601": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "46602": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "46603": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "46604": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Einheit"
+    },
+    "46608": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46609": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46610": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "46611": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Einheit"
+    },
+    "46615": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46616": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46617": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46618": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Pmax",
+      "NodeName": "Einheit"
+    },
+    "46619": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46620": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46621": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46622": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "Qmax",
+      "NodeName": "Einheit"
+    },
+    "46624": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46625": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46626": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VLmax",
+      "NodeName": "Einheit"
+    },
+    "46628": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "RLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46629": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "RLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "46630": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "RLmax",
+      "NodeName": "Einheit"
+    },
+    "46634": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "46635": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "46636": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "46637": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "VTa3",
+      "NodeName": "Einheit"
+    },
+    "46638": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "46639": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "46640": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "46641": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Einheit"
+    },
+    "46642": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "46643": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "46644": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "46645": {
+      "WMZ": "WMZ1",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Einheit"
+    },
+    "47006": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "47007": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "47008": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "47009": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Q",
+      "NodeName": "Einheit"
+    },
+    "47010": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "47011": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "47012": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "47013": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "V",
+      "NodeName": "Einheit"
+    },
+    "47014": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "47015": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "47016": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "47017": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "P",
+      "NodeName": "Einheit"
+    },
+    "47018": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "47019": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "47020": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "47021": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "W",
+      "NodeName": "Einheit"
+    },
+    "47023": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47024": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47025": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VL",
+      "NodeName": "Einheit"
+    },
+    "47027": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "RL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47028": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "RL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47029": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "RL",
+      "NodeName": "Einheit"
+    },
+    "47038": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47039": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47040": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47041": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Einheit"
+    },
+    "47044": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47045": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47046": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47047": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Einheit"
+    },
+    "47048": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47049": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47050": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47051": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Einheit"
+    },
+    "47054": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47055": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47056": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47057": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Einheit"
+    },
+    "47058": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47059": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47060": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47061": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev1",
+      "NodeName": "Einheit"
+    },
+    "47062": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47063": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47064": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47065": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev1",
+      "NodeName": "Einheit"
+    },
+    "47066": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47067": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47068": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47069": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WDev2",
+      "NodeName": "Einheit"
+    },
+    "47070": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47071": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47072": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47073": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VDev2",
+      "NodeName": "Einheit"
+    },
+    "47074": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47075": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47076": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47077": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa1",
+      "NodeName": "Einheit"
+    },
+    "47078": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47079": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47080": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47081": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa1",
+      "NodeName": "Einheit"
+    },
+    "47082": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47083": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47084": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47085": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "WTa2",
+      "NodeName": "Einheit"
+    },
+    "47086": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47087": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47088": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47089": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa2",
+      "NodeName": "Einheit"
+    },
+    "47101": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "47102": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "47103": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "47104": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Einheit"
+    },
+    "47108": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47109": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47110": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47111": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Einheit"
+    },
+    "47115": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47116": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47117": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47118": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Pmax",
+      "NodeName": "Einheit"
+    },
+    "47119": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47120": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47121": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47122": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "Qmax",
+      "NodeName": "Einheit"
+    },
+    "47124": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47125": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47126": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VLmax",
+      "NodeName": "Einheit"
+    },
+    "47128": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "RLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47129": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "RLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47130": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "RLmax",
+      "NodeName": "Einheit"
+    },
+    "47134": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "47135": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "47136": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "47137": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "VTa3",
+      "NodeName": "Einheit"
+    },
+    "47138": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47139": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47140": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47141": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Einheit"
+    },
+    "47142": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47143": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47144": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47145": {
+      "WMZ": "WMZ2",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Einheit"
+    },
+    "47506": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "47507": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "47508": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Q",
+      "NodeName": "Wertigkeiten"
+    },
+    "47509": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Q",
+      "NodeName": "Einheit"
+    },
+    "47510": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "47511": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "47512": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "V",
+      "NodeName": "Wertigkeiten"
+    },
+    "47513": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "V",
+      "NodeName": "Einheit"
+    },
+    "47514": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "47515": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "47516": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "P",
+      "NodeName": "Wertigkeiten"
+    },
+    "47517": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "P",
+      "NodeName": "Einheit"
+    },
+    "47518": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "47519": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "47520": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "W",
+      "NodeName": "Wertigkeiten"
+    },
+    "47521": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "W",
+      "NodeName": "Einheit"
+    },
+    "47523": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47524": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47525": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VL",
+      "NodeName": "Einheit"
+    },
+    "47527": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "RL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47528": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "RL",
+      "NodeName": "Wertigkeiten"
+    },
+    "47529": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "RL",
+      "NodeName": "Einheit"
+    },
+    "47538": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47539": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47540": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47541": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag1",
+      "NodeName": "Einheit"
+    },
+    "47544": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47545": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47546": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47547": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag1",
+      "NodeName": "Einheit"
+    },
+    "47548": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47549": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47550": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47551": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WSTag2",
+      "NodeName": "Einheit"
+    },
+    "47554": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47555": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47556": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47557": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VSTag2",
+      "NodeName": "Einheit"
+    },
+    "47558": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47559": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47560": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47561": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev1",
+      "NodeName": "Einheit"
+    },
+    "47562": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47563": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47564": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47565": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev1",
+      "NodeName": "Einheit"
+    },
+    "47566": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47567": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47568": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47569": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WDev2",
+      "NodeName": "Einheit"
+    },
+    "47570": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47571": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47572": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47573": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VDev2",
+      "NodeName": "Einheit"
+    },
+    "47574": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47575": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47576": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47577": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa1",
+      "NodeName": "Einheit"
+    },
+    "47578": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47579": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47580": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47581": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa1",
+      "NodeName": "Einheit"
+    },
+    "47582": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47583": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47584": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47585": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "WTa2",
+      "NodeName": "Einheit"
+    },
+    "47586": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47587": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47588": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa2",
+      "NodeName": "Wertigkeiten"
+    },
+    "47589": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa2",
+      "NodeName": "Einheit"
+    },
+    "47601": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "47602": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "47603": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Wertigkeiten"
+    },
+    "47604": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QDev1Nr5",
+      "NodeName": "Einheit"
+    },
+    "47608": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47609": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47610": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Wertigkeiten"
+    },
+    "47611": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PDev1Nr1",
+      "NodeName": "Einheit"
+    },
+    "47615": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47616": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47617": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Pmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47618": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Pmax",
+      "NodeName": "Einheit"
+    },
+    "47619": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47620": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47621": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Qmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47622": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "Qmax",
+      "NodeName": "Einheit"
+    },
+    "47624": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47625": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47626": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VLmax",
+      "NodeName": "Einheit"
+    },
+    "47628": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "RLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47629": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "RLmax",
+      "NodeName": "Wertigkeiten"
+    },
+    "47630": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "RLmax",
+      "NodeName": "Einheit"
+    },
+    "47634": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "47635": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "47636": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa3",
+      "NodeName": "Wertigkeiten"
+    },
+    "47637": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "VTa3",
+      "NodeName": "Einheit"
+    },
+    "47638": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47639": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47640": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47641": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "PTa1Nr24",
+      "NodeName": "Einheit"
+    },
+    "47642": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47643": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47644": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Wertigkeiten"
+    },
+    "47645": {
+      "WMZ": "WMZ3",
+      "KatWMZ": "QTa1Nr24",
+      "NodeName": "Einheit"
+    }
+  }
+}

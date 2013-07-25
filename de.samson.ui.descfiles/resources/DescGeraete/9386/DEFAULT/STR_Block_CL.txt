@@ -1,0 +1,6 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"9386"____________;  1;           123;       1
+
+

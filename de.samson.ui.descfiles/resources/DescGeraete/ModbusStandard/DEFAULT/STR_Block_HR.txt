@@ -1,0 +1,16 @@
+
+REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
+
+"ModbusStandard"__;  30001;       30040;     2
+"ModbusStandard"__;  30041;       30080;     2
+"ModbusStandard"__;  30081;       30120;     2
+"ModbusStandard"__;  30121;       30160;     2
+"ModbusStandard"__;  30161;       30200;     2
+"ModbusStandard"__;  40001;       40040;     2
+"ModbusStandard"__;  40041;       40080;     2
+"ModbusStandard"__;  40081;       40120;     2
+"ModbusStandard"__;  40121;       40160;     2
+"ModbusStandard"__;  40161;       40199;     2
+"ModbusStandard"__;  40200;       40324;     2
+"ModbusStandard"__;  40325;       40449;     2
+"ModbusStandard"__;  40450;       40500;     2

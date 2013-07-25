@@ -1,0 +1,4 @@
+
+REM ZPNr Gerätekennung        Bezeichnung         BerAnfang    BerEnde        WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
+
+1;      "5477"____________;  "ZP_Lüftung"______;  0.000;       0.000;         1;      0;         16;          0;            0;          2;           520

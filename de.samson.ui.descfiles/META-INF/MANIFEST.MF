@@ -6,6 +6,8 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.samson.ui.descfilemanager.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
- de.samson.service.database;bundle-version="1.0.0"
+ de.samson.service.database;bundle-version="1.0.0",
+ org.junit,
+ de.samson.libraries;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

@@ -1,0 +1,57 @@
+
+REM HauptKategorieName         HauptKategorie   UnterKategorieName            UnterKategorie   KategorieKurz  InCSV
+
+"Allgemeines"______________;   "ALG";          "Betriebsart"______________;  "BTR";           "ALG-BTR";      0
+"Allgemeines"______________;   "ALG";          "Datum"____________________;  "DAT";           "ALG-DAT";      0
+"Allgemeines"______________;   "ALG";          "Error"____________________;  "ERO";           "ALG-ERO";      0
+"Allgemeines"______________;   "ALG";          "HRAllgemein"______________;  "HR"_;           "ALG-HR"_;      0
+"Allgemeines"______________;   "ALG";          "IRAllgemein"______________;  "IR"_;           "ALG-IR"_;      0
+"Allgemeines"______________;   "ALG";          "Identifikation"___________;  "ID"_;           "ALG-ID"_;      0
+"Allgemeines"______________;   "ALG";          "Modem"____________________;  "MOD";           "ALG-MOD";      0
+"Allgemeines"______________;   "ALG";          "Sonderklemmen"____________;  "SOK";           "ALG-SOK";      0
+"Allgemeines"______________;   "ALG";          "Sonstiges"________________;  "SON";           "ALG-SON";      0
+"Allgemeines"______________;   "ALG";          "Volumen/Leistung"_________;  "VOL";           "ALG-VOL";      0
+"Konfigurationsschalter"___;   "CON";          "Allgemein"________________;  "ALG";           "CON-ALG";      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Abluft"___________________;  "ALU";           "FÜH-ALU";      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Außenfühler"______________;  "AT"_;           "FÜH-AT"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Ein/Ausgänge"_____________;  "EA"_;           "FÜH-EA"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Ferngeber"________________;  "FG"_;           "FÜH-FG"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Rücklauf"_________________;  "RL"_;           "FÜH-RL"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Raumfühler"_______________;  "RT"_;           "FÜH-RT"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Speicherfühler"___________;  "SF"_;           "FÜH-SF"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Vorlauf"__________________;  "VL"_;           "FÜH-VL"_;      0
+"Fühler/Ein/Ausgänge"______;   "FÜH";          "Zuluft"___________________;  "ZLU";           "FÜH-ZLU";      0
+"Kennlinien"_______________;   "KNL";          "Außentemperatur"__________;  "AT"_;           "KNL-AT"_;      0
+"Kennlinien"_______________;   "KNL";          "Rücklauf"_________________;  "RL"_;           "KNL-RL"_;      0
+"Kennlinien"_______________;   "KNL";          "Sonstige"_________________;  "SON";           "KNL-SON";      0
+"Kennlinien"_______________;   "KNL";          "Vorlauf"__________________;  "VL"_;           "KNL-VL"_;      0
+"Regelparameter"___________;   "RPA";          "2-Punkt"__________________;  "2P"_;           "RPA-2P"_;      0
+"Regelparameter"___________;   "RPA";          "Kp"_______________________;  "KP"_;           "RPA-KP"_;      0
+"Regelparameter"___________;   "RPA";          "Sonstige"_________________;  "SON";           "RPA-SON";      0
+"Regelparameter"___________;   "RPA";          "Tn"_______________________;  "TN"_;           "RPA-TN"_;      0
+"Regelparameter"___________;   "RPA";          "Tv"_______________________;  "TV"_;           "RPA-TV"_;      0
+"Regelparameter"___________;   "RPA";          "Ty"_______________________;  "TY"_;           "RPA-TY"_;      0
+"Sollwert"_________________;   "SOL";          "Abluft"___________________;  "ALU";           "SOL-ALU";      0
+"Sollwert"_________________;   "SOL";          "Außentemperatur"__________;  "AT"_;           "SOL-AT"_;      0
+"Sollwert"_________________;   "SOL";          "Rücklauf"_________________;  "RL"_;           "SOL-RL"_;      0
+"Sollwert"_________________;   "SOL";          "Raumtemperatur"___________;  "RT"_;           "SOL-RT"_;      0
+"Sollwert"_________________;   "SOL";          "Sonstige"_________________;  "SON";           "SOL-SON";      0
+"Sollwert"_________________;   "SOL";          "Vorlauf"__________________;  "VL"_;           "SOL-VL"_;      0
+
+REM HauptKategorieName         HauptKategorie   UnterKategorieName            UnterKategorie   KategorieKurz  InCSV
+
+"Sollwert"_________________;   "SOL";          "Warmwasser"_______________;  "WW"_;           "SOL-WW"_;      0
+"Sollwert"_________________;   "SOL";          "Zuluft"___________________;  "ZLU";           "SOL-ZLU";      0
+"Speicherprog. Steuerung"__;   "SPS";          "Analogvergleichswert"_____;  "A"__;           "SPS-A"__;      0
+"Speicherprog. Steuerung"__;   "SPS";          "Merkerfestwert"___________;  "MF"_;           "SPS-MF"_;      0
+"Speicherprog. Steuerung"__;   "SPS";          "Merkerwort"_______________;  "MW"_;           "SPS-MW"_;      0
+"Speicherprog. Steuerung"__;   "SPS";          "Timer"____________________;  "T"__;           "SPS-T"__;      0
+"Speicherprog. Steuerung"__;   "SPS";          "Zähler"___________________;  "Z"__;           "SPS-Z"__;      0
+"Wärmemengenzähler"________;   "WMZ";          "Error"____________________;  "ERO";           "WMZ-ERO";      0
+"Wärmemengenzähler"________;   "WMZ";          "Leistung"_________________;  "P"__;           "WMZ-P"__;      0
+"Wärmemengenzähler"________;   "WMZ";          "Durchfluß"________________;  "Q"__;           "WMZ-Q"__;      0
+"Wärmemengenzähler"________;   "WMZ";          "Rücklauftemperatur"_______;  "RL"_;           "WMZ-RL"_;      0
+"Wärmemengenzähler"________;   "WMZ";          "Sonstige"_________________;  "SON";           "WMZ-SON";      0
+"Wärmemengenzähler"________;   "WMZ";          "Volumen"__________________;  "V"__;           "WMZ-V"__;      0
+"Wärmemengenzähler"________;   "WMZ";          "Vorlauftemperatur"________;  "VL"_;           "WMZ-VL"_;      0
+"Wärmemengenzähler"________;   "WMZ";          "Arbeit"___________________;  "W"__;           "WMZ-W"__;      0

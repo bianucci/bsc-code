@@ -19,7 +19,7 @@ import org.eclipse.swt.widgets.Tree;
 
 import de.samson.service.database.entities.description.STR_Geraet;
 import de.samson.ui.descfilemanager.exceptions.DescFileParsingException;
-import de.samson.ui.descfilemanager.exceptions.NoDescDirectoryNotFoundEception;
+import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
 import de.samson.ui.descfilemanager.parser.DescFileParser;
 import de.samson.ui.descfilemanager.reglerTreeFactory.DescFileTreeViewerFactory;
 import de.samson.ui.descfilemanager.reglerTreeFactory.ReglerRevisionGroup;
@@ -72,7 +72,7 @@ public class DescFilesLocalView extends Composite {
 						DescFileParser.init(temp);
 						treeData = DescFileParser.getController();
 						tv.setInput(treeData);
-					} catch (NoDescDirectoryNotFoundEception | IOException
+					} catch (DescDirectoryNotFoundEception | IOException
 							| DescFileParsingException e1) {
 						e1.printStackTrace();
 						tv.setInput(new ArrayList<STR_Geraet>());

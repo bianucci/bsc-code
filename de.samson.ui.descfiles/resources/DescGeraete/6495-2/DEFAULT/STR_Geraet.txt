@@ -1,0 +1,4 @@
+
+REM Gerätekennung     Gerätetyp           IdxAdr     IndexName          InCSV  MaskCSVFilterGruppe SingelUse
+
+"6495-2"__________;  "6495-2"__________;  0;        " "______________;  0;     8;                  0

@@ -1,0 +1,56 @@
+Gerät 55xx56xx - V>2  [RV: 0013]
+
+nur Nummer hochgezählt damit wieder gleich mit der englischen Version
+
+
+Gerät 55xx56xx - V>2  [RV: 0012]
+
+
+"55xx56xx"_______;  998;         1044;      1
+
+
+
+46513;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VEinh"_______;  "WMZ1 Einheit Volumen, 0=m³, 1=l, 30=dam³"__________;  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  10
+
+46525;  "55xx56xx"________;  "WMZ-VL"_;      "WMZ1VLEinh"______;  "WMZ1 Einheit Vorlauftemp, 0=°C, 1=°F"______________;  1;   0.000;               1.000;               0.000;               1.000;                0;   " "_______________;  10
+
+46529;  "55xx56xx"________;  "WMZ-RL"_;      "WMZ1RLEinh"______;  "WMZ1 Einheit Ruecklauftemp, 0=°C, 1=°F"____________;  1;   0.000;               1.000;               0.000;               1.000;                0;   " "_______________;  10
+
+46547;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VSTag1Einh"__;  "WMZ1 Einheit Volumen Stichtag1, 0=m³, 1=l, 30=dam³";  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  2
+
+46557;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VSTag2Einh"__;  "WMZ1 Einheit Volumen Stichtag2, 0=m³, 1=l, 30=dam³";  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  2
+
+46565;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VDev1Einh"___;  "WMZ1 Einheit Volumen Device1, 0=m³, 1=l, 30=dam³"__;  1;   0.000;               30.000;              0.000;               3.000;                0;   " "_______________;  2
+
+46573;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VDev2Einh"___;  "WMZ1 Einheit Volumen Device2, 0=m³, 1=l, 30=dam³"__;  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  2
+
+46581;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VTa1Einh"____;  "WMZ1 Einheit Volumen Tarif1, 0=m³, 1=l, 30=dam³"___;  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  2
+
+46589;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VTa2Einh"____;  "WMZ1 Einheit Volumen Tarif2, 0=m³, 1=l, 30=dam³"___;  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  2
+
+
+46626;  "55xx56xx"________;  "WMZ-VL"_;      "WMZ1VLmaxEinh"___;  "WMZ1 Einheit Vorlauftemperatur max, 0=°C, 1=°F"____;  1;   0.000;               1.000;               0.000;               1.000;                0;   " "_______________;  2
+
+46630;  "55xx56xx"________;  "WMZ-RL"_;      "WMZ1RLmaxEinh"___;  "WMZ1 Einheit Ruecklauftemp max, 0=°C, 1=°F"________;  1;   0.000;               1.000;               0.000;               1.000;                0;   " "_______________;  2
+
+46637;  "55xx56xx"________;  "WMZ-V"__;      "WMZ1VTa3Einh"____;  "WMZ1 Einheit Volumen Tarif3, 0=m³, 1=l, 30=dam³"___;  1;   0.000;               30.000;              0.000;               30.000;               0;   " "_______________;  2
+
+
+
+
+
+
+Gerät 55xx56xx - V>2  [RV: 0011]
+
+11
+
+"55xx56xx"_______;  998;         1044;      2
+"55xx56xx"_______;  1800;        1845;      2
+
+998;    "55xx56xx"_______;  "ALG-BTR";      "Btr_nicht_Auto"__;  "mind. 1 Rk ungleich Auto"__________________________;  1;  "NEIN-(0)"________;  "Ja-(1)"__________;  10
+999;    "55xx56xx"_______;  "ALG-BTR";      "BtrS_nicht_Auto"_;  "mind. 1 Rk ungleich Auto mittels Betriebsschalter"_;  1;  "NEIN-(0)"________;  "Ja-(1)"__________;  10
+1809;   "55xx56xx"_______;  "ALG-BTR";      "SF2_anstatt_SF1"_;  "Zwangsladung durch Umschaltung von SF1 auf SF2"____;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+1845;   "55xx56xx"_______;  "CON-WW"_;      "FB21_Drehz_Ladep";  "FB21: Drehzahlregelung der Ladepumpe"______________;  0;  "INAKTIV-(0)"_____;  "AKTIV-(1)"_______;  10
+
+41840;  "55xx56xx"_______;  "SOL-WW"_;      "Vorrang_TW_RK"___;  "RK-Auswahl: 1=RK1;2=RK2;3=RK1+2;4=RK3;5=RK1+3"_____;  0;   0,000;               7,000;               0,000;               7,000;                0;   " "_______________;  10
+46488;  "55xx56xx"_______;  "WMZ-SON";      "M-Bus_Ausleseint";  "M-Bus Ausleseintervall"____________________________;  0;   3,000;               43200,000;           3,000;               43200,000;            0;   "sec"_____________;  10

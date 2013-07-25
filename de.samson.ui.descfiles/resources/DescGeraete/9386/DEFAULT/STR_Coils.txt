@@ -1,0 +1,52 @@
+
+REM CLNr Gerätekennung        AnzKategorie    Bezeichnung          Kommentar                                             RO   Text0                Text1               MaskCSV
+
+1;      "9386"____________;  "ALG-BTR";      "Sammelstörung"___;  "Sammelstörung"_____________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  42
+2;      "9386"____________;  "ALG-BTR";      "Dateneing_aktiv"_;  "Dateneingabe aktiv"________________________________;  1;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+3;      "9386"____________;  "ALG-BTR";      "Dateneing_stattg";  "Dateneingabe stattgefunden"________________________;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+4;      "9386"____________;  "ALG-BTR";      "Sammel-Ebenenbit";  "Sammel-Ebenenbit (CL 050-095)"_____________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+5;      "9386"____________;  "ALG-BTR";      "Counter_read"____;  "wird gelöscht, wenn Flanke an Zähleingang erkannt"_;  0;  "NEIN-(0)"________;  "JA-(1)"__________;  10
+
+10;     "9386"____________;  "BEA-BE"_;      "Binäreing_BE01"__;  "Status Binäreingang BE 01 (Ebenenbit: CL 050)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+11;     "9386"____________;  "BEA-BE"_;      "Binäreing_BE02"__;  "Status Binäreingang BE 02 (Ebenenbit: CL 051)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+12;     "9386"____________;  "BEA-BE"_;      "Binäreing_BE03"__;  "Status Binäreingang BE 03 (Ebenenbit: CL 052)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+13;     "9386"____________;  "BEA-BE"_;      "Binäreing_BE04"__;  "Status Binäreingang BE 04 (Ebenenbit: CL 053)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+14;     "9386"____________;  "BEA-BE"_;      "Binäreing_BE05"__;  "Status Binäreingang BE 05 (Ebenenbit: CL 054)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+15;     "9386"____________;  "BEA-BE"_;      "Binäreing_BE06"__;  "Status Binäreingang BE 06 (Ebenenbit: CL 055)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+20;     "9386"____________;  "BEA-BA"_;      "Binärausg_BA01"__;  "Status Binärausgang BA 01 (Ebenenbit: CL 060)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+21;     "9386"____________;  "BEA-BA"_;      "Binärausg_BA02"__;  "Status Binärausgang BA 02 (Ebenenbit: CL 061)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+22;     "9386"____________;  "BEA-BA"_;      "Binärausg_BA03"__;  "Status Binärausgang BA 03 (Ebenenbit: CL 062)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+23;     "9386"____________;  "BEA-BA"_;      "Binärausg_BA04"__;  "Status Binärausgang BA 04 (Ebenenbit: CL 063)"_____;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+50;     "9386"____________;  "EBN-SON";      "EBN_Binär_BE01"__;  "Ebene Binäreingang BE 1 (CL 010)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+51;     "9386"____________;  "EBN-SON";      "EBN_Binär_BE02"__;  "Ebene Binäreingang BE 2 (CL 011)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+52;     "9386"____________;  "EBN-SON";      "EBN_Binär_BE03"__;  "Ebene Binäreingang BE 3 (CL 012)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+53;     "9386"____________;  "EBN-SON";      "EBN_Binär_BE04"__;  "Ebene Binäreingang BE 4 (CL 013)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+54;     "9386"____________;  "EBN-SON";      "EBN_Binär_BE05"__;  "Ebene Binäreingang BE 5 (CL 014)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+55;     "9386"____________;  "EBN-SON";      "EBN_Binär_BE06"__;  "Ebene Binäreingang BE 6 (CL 015)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+60;     "9386"____________;  "EBN-BA"_;      "EBN_Binär_BA01"__;  "Ebene Binärausgang BA 1 (CL 020)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+61;     "9386"____________;  "EBN-BA"_;      "EBN_Binär_BA02"__;  "Ebene Binärausgang BA 2 (CL 021)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+62;     "9386"____________;  "EBN-BA"_;      "EBN_Binär_BA03"__;  "Ebene Binärausgang BA 3 (CL 022)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+63;     "9386"____________;  "EBN-BA"_;      "EBN_Binär_BA04"__;  "Ebene Binärausgang BA 4 (CL 023)"__________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+80;     "9386"____________;  "EBN-AST";      "EBN_Analog_AA1"__;  "Ebene Analogausgang AA1 (HR 40030)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+81;     "9386"____________;  "EBN-AST";      "EBN_Analog_AA2"__;  "Ebene Analogausgang AA2 (HR 40031)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+90;     "9386"____________;  "EBN-UE"_;      "EBN_Analog_AE1"__;  "Ebene Analogeingang AE1 (HR 40020)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+91;     "9386"____________;  "EBN-UE"_;      "EBN_Analog_AE2"__;  "Ebene Analogeingang AE2 (HR 40021)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+92;     "9386"____________;  "EBN-UE"_;      "EBN_Analog_AE3"__;  "Ebene Analogeingang AE3 (HR 40022)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+93;     "9386"____________;  "EBN-UE"_;      "EBN_Analog_AE4"__;  "Ebene Analogeingang AE4 (HR 40023)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+94;     "9386"____________;  "EBN-UE"_;      "EBN_Analog_AE5"__;  "Ebene Analogeingang AE5 (HR 40024)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+95;     "9386"____________;  "EBN-UE"_;      "EBN_Analog_AE6"__;  "Ebene Analogeingang AE6 (HR 40025)"________________;  0;  "GLT-(0)"_________;  "AUTARK-(1)"______;  10
+
+106;    "9386"____________;  "CON-SON";      "FB07_16Bit_Modb"_;  "FB 07: Modbus-16-Bit-Adressierung"_________________;  0;  "8Bit-Adresse-(0)";  "16BitAdresse-(1)";  10
+
+120;    "9386"____________;  "BEA-BA"_;      "EE_default_BA01"_;  "Soll-Status Binärausgang BA 01 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+121;    "9386"____________;  "BEA-BA"_;      "EE_default_BA02"_;  "Soll-Status Binärausgang BA 02 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+122;    "9386"____________;  "BEA-BA"_;      "EE_default_BA03"_;  "Soll-Status Binärausgang BA 03 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+123;    "9386"____________;  "BEA-BA"_;      "EE_default_BA04"_;  "Soll-Status Binärausgang BA 04 nach Komm.-Ausfall"_;  0;  "AUS-(0)"_________;  "EIN-(1)"_________;  10
+
+
+
