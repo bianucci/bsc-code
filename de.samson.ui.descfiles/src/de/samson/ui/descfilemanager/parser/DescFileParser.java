@@ -89,9 +89,9 @@ public class DescFileParser {
 					tempGeraet.getRegisterList().add(tempHReg);
 				}
 
-				// List<WaermeMengenZähler> parsedJSONFile = parseJSONFile(next,
-				// tempGeraet);
-				// tempGeraet.setAllWMZ(parsedJSONFile);
+				List<WaermeMengenZähler> parsedJSONFile = parseJSONFile(next,
+						tempGeraet);
+				tempGeraet.setAllWMZ(parsedJSONFile);
 				controller.add(tempGeraet);
 
 			} catch (DescFileCorruptedException e) {

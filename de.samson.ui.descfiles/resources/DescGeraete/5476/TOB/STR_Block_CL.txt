@@ -1,6 +1,0 @@
-
-REM Gerätekennung    BlockAnfang  BlockEnde  Klasse
-
-"5476TOB"_________;  1;           40;        1
-"5476TOB"_________;  41;          64;        2
-"5476TOB"_________;  65;          152;       3

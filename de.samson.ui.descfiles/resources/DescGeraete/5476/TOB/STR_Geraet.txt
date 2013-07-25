@@ -1,4 +1,0 @@
-
-REM Gerätekennung     Gerätetyp           IdxAdr     IndexName          InCSV  MaskCSVFilterGruppe SingelUse
-
-"5476TOB"_________;  "5476"____________;  0;        " "______________;  0;     8;                  0

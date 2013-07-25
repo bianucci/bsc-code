@@ -1,4 +1,0 @@
-
-REM ZPNr Gerätekennung        Bezeichnung         WoPgm   AnzJhrPgm  AnzFeierPgm  AnzEinmalPgm  WoImJhrPgm  AnzEinWoPgm  MaskCSV
-
-1;      "5476TOB"_________;  "ZP_ZirkulatPump"_;  1;      0;         0;           0;            0;          2;           0
