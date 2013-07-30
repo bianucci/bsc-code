@@ -12,7 +12,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "s_modbusphp_cfg.standorte")
+@Table(name = "standorte", schema="s_modbusphp_cfg")
 public class Standort {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

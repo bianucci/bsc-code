@@ -14,7 +14,7 @@ import javax.persistence.Table;
 import de.samson.service.database.entities.config.GatewayConfig;
 
 @Entity
-@Table(name = "s_modbusphp_data.Gateways")
+@Table(name = "Gateways", schema="s_modbusphp_data")
 public class GatewayData {
 
 	@Id

@@ -16,7 +16,7 @@ import javax.persistence.Transient;
 import de.samson.service.database.entities.config.ReglerConfig;
 
 @Entity
-@Table(name = "description.str_geraet")
+@Table(name = "str_geraet", schema="description")
 @IdClass(GeraeteDescriptionID.class)
 public class GeraeteDescription {
 
@@ -33,6 +33,9 @@ public class GeraeteDescription {
 
 	@Id
 	String geraeteKennung;
+	
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraeteDescription", orphanRemoval = true)
+	List<WMZDescription> wmz;
 
 	String geraeteTyp;
 	int idxAdr;

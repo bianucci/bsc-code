@@ -7,6 +7,9 @@
 		<class>de.samson.service.database.entities.description.GeraeteDescription</class>
 		<class>de.samson.service.database.entities.description.CoilDescription</class>
 		<class>de.samson.service.database.entities.description.HoldingRegiterDescription</class>
+		<class>de.samson.service.database.entities.description.WMZDescription</class>
+		<class>de.samson.service.database.entities.description.WMWDescription</class>
+		<class>de.samson.service.database.entities.description.WMWMasseinheit</class>
 
 		<class>de.samson.service.database.entities.data.RegisterData</class>
 		<class>de.samson.service.database.entities.data.CoilData</class>
@@ -22,9 +25,9 @@
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
-			<!-- EclipseLink should create the database schema automatically <property 
+			 <property 
 				name="eclipselink.ddl-generation" value="create-tables" /> <property name="eclipselink.ddl-generation.output-mode" 
-				value="database" /> -->
+				value="database" />
 		</properties>
 
 	</persistence-unit>

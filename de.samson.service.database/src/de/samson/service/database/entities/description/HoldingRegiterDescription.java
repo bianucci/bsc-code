@@ -8,7 +8,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "description.str_holdingreg")
+@Table(name = "str_holdingreg", schema="description")
 @IdClass(HoldingRegisterDescriptionID.class)
 public class HoldingRegiterDescription {
 
@@ -27,6 +27,9 @@ public class HoldingRegiterDescription {
 			@JoinColumn(name = "revision", referencedColumnName = "revision", insertable = false, updatable = false) })
 	GeraeteDescription geraet;
 
+	@JoinColumn(name = "wmw_id", referencedColumnName = "wmwId")
+	WMWDescription wmw;
+	
 	@Id
 	String geraeteKennung;
 

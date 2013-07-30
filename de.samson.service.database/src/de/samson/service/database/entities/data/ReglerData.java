@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import de.samson.service.database.entities.config.ReglerConfig;
 
 @Entity
-@Table(name = "s_modbusphp_data.Regler")
+@Table(name = "Regler", schema="s_modbusphp_data")
 public class ReglerData {
 
 	@Id

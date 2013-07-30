@@ -18,7 +18,7 @@ import de.samson.service.database.entities.data.ReglerData;
 import de.samson.service.database.entities.description.GeraeteDescription;
 
 @Entity
-@Table(name = "s_modbusphp_cfg.Regler")
+@Table(name = "Regler", schema="s_modbusphp_cfg")
 public class ReglerConfig {
 
 	@Id

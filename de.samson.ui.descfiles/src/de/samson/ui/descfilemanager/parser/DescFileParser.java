@@ -18,7 +18,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.samson.service.database.entities.description.CoilDescription;
 import de.samson.service.database.entities.description.GeraeteDescription;
 import de.samson.service.database.entities.description.HoldingRegiterDescription;
-import de.samson.service.database.entities.description.WMWDescrption;
+import de.samson.service.database.entities.description.WMWDescription;
 import de.samson.service.database.entities.description.WMZDescription;
 import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
 import de.samson.ui.descfilemanager.exceptions.DescFileCorruptedException;
@@ -210,7 +210,7 @@ public class DescFileParser {
 
 		List<WMZDescription> l = new ArrayList<WMZDescription>();
 		WMZDescription wmz;
-		WMWDescrption wmw;
+		WMWDescription wmw;
 
 		// ALL JSON DATA
 		Map<String, Object> userData = mapper.readValue(jsonFile, Map.class);
@@ -235,7 +235,7 @@ public class DescFileParser {
 
 			// ITERATE THROUGH ALL WMW
 			for (int j = 0; j < arrayAllWMW.length; j++) {
-				wmw = new WMWDescrption();
+				wmw = new WMWDescription();
 
 				// CURRENT WMW
 				Map<String, Object> mapWMW = (Map<String, Object>) arrayAllWMW[j];
@@ -255,7 +255,7 @@ public class DescFileParser {
 				// SET MASzEINHEIT FOR WMZ
 				Map<String, String> tabEinheit = (Map<String, String>) einheit
 						.get("TabEinheiten");
-				wmw.setMassEinheit(tabEinheit);
+				// wmw.setMassEinheit(tabEinheit);TODO
 
 				// SET WERTE REGISTER FOR WMZ
 				ArrayList<Object> wertigkeiten = (ArrayList<Object>) mapWMW
@@ -265,14 +265,15 @@ public class DescFileParser {
 					Map<String, Object> dp = (Map<String, Object>) o;
 					double faktor = (double) dp.get("DblWertigkeit");
 					int reg = (int) dp.get("IntRegister");
-					for (HoldingRegiterDescription sreg : regler.getRegisterList()) {
+					for (HoldingRegiterDescription sreg : regler
+							.getRegisterList()) {
 						if (sreg.getHrnr() == reg) {
 							m.put(sreg, faktor);
 							break;
 						}
 					}
 				}
-				wmw.setWertigkeiten(m);
+				//wmw.setWertigkeiten(m); TODO
 				wmz.add(wmw);
 			}
 			l.add(wmz);
@@ -280,8 +281,9 @@ public class DescFileParser {
 		return l;
 	}
 
-	private static CoilDescription createCoilFromParsedData(String[] parsedData,
-			GeraeteDescription geraet) throws DescFileCorruptedException {
+	private static CoilDescription createCoilFromParsedData(
+			String[] parsedData, GeraeteDescription geraet)
+			throws DescFileCorruptedException {
 
 		CoilDescription tempCoil = new CoilDescription();
 
@@ -335,8 +337,9 @@ public class DescFileParser {
 		return tempHReg;
 	}
 
-	private static GeraeteDescription createGeraetFromParsedData(String[] parsedData,
-			String revision, String comment) throws DescFileCorruptedException {
+	private static GeraeteDescription createGeraetFromParsedData(
+			String[] parsedData, String revision, String comment)
+			throws DescFileCorruptedException {
 		GeraeteDescription tempGeraet = new GeraeteDescription();
 
 		tempGeraet.setGeraeteKennung(parsedData[0]);

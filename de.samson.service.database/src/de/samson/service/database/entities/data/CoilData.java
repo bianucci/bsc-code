@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "s_modbusphp_data.Coils")
+@Table(name = "Coils", schema="s_modbusphp_data")
 @IdClass(value = CoilDataID.class)
 public class CoilData {
 	@Id
