@@ -21,6 +21,13 @@
 		<class>de.samson.service.database.entities.config.ReglerConfig</class>
 		<class>de.samson.service.database.entities.config.GatewayConfig</class>
 		<class>de.samson.service.database.entities.config.Standort</class>
+		
+		<class>de.samson.service.database.entities.histdata.HistDataSet</class>
+		<class>de.samson.service.database.entities.histdata.HistDataProvider</class>
+		<class>de.samson.service.database.entities.histdata.HistValue</class>
+		<class>de.samson.service.database.entities.histdata.CoilDataProvider</class>
+		<class>de.samson.service.database.entities.histdata.HRegDataProvider</class>
+		<class>de.samson.service.database.entities.histdata.WMWDataProvider</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />

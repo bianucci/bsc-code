@@ -1,0 +1,51 @@
+package de.samson.service.database.entities.histdata;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import de.samson.service.database.entities.description.CoilDescription;
+
+@Entity
+@DiscriminatorValue("coil")
+@Table(name = "hist_data.coil_data_src")
+public class CoilDataProvider extends HistDataProvider {
+
+	@OneToOne
+	@JoinColumns(value = {
+			@JoinColumn(name = "coil_nr", referencedColumnName = "clnr"),
+			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
+			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
+	CoilDescription cd;
+
+	public CoilDescription getCd() {
+		return cd;
+	}
+
+	public void setCd(CoilDescription cd) {
+		this.cd = cd;
+	}
+
+	@Override
+	public void setBezeichnung(String bezeichnung) {
+		super.setBezeichnung(bezeichnung);
+	}
+
+	@Override
+	public String getBezeichnung() {
+		return super.getBezeichnung();
+	}
+
+	@Override
+	public void setId(long id) {
+		super.setId(id);
+	}
+
+	@Override
+	public long getId() {
+		return super.getId();
+	}
+}
