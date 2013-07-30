@@ -13,7 +13,7 @@ import de.samson.dataviewer.PartID;
 import de.samson.modbusphp.datapointwriter.DataPointWriterService;
 import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
 import de.samson.service.database.entities.data.RegisterData;
-import de.samson.service.database.entities.description.STR_HoldingReg;
+import de.samson.service.database.entities.description.HoldingRegiterDescription;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class RegValueEditingSupport extends EditingSupport {
@@ -33,7 +33,7 @@ public class RegValueEditingSupport extends EditingSupport {
 	@Override
 	protected boolean canEdit(Object element) {
 		RegisterData rd = (RegisterData) element;
-		STR_HoldingReg sr = DataConverterUtil.getRegisterDescForData(rd);
+		HoldingRegiterDescription sr = DataConverterUtil.getRegisterDescForData(rd);
 		return !sr.isRo();
 	}
 
@@ -43,7 +43,7 @@ public class RegValueEditingSupport extends EditingSupport {
 		int w = rd.getsWert();
 		String rawdata = String.valueOf(w);
 
-			STR_HoldingReg sr = DataConverterUtil.getRegisterDescForData(rd);
+			HoldingRegiterDescription sr = DataConverterUtil.getRegisterDescForData(rd);
 		double f = sr.getSkalierungsfaktor();
 
 		if (f == 1) {
@@ -67,7 +67,7 @@ public class RegValueEditingSupport extends EditingSupport {
 	@Override
 	protected void setValue(Object element, Object value) {
 		RegisterData rd = (RegisterData) element;
-		STR_HoldingReg sr = DataConverterUtil.getRegisterDescForData(rd);
+		HoldingRegiterDescription sr = DataConverterUtil.getRegisterDescForData(rd);
 
 		String s = (String) value;
 		if (s.length() == 0)
@@ -114,7 +114,7 @@ public class RegValueEditingSupport extends EditingSupport {
 		this.viewer.refresh();
 	}
 
-	public boolean sizeIsValid(String sValue, STR_HoldingReg s) {
+	public boolean sizeIsValid(String sValue, HoldingRegiterDescription s) {
 		double value = Double.valueOf(sValue.replace(",", "."));
 
 		String sMin = s.getUeBerAnfang();

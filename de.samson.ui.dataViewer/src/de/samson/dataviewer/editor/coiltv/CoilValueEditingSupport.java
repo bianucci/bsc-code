@@ -17,7 +17,7 @@ import de.samson.dataviewer.PartID;
 import de.samson.modbusphp.datapointwriter.DataPointWriterService;
 import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
 import de.samson.service.database.entities.data.CoilData;
-import de.samson.service.database.entities.description.STR_Coil;
+import de.samson.service.database.entities.description.CoilDescription;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class CoilValueEditingSupport extends EditingSupport {
@@ -36,7 +36,7 @@ public class CoilValueEditingSupport extends EditingSupport {
 	@Override
 	protected CellEditor getCellEditor(Object element) {
 		CoilData cd = (CoilData) element;
-		STR_Coil coilDesc = DataConverterUtil.getCoilDescForData(cd);
+		CoilDescription coilDesc = DataConverterUtil.getCoilDescForData(cd);
 		String[] input = new String[] { coilDesc.getText0(),
 				coilDesc.getText1() };
 		cellEditor.setInput(input);
@@ -46,14 +46,14 @@ public class CoilValueEditingSupport extends EditingSupport {
 	@Override
 	protected boolean canEdit(Object element) {
 		CoilData cd = (CoilData) element;
-		STR_Coil coilDesc = DataConverterUtil.getCoilDescForData(cd);
+		CoilDescription coilDesc = DataConverterUtil.getCoilDescForData(cd);
 		return !coilDesc.isRo();
 	}
 
 	@Override
 	protected Object getValue(Object element) {
 		CoilData cd = (CoilData) element;
-		STR_Coil coilDesc = DataConverterUtil.getCoilDescForData(cd);
+		CoilDescription coilDesc = DataConverterUtil.getCoilDescForData(cd);
 
 		if (cd.getWert() == true)
 			return coilDesc.getText1();

@@ -2,12 +2,12 @@ package de.samson.service.database.entities.description;
 
 import java.util.ArrayList;
 
-public class WaermeMengenZähler extends ArrayList<WaermeMengenWert> {
+public class WMZDescription extends ArrayList<WMWDescrption> {
 	private static final long serialVersionUID = 1L;
 
 	String name;
 
-	public WaermeMengenZähler() {
+	public WMZDescription() {
 	}
 
 	public void setName(String name) {

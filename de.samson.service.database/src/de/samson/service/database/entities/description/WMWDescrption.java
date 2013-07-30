@@ -2,24 +2,24 @@ package de.samson.service.database.entities.description;
 
 import java.util.Map;
 
-public class WaermeMengenWert {
+public class WMWDescrption {
 	// Register mit faktor
-	Map<STR_HoldingReg, Double> wertigkeiten;
+	Map<HoldingRegiterDescription, Double> wertigkeiten;
 
 	// Register mit wert für Einheit
-	STR_HoldingReg einheitRegister;
+	HoldingRegiterDescription einheitRegister;
 
 	// Wert zu Bedeutung, z.b. 0=m^3/h
 	Map<String, String> massEinheit;
 
 	String category;
 
-	public WaermeMengenWert() {
+	public WMWDescrption() {
 		super();
 	}
 
-	public WaermeMengenWert(Map<STR_HoldingReg, Double> wertigkeiten,
-			STR_HoldingReg einheitRegister, Map<String, String> massEinheit,
+	public WMWDescrption(Map<HoldingRegiterDescription, Double> wertigkeiten,
+			HoldingRegiterDescription einheitRegister, Map<String, String> massEinheit,
 			String category) {
 		super();
 		this.wertigkeiten = wertigkeiten;
@@ -28,11 +28,11 @@ public class WaermeMengenWert {
 		this.category = category;
 	}
 
-	public void setWertigkeiten(Map<STR_HoldingReg, Double> wertigkeiten) {
+	public void setWertigkeiten(Map<HoldingRegiterDescription, Double> wertigkeiten) {
 		this.wertigkeiten = wertigkeiten;
 	}
 
-	public void setEinheitRegister(STR_HoldingReg einheitRegister) {
+	public void setEinheitRegister(HoldingRegiterDescription einheitRegister) {
 		this.einheitRegister = einheitRegister;
 	}
 
@@ -44,11 +44,11 @@ public class WaermeMengenWert {
 		this.category = category;
 	}
 
-	public Map<STR_HoldingReg, Double> getWertigkeiten() {
+	public Map<HoldingRegiterDescription, Double> getWertigkeiten() {
 		return wertigkeiten;
 	}
 
-	public STR_HoldingReg getEinheitRegister() {
+	public HoldingRegiterDescription getEinheitRegister() {
 		return einheitRegister;
 	}
 

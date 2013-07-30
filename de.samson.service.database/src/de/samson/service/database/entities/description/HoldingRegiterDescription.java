@@ -9,8 +9,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "description.str_holdingreg")
-@IdClass(STR_HoldingRegID.class)
-public class STR_HoldingReg {
+@IdClass(HoldingRegisterDescriptionID.class)
+public class HoldingRegiterDescription {
 
 	String aBerAnfang;
 
@@ -25,7 +25,7 @@ public class STR_HoldingReg {
 	@JoinColumns(value = {
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung", insertable = false, updatable = false),
 			@JoinColumn(name = "revision", referencedColumnName = "revision", insertable = false, updatable = false) })
-	STR_Geraet geraet;
+	GeraeteDescription geraet;
 
 	@Id
 	String geraeteKennung;
@@ -45,7 +45,7 @@ public class STR_HoldingReg {
 	String ueBerAnfang;
 	String ueBerEnde;
 
-	public STR_HoldingReg() {
+	public HoldingRegiterDescription() {
 
 	}
 
@@ -89,11 +89,11 @@ public class STR_HoldingReg {
 		this.einheit = einheit;
 	}
 
-	public STR_Geraet getGeraet() {
+	public GeraeteDescription getGeraet() {
 		return geraet;
 	}
 
-	public void setGeraet(STR_Geraet geraet) {
+	public void setGeraet(GeraeteDescription geraet) {
 		this.geraet = geraet;
 	}
 

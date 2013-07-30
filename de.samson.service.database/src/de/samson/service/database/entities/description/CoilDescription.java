@@ -10,8 +10,8 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "description.str_coil")
-@IdClass(STR_CoilID.class)
-public class STR_Coil {
+@IdClass(CoilDescriptionID.class)
+public class CoilDescription {
 
 	String anzKategorie;
 
@@ -24,7 +24,7 @@ public class STR_Coil {
 	@JoinColumns(value = {
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung", insertable = false, updatable = false),
 			@JoinColumn(name = "revision", referencedColumnName = "revision", insertable = false, updatable = false) })
-	STR_Geraet geraet;
+	GeraeteDescription geraet;
 
 	@Id
 	String geraeteKennung;
@@ -40,7 +40,7 @@ public class STR_Coil {
 	String text0;
 	String text1;
 
-	public STR_Coil() {
+	public CoilDescription() {
 	}
 
 	public String getAnzKategorie() {
@@ -67,11 +67,11 @@ public class STR_Coil {
 		this.clnr = clnr;
 	}
 
-	public STR_Geraet getGeraet() {
+	public GeraeteDescription getGeraet() {
 		return geraet;
 	}
 
-	public void setGeraet(STR_Geraet geraet) {
+	public void setGeraet(GeraeteDescription geraet) {
 		this.geraet = geraet;
 	}
 

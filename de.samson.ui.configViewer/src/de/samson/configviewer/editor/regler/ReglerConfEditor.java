@@ -36,8 +36,8 @@ import de.samson.service.database.DatabaseService;
 import de.samson.service.database.entities.config.CoilConfig;
 import de.samson.service.database.entities.config.RegisterConfig;
 import de.samson.service.database.entities.config.ReglerConfig;
-import de.samson.service.database.entities.description.STR_Coil;
-import de.samson.service.database.entities.description.STR_HoldingReg;
+import de.samson.service.database.entities.description.CoilDescription;
+import de.samson.service.database.entities.description.HoldingRegiterDescription;
 
 public class ReglerConfEditor extends EditorPart {
 	public ReglerConfEditor() {
@@ -184,7 +184,7 @@ public class ReglerConfEditor extends EditorPart {
 		TableItem[] coils = coilTV.getTable().getItems();
 		for (CoilConfig c : rc.getCoilsConfigs()) {
 			for (int i = 0; i < coils.length; i++) {
-				STR_Coil s = (STR_Coil) coils[i].getData();
+				CoilDescription s = (CoilDescription) coils[i].getData();
 				if (s.getClnr() == c.getnCoilnr()) {
 					coilTV.setChecked(s, true);
 					break;
@@ -196,7 +196,7 @@ public class ReglerConfEditor extends EditorPart {
 		for (RegisterConfig r : rc.getRegisterConfigs()) {
 
 			for (int i = 0; i < register.length; i++) {
-				STR_HoldingReg s = (STR_HoldingReg) register[i].getData();
+				HoldingRegiterDescription s = (HoldingRegiterDescription) register[i].getData();
 				if (s.getHrnr() - 40000 == r.getnRegisternr()) {
 					regTV.setChecked(s, true);
 				}

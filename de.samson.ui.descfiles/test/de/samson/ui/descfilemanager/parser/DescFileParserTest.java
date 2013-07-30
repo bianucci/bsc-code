@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;
 
-import de.samson.service.database.entities.description.STR_Geraet;
+import de.samson.service.database.entities.description.GeraeteDescription;
 import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
 import de.samson.ui.descfilemanager.exceptions.DescFileParsingException;
 
@@ -32,7 +32,7 @@ public class DescFileParserTest {
 		} catch (DescFileParsingException e) {
 //			e.printStackTrace();
 		}
-		ArrayList<STR_Geraet> controller = DescFileParser.getController();
+		ArrayList<GeraeteDescription> controller = DescFileParser.getController();
 		System.out.println(controller);
 		
 	}

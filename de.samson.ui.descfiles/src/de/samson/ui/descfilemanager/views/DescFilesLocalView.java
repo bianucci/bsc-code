@@ -17,7 +17,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Text;
 import org.eclipse.swt.widgets.Tree;
 
-import de.samson.service.database.entities.description.STR_Geraet;
+import de.samson.service.database.entities.description.GeraeteDescription;
 import de.samson.ui.descfilemanager.exceptions.DescFileParsingException;
 import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
 import de.samson.ui.descfilemanager.parser.DescFileParser;
@@ -31,7 +31,7 @@ public class DescFilesLocalView extends Composite {
 	private Text t;
 	private CheckboxTreeViewer tv;
 	private Tree tree;
-	private List<STR_Geraet> treeData;
+	private List<GeraeteDescription> treeData;
 
 	public DescFilesLocalView(Composite parent, int style) {
 		super(parent, style);
@@ -55,7 +55,7 @@ public class DescFilesLocalView extends Composite {
 		tv = DescFileTreeViewerFactory.createTreeViewer(g);
 		tree = tv.getTree();
 		tree.setLayoutData(new GridData(SWT.FILL, SWT.FILL, true, true));
-		tv.setInput(new ArrayList<STR_Geraet>());
+		tv.setInput(new ArrayList<GeraeteDescription>());
 
 		b = new Button(this, SWT.PUSH);
 		b.setText(" ... ");
@@ -75,7 +75,7 @@ public class DescFilesLocalView extends Composite {
 					} catch (DescDirectoryNotFoundEception | IOException
 							| DescFileParsingException e1) {
 						e1.printStackTrace();
-						tv.setInput(new ArrayList<STR_Geraet>());
+						tv.setInput(new ArrayList<GeraeteDescription>());
 					}
 				}
 			}
@@ -95,11 +95,11 @@ public class DescFilesLocalView extends Composite {
 		tv.refresh();
 	}
 
-	public List<STR_Geraet> getCheckedElements() {
-		List<STR_Geraet> checked = new ArrayList<STR_Geraet>();
+	public List<GeraeteDescription> getCheckedElements() {
+		List<GeraeteDescription> checked = new ArrayList<GeraeteDescription>();
 		for (Object o : tv.getCheckedElements()) {
-			if (o instanceof STR_Geraet) {
-				checked.add((STR_Geraet) o);
+			if (o instanceof GeraeteDescription) {
+				checked.add((GeraeteDescription) o);
 			}
 			if (o instanceof ReglerRevisionGroup) {
 				ReglerRevisionGroup g = (ReglerRevisionGroup) o;

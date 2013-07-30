@@ -17,11 +17,11 @@ import de.samson.service.database.entities.config.ReglerConfig;
 
 @Entity
 @Table(name = "description.str_geraet")
-@IdClass(STR_GeraetID.class)
-public class STR_Geraet {
+@IdClass(GeraeteDescriptionID.class)
+public class GeraeteDescription {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraet", orphanRemoval = true)
-	List<STR_Coil> coilsList;
+	List<CoilDescription> coilsList;
 
 	String comment;
 
@@ -43,7 +43,7 @@ public class STR_Geraet {
 	int maskCSVFilterGruppe;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraet", orphanRemoval = true)
-	List<STR_HoldingReg> registerList;
+	List<HoldingRegiterDescription> registerList;
 
 	@Id
 	int revision;
@@ -51,16 +51,16 @@ public class STR_Geraet {
 	String singleUse;
 
 	@Transient
-	private List<WaermeMengenZähler> wmzList;
+	private List<WMZDescription> wmzList;
 
-	public STR_Geraet() {
+	public GeraeteDescription() {
 	}
 
-	public List<STR_Coil> getCoilsList() {
+	public List<CoilDescription> getCoilsList() {
 		return coilsList;
 	}
 
-	public void setCoilsList(List<STR_Coil> coilsList) {
+	public void setCoilsList(List<CoilDescription> coilsList) {
 		this.coilsList = coilsList;
 	}
 
@@ -128,11 +128,11 @@ public class STR_Geraet {
 		this.maskCSVFilterGruppe = maskCSVFilterGruppe;
 	}
 
-	public List<STR_HoldingReg> getRegisterList() {
+	public List<HoldingRegiterDescription> getRegisterList() {
 		return registerList;
 	}
 
-	public void setRegisterList(List<STR_HoldingReg> registerList) {
+	public void setRegisterList(List<HoldingRegiterDescription> registerList) {
 		this.registerList = registerList;
 	}
 
@@ -152,11 +152,11 @@ public class STR_Geraet {
 		this.singleUse = singleUse;
 	}
 
-	public void setAllWMZ(List<WaermeMengenZähler> parsedJSONFile) {
+	public void setAllWMZ(List<WMZDescription> parsedJSONFile) {
 		this.wmzList = parsedJSONFile;
 	}
 
-	public List<WaermeMengenZähler> getWmzList() {
+	public List<WMZDescription> getWmzList() {
 		return wmzList;
 	}
 }

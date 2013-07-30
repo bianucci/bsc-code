@@ -15,7 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import de.samson.service.database.entities.data.ReglerData;
-import de.samson.service.database.entities.description.STR_Geraet;
+import de.samson.service.database.entities.description.GeraeteDescription;
 
 @Entity
 @Table(name = "s_modbusphp_cfg.Regler")
@@ -42,7 +42,7 @@ public class ReglerConfig {
 	ReglerData reglerData;
 
 	@OneToOne(mappedBy = "reglerConfig")
-	STR_Geraet reglerDescription;
+	GeraeteDescription reglerDescription;
 
 	@Transient
 	private boolean available = true;
@@ -127,11 +127,11 @@ public class ReglerConfig {
 		this.descFileRevision = descFileRevision;
 	}
 
-	public STR_Geraet getReglerDescription() {
+	public GeraeteDescription getReglerDescription() {
 		return reglerDescription;
 	}
 
-	public void setReglerDescription(STR_Geraet reglerDescription) {
+	public void setReglerDescription(GeraeteDescription reglerDescription) {
 		this.reglerDescription = reglerDescription;
 	}
 

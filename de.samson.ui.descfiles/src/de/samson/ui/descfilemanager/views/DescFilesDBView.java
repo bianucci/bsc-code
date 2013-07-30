@@ -15,7 +15,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.Tree;
 
 import de.samson.service.database.DatabaseService;
-import de.samson.service.database.entities.description.STR_Geraet;
+import de.samson.service.database.entities.description.GeraeteDescription;
 import de.samson.ui.descfilemanager.reglerTreeFactory.DescFileTreeViewerFactory;
 import de.samson.ui.descfilemanager.reglerTreeFactory.ReglerRevisionGroup;
 
@@ -25,7 +25,7 @@ public class DescFilesDBView extends Composite {
 	private Button b;
 	private CheckboxTreeViewer tv;
 	private Tree tree;
-	private List<STR_Geraet> treeData;
+	private List<GeraeteDescription> treeData;
 
 	public DescFilesDBView(Composite parent, int style) {
 		super(parent, style);
@@ -54,19 +54,19 @@ public class DescFilesDBView extends Composite {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				super.widgetSelected(e);
-				List<STR_Geraet> toDelete = getCheckedElements();
-				for (STR_Geraet s : toDelete)
+				List<GeraeteDescription> toDelete = getCheckedElements();
+				for (GeraeteDescription s : toDelete)
 					DatabaseService.removeEntity(s);
 				refreshTreeViewer();
 			}
 		});
 	}
 
-	public List<STR_Geraet> getCheckedElements() {
-		List<STR_Geraet> checked = new Vector<STR_Geraet>();
+	public List<GeraeteDescription> getCheckedElements() {
+		List<GeraeteDescription> checked = new Vector<GeraeteDescription>();
 		for (Object o : tv.getCheckedElements()) {
-			if (o instanceof STR_Geraet) {
-				checked.add((STR_Geraet) o);
+			if (o instanceof GeraeteDescription) {
+				checked.add((GeraeteDescription) o);
 			}
 			if (o instanceof ReglerRevisionGroup) {
 				ReglerRevisionGroup g = (ReglerRevisionGroup) o;

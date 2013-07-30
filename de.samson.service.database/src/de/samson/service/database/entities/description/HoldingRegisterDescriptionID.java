@@ -1,14 +1,14 @@
 package de.samson.service.database.entities.description;
 import java.io.Serializable;
 
-public class STR_HoldingRegID implements Serializable {
+public class HoldingRegisterDescriptionID implements Serializable {
 	private static final long serialVersionUID = -5058733829906896211L;
 
 	String geraeteKennung;
 	int hrnr;
 	int revision;
 
-	public STR_HoldingRegID() {
+	public HoldingRegisterDescriptionID() {
 	}
 
 	public String getGeraeteKennung() {
@@ -54,7 +54,7 @@ public class STR_HoldingRegID implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		STR_HoldingRegID other = (STR_HoldingRegID) obj;
+		HoldingRegisterDescriptionID other = (HoldingRegisterDescriptionID) obj;
 		if (geraeteKennung == null) {
 			if (other.geraeteKennung != null)
 				return false;

@@ -1,20 +1,22 @@
 package de.samson.service.database.entities.description;
-
 import java.io.Serializable;
 
-public class STR_GeraetID implements Serializable {
-	private static final long serialVersionUID = 3486950196958179006L;
+public class CoilDescriptionID implements Serializable {
+	private static final long serialVersionUID = 123456L;
 
+	int clnr;
 	String geraeteKennung;
 	int revision;
 
-	public STR_GeraetID() {
+	public CoilDescriptionID() {
 	}
 
-	public STR_GeraetID(String geraeteKennung, int revision) {
-		super();
-		this.geraeteKennung = geraeteKennung;
-		this.revision = revision;
+	public int getClnr() {
+		return clnr;
+	}
+
+	public void setClnr(int clnr) {
+		this.clnr = clnr;
 	}
 
 	public String getGeraeteKennung() {
@@ -37,6 +39,7 @@ public class STR_GeraetID implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + clnr;
 		result = prime * result
 				+ ((geraeteKennung == null) ? 0 : geraeteKennung.hashCode());
 		result = prime * result + revision;
@@ -51,7 +54,9 @@ public class STR_GeraetID implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		STR_GeraetID other = (STR_GeraetID) obj;
+		CoilDescriptionID other = (CoilDescriptionID) obj;
+		if (clnr != other.clnr)
+			return false;
 		if (geraeteKennung == null) {
 			if (other.geraeteKennung != null)
 				return false;

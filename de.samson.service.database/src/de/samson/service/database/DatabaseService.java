@@ -23,10 +23,10 @@ import de.samson.service.database.entities.config.RegisterConfigID;
 import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.config.Standort;
 import de.samson.service.database.entities.data.ReglerData;
-import de.samson.service.database.entities.description.STR_Coil;
-import de.samson.service.database.entities.description.STR_Geraet;
-import de.samson.service.database.entities.description.STR_GeraetID;
-import de.samson.service.database.entities.description.STR_HoldingReg;
+import de.samson.service.database.entities.description.CoilDescription;
+import de.samson.service.database.entities.description.GeraeteDescription;
+import de.samson.service.database.entities.description.GeraeteDescriptionID;
+import de.samson.service.database.entities.description.HoldingRegiterDescription;
 import de.samson.service.database.util.DefaultEntityFactory;
 
 public class DatabaseService extends Observable {
@@ -81,7 +81,7 @@ public class DatabaseService extends Observable {
 
 	public static List<String> getAllREvisionNrForRegler(String reglerTyp) {
 		TypedQuery<String> q = em.createQuery(
-				"Select s.revision from STR_Geraet s where s.geraeteKennung ='"
+				"Select s.revision from GeraeteDescription s where s.geraeteKennung ='"
 						+ reglerTyp + "'", String.class);
 		return q.getResultList();
 	}
@@ -92,7 +92,7 @@ public class DatabaseService extends Observable {
 
 	public static List<String> getAllReglerTypes() {
 		TypedQuery<String> q = em
-				.createQuery("Select DISTINCT(s.geraeteTyp) from STR_Geraet s",
+				.createQuery("Select DISTINCT(s.geraeteTyp) from GeraeteDescription s",
 						String.class);
 		return q.getResultList();
 	}
@@ -101,9 +101,9 @@ public class DatabaseService extends Observable {
 		return em.find(ReglerData.class, id);
 	}
 
-	public static List<STR_Geraet> getAllSTR_Geraet() {
-		TypedQuery<STR_Geraet> q = em.createQuery("Select s from STR_Geraet s",
-				STR_Geraet.class);
+	public static List<GeraeteDescription> getAllSTR_Geraet() {
+		TypedQuery<GeraeteDescription> q = em.createQuery("Select s from GeraeteDescription s",
+				GeraeteDescription.class);
 		return q.getResultList();
 	}
 
@@ -166,13 +166,13 @@ public class DatabaseService extends Observable {
 		transaction.begin();
 
 		for (Object o : toAdd) {
-			if (o instanceof STR_HoldingReg) {
+			if (o instanceof HoldingRegiterDescription) {
 				RegisterConfig c = DefaultEntityFactory
-						.createNewRegisterConfig(rc, (STR_HoldingReg) o);
+						.createNewRegisterConfig(rc, (HoldingRegiterDescription) o);
 				rc.getRegisterConfigs().add(c);
-			} else if (o instanceof STR_Coil) {
+			} else if (o instanceof CoilDescription) {
 				CoilConfig c = DefaultEntityFactory.createNewCoilConfig(rc,
-						(STR_Coil) o);
+						(CoilDescription) o);
 				rc.getCoilsConfigs().add(c);
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().add((RegisterConfig) o);
@@ -182,14 +182,14 @@ public class DatabaseService extends Observable {
 		}
 
 		for (Object o : toDelete) {
-			if (o instanceof STR_HoldingReg) {
+			if (o instanceof HoldingRegiterDescription) {
 				RegisterConfig c = (RegisterConfig) findEntityByID(
 						RegisterConfig.class, new RegisterConfigID(rc.getnId(),
-								((STR_HoldingReg) o).getHrnr() - 40000));
+								((HoldingRegiterDescription) o).getHrnr() - 40000));
 				rc.getRegisterConfigs().remove(c);
-			} else if (o instanceof STR_Coil) {
+			} else if (o instanceof CoilDescription) {
 				CoilConfig c = (CoilConfig) findEntityByID(CoilConfig.class,
-						new CoilConfigID(rc.getnId(), ((STR_Coil) o).getClnr()));
+						new CoilConfigID(rc.getnId(), ((CoilDescription) o).getClnr()));
 				rc.getCoilsConfigs().remove(c);
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().remove(o);
@@ -202,8 +202,8 @@ public class DatabaseService extends Observable {
 			rc.setnDeviceid(Integer.valueOf(statNR));
 
 		if ((rc.getDescFileRevision() != revNR) || (rc.getsTyp() != reglerTyp)) {
-			STR_Geraet s = (STR_Geraet) findEntityByID(STR_Geraet.class,
-					new STR_GeraetID(reglerTyp, Integer.valueOf(revNR)));
+			GeraeteDescription s = (GeraeteDescription) findEntityByID(GeraeteDescription.class,
+					new GeraeteDescriptionID(reglerTyp, Integer.valueOf(revNR)));
 
 			rc.setReglerDescription(s);
 			rc.setsTyp(reglerTyp);

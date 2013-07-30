@@ -12,7 +12,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
 
 import de.samson.service.database.DatabaseService;
-import de.samson.service.database.entities.description.STR_Geraet;
+import de.samson.service.database.entities.description.GeraeteDescription;
 
 public class DescFileManagerView extends ViewPart {
 
@@ -41,8 +41,8 @@ public class DescFileManagerView extends ViewPart {
 
 			@Override
 			public void widgetSelected(SelectionEvent e) {
-				List<STR_Geraet> toPersist = v2.getCheckedElements();
-				for (STR_Geraet s : toPersist) {
+				List<GeraeteDescription> toPersist = v2.getCheckedElements();
+				for (GeraeteDescription s : toPersist) {
 					DatabaseService.addEntity(s);
 				}
 				v1.refreshTreeViewer();

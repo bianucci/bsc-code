@@ -3,7 +3,7 @@ package de.samson.ui.descfilemanager.reglerTreeFactory;
 
 import org.eclipse.jface.viewers.LabelProvider;
 
-import de.samson.service.database.entities.description.STR_Geraet;
+import de.samson.service.database.entities.description.GeraeteDescription;
 
 public class ReglerTreeLabelProvider extends LabelProvider {
 
@@ -14,8 +14,8 @@ public class ReglerTreeLabelProvider extends LabelProvider {
 	@Override
 	public String getText(Object element) {
 
-		if (element instanceof STR_Geraet) {
-			STR_Geraet str_Geraet = (STR_Geraet) element;
+		if (element instanceof GeraeteDescription) {
+			GeraeteDescription str_Geraet = (GeraeteDescription) element;
 
 			StringBuilder stringBuilder = new StringBuilder();
 			stringBuilder.append("Rev. ");
