@@ -6,17 +6,11 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.persistence.Transient;
-
-import de.samson.service.database.entities.config.ReglerConfig;
 
 @Entity
-@Table(name = "str_geraet", schema="description")
+@Table(name = "str_geraet", schema = "description")
 @IdClass(GeraeteDescriptionID.class)
 public class GeraeteDescription {
 
@@ -25,17 +19,11 @@ public class GeraeteDescription {
 
 	String comment;
 
-	@OneToOne(cascade = CascadeType.MERGE)
-	@JoinColumns(value = {
-			@JoinColumn(name = "revision", referencedColumnName = "descFileRevision", insertable = false, updatable = false),
-			@JoinColumn(name = "geraeteKennung", referencedColumnName = "sTyp", insertable = false, updatable = false) })
-	ReglerConfig reglerConfig;
-
 	@Id
 	String geraeteKennung;
-	
+
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraeteDescription", orphanRemoval = true)
-	List<WMZDescription> wmz;
+	List<WmzDesc> wmz;
 
 	String geraeteTyp;
 	int idxAdr;
@@ -53,8 +41,8 @@ public class GeraeteDescription {
 
 	String singleUse;
 
-	@Transient
-	private List<WMZDescription> wmzList;
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="geraeteDescription", orphanRemoval=true)
+	private List<WmzDesc> wmzList;
 
 	public GeraeteDescription() {
 	}
@@ -73,14 +61,6 @@ public class GeraeteDescription {
 
 	public void setComment(String comment) {
 		this.comment = comment;
-	}
-
-	public ReglerConfig getReglerConfig() {
-		return reglerConfig;
-	}
-
-	public void setReglerConfig(ReglerConfig reglerConfig) {
-		this.reglerConfig = reglerConfig;
 	}
 
 	public String getGeraeteKennung() {
@@ -155,11 +135,11 @@ public class GeraeteDescription {
 		this.singleUse = singleUse;
 	}
 
-	public void setAllWMZ(List<WMZDescription> parsedJSONFile) {
+	public void setAllWMZ(List<WmzDesc> parsedJSONFile) {
 		this.wmzList = parsedJSONFile;
 	}
 
-	public List<WMZDescription> getWmzList() {
+	public List<WmzDesc> getWmzList() {
 		return wmzList;
 	}
 }

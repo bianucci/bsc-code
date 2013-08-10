@@ -17,7 +17,7 @@ import javax.persistence.Transient;
 import de.samson.service.database.entities.data.GatewayData;
 
 @Entity
-@Table(name = "Gateways", schema="s_modbusphp_cfg")
+@Table(name = "Gateways", schema = "s_modbusphp_cfg")
 public class GatewayConfig {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,11 +35,23 @@ public class GatewayConfig {
 
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "gatewayConfig")
 	GatewayData gatewayData;
-	
+
 	@Transient
 	private boolean available = true;
 
 	public GatewayConfig() {
+	}
+
+	public GatewayConfig(int nPort, int nGruppe, Standort standort,
+			List<ReglerConfig> regler, GatewayData gatewayData,
+			boolean available) {
+		super();
+		this.nPort = nPort;
+		this.nGruppe = nGruppe;
+		this.standort = standort;
+		this.regler = regler;
+		this.gatewayData = gatewayData;
+		this.available = available;
 	}
 
 	public GatewayData getGatewayData() {

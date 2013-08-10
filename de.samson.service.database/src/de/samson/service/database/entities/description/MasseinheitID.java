@@ -2,38 +2,38 @@ package de.samson.service.database.entities.description;
 
 import java.io.Serializable;
 
-public class WmwMasseinheitID implements Serializable {
+public class MasseinheitID implements Serializable {
 	private static final long serialVersionUID = 2407002330520798123L;
 
-	long keyEinheit;
-	long wmwID;
+	long key;
+	long wmw_id;
 
-	public WmwMasseinheitID() {
+	public MasseinheitID() {
 
 	}
 
 	public long getKeyEinheit() {
-		return keyEinheit;
+		return key;
 	}
 
 	public void setKeyEinheit(long key) {
-		this.keyEinheit = key;
+		this.key = key;
 	}
 
 	public long getWmwID() {
-		return wmwID;
+		return wmw_id;
 	}
 
 	public void setWmwID(long wmwID) {
-		this.wmwID = wmwID;
+		this.wmw_id = wmwID;
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (int) (keyEinheit ^ (keyEinheit >>> 32));
-		result = prime * result + (int) (wmwID ^ (wmwID >>> 32));
+		result = prime * result + (int) (key ^ (key >>> 32));
+		result = prime * result + (int) (wmw_id ^ (wmw_id >>> 32));
 		return result;
 	}
 
@@ -45,10 +45,10 @@ public class WmwMasseinheitID implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		WmwMasseinheitID other = (WmwMasseinheitID) obj;
-		if (keyEinheit != other.keyEinheit)
+		MasseinheitID other = (MasseinheitID) obj;
+		if (key != other.key)
 			return false;
-		if (wmwID != other.wmwID)
+		if (wmw_id != other.wmw_id)
 			return false;
 		return true;
 	}

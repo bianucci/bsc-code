@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
@@ -15,10 +16,11 @@ import javax.persistence.Table;
 import javax.persistence.Transient;
 
 import de.samson.service.database.entities.data.ReglerData;
+import de.samson.service.database.entities.data.WmzData;
 import de.samson.service.database.entities.description.GeraeteDescription;
 
 @Entity
-@Table(name = "Regler", schema="s_modbusphp_cfg")
+@Table(name = "Regler", schema = "s_modbusphp_cfg")
 public class ReglerConfig {
 
 	@Id
@@ -41,8 +43,14 @@ public class ReglerConfig {
 	@OneToOne(cascade = CascadeType.ALL, mappedBy = "reglerConfig", orphanRemoval = true)
 	ReglerData reglerData;
 
-	@OneToOne(mappedBy = "reglerConfig")
+	@ManyToOne
+	@JoinColumns(value = {
+			@JoinColumn(name = "sTyp", referencedColumnName = "geraeteKennung", insertable=false, updatable=false),
+			@JoinColumn(name = "descFileRevision", referencedColumnName = "revision", insertable=false, updatable=false) })
 	GeraeteDescription reglerDescription;
+
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerConfig", orphanRemoval = true)
+	List<WmzData> allWmz;
 
 	@Transient
 	private boolean available = true;
@@ -127,10 +135,12 @@ public class ReglerConfig {
 		this.descFileRevision = descFileRevision;
 	}
 
+	@Transient
 	public GeraeteDescription getReglerDescription() {
 		return reglerDescription;
 	}
 
+	@Transient
 	public void setReglerDescription(GeraeteDescription reglerDescription) {
 		this.reglerDescription = reglerDescription;
 	}

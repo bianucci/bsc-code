@@ -7,31 +7,26 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import de.samson.service.database.entities.description.CoilDescription;
+import de.samson.service.database.entities.description.HoldingRegiterDescription;
 
 @Entity
-@DiscriminatorValue("coil")
-@Table(name = "hist_data.coil_data_src")
-public class CoilDataProvider extends HistDataProvider {
+@DiscriminatorValue("hreg")
+@Table(name = "hist_data.hreg_data_src")
+public class HRegDataSource extends HistDataSource {
 
 	@OneToOne
 	@JoinColumns(value = {
-			@JoinColumn(name = "coil_nr", referencedColumnName = "clnr"),
+			@JoinColumn(name = "hreg_nr", referencedColumnName = "hrnr"),
 			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
-	CoilDescription cd;
+	HoldingRegiterDescription hrd;
 
-	public CoilDescription getCd() {
-		return cd;
+	public HoldingRegiterDescription getHrd() {
+		return hrd;
 	}
 
-	public void setCd(CoilDescription cd) {
-		this.cd = cd;
-	}
-
-	@Override
-	public void setBezeichnung(String bezeichnung) {
-		super.setBezeichnung(bezeichnung);
+	public void setHrd(HoldingRegiterDescription hrd) {
+		this.hrd = hrd;
 	}
 
 	@Override
@@ -40,12 +35,18 @@ public class CoilDataProvider extends HistDataProvider {
 	}
 
 	@Override
-	public void setId(long id) {
-		super.setId(id);
+	public void setBezeichnung(String bezeichnung) {
+		super.setBezeichnung(bezeichnung);
 	}
 
 	@Override
 	public long getId() {
 		return super.getId();
 	}
+
+	@Override
+	public void setId(long id) {
+		super.setId(id);
+	}
+
 }

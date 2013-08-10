@@ -5,10 +5,12 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "str_holdingreg", schema="description")
+@Table(name = "str_holdingreg", schema = "description")
 @IdClass(HoldingRegisterDescriptionID.class)
 public class HoldingRegiterDescription {
 
@@ -22,14 +24,16 @@ public class HoldingRegiterDescription {
 
 	String einheit;
 
+	@ManyToOne
 	@JoinColumns(value = {
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung", insertable = false, updatable = false),
 			@JoinColumn(name = "revision", referencedColumnName = "revision", insertable = false, updatable = false) })
 	GeraeteDescription geraet;
 
-	@JoinColumn(name = "wmw_id", referencedColumnName = "wmwId")
-	WMWDescription wmw;
-	
+	@OneToOne
+	@JoinColumn(name = "wmw_id", referencedColumnName = "id", nullable = true)
+	WmwDesc wmw;
+
 	@Id
 	String geraeteKennung;
 
@@ -47,6 +51,8 @@ public class HoldingRegiterDescription {
 
 	String ueBerAnfang;
 	String ueBerEnde;
+	
+	int faktor;
 
 	public HoldingRegiterDescription() {
 
@@ -171,13 +177,13 @@ public class HoldingRegiterDescription {
 	public void setUeBerEnde(String ueBerEnde) {
 		this.ueBerEnde = ueBerEnde;
 	}
-	
-	public double getSkalierungsfaktor(){
-		double uB = Double.valueOf(getUeBerEnde()
-				.replace(',', '.').replace(".000", ".00"));
 
-		double aB = Double.valueOf(getaBerEnde().replace(',', '.')
-				.replace(".000", ".00"));
+	public double getSkalierungsfaktor() {
+		double uB = Double.valueOf(getUeBerEnde().replace(',', '.').replace(
+				".000", ".00"));
+
+		double aB = Double.valueOf(getaBerEnde().replace(',', '.').replace(
+				".000", ".00"));
 
 		if ((aB == 0) && uB == 0) {
 			aB = 1;

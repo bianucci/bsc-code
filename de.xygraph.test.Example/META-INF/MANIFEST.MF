@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: Example
-Bundle-SymbolicName: de.xygraph.test.Example; singleton:=true
+Bundle-SymbolicName: de.samson.ui.dataVisualizer;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.xygraph.test.example.Activator
 Require-Bundle: org.eclipse.core.runtime,
@@ -10,6 +10,7 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.swt;bundle-version="3.7.2",
  org.eclipse.jface;bundle-version="3.7.0",
  org.csstudio.swt.widgets.source;bundle-version="2.1.0",
- org.csstudio.swt.xygraph.source;bundle-version="2.1.0"
+ org.csstudio.swt.xygraph.source;bundle-version="2.1.0",
+ de.samson.service.database;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

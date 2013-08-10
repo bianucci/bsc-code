@@ -8,12 +8,15 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  library.com.mysql.JDBC;bundle-version="5.1.24",
  library.org.eclipse.persistence.EclipseLink;bundle-version="1.0.0",
- org.junit
+ org.junit,
+ org.csstudio.swt.xygraph.source;bundle-version="2.1.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: de.samson.service.database,
  de.samson.service.database.entities.config,
  de.samson.service.database.entities.data,
  de.samson.service.database.entities.description,
+ de.samson.service.database.entities.histdata,
  de.samson.service.database.impl,
+ de.samson.service.database.listener,
  de.samson.service.database.util

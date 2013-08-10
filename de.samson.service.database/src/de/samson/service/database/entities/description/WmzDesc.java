@@ -16,25 +16,25 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 @Entity
-@Table(name = "desc_wmz", schema="description", uniqueConstraints = { @UniqueConstraint(columnNames = {
-		"nr", "geraeteKennung", "revision" }) })
-public class WMZDescription extends ArrayList<WMWDescription> {
+@Table(name = "desc_wmz", schema = "description", uniqueConstraints = { @UniqueConstraint(columnNames = {
+		"bezeichnung", "geraeteKennung", "revision" }) })
+public class WmzDesc extends ArrayList<WmwDesc> {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
 
-	int nr;
+	String bezeichnung;
 
 	@ManyToOne
 	@JoinColumns(value = {
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung"),
-			@JoinColumn(name = "descFileRevision", referencedColumnName = "revision") })
+			@JoinColumn(name = "revision", referencedColumnName = "revision") })
 	GeraeteDescription geraeteDescription;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "wmz", orphanRemoval = true)
-	List<WMWDescription> wmwList;
+	List<WmwDesc> wmwList;
 
 	public void setName(String string) {
 	}

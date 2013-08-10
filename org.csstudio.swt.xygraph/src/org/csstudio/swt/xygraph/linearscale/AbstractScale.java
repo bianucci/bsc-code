@@ -46,7 +46,7 @@ public abstract class AbstractScale extends Figure{
 	 */
 	private static final int ENGINEERING_LIMIT = 4;
 
-	private static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd\nHH:mm:ss";    	//$NON-NLS-1$
+	private static final String DEFAULT_DATE_FORMAT = "dd.MM.yyyy\nHH:mm:ss";    	//$NON-NLS-1$
     
     /** ticks label position */
     private LabelSide tickLableSide = LabelSide.Primary;   
@@ -137,7 +137,7 @@ public abstract class AbstractScale extends Figure{
 	                } else if (length <= 604800000d || timeUnit == Calendar.HOUR_OF_DAY) { //less than a week
 	                	formatPattern = "MM-dd\nHH:mm";//$NON-NLS-1$
 	                } else if (length <= 2592000000d || timeUnit == Calendar.DATE) { //less than a month
-	                	formatPattern = "MM-dd";//$NON-NLS-1$
+	                	formatPattern = "dd.MM.yyyy";//$NON-NLS-1$
 //	                } else if (length <= 31536000000d ||timeUnit == Calendar.MONTH) { //less than a year
 //	                	formatPattern = "yyyy-MM-dd";//$NON-NLS-1$
 	                } else {		//more than a month
@@ -147,7 +147,7 @@ public abstract class AbstractScale extends Figure{
             	}
               	if(minOrMaxDate && autoFormat){
               			if(Math.abs(max - min)<5000)
-              				return new SimpleDateFormat("yyyy-MM-dd\nHH:mm:ss.SSS").format(obj); //$NON-NLS-1$
+              				return new SimpleDateFormat("dd.MM.yyyy\nHH:mm:ss.SSS").format(obj); //$NON-NLS-1$
            			return new SimpleDateFormat(DEFAULT_DATE_FORMAT).format(obj);
               	}
             	return new SimpleDateFormat(formatPattern).format(obj);

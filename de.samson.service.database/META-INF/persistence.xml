@@ -7,14 +7,9 @@
 		<class>de.samson.service.database.entities.description.GeraeteDescription</class>
 		<class>de.samson.service.database.entities.description.CoilDescription</class>
 		<class>de.samson.service.database.entities.description.HoldingRegiterDescription</class>
-		<class>de.samson.service.database.entities.description.WMZDescription</class>
-		<class>de.samson.service.database.entities.description.WMWDescription</class>
-		<class>de.samson.service.database.entities.description.WMWMasseinheit</class>
-
-		<class>de.samson.service.database.entities.data.RegisterData</class>
-		<class>de.samson.service.database.entities.data.CoilData</class>
-		<class>de.samson.service.database.entities.data.ReglerData</class>
-		<class>de.samson.service.database.entities.data.GatewayData</class>
+		<class>de.samson.service.database.entities.description.WmzDesc</class>
+		<class>de.samson.service.database.entities.description.WmwDesc</class>
+		<class>de.samson.service.database.entities.description.Masseinheit</class>
 
 		<class>de.samson.service.database.entities.config.RegisterConfig</class>
 		<class>de.samson.service.database.entities.config.CoilConfig</class>
@@ -22,19 +17,26 @@
 		<class>de.samson.service.database.entities.config.GatewayConfig</class>
 		<class>de.samson.service.database.entities.config.Standort</class>
 		
-		<class>de.samson.service.database.entities.histdata.HistDataSet</class>
-		<class>de.samson.service.database.entities.histdata.HistDataProvider</class>
+		<class>de.samson.service.database.entities.data.RegisterData</class>
+		<class>de.samson.service.database.entities.data.CoilData</class>
+		<class>de.samson.service.database.entities.data.ReglerData</class>
+		<class>de.samson.service.database.entities.data.GatewayData</class>
+		<class>de.samson.service.database.entities.data.WmzData</class>
+		<class>de.samson.service.database.entities.data.WmwData</class>
+
+		<!--<class>de.samson.service.database.entities.histdata.HistDataSet</class>
+		<class>de.samson.service.database.entities.histdata.HistDataSource</class>
 		<class>de.samson.service.database.entities.histdata.HistValue</class>
-		<class>de.samson.service.database.entities.histdata.CoilDataProvider</class>
-		<class>de.samson.service.database.entities.histdata.HRegDataProvider</class>
-		<class>de.samson.service.database.entities.histdata.WMWDataProvider</class>
+		<class>de.samson.service.database.entities.histdata.CoilDataSource</class>
+		<class>de.samson.service.database.entities.histdata.HRegDataSource</class>
+		<class>de.samson.service.database.entities.histdata.WmwDataSource</class>-->
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
-			 <property 
+			<!--   <property 
 				name="eclipselink.ddl-generation" value="create-tables" /> <property name="eclipselink.ddl-generation.output-mode" 
-				value="database" />
+				value="database" />-->
 		</properties>
 
 	</persistence-unit>

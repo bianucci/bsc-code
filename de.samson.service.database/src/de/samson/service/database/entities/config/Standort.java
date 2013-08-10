@@ -27,10 +27,9 @@ public class Standort {
 	public Standort() {
 	}
 
-	public Standort(int nid, String sStrasse, String sHn, int nPlz,
+	public Standort(String sStrasse, String sHn, int nPlz,
 			List<GatewayConfig> gateways) {
 		super();
-		this.nid = nid;
 		this.sStrasse = sStrasse;
 		this.sHn = sHn;
 		this.nPlz = nPlz;

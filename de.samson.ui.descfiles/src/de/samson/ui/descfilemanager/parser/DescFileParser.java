@@ -18,8 +18,8 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.samson.service.database.entities.description.CoilDescription;
 import de.samson.service.database.entities.description.GeraeteDescription;
 import de.samson.service.database.entities.description.HoldingRegiterDescription;
-import de.samson.service.database.entities.description.WMWDescription;
-import de.samson.service.database.entities.description.WMZDescription;
+import de.samson.service.database.entities.description.WmwDesc;
+import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
 import de.samson.ui.descfilemanager.exceptions.DescFileCorruptedException;
 import de.samson.ui.descfilemanager.exceptions.DescFileParsingException;
@@ -89,8 +89,7 @@ public class DescFileParser {
 					tempGeraet.getRegisterList().add(tempHReg);
 				}
 
-				List<WMZDescription> parsedJSONFile = parseJSONFile(next,
-						tempGeraet);
+				List<WmzDesc> parsedJSONFile = parseJSONFile(next, tempGeraet);
 				tempGeraet.setAllWMZ(parsedJSONFile);
 				controller.add(tempGeraet);
 
@@ -196,7 +195,7 @@ public class DescFileParser {
 	}
 
 	@SuppressWarnings({ "unchecked" })
-	public static List<WMZDescription> parseJSONFile(File jsonFile,
+	public static List<WmzDesc> parseJSONFile(File jsonFile,
 			GeraeteDescription regler) throws JsonParseException, IOException,
 			DescFileCorruptedException {
 
@@ -208,9 +207,9 @@ public class DescFileParser {
 
 		ObjectMapper mapper = new ObjectMapper();
 
-		List<WMZDescription> l = new ArrayList<WMZDescription>();
-		WMZDescription wmz;
-		WMWDescription wmw;
+		List<WmzDesc> l = new ArrayList<WmzDesc>();
+		WmzDesc wmz;
+		WmwDesc wmw;
 
 		// ALL JSON DATA
 		Map<String, Object> userData = mapper.readValue(jsonFile, Map.class);
@@ -224,7 +223,7 @@ public class DescFileParser {
 		Object[] arrayAllWMZ = mapAllWMZ.values().toArray();
 
 		for (int i = 0; i < arrayAllWMZ.length; i++) {
-			wmz = new WMZDescription();
+			wmz = new WmzDesc();
 
 			// CURRENT WMZ
 			LinkedHashMap<String, Object> mapWMZ = (LinkedHashMap<String, Object>) arrayAllWMZ[i];
@@ -235,11 +234,11 @@ public class DescFileParser {
 
 			// ITERATE THROUGH ALL WMW
 			for (int j = 0; j < arrayAllWMW.length; j++) {
-				wmw = new WMWDescription();
+				wmw = new WmwDesc();
 
 				// CURRENT WMW
 				Map<String, Object> mapWMW = (Map<String, Object>) arrayAllWMW[j];
-				wmw.setCategory((String) mapWMZ.keySet().toArray()[j]);
+				// wmw.setCategory((String) mapWMZ.keySet().toArray()[j]);TODO
 
 				// SET EINHEIT REGISTER FOR WMZ
 				Map<String, Object> einheit = (Map<String, Object>) mapWMW
@@ -247,7 +246,6 @@ public class DescFileParser {
 				int einReg = (int) einheit.get("IntRegister");
 				for (HoldingRegiterDescription sreg : regler.getRegisterList()) {
 					if (sreg.getHrnr() == einReg) {
-						wmw.setEinheitRegister(sreg);
 						break;
 					}
 				}
@@ -273,7 +271,7 @@ public class DescFileParser {
 						}
 					}
 				}
-				//wmw.setWertigkeiten(m); TODO
+				// wmw.setWertigkeiten(m); TODO
 				wmz.add(wmw);
 			}
 			l.add(wmz);

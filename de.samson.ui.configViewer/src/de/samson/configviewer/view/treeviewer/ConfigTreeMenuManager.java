@@ -49,7 +49,7 @@ public class ConfigTreeMenuManager extends MenuManager {
 						.getSelection();
 
 				GatewayConfig gwc = (GatewayConfig) selection.getFirstElement();
-				DatabaseService.addDefaultRegisterConfigToGateway(gwc);
+				DatabaseService.addDefaultReglerConfigToGateway(gwc);
 				DatabaseService.refreshEntity(gwc);
 
 				tv.refresh();

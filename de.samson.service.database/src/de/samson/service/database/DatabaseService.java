@@ -1,5 +1,6 @@
 package de.samson.service.database;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -70,7 +71,7 @@ public class DatabaseService extends Observable {
 					"Select s from Standort s", Standort.class);
 			currentDBState = createQuery.getResultList();
 		} catch (Exception e) {
-
+			e.printStackTrace();
 			throw new Exception();
 		}
 	}
@@ -91,9 +92,9 @@ public class DatabaseService extends Observable {
 	}
 
 	public static List<String> getAllReglerTypes() {
-		TypedQuery<String> q = em
-				.createQuery("Select DISTINCT(s.geraeteTyp) from GeraeteDescription s",
-						String.class);
+		TypedQuery<String> q = em.createQuery(
+				"Select DISTINCT(s.geraeteTyp) from GeraeteDescription s",
+				String.class);
 		return q.getResultList();
 	}
 
@@ -102,8 +103,8 @@ public class DatabaseService extends Observable {
 	}
 
 	public static List<GeraeteDescription> getAllSTR_Geraet() {
-		TypedQuery<GeraeteDescription> q = em.createQuery("Select s from GeraeteDescription s",
-				GeraeteDescription.class);
+		TypedQuery<GeraeteDescription> q = em.createQuery(
+				"Select s from GeraeteDescription s", GeraeteDescription.class);
 		return q.getResultList();
 	}
 
@@ -140,8 +141,7 @@ public class DatabaseService extends Observable {
 		return em.find(GatewayConfig.class, id);
 	}
 
-	public static ReglerConfig addDefaultRegisterConfigToGateway(
-			GatewayConfig gwc) {
+	public static ReglerConfig addDefaultReglerConfigToGateway(GatewayConfig gwc) {
 		ReglerConfig defaultConfig = DefaultEntityFactory
 				.createReglerConfig(gwc);
 		persistEntity(defaultConfig);
@@ -160,6 +160,25 @@ public class DatabaseService extends Observable {
 		return s;
 	}
 
+	public static List<RegisterConfig> addRegisterConfigsInRange(
+			ReglerConfig rc, int beginHRNR, int endHRNR) {
+		List<RegisterConfig> added = new ArrayList<RegisterConfig>();
+		List<HoldingRegiterDescription> availableRegs = rc
+				.getReglerDescription().getRegisterList();
+
+		for (int i = 0; i < availableRegs.size(); i++) {
+			int regNr = availableRegs.get(i).getHrnr() - 40000;
+			if ((regNr > beginHRNR) && (regNr < endHRNR)) {
+				HoldingRegiterDescription s = availableRegs.get(i);
+				added.add(DefaultEntityFactory.createNewRegisterConfig(rc, s));
+			} else if (regNr > endHRNR)
+				break;
+		}
+		rc.getRegisterConfigs().addAll(added);
+		persistEntity(rc);
+		return added;
+	}
+
 	public static void updateReglerConfig(ReglerConfig rc, List<Object> toAdd,
 			List<Object> toDelete, String statNR, String revNR, String reglerTyp) {
 		EntityTransaction transaction = em.getTransaction();
@@ -168,7 +187,8 @@ public class DatabaseService extends Observable {
 		for (Object o : toAdd) {
 			if (o instanceof HoldingRegiterDescription) {
 				RegisterConfig c = DefaultEntityFactory
-						.createNewRegisterConfig(rc, (HoldingRegiterDescription) o);
+						.createNewRegisterConfig(rc,
+								(HoldingRegiterDescription) o);
 				rc.getRegisterConfigs().add(c);
 			} else if (o instanceof CoilDescription) {
 				CoilConfig c = DefaultEntityFactory.createNewCoilConfig(rc,
@@ -184,12 +204,16 @@ public class DatabaseService extends Observable {
 		for (Object o : toDelete) {
 			if (o instanceof HoldingRegiterDescription) {
 				RegisterConfig c = (RegisterConfig) findEntityByID(
-						RegisterConfig.class, new RegisterConfigID(rc.getnId(),
+						RegisterConfig.class,
+						new RegisterConfigID(
+								rc.getnId(),
 								((HoldingRegiterDescription) o).getHrnr() - 40000));
 				rc.getRegisterConfigs().remove(c);
 			} else if (o instanceof CoilDescription) {
-				CoilConfig c = (CoilConfig) findEntityByID(CoilConfig.class,
-						new CoilConfigID(rc.getnId(), ((CoilDescription) o).getClnr()));
+				CoilConfig c = (CoilConfig) findEntityByID(
+						CoilConfig.class,
+						new CoilConfigID(rc.getnId(), ((CoilDescription) o)
+								.getClnr()));
 				rc.getCoilsConfigs().remove(c);
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().remove(o);
@@ -202,8 +226,9 @@ public class DatabaseService extends Observable {
 			rc.setnDeviceid(Integer.valueOf(statNR));
 
 		if ((rc.getDescFileRevision() != revNR) || (rc.getsTyp() != reglerTyp)) {
-			GeraeteDescription s = (GeraeteDescription) findEntityByID(GeraeteDescription.class,
-					new GeraeteDescriptionID(reglerTyp, Integer.valueOf(revNR)));
+			GeraeteDescription s = (GeraeteDescription) findEntityByID(
+					GeraeteDescription.class, new GeraeteDescriptionID(
+							reglerTyp, Integer.valueOf(revNR)));
 
 			rc.setReglerDescription(s);
 			rc.setsTyp(reglerTyp);

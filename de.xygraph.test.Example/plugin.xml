@@ -47,5 +47,14 @@
          </view>
       </perspectiveExtension>
    </extension>
+   <extension
+         point="org.eclipse.ui.editors">
+      <editor
+            class="de.samson.histdata.ui.editor.HistDataEditor"
+            default="false"
+            id="de.samson.ui.dataVisualizer.hsitDataEditor"
+            name="Historical Data Editor">
+      </editor>
+   </extension>
 
 </plugin>
