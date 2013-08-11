@@ -5,16 +5,16 @@ import java.util.List;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import de.samson.service.database.entities.description.GeraeteDescription;
-import de.samson.service.database.entities.description.HoldingRegiterDescription;
+import de.samson.service.database.entities.description.GeraeteDesc;
+import de.samson.service.database.entities.description.HRegDesc;
 
 public class RegTableContentProvider implements IStructuredContentProvider {
-	List<HoldingRegiterDescription> source;
+	List<HRegDesc> source;
 
 	@Override
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-		if (newInput instanceof GeraeteDescription) {
-			source = ((GeraeteDescription) newInput).getRegisterList();
+		if (newInput instanceof GeraeteDesc) {
+			source = ((GeraeteDesc) newInput).getRegisterList();
 		}
 	}
 

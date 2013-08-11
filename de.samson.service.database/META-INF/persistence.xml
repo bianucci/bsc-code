@@ -4,9 +4,9 @@
 	version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
 	<persistence-unit name="todo" transaction-type="RESOURCE_LOCAL">
 
-		<class>de.samson.service.database.entities.description.GeraeteDescription</class>
-		<class>de.samson.service.database.entities.description.CoilDescription</class>
-		<class>de.samson.service.database.entities.description.HoldingRegiterDescription</class>
+		<class>de.samson.service.database.entities.description.GeraeteDesc</class>
+		<class>de.samson.service.database.entities.description.CoilDesc</class>
+		<class>de.samson.service.database.entities.description.HRegDesc</class>
 		<class>de.samson.service.database.entities.description.WmzDesc</class>
 		<class>de.samson.service.database.entities.description.WmwDesc</class>
 		<class>de.samson.service.database.entities.description.Masseinheit</class>

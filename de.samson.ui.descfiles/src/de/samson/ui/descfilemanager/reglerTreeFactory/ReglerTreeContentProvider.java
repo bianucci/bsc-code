@@ -6,7 +6,7 @@ import java.util.List;
 import org.eclipse.jface.viewers.ITreeContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import de.samson.service.database.entities.description.GeraeteDescription;
+import de.samson.service.database.entities.description.GeraeteDesc;
 
 public class ReglerTreeContentProvider implements ITreeContentProvider {
 
@@ -22,13 +22,13 @@ public class ReglerTreeContentProvider implements ITreeContentProvider {
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
 		dataResource = new ArrayList<ReglerRevisionGroup>();
 
-		List<GeraeteDescription> allRegler = (List<GeraeteDescription>) newInput;
+		List<GeraeteDesc> allRegler = (List<GeraeteDesc>) newInput;
 
 		if (allRegler == null || allRegler.size() <= 0) {
 			return;
 		}
 
-		for (GeraeteDescription s : allRegler) {
+		for (GeraeteDesc s : allRegler) {
 
 			String name = s.getGeraeteKennung();
 

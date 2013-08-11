@@ -15,9 +15,9 @@ import java.util.Map;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
-import de.samson.service.database.entities.description.CoilDescription;
-import de.samson.service.database.entities.description.GeraeteDescription;
-import de.samson.service.database.entities.description.HoldingRegiterDescription;
+import de.samson.service.database.entities.description.CoilDesc;
+import de.samson.service.database.entities.description.GeraeteDesc;
+import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.WmwDesc;
 import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
@@ -26,7 +26,7 @@ import de.samson.ui.descfilemanager.exceptions.DescFileParsingException;
 
 public class DescFileParser {
 
-	private static ArrayList<GeraeteDescription> controller;
+	private static ArrayList<GeraeteDesc> controller;
 
 	private static ArrayList<File> allControllerDirs;
 
@@ -74,17 +74,17 @@ public class DescFileParser {
 				String revCount = parseDescriptionFile(next,
 						EnumDescFileType.RevCount).get(0)[0];
 
-				GeraeteDescription tempGeraet = createGeraetFromParsedData(
+				GeraeteDesc tempGeraet = createGeraetFromParsedData(
 						str_geraetData, revCount, comment);
 
 				for (String[] data : str_coilsData) {
-					CoilDescription tempCoil = createCoilFromParsedData(data,
+					CoilDesc tempCoil = createCoilFromParsedData(data,
 							tempGeraet);
 					tempGeraet.getCoilsList().add(tempCoil);
 				}
 
 				for (String[] data : str_holdingregData) {
-					HoldingRegiterDescription tempHReg = createHoldingRegFromParsedData(
+					HRegDesc tempHReg = createHoldingRegFromParsedData(
 							data, tempGeraet);
 					tempGeraet.getRegisterList().add(tempHReg);
 				}
@@ -196,7 +196,7 @@ public class DescFileParser {
 
 	@SuppressWarnings({ "unchecked" })
 	public static List<WmzDesc> parseJSONFile(File jsonFile,
-			GeraeteDescription regler) throws JsonParseException, IOException,
+			GeraeteDesc regler) throws JsonParseException, IOException,
 			DescFileCorruptedException {
 
 		jsonFile = new File(jsonFile.getAbsolutePath() + "\\"
@@ -244,7 +244,7 @@ public class DescFileParser {
 				Map<String, Object> einheit = (Map<String, Object>) mapWMW
 						.get("Einheit");
 				int einReg = (int) einheit.get("IntRegister");
-				for (HoldingRegiterDescription sreg : regler.getRegisterList()) {
+				for (HRegDesc sreg : regler.getRegisterList()) {
 					if (sreg.getHrnr() == einReg) {
 						break;
 					}
@@ -258,12 +258,12 @@ public class DescFileParser {
 				// SET WERTE REGISTER FOR WMZ
 				ArrayList<Object> wertigkeiten = (ArrayList<Object>) mapWMW
 						.get("Wertigkeiten");
-				Map<HoldingRegiterDescription, Double> m = new HashMap<>();
+				Map<HRegDesc, Double> m = new HashMap<>();
 				for (Object o : wertigkeiten) {
 					Map<String, Object> dp = (Map<String, Object>) o;
 					double faktor = (double) dp.get("DblWertigkeit");
 					int reg = (int) dp.get("IntRegister");
-					for (HoldingRegiterDescription sreg : regler
+					for (HRegDesc sreg : regler
 							.getRegisterList()) {
 						if (sreg.getHrnr() == reg) {
 							m.put(sreg, faktor);
@@ -279,11 +279,11 @@ public class DescFileParser {
 		return l;
 	}
 
-	private static CoilDescription createCoilFromParsedData(
-			String[] parsedData, GeraeteDescription geraet)
+	private static CoilDesc createCoilFromParsedData(
+			String[] parsedData, GeraeteDesc geraet)
 			throws DescFileCorruptedException {
 
-		CoilDescription tempCoil = new CoilDescription();
+		CoilDesc tempCoil = new CoilDesc();
 
 		tempCoil.setGeraet(geraet);
 		tempCoil.setGeraeteKennung(geraet.getGeraeteKennung());
@@ -305,10 +305,10 @@ public class DescFileParser {
 		return tempCoil;
 	}
 
-	private static HoldingRegiterDescription createHoldingRegFromParsedData(
-			String[] parsedData, GeraeteDescription geraet)
+	private static HRegDesc createHoldingRegFromParsedData(
+			String[] parsedData, GeraeteDesc geraet)
 			throws DescFileCorruptedException {
-		HoldingRegiterDescription tempHReg = new HoldingRegiterDescription();
+		HRegDesc tempHReg = new HRegDesc();
 
 		tempHReg.setGeraet(geraet);
 		tempHReg.setGeraeteKennung(geraet.getGeraeteKennung());
@@ -335,10 +335,10 @@ public class DescFileParser {
 		return tempHReg;
 	}
 
-	private static GeraeteDescription createGeraetFromParsedData(
+	private static GeraeteDesc createGeraetFromParsedData(
 			String[] parsedData, String revision, String comment)
 			throws DescFileCorruptedException {
-		GeraeteDescription tempGeraet = new GeraeteDescription();
+		GeraeteDesc tempGeraet = new GeraeteDesc();
 
 		tempGeraet.setGeraeteKennung(parsedData[0]);
 
@@ -348,8 +348,8 @@ public class DescFileParser {
 		tempGeraet.setSingleUse(parsedData[6]);
 		tempGeraet.setComment(comment);
 
-		tempGeraet.setRegisterList(new ArrayList<HoldingRegiterDescription>());
-		tempGeraet.setCoilsList(new ArrayList<CoilDescription>());
+		tempGeraet.setRegisterList(new ArrayList<HRegDesc>());
+		tempGeraet.setCoilsList(new ArrayList<CoilDesc>());
 
 		try {
 			tempGeraet.setRevision(Integer.valueOf(revision));
@@ -363,7 +363,7 @@ public class DescFileParser {
 		return tempGeraet;
 	}
 
-	public static ArrayList<GeraeteDescription> getController() {
+	public static ArrayList<GeraeteDesc> getController() {
 		return controller;
 	}
 }

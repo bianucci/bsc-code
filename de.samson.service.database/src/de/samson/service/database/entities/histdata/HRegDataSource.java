@@ -7,7 +7,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import de.samson.service.database.entities.description.HoldingRegiterDescription;
+import de.samson.service.database.entities.description.HRegDesc;
 
 @Entity
 @DiscriminatorValue("hreg")
@@ -19,13 +19,13 @@ public class HRegDataSource extends HistDataSource {
 			@JoinColumn(name = "hreg_nr", referencedColumnName = "hrnr"),
 			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
-	HoldingRegiterDescription hrd;
+	HRegDesc hrd;
 
-	public HoldingRegiterDescription getHrd() {
+	public HRegDesc getHrd() {
 		return hrd;
 	}
 
-	public void setHrd(HoldingRegiterDescription hrd) {
+	public void setHrd(HRegDesc hrd) {
 		this.hrd = hrd;
 	}
 

@@ -32,6 +32,6 @@ public class WmwDesc {
 	List<Masseinheit> masseinheiten;
 
 	@OneToMany(mappedBy = "wmw", orphanRemoval = false)
-	List<HoldingRegiterDescription> werteRegister;
+	List<HRegDesc> werteRegister;
 
 }

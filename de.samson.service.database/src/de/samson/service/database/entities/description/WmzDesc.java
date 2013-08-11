@@ -31,7 +31,7 @@ public class WmzDesc extends ArrayList<WmwDesc> {
 	@JoinColumns(value = {
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "revision", referencedColumnName = "revision") })
-	GeraeteDescription geraeteDescription;
+	GeraeteDesc geraeteDesc;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "wmz", orphanRemoval = true)
 	List<WmwDesc> wmwList;

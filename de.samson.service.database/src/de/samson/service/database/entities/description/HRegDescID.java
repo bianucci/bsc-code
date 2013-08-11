@@ -1,22 +1,14 @@
 package de.samson.service.database.entities.description;
 import java.io.Serializable;
 
-public class CoilDescriptionID implements Serializable {
-	private static final long serialVersionUID = 123456L;
+public class HRegDescID implements Serializable {
+	private static final long serialVersionUID = -5058733829906896211L;
 
-	int clnr;
 	String geraeteKennung;
+	int hrnr;
 	int revision;
 
-	public CoilDescriptionID() {
-	}
-
-	public int getClnr() {
-		return clnr;
-	}
-
-	public void setClnr(int clnr) {
-		this.clnr = clnr;
+	public HRegDescID() {
 	}
 
 	public String getGeraeteKennung() {
@@ -25,6 +17,14 @@ public class CoilDescriptionID implements Serializable {
 
 	public void setGeraeteKennung(String geraeteKennung) {
 		this.geraeteKennung = geraeteKennung;
+	}
+
+	public int getHrnr() {
+		return hrnr;
+	}
+
+	public void setHrnr(int hrnr) {
+		this.hrnr = hrnr;
 	}
 
 	public int getRevision() {
@@ -39,9 +39,9 @@ public class CoilDescriptionID implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + clnr;
 		result = prime * result
 				+ ((geraeteKennung == null) ? 0 : geraeteKennung.hashCode());
+		result = prime * result + hrnr;
 		result = prime * result + revision;
 		return result;
 	}
@@ -54,13 +54,13 @@ public class CoilDescriptionID implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		CoilDescriptionID other = (CoilDescriptionID) obj;
-		if (clnr != other.clnr)
-			return false;
+		HRegDescID other = (HRegDescID) obj;
 		if (geraeteKennung == null) {
 			if (other.geraeteKennung != null)
 				return false;
 		} else if (!geraeteKennung.equals(other.geraeteKennung))
+			return false;
+		if (hrnr != other.hrnr)
 			return false;
 		if (revision != other.revision)
 			return false;

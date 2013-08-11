@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
-import de.samson.service.database.entities.description.HoldingRegiterDescription;
+import de.samson.service.database.entities.description.HRegDesc;
 
 public class RegisterTableViewerFactory {
 
@@ -38,7 +38,7 @@ public class RegisterTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				int hrnr = ((HoldingRegiterDescription) element).getHrnr();
+				int hrnr = ((HRegDesc) element).getHrnr();
 				return String.valueOf(hrnr);
 			}
 		});
@@ -47,7 +47,7 @@ public class RegisterTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return ((HoldingRegiterDescription) element).getBezeichnung();
+				return ((HRegDesc) element).getBezeichnung();
 			}
 		});
 
@@ -55,7 +55,7 @@ public class RegisterTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return ((HoldingRegiterDescription) element).getAnzKategorie();
+				return ((HRegDesc) element).getAnzKategorie();
 			}
 		});
 
@@ -63,7 +63,7 @@ public class RegisterTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return ((HoldingRegiterDescription) element).getKommentar();
+				return ((HRegDesc) element).getKommentar();
 			}
 		});
 		
@@ -71,7 +71,7 @@ public class RegisterTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return String.valueOf(((HoldingRegiterDescription) element).isRo());
+				return String.valueOf(((HRegDesc) element).isRo());
 			}
 		});
 	}

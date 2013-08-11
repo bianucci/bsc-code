@@ -9,7 +9,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 
-import de.samson.service.database.entities.description.CoilDescription;
+import de.samson.service.database.entities.description.CoilDesc;
 
 public class CoilTableViewerFactory {
 
@@ -39,7 +39,7 @@ public class CoilTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				int hrnr = ((CoilDescription) element).getClnr();
+				int hrnr = ((CoilDesc) element).getClnr();
 				return String.valueOf(hrnr);
 			}
 		});
@@ -48,7 +48,7 @@ public class CoilTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return ((CoilDescription) element).getBezeichnung();
+				return ((CoilDesc) element).getBezeichnung();
 			}
 		});
 
@@ -56,7 +56,7 @@ public class CoilTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return ((CoilDescription) element).getAnzKategorie();
+				return ((CoilDesc) element).getAnzKategorie();
 			}
 		});
 	
@@ -64,7 +64,7 @@ public class CoilTableViewerFactory {
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
-				return ((CoilDescription) element).getKommentar();
+				return ((CoilDesc) element).getKommentar();
 			}
 		});
 	}

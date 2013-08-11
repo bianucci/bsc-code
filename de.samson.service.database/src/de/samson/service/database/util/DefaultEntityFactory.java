@@ -12,13 +12,13 @@ import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.GatewayData;
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.data.ReglerData;
-import de.samson.service.database.entities.description.CoilDescription;
-import de.samson.service.database.entities.description.GeraeteDescription;
-import de.samson.service.database.entities.description.HoldingRegiterDescription;
+import de.samson.service.database.entities.description.CoilDesc;
+import de.samson.service.database.entities.description.GeraeteDesc;
+import de.samson.service.database.entities.description.HRegDesc;
 
 public class DefaultEntityFactory {
 
-	private static GeraeteDescription str = null;
+	private static GeraeteDesc str = null;
 
 	public static ReglerConfig createReglerConfig(GatewayConfig gwc) {
 		ReglerConfig rc = new ReglerConfig();
@@ -78,7 +78,7 @@ public class DefaultEntityFactory {
 	}
 
 	public static RegisterConfig createNewRegisterConfig(ReglerConfig rc,
-			HoldingRegiterDescription s) {
+			HRegDesc s) {
 		RegisterConfig r = new RegisterConfig();
 		r.setnRegisteranz(1);
 		r.setnRegisternr(s.getHrnr() - 40000);
@@ -87,7 +87,7 @@ public class DefaultEntityFactory {
 		return r;
 	}
 
-	public static CoilConfig createNewCoilConfig(ReglerConfig rc, CoilDescription s) {
+	public static CoilConfig createNewCoilConfig(ReglerConfig rc, CoilDesc s) {
 		CoilConfig ccf = new CoilConfig();
 		ccf.setnCoilanz(1);
 		ccf.setnCoilnr(s.getClnr());

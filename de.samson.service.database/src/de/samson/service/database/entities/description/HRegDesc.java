@@ -6,41 +6,72 @@ import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "str_coil", schema="description")
-@IdClass(CoilDescriptionID.class)
-public class CoilDescription {
+@Table(name = "str_holdingreg", schema = "description")
+@IdClass(HRegDescID.class)
+public class HRegDesc {
+
+	String aBerAnfang;
+
+	String aBerEnde;
 
 	String anzKategorie;
 
 	String bezeichnung;
 
-	@Id
-	int clnr;
+	String einheit;
 
 	@ManyToOne
 	@JoinColumns(value = {
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung", insertable = false, updatable = false),
 			@JoinColumn(name = "revision", referencedColumnName = "revision", insertable = false, updatable = false) })
-	GeraeteDescription geraet;
+	GeraeteDesc geraet;
+
+	@OneToOne
+	@JoinColumn(name = "wmw_id", referencedColumnName = "id", nullable = true)
+	WmwDesc wmw;
 
 	@Id
 	String geraeteKennung;
 
+	@Id
+	int hrnr;
+
 	String kommentar;
 	int maskCSV;
+	int nkS;
 
 	@Id
 	int revision;
 
 	boolean ro;
 
-	String text0;
-	String text1;
+	String ueBerAnfang;
+	String ueBerEnde;
+	
+	int faktor;
 
-	public CoilDescription() {
+	public HRegDesc() {
+
+	}
+
+	public String getaBerAnfang() {
+		return aBerAnfang;
+	}
+
+	public void setaBerAnfang(String aBerAnfang) {
+		this.aBerAnfang = aBerAnfang;
+	}
+
+	public String getaBerEnde() {
+		return aBerEnde;
+	}
+
+	public void setaBerEnde(String aBerEnde) {
+		this.aBerEnde = aBerEnde;
 	}
 
 	public String getAnzKategorie() {
@@ -59,19 +90,19 @@ public class CoilDescription {
 		this.bezeichnung = bezeichnung;
 	}
 
-	public int getClnr() {
-		return clnr;
+	public String getEinheit() {
+		return einheit;
 	}
 
-	public void setClnr(int clnr) {
-		this.clnr = clnr;
+	public void setEinheit(String einheit) {
+		this.einheit = einheit;
 	}
 
-	public GeraeteDescription getGeraet() {
+	public GeraeteDesc getGeraet() {
 		return geraet;
 	}
 
-	public void setGeraet(GeraeteDescription geraet) {
+	public void setGeraet(GeraeteDesc geraet) {
 		this.geraet = geraet;
 	}
 
@@ -81,6 +112,14 @@ public class CoilDescription {
 
 	public void setGeraeteKennung(String geraeteKennung) {
 		this.geraeteKennung = geraeteKennung;
+	}
+
+	public int getHrnr() {
+		return hrnr;
+	}
+
+	public void setHrnr(int hrnr) {
+		this.hrnr = hrnr;
 	}
 
 	public String getKommentar() {
@@ -99,6 +138,14 @@ public class CoilDescription {
 		this.maskCSV = maskCSV;
 	}
 
+	public int isNkS() {
+		return nkS;
+	}
+
+	public void setNkS(int nkS) {
+		this.nkS = nkS;
+	}
+
 	public int getRevision() {
 		return revision;
 	}
@@ -115,20 +162,35 @@ public class CoilDescription {
 		this.ro = ro;
 	}
 
-	public String getText0() {
-		return text0;
+	public String getUeBerAnfang() {
+		return ueBerAnfang;
 	}
 
-	public void setText0(String text0) {
-		this.text0 = text0;
+	public void setUeBerAnfang(String ueBerAnfang) {
+		this.ueBerAnfang = ueBerAnfang;
 	}
 
-	public String getText1() {
-		return text1;
+	public String getUeBerEnde() {
+		return ueBerEnde;
 	}
 
-	public void setText1(String text1) {
-		this.text1 = text1;
+	public void setUeBerEnde(String ueBerEnde) {
+		this.ueBerEnde = ueBerEnde;
+	}
+
+	public double getSkalierungsfaktor() {
+		double uB = Double.valueOf(getUeBerEnde().replace(',', '.').replace(
+				".000", ".00"));
+
+		double aB = Double.valueOf(getaBerEnde().replace(',', '.').replace(
+				".000", ".00"));
+
+		if ((aB == 0) && uB == 0) {
+			aB = 1;
+			uB = 1;
+		}
+
+		return uB / aB;
 	}
 
 }

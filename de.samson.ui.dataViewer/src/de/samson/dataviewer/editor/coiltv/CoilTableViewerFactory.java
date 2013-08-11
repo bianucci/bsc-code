@@ -8,7 +8,7 @@ import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TableColumn;
 
 import de.samson.service.database.entities.data.CoilData;
-import de.samson.service.database.entities.description.CoilDescription;
+import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class CoilTableViewerFactory {
@@ -41,7 +41,7 @@ public class CoilTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				CoilData cd = (CoilData) element;
-				CoilDescription sc = DataConverterUtil.getCoilDescForData(cd);
+				CoilDesc sc = DataConverterUtil.getCoilDescForData(cd);
 				if (sc != null)
 					return sc.getBezeichnung();
 				else
@@ -54,7 +54,7 @@ public class CoilTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				CoilData cd = (CoilData) element;
-				CoilDescription sc = DataConverterUtil.getCoilDescForData(cd);
+				CoilDesc sc = DataConverterUtil.getCoilDescForData(cd);
 
 				if (cd.getWert())
 					return sc.getText1();
@@ -70,7 +70,7 @@ public class CoilTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				CoilData cd = (CoilData) element;
-				CoilDescription sc = DataConverterUtil.getCoilDescForData(cd);
+				CoilDesc sc = DataConverterUtil.getCoilDescForData(cd);
 				if (sc != null)
 					return sc.getKommentar();
 				else
@@ -83,7 +83,7 @@ public class CoilTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				CoilData cd = (CoilData) element;
-				CoilDescription sc = DataConverterUtil.getCoilDescForData(cd);
+				CoilDesc sc = DataConverterUtil.getCoilDescForData(cd);
 				if (sc != null)
 					return sc.getAnzKategorie();
 				else
@@ -96,7 +96,7 @@ public class CoilTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				CoilData cd = (CoilData) element;
-				CoilDescription sc = DataConverterUtil.getCoilDescForData(cd);
+				CoilDesc sc = DataConverterUtil.getCoilDescForData(cd);
 				if (sc != null)
 					return sc.getBezeichnung();
 				else

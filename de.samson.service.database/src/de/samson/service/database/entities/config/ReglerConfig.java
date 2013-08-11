@@ -17,7 +17,7 @@ import javax.persistence.Transient;
 
 import de.samson.service.database.entities.data.ReglerData;
 import de.samson.service.database.entities.data.WmzData;
-import de.samson.service.database.entities.description.GeraeteDescription;
+import de.samson.service.database.entities.description.GeraeteDesc;
 
 @Entity
 @Table(name = "Regler", schema = "s_modbusphp_cfg")
@@ -47,7 +47,7 @@ public class ReglerConfig {
 	@JoinColumns(value = {
 			@JoinColumn(name = "sTyp", referencedColumnName = "geraeteKennung", insertable=false, updatable=false),
 			@JoinColumn(name = "descFileRevision", referencedColumnName = "revision", insertable=false, updatable=false) })
-	GeraeteDescription reglerDescription;
+	GeraeteDesc reglerDescription;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerConfig", orphanRemoval = true)
 	List<WmzData> allWmz;
@@ -136,12 +136,12 @@ public class ReglerConfig {
 	}
 
 	@Transient
-	public GeraeteDescription getReglerDescription() {
+	public GeraeteDesc getReglerDescription() {
 		return reglerDescription;
 	}
 
 	@Transient
-	public void setReglerDescription(GeraeteDescription reglerDescription) {
+	public void setReglerDescription(GeraeteDesc reglerDescription) {
 		this.reglerDescription = reglerDescription;
 	}
 

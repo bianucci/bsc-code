@@ -6,16 +6,16 @@ import java.util.List;
 import org.eclipse.jface.viewers.IStructuredContentProvider;
 import org.eclipse.jface.viewers.Viewer;
 
-import de.samson.service.database.entities.description.CoilDescription;
-import de.samson.service.database.entities.description.GeraeteDescription;
+import de.samson.service.database.entities.description.CoilDesc;
+import de.samson.service.database.entities.description.GeraeteDesc;
 
 public class CoilTableContentProvider implements IStructuredContentProvider {
-	List<CoilDescription> source;
+	List<CoilDesc> source;
 
 	@Override
 	public void inputChanged(Viewer viewer, Object oldInput, Object newInput) {
-		if (newInput instanceof GeraeteDescription) {
-			source = ((GeraeteDescription) newInput).getCoilsList();
+		if (newInput instanceof GeraeteDesc) {
+			source = ((GeraeteDesc) newInput).getCoilsList();
 		}
 	}
 

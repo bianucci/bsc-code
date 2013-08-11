@@ -2,16 +2,16 @@ package de.samson.service.database.entities.description;
 
 import java.io.Serializable;
 
-public class GeraeteDescriptionID implements Serializable {
+public class GeraeteDescID implements Serializable {
 	private static final long serialVersionUID = 3486950196958179006L;
 
 	String geraeteKennung;
 	int revision;
 
-	public GeraeteDescriptionID() {
+	public GeraeteDescID() {
 	}
 
-	public GeraeteDescriptionID(String geraeteKennung, int revision) {
+	public GeraeteDescID(String geraeteKennung, int revision) {
 		super();
 		this.geraeteKennung = geraeteKennung;
 		this.revision = revision;
@@ -51,7 +51,7 @@ public class GeraeteDescriptionID implements Serializable {
 			return false;
 		if (getClass() != obj.getClass())
 			return false;
-		GeraeteDescriptionID other = (GeraeteDescriptionID) obj;
+		GeraeteDescID other = (GeraeteDescID) obj;
 		if (geraeteKennung == null) {
 			if (other.geraeteKennung != null)
 				return false;

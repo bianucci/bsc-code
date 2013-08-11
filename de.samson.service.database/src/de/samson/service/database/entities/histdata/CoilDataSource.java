@@ -7,7 +7,7 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
-import de.samson.service.database.entities.description.CoilDescription;
+import de.samson.service.database.entities.description.CoilDesc;
 
 @Entity
 @DiscriminatorValue("coil")
@@ -19,13 +19,13 @@ public class CoilDataSource extends HistDataSource {
 			@JoinColumn(name = "coil_nr", referencedColumnName = "clnr"),
 			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
-	CoilDescription cd;
+	CoilDesc cd;
 
-	public CoilDescription getCd() {
+	public CoilDesc getCd() {
 		return cd;
 	}
 
-	public void setCd(CoilDescription cd) {
+	public void setCd(CoilDesc cd) {
 		this.cd = cd;
 	}
 

@@ -8,7 +8,7 @@ import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.TableColumn;
 
 import de.samson.service.database.entities.data.RegisterData;
-import de.samson.service.database.entities.description.HoldingRegiterDescription;
+import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class RegisterTableViewerFactory {
@@ -44,7 +44,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				if (sr != null)
 					return sr.getBezeichnung();
@@ -58,7 +58,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 
 				double s = sr.getSkalierungsfaktor();
@@ -85,7 +85,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				return String.valueOf(sr.getEinheit());
 			}
@@ -96,7 +96,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				return String.valueOf(sr.getAnzKategorie());
 			}
@@ -107,7 +107,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				return String.valueOf(sr.getKommentar());
 			}
@@ -118,7 +118,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				return String.valueOf(sr.getaBerAnfang());
 			}
@@ -129,7 +129,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				return String.valueOf(sr.getaBerEnde());
 			}
@@ -140,7 +140,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HoldingRegiterDescription sr = DataConverterUtil
+				HRegDesc sr = DataConverterUtil
 						.getRegisterDescForData(rd);
 				return String.valueOf(sr.isRo());
 			}

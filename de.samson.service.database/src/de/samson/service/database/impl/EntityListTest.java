@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 
 import org.junit.Test;
 
-import de.samson.service.database.entities.description.GeraeteDescription;
+import de.samson.service.database.entities.description.GeraeteDesc;
 
 public class EntityListTest {
 
@@ -21,7 +21,7 @@ public class EntityListTest {
 		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
 		em = factory.createEntityManager();
 
-		EntityList<GeraeteDescription> e = new EntityList<>(em, "GeraeteDescription");
+		EntityList<GeraeteDesc> e = new EntityList<>(em, "GeraeteDesc");
 		assertTrue(e.size() > 0);
 		System.out.println(e);
 	}

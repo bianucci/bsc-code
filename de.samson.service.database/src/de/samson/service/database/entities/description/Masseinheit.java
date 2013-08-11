@@ -32,7 +32,7 @@ public class Masseinheit {
 			@JoinColumn(name = "hrnr", referencedColumnName = "hrnr"),
 			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "revision", referencedColumnName = "revision") })
-	HoldingRegiterDescription registerStoredIn;
+	HRegDesc registerStoredIn;
 
 	public long getWmwID() {
 		return wmw_id;

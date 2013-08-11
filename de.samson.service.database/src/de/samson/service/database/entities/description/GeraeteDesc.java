@@ -11,18 +11,18 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "str_geraet", schema = "description")
-@IdClass(GeraeteDescriptionID.class)
-public class GeraeteDescription {
+@IdClass(GeraeteDescID.class)
+public class GeraeteDesc {
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraet", orphanRemoval = true)
-	List<CoilDescription> coilsList;
+	List<CoilDesc> coilsList;
 
 	String comment;
 
 	@Id
 	String geraeteKennung;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraeteDescription", orphanRemoval = true)
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraeteDesc", orphanRemoval = true)
 	List<WmzDesc> wmz;
 
 	String geraeteTyp;
@@ -34,24 +34,24 @@ public class GeraeteDescription {
 	int maskCSVFilterGruppe;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraet", orphanRemoval = true)
-	List<HoldingRegiterDescription> registerList;
+	List<HRegDesc> registerList;
 
 	@Id
 	int revision;
 
 	String singleUse;
 
-	@OneToMany(cascade=CascadeType.ALL, mappedBy="geraeteDescription", orphanRemoval=true)
+	@OneToMany(cascade=CascadeType.ALL, mappedBy="geraeteDesc", orphanRemoval=true)
 	private List<WmzDesc> wmzList;
 
-	public GeraeteDescription() {
+	public GeraeteDesc() {
 	}
 
-	public List<CoilDescription> getCoilsList() {
+	public List<CoilDesc> getCoilsList() {
 		return coilsList;
 	}
 
-	public void setCoilsList(List<CoilDescription> coilsList) {
+	public void setCoilsList(List<CoilDesc> coilsList) {
 		this.coilsList = coilsList;
 	}
 
@@ -111,11 +111,11 @@ public class GeraeteDescription {
 		this.maskCSVFilterGruppe = maskCSVFilterGruppe;
 	}
 
-	public List<HoldingRegiterDescription> getRegisterList() {
+	public List<HRegDesc> getRegisterList() {
 		return registerList;
 	}
 
-	public void setRegisterList(List<HoldingRegiterDescription> registerList) {
+	public void setRegisterList(List<HRegDesc> registerList) {
 		this.registerList = registerList;
 	}
 
