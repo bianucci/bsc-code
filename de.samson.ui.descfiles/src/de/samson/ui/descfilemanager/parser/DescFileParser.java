@@ -6,7 +6,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -18,6 +17,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.entities.description.GeraeteDesc;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.entities.description.Masseinheit;
 import de.samson.service.database.entities.description.WmwDesc;
 import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.ui.descfilemanager.exceptions.DescDirectoryNotFoundEception;
@@ -84,8 +84,8 @@ public class DescFileParser {
 				}
 
 				for (String[] data : str_holdingregData) {
-					HRegDesc tempHReg = createHoldingRegFromParsedData(
-							data, tempGeraet);
+					HRegDesc tempHReg = createHoldingRegFromParsedData(data,
+							tempGeraet);
 					tempGeraet.getRegisterList().add(tempHReg);
 				}
 
@@ -195,9 +195,8 @@ public class DescFileParser {
 	}
 
 	@SuppressWarnings({ "unchecked" })
-	public static List<WmzDesc> parseJSONFile(File jsonFile,
-			GeraeteDesc regler) throws JsonParseException, IOException,
-			DescFileCorruptedException {
+	public static List<WmzDesc> parseJSONFile(File jsonFile, GeraeteDesc regler)
+			throws JsonParseException, IOException, DescFileCorruptedException {
 
 		jsonFile = new File(jsonFile.getAbsolutePath() + "\\"
 				+ EnumDescFileType.JSON.getFileName());
@@ -224,10 +223,11 @@ public class DescFileParser {
 
 		for (int i = 0; i < arrayAllWMZ.length; i++) {
 			wmz = new WmzDesc();
+			wmz.setWmwList(new ArrayList<WmwDesc>());
 
 			// CURRENT WMZ
 			LinkedHashMap<String, Object> mapWMZ = (LinkedHashMap<String, Object>) arrayAllWMZ[i];
-			wmz.setName((String) mapAllWMZ.keySet().toArray()[i]);
+			wmz.setBezeichnung((String) mapAllWMZ.keySet().toArray()[i]);
 
 			// ALL WMW FOR THIS WMZ
 			Object[] arrayAllWMW = mapWMZ.values().toArray();
@@ -235,10 +235,12 @@ public class DescFileParser {
 			// ITERATE THROUGH ALL WMW
 			for (int j = 0; j < arrayAllWMW.length; j++) {
 				wmw = new WmwDesc();
+				wmw.setMasseinheiten(new ArrayList<Masseinheit>());
+				wmw.setWerteRegister(new ArrayList<HRegDesc>());
 
 				// CURRENT WMW
 				Map<String, Object> mapWMW = (Map<String, Object>) arrayAllWMW[j];
-				// wmw.setCategory((String) mapWMZ.keySet().toArray()[j]);TODO
+				wmw.setCategory((String) mapWMZ.keySet().toArray()[j]);
 
 				// SET EINHEIT REGISTER FOR WMZ
 				Map<String, Object> einheit = (Map<String, Object>) mapWMW
@@ -246,42 +248,51 @@ public class DescFileParser {
 				int einReg = (int) einheit.get("IntRegister");
 				for (HRegDesc sreg : regler.getRegisterList()) {
 					if (sreg.getHrnr() == einReg) {
+						wmw.setRegisterEinheitIsStoredIn(sreg);
 						break;
 					}
 				}
 
 				// SET MASzEINHEIT FOR WMZ
-				Map<String, String> tabEinheit = (Map<String, String>) einheit
+				Map<String, Object> tabEinheit = (Map<String, Object>) einheit
 						.get("TabEinheiten");
-				// wmw.setMassEinheit(tabEinheit);TODO
+				for (int k = 0; k <= tabEinheit.keySet().size() - 1; k++) {
+					String key = (String) tabEinheit.keySet().toArray()[k];
+					String value = (String) tabEinheit.get(key);
+
+					Masseinheit m = new Masseinheit();
+					m.setKeyEinheit(key);
+					m.setValueEinheit(value);
+					m.setWmw(wmw);
+					wmw.getMasseinheiten().add(m);
+				}
 
 				// SET WERTE REGISTER FOR WMZ
 				ArrayList<Object> wertigkeiten = (ArrayList<Object>) mapWMW
 						.get("Wertigkeiten");
-				Map<HRegDesc, Double> m = new HashMap<>();
 				for (Object o : wertigkeiten) {
 					Map<String, Object> dp = (Map<String, Object>) o;
 					double faktor = (double) dp.get("DblWertigkeit");
 					int reg = (int) dp.get("IntRegister");
-					for (HRegDesc sreg : regler
-							.getRegisterList()) {
+					for (HRegDesc sreg : regler.getRegisterList()) {
 						if (sreg.getHrnr() == reg) {
-							m.put(sreg, faktor);
+							sreg.setFaktor(faktor);
+							wmw.getWerteRegister().add(sreg);
 							break;
 						}
 					}
 				}
-				// wmw.setWertigkeiten(m); TODO
-				wmz.add(wmw);
+				wmz.getWmwList().add(wmw);
+				wmw.setWmz(wmz);
 			}
+			wmz.setGeraeteDesc(regler);
 			l.add(wmz);
 		}
 		return l;
 	}
 
-	private static CoilDesc createCoilFromParsedData(
-			String[] parsedData, GeraeteDesc geraet)
-			throws DescFileCorruptedException {
+	private static CoilDesc createCoilFromParsedData(String[] parsedData,
+			GeraeteDesc geraet) throws DescFileCorruptedException {
 
 		CoilDesc tempCoil = new CoilDesc();
 
@@ -305,9 +316,8 @@ public class DescFileParser {
 		return tempCoil;
 	}
 
-	private static HRegDesc createHoldingRegFromParsedData(
-			String[] parsedData, GeraeteDesc geraet)
-			throws DescFileCorruptedException {
+	private static HRegDesc createHoldingRegFromParsedData(String[] parsedData,
+			GeraeteDesc geraet) throws DescFileCorruptedException {
 		HRegDesc tempHReg = new HRegDesc();
 
 		tempHReg.setGeraet(geraet);
@@ -335,9 +345,8 @@ public class DescFileParser {
 		return tempHReg;
 	}
 
-	private static GeraeteDesc createGeraetFromParsedData(
-			String[] parsedData, String revision, String comment)
-			throws DescFileCorruptedException {
+	private static GeraeteDesc createGeraetFromParsedData(String[] parsedData,
+			String revision, String comment) throws DescFileCorruptedException {
 		GeraeteDesc tempGeraet = new GeraeteDesc();
 
 		tempGeraet.setGeraeteKennung(parsedData[0]);

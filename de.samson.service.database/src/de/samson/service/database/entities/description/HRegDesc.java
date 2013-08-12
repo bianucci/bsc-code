@@ -30,7 +30,7 @@ public class HRegDesc {
 			@JoinColumn(name = "revision", referencedColumnName = "revision", insertable = false, updatable = false) })
 	GeraeteDesc geraet;
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "wmw_id", referencedColumnName = "id", nullable = true)
 	WmwDesc wmw;
 
@@ -51,8 +51,8 @@ public class HRegDesc {
 
 	String ueBerAnfang;
 	String ueBerEnde;
-	
-	int faktor;
+
+	double faktor;
 
 	public HRegDesc() {
 
@@ -176,6 +176,22 @@ public class HRegDesc {
 
 	public void setUeBerEnde(String ueBerEnde) {
 		this.ueBerEnde = ueBerEnde;
+	}
+
+	public WmwDesc getWmw() {
+		return wmw;
+	}
+
+	public void setWmw(WmwDesc wmw) {
+		this.wmw = wmw;
+	}
+
+	public double getFaktor() {
+		return faktor;
+	}
+
+	public void setFaktor(double faktor) {
+		this.faktor = faktor;
 	}
 
 	public double getSkalierungsfaktor() {

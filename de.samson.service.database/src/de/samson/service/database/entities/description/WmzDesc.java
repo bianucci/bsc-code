@@ -1,6 +1,5 @@
 package de.samson.service.database.entities.description;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -18,9 +17,7 @@ import javax.persistence.UniqueConstraint;
 @Entity
 @Table(name = "desc_wmz", schema = "description", uniqueConstraints = { @UniqueConstraint(columnNames = {
 		"bezeichnung", "geraeteKennung", "revision" }) })
-public class WmzDesc extends ArrayList<WmwDesc> {
-	private static final long serialVersionUID = 1L;
-
+public class WmzDesc {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	long id;
@@ -36,6 +33,36 @@ public class WmzDesc extends ArrayList<WmwDesc> {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "wmz", orphanRemoval = true)
 	List<WmwDesc> wmwList;
 
-	public void setName(String string) {
+	public long getId() {
+		return id;
 	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
+
+	public String getBezeichnung() {
+		return bezeichnung;
+	}
+
+	public void setBezeichnung(String bezeichnung) {
+		this.bezeichnung = bezeichnung;
+	}
+
+	public GeraeteDesc getGeraeteDesc() {
+		return geraeteDesc;
+	}
+
+	public void setGeraeteDesc(GeraeteDesc geraeteDesc) {
+		this.geraeteDesc = geraeteDesc;
+	}
+
+	public List<WmwDesc> getWmwList() {
+		return wmwList;
+	}
+
+	public void setWmwList(List<WmwDesc> wmwList) {
+		this.wmwList = wmwList;
+	}
+
 }

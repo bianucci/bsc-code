@@ -22,9 +22,6 @@ public class GeraeteDesc {
 	@Id
 	String geraeteKennung;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "geraeteDesc", orphanRemoval = true)
-	List<WmzDesc> wmz;
-
 	String geraeteTyp;
 	int idxAdr;
 	boolean inCSV;

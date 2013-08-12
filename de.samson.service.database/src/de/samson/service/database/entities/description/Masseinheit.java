@@ -5,7 +5,6 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -19,20 +18,13 @@ public class Masseinheit {
 	long wmw_id;
 
 	@Id
-	long key;
+	String keyString;
 
 	String value;
 
 	@ManyToOne
-	@JoinColumn(name = "wmw_id", referencedColumnName = "wmw_id")
+	@JoinColumn(name = "wmw_id", referencedColumnName = "id")
 	WmwDesc wmw;
-
-	@ManyToOne
-	@JoinColumns(value = {
-			@JoinColumn(name = "hrnr", referencedColumnName = "hrnr"),
-			@JoinColumn(name = "geraeteKennung", referencedColumnName = "geraeteKennung"),
-			@JoinColumn(name = "revision", referencedColumnName = "revision") })
-	HRegDesc registerStoredIn;
 
 	public long getWmwID() {
 		return wmw_id;
@@ -42,12 +34,12 @@ public class Masseinheit {
 		this.wmw_id = wmwID;
 	}
 
-	public long getKeyEinheit() {
-		return key;
+	public String getKeyEinheit() {
+		return keyString;
 	}
 
-	public void setKeyEinheit(long key) {
-		this.key = key;
+	public void setKeyEinheit(String key) {
+		this.keyString = key;
 	}
 
 	public String getValueEinheit() {

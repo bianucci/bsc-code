@@ -5,19 +5,19 @@ import java.io.Serializable;
 public class MasseinheitID implements Serializable {
 	private static final long serialVersionUID = 2407002330520798123L;
 
-	long key;
+	String keyString;
 	long wmw_id;
 
 	public MasseinheitID() {
 
 	}
 
-	public long getKeyEinheit() {
-		return key;
+	public String getKeyEinheit() {
+		return keyString;
 	}
 
-	public void setKeyEinheit(long key) {
-		this.key = key;
+	public void setKeyEinheit(String key) {
+		this.keyString = key;
 	}
 
 	public long getWmwID() {
@@ -32,7 +32,7 @@ public class MasseinheitID implements Serializable {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + (int) (key ^ (key >>> 32));
+		result = prime * result + ((keyString == null) ? 0 : keyString.hashCode());
 		result = prime * result + (int) (wmw_id ^ (wmw_id >>> 32));
 		return result;
 	}
@@ -46,7 +46,10 @@ public class MasseinheitID implements Serializable {
 		if (getClass() != obj.getClass())
 			return false;
 		MasseinheitID other = (MasseinheitID) obj;
-		if (key != other.key)
+		if (keyString == null) {
+			if (other.keyString != null)
+				return false;
+		} else if (!keyString.equals(other.keyString))
 			return false;
 		if (wmw_id != other.wmw_id)
 			return false;

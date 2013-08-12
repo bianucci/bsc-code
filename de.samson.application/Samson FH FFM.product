@@ -46,6 +46,7 @@
       <plugin id="library.net.wimpi.modbus"/>
       <plugin id="library.org.apache.commons.lang"/>
       <plugin id="library.org.eclipse.persistence.EclipseLink"/>
+      <plugin id="org.csstudio.swt.xygraph.source"/>
       <plugin id="org.eclipse.core.commands"/>
       <plugin id="org.eclipse.core.contenttype"/>
       <plugin id="org.eclipse.core.databinding"/>
@@ -56,6 +57,7 @@
       <plugin id="org.eclipse.core.runtime"/>
       <plugin id="org.eclipse.core.runtime.compatibility.auth"/>
       <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.draw2d"/>
       <plugin id="org.eclipse.equinox.app"/>
       <plugin id="org.eclipse.equinox.app.source"/>
       <plugin id="org.eclipse.equinox.common"/>
