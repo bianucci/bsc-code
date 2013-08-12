@@ -22,7 +22,7 @@ public class WmwDesc {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long id;
+	int id;
 
 	String category;
 
@@ -33,7 +33,7 @@ public class WmwDesc {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "wmw", orphanRemoval = true)
 	List<Masseinheit> masseinheiten;
 
-	@OneToMany(mappedBy = "wmw", orphanRemoval = false)
+	@OneToMany(mappedBy = "wmwThisRegisterStoresValueFor", orphanRemoval = false)
 	List<HRegDesc> werteRegister;
 
 	@OneToOne
@@ -43,11 +43,11 @@ public class WmwDesc {
 			@JoinColumn(name = "revision_einheit", referencedColumnName = "revision") })
 	HRegDesc registerEinheitIsStoredIn;
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

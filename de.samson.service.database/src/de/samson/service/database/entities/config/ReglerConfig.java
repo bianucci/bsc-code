@@ -45,8 +45,8 @@ public class ReglerConfig {
 
 	@ManyToOne
 	@JoinColumns(value = {
-			@JoinColumn(name = "sTyp", referencedColumnName = "geraeteKennung", insertable=false, updatable=false),
-			@JoinColumn(name = "descFileRevision", referencedColumnName = "revision", insertable=false, updatable=false) })
+			@JoinColumn(name = "sTyp", referencedColumnName = "geraeteKennung", insertable = false, updatable = false),
+			@JoinColumn(name = "descFileRevision", referencedColumnName = "revision", insertable = false, updatable = false) })
 	GeraeteDesc reglerDescription;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerConfig", orphanRemoval = true)
@@ -151,6 +151,14 @@ public class ReglerConfig {
 
 	public boolean isAvailable() {
 		return available;
+	}
+
+	public List<WmzData> getAllWmz() {
+		return allWmz;
+	}
+
+	public void setAllWmz(List<WmzData> allWmz) {
+		this.allWmz = allWmz;
 	}
 
 }

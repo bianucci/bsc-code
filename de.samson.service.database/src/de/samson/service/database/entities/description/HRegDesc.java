@@ -32,7 +32,10 @@ public class HRegDesc {
 
 	@ManyToOne
 	@JoinColumn(name = "wmw_id", referencedColumnName = "id", nullable = true)
-	WmwDesc wmw;
+	WmwDesc wmwThisRegisterStoresValueFor;
+
+	@OneToOne(mappedBy = "registerEinheitIsStoredIn")
+	WmwDesc wmwThisRegisterStoresMasseinheitKeyFor;
 
 	@Id
 	String geraeteKennung;
@@ -53,10 +56,6 @@ public class HRegDesc {
 	String ueBerEnde;
 
 	double faktor;
-
-	public HRegDesc() {
-
-	}
 
 	public String getaBerAnfang() {
 		return aBerAnfang;
@@ -106,6 +105,24 @@ public class HRegDesc {
 		this.geraet = geraet;
 	}
 
+	public WmwDesc getWmwThisRegisterStoresValueFor() {
+		return wmwThisRegisterStoresValueFor;
+	}
+
+	public void setWmwThisRegisterStoresValueFor(
+			WmwDesc wmwThisRegisterStoresValueFor) {
+		this.wmwThisRegisterStoresValueFor = wmwThisRegisterStoresValueFor;
+	}
+
+	public WmwDesc getWmwThisRegisterStoresMasseinheitKeyFor() {
+		return wmwThisRegisterStoresMasseinheitKeyFor;
+	}
+
+	public void setWmwThisRegisterStoresMasseinheitKeyFor(
+			WmwDesc wmwThisRegisterStoresMasseinheitKeyFor) {
+		this.wmwThisRegisterStoresMasseinheitKeyFor = wmwThisRegisterStoresMasseinheitKeyFor;
+	}
+
 	public String getGeraeteKennung() {
 		return geraeteKennung;
 	}
@@ -138,7 +155,7 @@ public class HRegDesc {
 		this.maskCSV = maskCSV;
 	}
 
-	public int isNkS() {
+	public int getNkS() {
 		return nkS;
 	}
 
@@ -176,14 +193,6 @@ public class HRegDesc {
 
 	public void setUeBerEnde(String ueBerEnde) {
 		this.ueBerEnde = ueBerEnde;
-	}
-
-	public WmwDesc getWmw() {
-		return wmw;
-	}
-
-	public void setWmw(WmwDesc wmw) {
-		this.wmw = wmw;
 	}
 
 	public double getFaktor() {

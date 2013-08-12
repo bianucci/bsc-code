@@ -249,6 +249,7 @@ public class DescFileParser {
 				for (HRegDesc sreg : regler.getRegisterList()) {
 					if (sreg.getHrnr() == einReg) {
 						wmw.setRegisterEinheitIsStoredIn(sreg);
+						sreg.setWmwThisRegisterStoresMasseinheitKeyFor(wmw);
 						break;
 					}
 				}
@@ -278,6 +279,7 @@ public class DescFileParser {
 						if (sreg.getHrnr() == reg) {
 							sreg.setFaktor(faktor);
 							wmw.getWerteRegister().add(sreg);
+							sreg.setWmwThisRegisterStoresValueFor(wmw);
 							break;
 						}
 					}

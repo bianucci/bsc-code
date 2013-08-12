@@ -1,6 +1,7 @@
 package de.samson.service.database.util;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import de.samson.service.database.DatabaseService;
 import de.samson.service.database.entities.config.CoilConfig;
@@ -12,15 +13,18 @@ import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.GatewayData;
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.data.ReglerData;
+import de.samson.service.database.entities.data.WmwData;
+import de.samson.service.database.entities.data.WmzData;
 import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.entities.description.GeraeteDesc;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.entities.description.WmwDesc;
+import de.samson.service.database.entities.description.WmzDesc;
 
 public class DefaultEntityFactory {
 
-	private static GeraeteDesc str = null;
-
 	public static ReglerConfig createReglerConfig(GatewayConfig gwc) {
+		GeraeteDesc str = null;
 		ReglerConfig rc = new ReglerConfig();
 		ReglerData rd = new ReglerData();
 
@@ -44,7 +48,47 @@ public class DefaultEntityFactory {
 		rd.setReglerConfig(rc);
 		rc.setReglerData(rd);
 		gwc.getRegler().add(rc);
+
+		List<WmzData> allWmz = createAllWmzStoredInWmzDescription(str);
+		for (int i = 0; i < allWmz.size(); i++) {
+			WmzData wmzData = allWmz.get(i);
+			wmzData.setReglerConfig(rc);
+			rc.setAllWmz(allWmz);
+		}
+
 		return rc;
+	}
+
+	public static List<WmzData> createAllWmzStoredInWmzDescription(
+			GeraeteDesc rc) {
+		List<WmzData> allWmz = new ArrayList<WmzData>();
+
+		List<WmzDesc> wmzDescList = rc.getWmzList();
+		for (int i = 0; i < wmzDescList.size(); i++) {
+
+			WmzDesc wmzDesc = wmzDescList.get(i);
+			WmzData wmzData = new WmzData();
+
+			// create wmz data
+			wmzData.setAllWMW(new ArrayList<WmwData>());
+			wmzData.setDescription(wmzDesc);
+			allWmz.add(wmzData);
+
+			List<WmwDesc> wmwDescList = wmzDesc.getWmwList();
+			for (int j = 0; j < wmwDescList.size(); j++) {
+				WmwDesc wmwDesc = wmwDescList.get(j);
+				WmwData wmwData = new WmwData();
+
+				wmwData.setValue(0);
+				wmwData.setDescription(wmwDesc);
+				wmwData.setEinheit(0);
+				wmwData.setWmz(wmzData);
+				
+				wmzData.getAllWMW().add(wmwData);
+			}
+		}
+
+		return allWmz;
 	}
 
 	public static GatewayConfig createGatewayConfig(Standort s) {

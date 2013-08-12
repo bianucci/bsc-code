@@ -6,7 +6,7 @@ public class MasseinheitID implements Serializable {
 	private static final long serialVersionUID = 2407002330520798123L;
 
 	String keyString;
-	long wmw_id;
+	int wmw;
 
 	public MasseinheitID() {
 
@@ -20,12 +20,12 @@ public class MasseinheitID implements Serializable {
 		this.keyString = key;
 	}
 
-	public long getWmwID() {
-		return wmw_id;
+	public int getWmwID() {
+		return wmw;
 	}
 
-	public void setWmwID(long wmwID) {
-		this.wmw_id = wmwID;
+	public void setWmwID(int wmwID) {
+		this.wmw = wmwID;
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class MasseinheitID implements Serializable {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((keyString == null) ? 0 : keyString.hashCode());
-		result = prime * result + (int) (wmw_id ^ (wmw_id >>> 32));
+		result = prime * result + (int) (wmw ^ (wmw >>> 32));
 		return result;
 	}
 
@@ -51,7 +51,7 @@ public class MasseinheitID implements Serializable {
 				return false;
 		} else if (!keyString.equals(other.keyString))
 			return false;
-		if (wmw_id != other.wmw_id)
+		if (wmw != other.wmw)
 			return false;
 		return true;
 	}

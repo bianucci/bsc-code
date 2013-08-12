@@ -20,7 +20,7 @@ import javax.persistence.UniqueConstraint;
 public class WmzDesc {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	long id;
+	int id;
 
 	String bezeichnung;
 
@@ -33,11 +33,11 @@ public class WmzDesc {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "wmz", orphanRemoval = true)
 	List<WmwDesc> wmwList;
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

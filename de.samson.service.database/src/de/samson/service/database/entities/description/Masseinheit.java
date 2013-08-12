@@ -1,6 +1,5 @@
 package de.samson.service.database.entities.description;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
@@ -13,26 +12,26 @@ import javax.persistence.Table;
 @Table(name = "masseinheit", schema = "description")
 public class Masseinheit {
 
-	@Id
-	@Column(insertable = false, updatable = false)
-	long wmw_id;
+	
+//	int wmw_id;
 
 	@Id
 	String keyString;
 
 	String value;
 
+	@Id
 	@ManyToOne
 	@JoinColumn(name = "wmw_id", referencedColumnName = "id")
 	WmwDesc wmw;
 
-	public long getWmwID() {
-		return wmw_id;
-	}
-
-	public void setWmwID(long wmwID) {
-		this.wmw_id = wmwID;
-	}
+//	public int getWmwID() {
+//		return wmw_id;
+//	}
+//
+//	public void setWmwID(int wmwID) {
+//		this.wmw_id = wmwID;
+//	}
 
 	public String getKeyEinheit() {
 		return keyString;

@@ -44,8 +44,8 @@ public class Activator extends AbstractUIPlugin {
 					"Datenbank konnte nicht geladen werden", status);
 			e1.printStackTrace();
 		}
-		t = new Timer();
-		t.schedule(new DatabaseTimer(), 60000, 60000);
+		// t = new Timer();
+		// t.schedule(new DatabaseTimer(), 60000, 60000);
 
 		getPreferenceStore().addPropertyChangeListener(
 				new IPropertyChangeListener() {
@@ -73,7 +73,7 @@ public class Activator extends AbstractUIPlugin {
 	}
 
 	public void stop(BundleContext context) throws Exception {
-		t.cancel();
+		// t.cancel();
 
 		plugin = null;
 		super.stop(context);
