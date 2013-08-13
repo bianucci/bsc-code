@@ -11,7 +11,7 @@ import de.samson.service.database.entities.description.CoilDesc;
 
 @Entity
 @DiscriminatorValue("coil")
-@Table(name = "hist_data.coil_data_src")
+@Table(name = "hist_data.coil_data_source")
 public class CoilDataSource extends HistDataSource {
 
 	@OneToOne
@@ -40,12 +40,12 @@ public class CoilDataSource extends HistDataSource {
 	}
 
 	@Override
-	public void setId(long id) {
+	public void setId(int id) {
 		super.setId(id);
 	}
 
 	@Override
-	public long getId() {
+	public int getId() {
 		return super.getId();
 	}
 }

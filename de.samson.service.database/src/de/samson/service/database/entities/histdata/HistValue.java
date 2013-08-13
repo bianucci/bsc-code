@@ -13,19 +13,15 @@ import javax.persistence.TemporalType;
 import org.csstudio.swt.xygraph.dataprovider.ISample;
 
 @Entity
-@Table(name = "hist_data.hist_val")
+@Table(name = "hist_data.hist_value")
 public class HistValue implements ISample {
-
-	public HistValue() {
-		super();
-	}
 
 	@Id
 	int id;
 
 	@ManyToOne
-	@JoinColumn(referencedColumnName = "wmw_id")
-	CoilDataSource data_src;
+	@JoinColumn(name="data_source_id",referencedColumnName = "id")
+	HistDataSource data_source;
 
 	@Temporal(TemporalType.TIMESTAMP)
 	Date rec_time;

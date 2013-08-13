@@ -1,6 +1,5 @@
 package de.samson.service.database.entities.histdata;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -23,7 +22,7 @@ import org.csstudio.swt.xygraph.dataprovider.ISample;
 import org.csstudio.swt.xygraph.linearscale.Range;
 
 @Entity
-@Table(name = "hist_data.data_src")
+@Table(name = "hist_data.data_source")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "src_type", discriminatorType = DiscriminatorType.STRING, length = 20)
 public class HistDataSource implements IDataProvider {
@@ -32,15 +31,15 @@ public class HistDataSource implements IDataProvider {
 	}
 
 	@Id
-	long id;
+	int id;
 
 	String bezeichnung;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "data_src")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "data_source")
 	List<HistValue> historicalValues;
 
 	@ManyToMany
-	@JoinTable(name = "hist_data_set_has_data_src", joinColumns = @JoinColumn(name = "data_src_id", referencedColumnName = "wmw_id"), inverseJoinColumns = @JoinColumn(name = "data_set_id", referencedColumnName = "wmw_id"))
+	@JoinTable(name = "hist_data_set_has_data_src", joinColumns = @JoinColumn(name = "data_src_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "data_set_id", referencedColumnName = "id"))
 	List<HistDataSet> dataSets;
 
 	@Transient
@@ -92,11 +91,11 @@ public class HistDataSource implements IDataProvider {
 		return false;
 	}
 
-	public long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 

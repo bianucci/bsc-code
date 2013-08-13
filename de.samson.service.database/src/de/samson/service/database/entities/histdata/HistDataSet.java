@@ -20,8 +20,8 @@ public class HistDataSet {
 
 	@ManyToMany
 	@JoinTable(name = "hist_data.hist_data_set_has_data_src", 
-			joinColumns = @JoinColumn(name = "data_set_id", referencedColumnName = "wmw_id"), 
-			inverseJoinColumns = @JoinColumn(name = "data_src_id", referencedColumnName = "wmw_id"))
+			joinColumns = @JoinColumn(name = "hist_data_set_id", referencedColumnName = "id"), 
+			inverseJoinColumns = @JoinColumn(name = "data_src_id", referencedColumnName = "id"))
 	List<HistDataSource> data_sources;
 
 }

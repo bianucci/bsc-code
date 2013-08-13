@@ -4,17 +4,17 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import de.samson.service.database.entities.description.HRegDesc;
 
 @Entity
 @DiscriminatorValue("hreg")
-@Table(name = "hist_data.hreg_data_src")
+@Table(name = "hist_data.hreg_data_source")
 public class HRegDataSource extends HistDataSource {
 
-	@OneToOne
+	@ManyToOne
 	@JoinColumns(value = {
 			@JoinColumn(name = "hreg_nr", referencedColumnName = "hrnr"),
 			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
@@ -40,12 +40,12 @@ public class HRegDataSource extends HistDataSource {
 	}
 
 	@Override
-	public long getId() {
+	public int getId() {
 		return super.getId();
 	}
 
 	@Override
-	public void setId(long id) {
+	public void setId(int id) {
 		super.setId(id);
 	}
 

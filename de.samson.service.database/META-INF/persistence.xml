@@ -24,12 +24,12 @@
 		<class>de.samson.service.database.entities.data.WmzData</class>
 		<class>de.samson.service.database.entities.data.WmwData</class>
 
-		<!--<class>de.samson.service.database.entities.histdata.HistDataSet</class>
+		<class>de.samson.service.database.entities.histdata.HistDataSet</class>
 		<class>de.samson.service.database.entities.histdata.HistDataSource</class>
 		<class>de.samson.service.database.entities.histdata.HistValue</class>
 		<class>de.samson.service.database.entities.histdata.CoilDataSource</class>
 		<class>de.samson.service.database.entities.histdata.HRegDataSource</class>
-		<class>de.samson.service.database.entities.histdata.WmwDataSource</class>-->
+		<class>de.samson.service.database.entities.histdata.WmwDataSource</class>
 
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
