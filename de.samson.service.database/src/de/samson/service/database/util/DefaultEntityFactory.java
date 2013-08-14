@@ -20,6 +20,10 @@ import de.samson.service.database.entities.description.GeraeteDesc;
 import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.WmwDesc;
 import de.samson.service.database.entities.description.WmzDesc;
+import de.samson.service.database.entities.histdata.CoilDataSource;
+import de.samson.service.database.entities.histdata.HRegDataSource;
+import de.samson.service.database.entities.histdata.HistDataSet;
+import de.samson.service.database.entities.histdata.HistValue;
 
 public class DefaultEntityFactory {
 
@@ -83,7 +87,7 @@ public class DefaultEntityFactory {
 				wmwData.setDescription(wmwDesc);
 				wmwData.setEinheit(0);
 				wmwData.setWmz(wmzData);
-				
+
 				wmzData.getAllWMW().add(wmwData);
 			}
 		}
@@ -131,6 +135,32 @@ public class DefaultEntityFactory {
 		return r;
 	}
 
+	public static RegisterData createNewRegisterData(RegisterConfig rc) {
+		RegisterData rd = new RegisterData();
+		rd.setbErr(false);
+		rd.setDataSource(null);
+		rd.setnGruppe(0);
+		rd.setnIntervall(rc.getnIntervall());
+		rd.setnRegisternr(rc.getnRegisternr());
+		rd.setnRegler_id(rc.getReglerConfig().getnId());
+		rd.setReglerData(rc.getReglerConfig().getReglerData());
+		rd.setsWert(new byte[] { Byte.MIN_VALUE, Byte.MIN_VALUE });
+		return rd;
+	}
+
+	public static CoilData createNewCoilData(CoilConfig cc) {
+		CoilData cd = new CoilData();
+		cd.setbErr(false);
+		cd.setbWert(false);
+		cd.setDataSource(null);
+		cd.setnCoilnr(cc.getnCoilnr());
+		cd.setnGruppe(0);
+		cd.setnIntervall(cc.getnIntervall());
+		cd.setnRegler_id(cc.getReglerConfig().getnId());
+		cd.setRegler(cc.getReglerConfig().getReglerData());
+		return cd;
+	}
+
 	public static CoilConfig createNewCoilConfig(ReglerConfig rc, CoilDesc s) {
 		CoilConfig ccf = new CoilConfig();
 		ccf.setnCoilanz(1);
@@ -138,5 +168,25 @@ public class DefaultEntityFactory {
 		ccf.setnIntervall(10);
 		ccf.setReglerConfig(rc);
 		return ccf;
+	}
+
+	public static HRegDataSource createNewHRegDataSource(HRegDesc desc) {
+		HRegDataSource ds = new HRegDataSource();
+		ds.setBezeichnung("Register " + desc.getHrnr());
+		ds.setDataSets(new ArrayList<HistDataSet>());
+		ds.setHistoricalValues(new ArrayList<HistValue>());
+		ds.setHrd(desc);
+		ds.setTotband(1);
+		return ds;
+	}
+
+	public static CoilDataSource createNewCoilDataSource(CoilDesc desc) {
+		CoilDataSource ds = new CoilDataSource();
+		ds.setBezeichnung("Coil " + desc.getClnr());
+		ds.setDataSets(new ArrayList<HistDataSet>());
+		ds.setHistoricalValues(new ArrayList<HistValue>());
+		ds.setCd(desc);
+		ds.setTotband(1);
+		return ds;
 	}
 }

@@ -160,5 +160,7 @@ public class ReglerConfig {
 	public void setAllWmz(List<WmzData> allWmz) {
 		this.allWmz = allWmz;
 	}
+	
+	
 
 }

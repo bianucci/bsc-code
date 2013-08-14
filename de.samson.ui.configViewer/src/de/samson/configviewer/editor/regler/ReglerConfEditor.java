@@ -72,7 +72,7 @@ public class ReglerConfEditor extends EditorPart {
 		setInput(input);
 
 		rc = DatabaseService.getReglerConfigByID(this.input.getId());
-		
+
 		String s = "";
 		s += "Gerät " + rc.getsTyp();
 		setPartName(s);
@@ -112,8 +112,8 @@ public class ReglerConfEditor extends EditorPart {
 		regGroup.setLayout(new FillLayout());
 		coilGroup.setLayout(new FillLayout());
 
-		regTV = RegisterTableViewerFactory.createTV(regGroup);
-		coilTV = CoilTableViewerFactory.createTV(coilGroup);
+		regTV = RegisterTableViewerFactory.createTV(regGroup, rc);
+		coilTV = CoilTableViewerFactory.createTV(coilGroup, rc);
 
 		regTV.setInput(rc.getReglerDescription());
 		coilTV.setInput(rc.getReglerDescription());
@@ -302,7 +302,7 @@ public class ReglerConfEditor extends EditorPart {
 		toAdd.clear();
 		toDel.clear();
 		treeView.getTv().refresh();
-		
+
 		String s = "";
 		s += "Gerät " + rc.getsTyp();
 		setPartName(s);
@@ -334,7 +334,7 @@ public class ReglerConfEditor extends EditorPart {
 		s += " - " + rc.getGatewayConfig().getsIP();
 		return s;
 	}
-	
+
 	public ReglerConfig getRc() {
 		return rc;
 	}

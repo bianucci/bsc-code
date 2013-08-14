@@ -1,6 +1,5 @@
 package de.samson.service.database.entities.data;
 
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -13,7 +12,7 @@ import javax.persistence.Table;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 
 @Entity
-@Table(name = "Coils", schema="s_modbusphp_data")
+@Table(name = "Coils", schema = "s_modbusphp_data")
 @IdClass(value = CoilDataID.class)
 public class CoilData {
 	@Id
@@ -30,10 +29,10 @@ public class CoilData {
 	@ManyToOne
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
-	
+
 	@OneToOne
-	@JoinColumn(name="data_source_id", referencedColumnName="id")
-	CoilDataSource dataSource; 
+	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
+	CoilDataSource dataSource;
 
 	public CoilData() {
 	}
@@ -95,6 +94,34 @@ public class CoilData {
 
 	public void setRegler(ReglerData reglerData) {
 		this.reglerData = reglerData;
+	}
+
+	public int getnRegler_id() {
+		return nRegler_id;
+	}
+
+	public void setnRegler_id(int nRegler_id) {
+		this.nRegler_id = nRegler_id;
+	}
+
+	public ReglerData getReglerData() {
+		return reglerData;
+	}
+
+	public void setReglerData(ReglerData reglerData) {
+		this.reglerData = reglerData;
+	}
+
+	public CoilDataSource getDataSource() {
+		return dataSource;
+	}
+
+	public void setDataSource(CoilDataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	public boolean isbWert() {
+		return bWert;
 	}
 
 }

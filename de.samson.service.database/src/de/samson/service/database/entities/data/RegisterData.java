@@ -12,7 +12,7 @@ import javax.persistence.Table;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 
 @Entity
-@Table(name = "Register", schema="s_modbusphp_data")
+@Table(name = "Register", schema = "s_modbusphp_data")
 @IdClass(value = RegisterDataID.class)
 public class RegisterData {
 
@@ -26,10 +26,10 @@ public class RegisterData {
 	@ManyToOne
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
-	
+
 	@OneToOne
-	@JoinColumn(name="data_source_id", referencedColumnName="id")
-	HRegDataSource dataSource; 
+	@JoinColumn(name = "data_source_id", referencedColumnName = "id", nullable = true)
+	HRegDataSource dataSource;
 
 	private byte[] sWert;
 	private int nIntervall;
@@ -106,6 +106,22 @@ public class RegisterData {
 				+ getnIntervall() + ", getnGruppe()=" + getnGruppe()
 				+ ", isbErr()=" + isbErr() + ", getReglerData()="
 				+ getReglerData() + "]";
+	}
+
+	public int getnRegler_id() {
+		return nRegler_id;
+	}
+
+	public void setnRegler_id(int nRegler_id) {
+		this.nRegler_id = nRegler_id;
+	}
+
+	public HRegDataSource getDataSource() {
+		return dataSource;
+	}
+
+	public void setDataSource(HRegDataSource dataSource) {
+		this.dataSource = dataSource;
 	}
 
 }

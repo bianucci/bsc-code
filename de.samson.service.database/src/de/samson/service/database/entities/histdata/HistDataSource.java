@@ -44,7 +44,7 @@ public abstract class HistDataSource implements IDataProvider {
 	List<HistValue> historicalValues;
 
 	@ManyToMany
-	@JoinTable(name = "hist_data_set_has_data_src", joinColumns = @JoinColumn(name = "data_src_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "data_set_id", referencedColumnName = "id"))
+	@JoinTable(name = "hist_data_set_has_data_source", schema="hist_data", joinColumns = @JoinColumn(name = "data_source_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "data_set_id", referencedColumnName = "id"))
 	List<HistDataSet> dataSets;
 
 	@Transient

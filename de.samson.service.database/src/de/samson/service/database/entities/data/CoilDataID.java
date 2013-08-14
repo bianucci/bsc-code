@@ -1,6 +1,5 @@
 package de.samson.service.database.entities.data;
 
-
 import java.io.Serializable;
 
 public class CoilDataID implements Serializable {
@@ -10,6 +9,11 @@ public class CoilDataID implements Serializable {
 	int nRegler_id;
 
 	public CoilDataID() {
+	}
+
+	public CoilDataID(int getnId, int clnr) {
+		this.nRegler_id = getnId;
+		this.nCoilnr = clnr;
 	}
 
 	public int getnCoilnr() {

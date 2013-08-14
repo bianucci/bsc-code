@@ -11,6 +11,12 @@ public class RegisterDataID implements Serializable {
 	public RegisterDataID() {
 	}
 
+	public RegisterDataID(int nRegler_id, int nRegisternr) {
+		super();
+		this.nRegler_id = nRegler_id;
+		this.nRegisternr = nRegisternr;
+	}
+
 	public int getnRegler_id() {
 		return nRegler_id;
 	}

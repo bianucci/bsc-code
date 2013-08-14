@@ -23,11 +23,17 @@ import de.samson.service.database.entities.config.RegisterConfig;
 import de.samson.service.database.entities.config.RegisterConfigID;
 import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.config.Standort;
+import de.samson.service.database.entities.data.CoilData;
+import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.data.ReglerData;
 import de.samson.service.database.entities.description.CoilDesc;
+import de.samson.service.database.entities.description.CoilDescID;
 import de.samson.service.database.entities.description.GeraeteDesc;
 import de.samson.service.database.entities.description.GeraeteDescID;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.entities.description.HRegDescID;
+import de.samson.service.database.entities.histdata.CoilDataSource;
+import de.samson.service.database.entities.histdata.HRegDataSource;
 import de.samson.service.database.util.DefaultEntityFactory;
 
 public class DatabaseService extends Observable {
@@ -163,8 +169,8 @@ public class DatabaseService extends Observable {
 	public static List<RegisterConfig> addRegisterConfigsInRange(
 			ReglerConfig rc, int beginHRNR, int endHRNR) {
 		List<RegisterConfig> added = new ArrayList<RegisterConfig>();
-		List<HRegDesc> availableRegs = rc
-				.getReglerDescription().getRegisterList();
+		List<HRegDesc> availableRegs = rc.getReglerDescription()
+				.getRegisterList();
 
 		for (int i = 0; i < availableRegs.size(); i++) {
 			int regNr = availableRegs.get(i).getHrnr() - 40000;
@@ -187,13 +193,16 @@ public class DatabaseService extends Observable {
 		for (Object o : toAdd) {
 			if (o instanceof HRegDesc) {
 				RegisterConfig c = DefaultEntityFactory
-						.createNewRegisterConfig(rc,
-								(HRegDesc) o);
+						.createNewRegisterConfig(rc, (HRegDesc) o);
 				rc.getRegisterConfigs().add(c);
+				RegisterData d = DefaultEntityFactory.createNewRegisterData(c);
+				rc.getReglerData().getRegisterData().add(d);
 			} else if (o instanceof CoilDesc) {
 				CoilConfig c = DefaultEntityFactory.createNewCoilConfig(rc,
 						(CoilDesc) o);
 				rc.getCoilsConfigs().add(c);
+				CoilData d = DefaultEntityFactory.createNewCoilData(c);
+				rc.getReglerData().getCoilsData().add(d);
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().add((RegisterConfig) o);
 			} else if (o instanceof CoilConfig) {
@@ -204,16 +213,12 @@ public class DatabaseService extends Observable {
 		for (Object o : toDelete) {
 			if (o instanceof HRegDesc) {
 				RegisterConfig c = (RegisterConfig) findEntityByID(
-						RegisterConfig.class,
-						new RegisterConfigID(
-								rc.getnId(),
+						RegisterConfig.class, new RegisterConfigID(rc.getnId(),
 								((HRegDesc) o).getHrnr() - 40000));
 				rc.getRegisterConfigs().remove(c);
 			} else if (o instanceof CoilDesc) {
-				CoilConfig c = (CoilConfig) findEntityByID(
-						CoilConfig.class,
-						new CoilConfigID(rc.getnId(), ((CoilDesc) o)
-								.getClnr()));
+				CoilConfig c = (CoilConfig) findEntityByID(CoilConfig.class,
+						new CoilConfigID(rc.getnId(), ((CoilDesc) o).getClnr()));
 				rc.getCoilsConfigs().remove(c);
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().remove(o);
@@ -226,9 +231,8 @@ public class DatabaseService extends Observable {
 			rc.setnDeviceid(Integer.valueOf(statNR));
 
 		if ((rc.getDescFileRevision() != revNR) || (rc.getsTyp() != reglerTyp)) {
-			GeraeteDesc s = (GeraeteDesc) findEntityByID(
-					GeraeteDesc.class, new GeraeteDescID(
-							reglerTyp, Integer.valueOf(revNR)));
+			GeraeteDesc s = (GeraeteDesc) findEntityByID(GeraeteDesc.class,
+					new GeraeteDescID(reglerTyp, Integer.valueOf(revNR)));
 
 			rc.setReglerDescription(s);
 			rc.setsTyp(reglerTyp);
@@ -260,5 +264,31 @@ public class DatabaseService extends Observable {
 
 	public static void shutDown() {
 		emf.close();
+	}
+
+	public static void addNewDataSourceForHoldingReg(RegisterData rd) {
+		HRegDescID id = new HRegDescID();
+		id.setGeraeteKennung(rd.getReglerData().getReglerConfig().getsTyp());
+		id.setHrnr(rd.getnRegisternr() + 40000);
+		id.setRevision(Integer.valueOf(rd.getReglerData().getReglerConfig()
+				.getDescFileRevision()));
+		HRegDesc desc = (HRegDesc) findEntityByID(HRegDesc.class, id);
+		HRegDataSource ds = DefaultEntityFactory.createNewHRegDataSource(desc);
+		rd.setDataSource(ds);
+		persistEntity(ds);
+		persistEntity(rd);
+	}
+
+	public static void addNewDataSourceForCoil(CoilData cd) {
+		CoilDescID id = new CoilDescID();
+		id.setGeraeteKennung(cd.getReglerData().getReglerConfig().getsTyp());
+		id.setClnr(cd.getnCoilnr());
+		id.setRevision(Integer.valueOf(cd.getReglerData().getReglerConfig()
+				.getDescFileRevision()));
+		CoilDesc desc = (CoilDesc) findEntityByID(CoilDesc.class, id);
+		CoilDataSource ds = DefaultEntityFactory.createNewCoilDataSource(desc);
+		cd.setDataSource(ds);
+		persistEntity(ds);
+		persistEntity(cd);
 	}
 }
