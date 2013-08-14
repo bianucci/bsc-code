@@ -1,10 +1,11 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: HistDataCollector
-Bundle-SymbolicName: de.samson.service.histDataCollector; singleton:=true
+Bundle-SymbolicName: de.samson.service.histDataCollector;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Bundle-Activator: de.samson.service.histdatacollector.Activator
 Require-Bundle: org.eclipse.ui,
- org.eclipse.core.runtime
+ org.eclipse.core.runtime,
+ de.samson.service.database;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

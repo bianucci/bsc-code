@@ -6,13 +6,16 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import de.samson.service.database.entities.histdata.CoilDataSource;
+
 @Entity
-@Table(name = "Coils", schema="s_modbusphp_cfg")
+@Table(name = "Coils", schema = "s_modbusphp_cfg")
 @IdClass(value = CoilConfigID.class)
 public class CoilConfig {
-	
+
 	@Id
 	int nCoilnr;
 	int nCoilanz;
@@ -25,6 +28,10 @@ public class CoilConfig {
 	@ManyToOne
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nId")
 	ReglerConfig reglerConfig;
+
+	@OneToOne
+	@JoinColumn(name = "data_source_id", referencedColumnName = "id", nullable = true)
+	CoilDataSource dataSource;
 
 	public CoilConfig() {
 	}

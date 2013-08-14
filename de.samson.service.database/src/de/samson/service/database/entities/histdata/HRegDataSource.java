@@ -5,8 +5,11 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
+import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.HRegDesc;
 
 @Entity
@@ -20,6 +23,9 @@ public class HRegDataSource extends HistDataSource {
 			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	HRegDesc hrd;
+
+	@OneToOne(mappedBy = "dataSource")
+	RegisterData data;
 
 	public HRegDesc getHrd() {
 		return hrd;
@@ -47,6 +53,18 @@ public class HRegDataSource extends HistDataSource {
 	@Override
 	public void setId(int id) {
 		super.setId(id);
+	}
+
+	@Transient
+	@Override
+	public double getLastHistoricalValue() {
+		return historicalValues.get(historicalValues.size() - 1).getYValue();
+	}
+
+	@Transient
+	@Override
+	public double getCurrentValue() {
+		return data.getsWert();
 	}
 
 }

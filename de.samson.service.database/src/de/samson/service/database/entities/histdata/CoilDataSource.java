@@ -6,7 +6,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
+import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.CoilDesc;
 
 @Entity
@@ -20,6 +22,9 @@ public class CoilDataSource extends HistDataSource {
 			@JoinColumn(name = "geraete_kennung", referencedColumnName = "geraeteKennung"),
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	CoilDesc cd;
+
+	@OneToOne(mappedBy = "dataSource")
+	CoilData data;
 
 	public CoilDesc getCd() {
 		return cd;
@@ -47,5 +52,20 @@ public class CoilDataSource extends HistDataSource {
 	@Override
 	public int getId() {
 		return super.getId();
+	}
+
+	@Transient
+	@Override
+	public double getLastHistoricalValue() {
+		return historicalValues.get(historicalValues.size() - 1).getYValue();
+	}
+
+	@Transient
+	@Override
+	public double getCurrentValue() {
+		if (data.getWert())
+			return 1;
+		else
+			return 0;
 	}
 }

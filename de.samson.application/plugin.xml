@@ -129,6 +129,17 @@
                      checkEnabled="false">
                </visibleWhen>
             </command>
+            <separator
+                  name="de.samson.application.separator2"
+                  visible="true">
+            </separator>
+            <command
+                  commandId="de.samson.service.histDataCollector.handler.HistDataCollection"
+                  label="Hist Data"
+                  style="push">
+               <visibleWhen>
+               </visibleWhen>
+            </command>
          </toolbar>
       </menuContribution>
    </extension>

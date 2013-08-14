@@ -6,6 +6,8 @@ import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorColumn;
 import javax.persistence.DiscriminatorType;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
@@ -25,15 +27,18 @@ import org.csstudio.swt.xygraph.linearscale.Range;
 @Table(name = "hist_data.data_source")
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "src_type", discriminatorType = DiscriminatorType.STRING, length = 20)
-public class HistDataSource implements IDataProvider {
+public abstract class HistDataSource implements IDataProvider {
 
 	public HistDataSource() {
 	}
 
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	int id;
 
 	String bezeichnung;
+
+	double totband;
 
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "data_source")
 	List<HistValue> historicalValues;
@@ -72,22 +77,17 @@ public class HistDataSource implements IDataProvider {
 		return r;
 	}
 
-	@Transient
 	@Override
 	public boolean isChronological() {
 		return true;
 	}
 
-	@Transient
 	@Override
 	public void addDataProviderListener(IDataProviderListener listener) {
-		// TODO Auto-generated method stub
 	}
 
-	@Transient
 	@Override
 	public boolean removeDataProviderListener(IDataProviderListener listener) {
-		// TODO Auto-generated method stub
 		return false;
 	}
 
@@ -125,7 +125,18 @@ public class HistDataSource implements IDataProvider {
 
 	public void addHistVal(HistValue histValue) {
 		this.historicalValues.add(histValue);
-
 	}
+
+	public double getTotband() {
+		return totband;
+	}
+
+	public void setTotband(double totband) {
+		this.totband = totband;
+	}
+
+	public abstract double getLastHistoricalValue();
+
+	public abstract double getCurrentValue();
 
 }

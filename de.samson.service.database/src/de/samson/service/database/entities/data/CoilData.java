@@ -7,7 +7,10 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import de.samson.service.database.entities.histdata.CoilDataSource;
 
 @Entity
 @Table(name = "Coils", schema="s_modbusphp_data")
@@ -27,6 +30,10 @@ public class CoilData {
 	@ManyToOne
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
+	
+	@OneToOne
+	@JoinColumn(name="data_source_id", referencedColumnName="id")
+	CoilDataSource dataSource; 
 
 	public CoilData() {
 	}

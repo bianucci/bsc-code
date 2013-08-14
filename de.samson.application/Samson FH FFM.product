@@ -35,6 +35,7 @@
       <plugin id="de.samson.libraries"/>
       <plugin id="de.samson.service.database"/>
       <plugin id="de.samson.service.directregleraccess"/>
+      <plugin id="de.samson.service.histDataCollector"/>
       <plugin id="de.samson.service.network"/>
       <plugin id="de.samson.ui.configViewer"/>
       <plugin id="de.samson.ui.dataViewer"/>

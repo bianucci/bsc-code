@@ -6,7 +6,10 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import de.samson.service.database.entities.histdata.HRegDataSource;
 
 @Entity
 @Table(name = "Register", schema="s_modbusphp_data")
@@ -23,6 +26,10 @@ public class RegisterData {
 	@ManyToOne
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
+	
+	@OneToOne
+	@JoinColumn(name="data_source_id", referencedColumnName="id")
+	HRegDataSource dataSource; 
 
 	private byte[] sWert;
 	private int nIntervall;

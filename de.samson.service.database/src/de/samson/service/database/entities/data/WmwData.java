@@ -6,9 +6,11 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import de.samson.service.database.entities.description.WmwDesc;
+import de.samson.service.database.entities.histdata.WmwDataSource;
 
 @Entity
 @Table(name = "wmw", schema = "s_modbusphp_data")
@@ -26,6 +28,10 @@ public class WmwData {
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzData wmz;
 
+	@OneToOne
+	@JoinColumn(name="data_source_id", referencedColumnName="id")
+	WmwDataSource dataSource; 
+	
 	double value;
 
 	int einheit;
