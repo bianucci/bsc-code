@@ -1,11 +1,19 @@
 package de.samson.dataviewer.editor.coiltv;
 
+import java.net.URL;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.TableColumn;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.CoilDesc;
@@ -16,15 +24,17 @@ public class CoilTableViewerFactory {
 	private static CoilValueEditingSupport editingSupport;
 
 	public static TableViewer createTV(Composite parent) {
-		TableViewer tv = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL
+		final TableViewer tv = new TableViewer(parent, SWT.MULTI | SWT.H_SCROLL
 				| SWT.V_SCROLL | SWT.FULL_SELECTION);
 		createColumns(tv);
-		
+
 		tv.getTable().setHeaderVisible(true);
 		tv.getTable().setLinesVisible(true);
 		tv.setContentProvider(new CoilTableContentProvider());
 		return tv;
 	}
+
+	protected static Image HIST_DATA_AVAILABLE = getImage("hist_data_available.gif");
 
 	private static void createColumns(TableViewer tv) {
 		TableViewerColumn c = addTVColumn(tv, 30, "#");
@@ -64,7 +74,24 @@ public class CoilTableViewerFactory {
 		});
 		editingSupport = new CoilValueEditingSupport(tv);
 		c.setEditingSupport(editingSupport);
-		
+
+		c = addTVColumn(tv, 50, "HD");
+		c.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				return null;
+			}
+
+			@Override
+			public Image getImage(Object element) {
+				CoilData cd = (CoilData) element;
+				if (cd.getDataSource() != null) {
+					return HIST_DATA_AVAILABLE;
+				}
+				return null;
+			}
+		});
+
 		c = addTVColumn(tv, 150, "Kommentar");
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
@@ -77,7 +104,7 @@ public class CoilTableViewerFactory {
 					return "Error";
 			}
 		});
-		
+
 		c = addTVColumn(tv, 150, "Kategorie");
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
@@ -90,7 +117,7 @@ public class CoilTableViewerFactory {
 					return "Error";
 			}
 		});
-		
+
 		c = addTVColumn(tv, 150, "Bezeichnung");
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
@@ -114,6 +141,14 @@ public class CoilTableViewerFactory {
 		column.setMoveable(true);
 		column.setResizable(true);
 		return tvc;
+	}
+
+	private static Image getImage(String file) {
+		Bundle bundle = FrameworkUtil.getBundle(CoilTableViewerFactory.class);
+		URL url = FileLocator.find(bundle, new Path("icons/" + file), null);
+		ImageDescriptor image = ImageDescriptor.createFromURL(url);
+		return image.createImage();
+
 	}
 
 }

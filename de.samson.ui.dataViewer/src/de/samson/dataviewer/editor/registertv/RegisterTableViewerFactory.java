@@ -1,11 +1,19 @@
 package de.samson.dataviewer.editor.registertv;
 
+import java.net.URL;
+
+import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.ColumnLabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Group;
 import org.eclipse.swt.widgets.TableColumn;
+import org.osgi.framework.Bundle;
+import org.osgi.framework.FrameworkUtil;
 
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.HRegDesc;
@@ -14,6 +22,7 @@ import de.samson.service.database.util.DataConverterUtil;
 public class RegisterTableViewerFactory {
 
 	private static TableViewer tv;
+	protected static Image HIST_DATA_AVAILABLE = getImage("hist_data_available.gif");
 
 	public static TableViewer createTV(Group g) {
 		tv = new TableViewer(g, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL
@@ -44,8 +53,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				if (sr != null)
 					return sr.getBezeichnung();
 				else
@@ -58,8 +66,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 
 				double s = sr.getSkalierungsfaktor();
 				if (s == 1) {
@@ -72,21 +79,37 @@ public class RegisterTableViewerFactory {
 						v += "0";
 
 					else if ((s == 1000) && (split[1].length() < 3))
-						for(int i=0;i<3-split[1].length();i++)
-							v+="=";
+						for (int i = 0; i < 3 - split[1].length(); i++)
+							v += "=";
 					return v;
 				}
 			}
 		});
 		c.setEditingSupport(new RegValueEditingSupport(tv));
 
+		c = addTVColumn(tv, 50, "HD");
+		c.setLabelProvider(new ColumnLabelProvider() {
+			@Override
+			public String getText(Object element) {
+				return null;
+			}
+
+			@Override
+			public Image getImage(Object element) {
+				RegisterData rd = (RegisterData) element;
+				if (rd.getDataSource() != null) {
+					return HIST_DATA_AVAILABLE;
+				}
+				return null;
+			}
+		});
+
 		c = addTVColumn(tv, 50, "Einheit");
 		c.setLabelProvider(new ColumnLabelProvider() {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				return String.valueOf(sr.getEinheit());
 			}
 		});
@@ -96,8 +119,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				return String.valueOf(sr.getAnzKategorie());
 			}
 		});
@@ -107,8 +129,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				return String.valueOf(sr.getKommentar());
 			}
 		});
@@ -118,8 +139,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				return String.valueOf(sr.getaBerAnfang());
 			}
 		});
@@ -129,8 +149,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				return String.valueOf(sr.getaBerEnde());
 			}
 		});
@@ -140,8 +159,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
-				HRegDesc sr = DataConverterUtil
-						.getRegisterDescForData(rd);
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 				return String.valueOf(sr.isRo());
 			}
 		});
@@ -158,4 +176,12 @@ public class RegisterTableViewerFactory {
 		return tvc;
 	}
 
+	private static Image getImage(String file) {
+		Bundle bundle = FrameworkUtil
+				.getBundle(RegisterTableViewerFactory.class);
+		URL url = FileLocator.find(bundle, new Path("icons/" + file), null);
+		ImageDescriptor image = ImageDescriptor.createFromURL(url);
+		return image.createImage();
+
+	}
 }
