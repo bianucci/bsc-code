@@ -1,8 +1,5 @@
 package de.xygraph.test.example;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.csstudio.swt.xygraph.figures.ToolbarArmedXYGraph;
 import org.csstudio.swt.xygraph.figures.XYGraph;
 import org.csstudio.swt.xygraph.linearscale.Range;
@@ -11,13 +8,6 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.widgets.Canvas;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.ui.part.ViewPart;
-
-import de.samson.service.database.DatabaseService;
-import de.samson.service.database.entities.config.GatewayConfig;
-import de.samson.service.database.entities.config.RegisterConfig;
-import de.samson.service.database.entities.config.ReglerConfig;
-import de.samson.service.database.entities.config.Standort;
-import de.samson.service.database.util.DefaultEntityFactory;
 
 public class TestView extends ViewPart {
 

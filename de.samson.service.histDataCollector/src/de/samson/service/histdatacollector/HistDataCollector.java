@@ -9,7 +9,7 @@ import de.samson.service.database.DatabaseService;
 import de.samson.service.database.entities.histdata.HistDataSource;
 import de.samson.service.database.entities.histdata.HistValue;
 
-public class HistDataObserver {
+public class HistDataCollector {
 	private class HistDataCollectionTask extends TimerTask {
 		List<HistDataSource> allSourcesToCheck;
 
@@ -26,35 +26,42 @@ public class HistDataObserver {
 				double currLo = source.getCurrentValue() - source.getTotband();
 				double currHi = source.getCurrentValue() + source.getTotband();
 
-				if ((currLo > last) || (currHi < last)) {
-					HistValue newHistVal = new HistValue();
+				HistValue newHistVal = new HistValue();
+
+				newHistVal.setValue(0);
+				if ((last == -99999999) || (last < currLo) || (last > currHi)) {
 					newHistVal.setData_source(source);
 					newHistVal
 							.setRec_time(new Date(System.currentTimeMillis()));
-					newHistVal.setValue(last);
+
 					source.getHistoricalValues().add(newHistVal);
+
+					if (last == -99999999)
+						newHistVal.setValue(0);
+					else
+						newHistVal.setValue(source.getCurrentValue());
+
 					DatabaseService.persistEntity(source);
 				}
 			}
-
 		}
 	}
 
-	private static HistDataObserver hdo = null;
+	private static HistDataCollector hdc = null;
 	private Timer t;
 	private boolean timerIsRunning = false;
 	private HistDataCollectionTask task;
 
-	public static HistDataObserver getInstance() {
-		if (hdo == null)
-			hdo = new HistDataObserver();
-		return hdo;
+	public static HistDataCollector getInstance() {
+		if (hdc == null)
+			hdc = new HistDataCollector();
+		return hdc;
 	}
 
-	private HistDataObserver() {
+	private HistDataCollector() {
 	}
 
-	public void startObserving(List<HistDataSource> toCheck) {
+	public void startCollecting(List<HistDataSource> toCheck) {
 		if (!timerIsRunning) {
 			t = new Timer("Hist Data Collector");
 			task = new HistDataCollectionTask(toCheck);
@@ -64,12 +71,12 @@ public class HistDataObserver {
 		}
 	}
 
-	public void stopObserving() {
+	public void stopCollecting() {
 		t.cancel();
 		timerIsRunning = false;
 	}
 
-	public boolean isObserving() {
+	public boolean isCollecting() {
 		return timerIsRunning;
 	}
 }

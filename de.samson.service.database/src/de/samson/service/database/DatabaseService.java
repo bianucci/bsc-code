@@ -34,6 +34,7 @@ import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.HRegDescID;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 import de.samson.service.database.entities.histdata.HRegDataSource;
+import de.samson.service.database.entities.histdata.HistDataSource;
 import de.samson.service.database.util.DefaultEntityFactory;
 
 public class DatabaseService extends Observable {
@@ -290,5 +291,11 @@ public class DatabaseService extends Observable {
 		cd.setDataSource(ds);
 		persistEntity(ds);
 		persistEntity(cd);
+	}
+
+	public static List<HistDataSource> getAllDataSources() {
+		TypedQuery<HistDataSource> q = em.createQuery(
+				"Select s from HistDataSource s", HistDataSource.class);
+		return q.getResultList();
 	}
 }

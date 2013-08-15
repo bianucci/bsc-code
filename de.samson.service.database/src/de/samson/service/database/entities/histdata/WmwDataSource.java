@@ -26,7 +26,11 @@ public class WmwDataSource extends HistDataSource {
 	@Transient
 	@Override
 	public double getLastHistoricalValue() {
-		return historicalValues.get(historicalValues.size() - 1).getYValue();
+		if (historicalValues.size() > 0)
+			return historicalValues.get(historicalValues.size() - 1)
+					.getYValue();
+		else
+			return -99999999;
 	}
 
 	@Transient

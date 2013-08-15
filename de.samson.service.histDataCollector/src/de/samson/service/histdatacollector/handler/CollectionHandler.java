@@ -4,18 +4,19 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 
-import de.samson.service.histdatacollector.HistDataObserver;
+import de.samson.service.database.DatabaseService;
+import de.samson.service.histdatacollector.HistDataCollector;
 
 public class CollectionHandler extends AbstractHandler {
 
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
-		HistDataObserver instance = HistDataObserver.getInstance();
+		HistDataCollector instance = HistDataCollector.getInstance();
 		
-		if (instance.isObserving())
-			instance.stopObserving();
+		if (instance.isCollecting())
+			instance.stopCollecting();
 		else
-			instance.startObserving(null);
+			instance.startCollecting(DatabaseService.getAllDataSources());
 
 		return null;
 	}
