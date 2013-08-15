@@ -42,6 +42,7 @@ public class DatabaseService extends Observable {
 	private static EntityManagerFactory emf;
 
 	static List<Standort> currentDBState = new Vector<Standort>();
+	private static Map<String, Object> props2;
 
 	public static void start() throws Exception {
 
@@ -63,7 +64,7 @@ public class DatabaseService extends Observable {
 		props.put(PersistenceUnitProperties.JDBC_USER,
 				store.getString("USERNAME"));
 
-		Map<String, Object> props2 = new HashMap<String, Object>();
+		props2 = new HashMap<String, Object>();
 		props.put(PersistenceUnitProperties.CLASSLOADER,
 				Activator.class.getClassLoader());
 
@@ -268,6 +269,7 @@ public class DatabaseService extends Observable {
 	}
 
 	public static void addNewDataSourceForHoldingReg(RegisterData rd) {
+		// Set description for register datasource
 		HRegDescID id = new HRegDescID();
 		id.setGeraeteKennung(rd.getReglerData().getReglerConfig().getsTyp());
 		id.setHrnr(rd.getnRegisternr() + 40000);
@@ -275,12 +277,20 @@ public class DatabaseService extends Observable {
 				.getDescFileRevision()));
 		HRegDesc desc = (HRegDesc) findEntityByID(HRegDesc.class, id);
 		HRegDataSource ds = DefaultEntityFactory.createNewHRegDataSource(desc);
+
+		// establish references between datasource and register data
 		rd.setDataSource(ds);
-		persistEntity(ds);
+		ds.setData(rd);
+
+		//create default hist value for later comparison
+		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
+
+		//store the new Entity instances
 		persistEntity(rd);
 	}
 
 	public static void addNewDataSourceForCoil(CoilData cd) {
+		//Set description for coil datasource
 		CoilDescID id = new CoilDescID();
 		id.setGeraeteKennung(cd.getReglerData().getReglerConfig().getsTyp());
 		id.setClnr(cd.getnCoilnr());
@@ -288,12 +298,20 @@ public class DatabaseService extends Observable {
 				.getDescFileRevision()));
 		CoilDesc desc = (CoilDesc) findEntityByID(CoilDesc.class, id);
 		CoilDataSource ds = DefaultEntityFactory.createNewCoilDataSource(desc);
+		
+		//establish references between datasource and coil data
 		cd.setDataSource(ds);
-		persistEntity(ds);
+		ds.setData(cd);
+		
+		//create default historical value for later comparison
+		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
+
+		//store the new Entity instances
 		persistEntity(cd);
 	}
 
 	public static List<HistDataSource> getAllDataSources() {
+		// EntityManager tempEM = emf.createEntityManager(props2);
 		TypedQuery<HistDataSource> q = em.createQuery(
 				"Select s from HistDataSource s", HistDataSource.class);
 		return q.getResultList();

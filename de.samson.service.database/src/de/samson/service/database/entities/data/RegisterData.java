@@ -1,5 +1,6 @@
 package de.samson.service.database.entities.data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -27,7 +28,7 @@ public class RegisterData {
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
 
-	@OneToOne
+	@OneToOne(cascade=CascadeType.ALL)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id", nullable = true)
 	HRegDataSource dataSource;
 

@@ -1,6 +1,7 @@
 package de.samson.service.database.util;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import de.samson.service.database.DatabaseService;
@@ -23,6 +24,7 @@ import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 import de.samson.service.database.entities.histdata.HistDataSet;
+import de.samson.service.database.entities.histdata.HistDataSource;
 import de.samson.service.database.entities.histdata.HistValue;
 
 public class DefaultEntityFactory {
@@ -188,5 +190,13 @@ public class DefaultEntityFactory {
 		ds.setCd(desc);
 		ds.setTotband(1);
 		return ds;
+	}
+
+	public static HistValue createNewHistValue(HistDataSource ds) {
+		HistValue v = new HistValue();
+		v.setData_source(ds);
+		v.setRec_time(new Date(System.currentTimeMillis()));
+		v.setValue(0);
+		return v;
 	}
 }

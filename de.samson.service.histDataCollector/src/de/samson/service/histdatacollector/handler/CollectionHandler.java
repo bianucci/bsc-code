@@ -4,7 +4,6 @@ import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 import org.eclipse.core.commands.ExecutionException;
 
-import de.samson.service.database.DatabaseService;
 import de.samson.service.histdatacollector.HistDataCollector;
 
 public class CollectionHandler extends AbstractHandler {
@@ -16,7 +15,7 @@ public class CollectionHandler extends AbstractHandler {
 		if (instance.isCollecting())
 			instance.stopCollecting();
 		else
-			instance.startCollecting(DatabaseService.getAllDataSources());
+			instance.startCollecting();
 
 		return null;
 	}

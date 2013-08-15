@@ -1,5 +1,6 @@
 package de.samson.service.database.entities.data;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -28,10 +29,10 @@ public class WmwData {
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzData wmz;
 
-	@OneToOne
-	@JoinColumn(name="data_source_id", referencedColumnName="id")
-	WmwDataSource dataSource; 
-	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
+	WmwDataSource dataSource;
+
 	double value;
 
 	int einheit;

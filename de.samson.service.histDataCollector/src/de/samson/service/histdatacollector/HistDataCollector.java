@@ -13,15 +13,19 @@ public class HistDataCollector {
 	private class HistDataCollectionTask extends TimerTask {
 		List<HistDataSource> allSourcesToCheck;
 
-		public HistDataCollectionTask(List<HistDataSource> allSourcesToCheck) {
-			super();
-			this.allSourcesToCheck = allSourcesToCheck;
-		}
-
 		@Override
 		public void run() {
+			System.out.println("Iteration started");
+			allSourcesToCheck = DatabaseService.getAllDataSources();
+
 			for (int i = 0; i < allSourcesToCheck.size(); i++) {
 				HistDataSource source = allSourcesToCheck.get(i);
+
+				// TODO with lots of histvalues refresh lot. get reference to
+				// real data provider e.g. coilconfig and refresh dat mofo
+				// directly
+				DatabaseService.refreshEntity(source);
+
 				double last = source.getLastHistoricalValue();
 				double currLo = source.getCurrentValue() - source.getTotband();
 				double currHi = source.getCurrentValue() + source.getTotband();
@@ -29,21 +33,22 @@ public class HistDataCollector {
 				HistValue newHistVal = new HistValue();
 
 				newHistVal.setValue(0);
-				if ((last == -99999999) || (last < currLo) || (last > currHi)) {
+				if ((last < currLo) || (last > currHi)) {
 					newHistVal.setData_source(source);
 					newHistVal
 							.setRec_time(new Date(System.currentTimeMillis()));
 
 					source.getHistoricalValues().add(newHistVal);
 
-					if (last == -99999999)
-						newHistVal.setValue(0);
-					else
-						newHistVal.setValue(source.getCurrentValue());
+					newHistVal.setValue(source.getCurrentValue());
 
 					DatabaseService.persistEntity(source);
+					System.out.println("New hist value "
+							+ newHistVal.getValue()
+							+ " added for HistDataSource " + source.getId());
 				}
 			}
+			System.out.println("Iteration ended");
 		}
 	}
 
@@ -61,12 +66,12 @@ public class HistDataCollector {
 	private HistDataCollector() {
 	}
 
-	public void startCollecting(List<HistDataSource> toCheck) {
+	public void startCollecting() {
 		if (!timerIsRunning) {
 			t = new Timer("Hist Data Collector");
-			task = new HistDataCollectionTask(toCheck);
+			task = new HistDataCollectionTask();
 
-			t.schedule(task, 2000, 1000);
+			t.schedule(task, 2000, 6000);
 			timerIsRunning = true;
 		}
 	}

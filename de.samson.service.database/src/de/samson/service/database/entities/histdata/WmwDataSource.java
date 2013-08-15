@@ -26,11 +26,7 @@ public class WmwDataSource extends HistDataSource {
 	@Transient
 	@Override
 	public double getLastHistoricalValue() {
-		if (historicalValues.size() > 0)
-			return historicalValues.get(historicalValues.size() - 1)
-					.getYValue();
-		else
-			return -99999999;
+		return historicalValues.get(historicalValues.size() - 1).getYValue();
 	}
 
 	@Transient
@@ -38,4 +34,21 @@ public class WmwDataSource extends HistDataSource {
 	public double getCurrentValue() {
 		return data.getValue();
 	}
+
+	public WmwDesc getDescription() {
+		return description;
+	}
+
+	public void setDescription(WmwDesc description) {
+		this.description = description;
+	}
+
+	public WmwData getData() {
+		return data;
+	}
+
+	public void setData(WmwData data) {
+		this.data = data;
+	}
+
 }

@@ -57,11 +57,7 @@ public class CoilDataSource extends HistDataSource {
 	@Transient
 	@Override
 	public double getLastHistoricalValue() {
-		if (historicalValues.size() > 0)
-			return historicalValues.get(historicalValues.size() - 1)
-					.getYValue();
-		else
-			return -99999999;
+		return historicalValues.get(historicalValues.size() - 1).getYValue();
 	}
 
 	@Transient
@@ -72,4 +68,13 @@ public class CoilDataSource extends HistDataSource {
 		else
 			return 0;
 	}
+
+	public CoilData getData() {
+		return data;
+	}
+
+	public void setData(CoilData data) {
+		this.data = data;
+	}
+
 }

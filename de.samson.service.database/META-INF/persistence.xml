@@ -16,7 +16,7 @@
 		<class>de.samson.service.database.entities.config.ReglerConfig</class>
 		<class>de.samson.service.database.entities.config.GatewayConfig</class>
 		<class>de.samson.service.database.entities.config.Standort</class>
-		
+
 		<class>de.samson.service.database.entities.data.RegisterData</class>
 		<class>de.samson.service.database.entities.data.CoilData</class>
 		<class>de.samson.service.database.entities.data.ReglerData</class>
@@ -34,9 +34,13 @@
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 
-			<!--   <property 
-				name="eclipselink.ddl-generation" value="create-tables" /> <property name="eclipselink.ddl-generation.output-mode" 
-				value="database" />-->
+			<!-- <property name="eclipselink.ddl-generation" value="create-tables" 
+				/> <property name="eclipselink.ddl-generation.output-mode" value="database" 
+				/> -->
+			<property name="eclipselink.cache.shared.default" value="false" />
+			<property name="eclipselink.cache.size.default" value="0" />
+			<property name="eclipselink.cache.type.default" value="None" />
+			<property name="eclipselink.query-results-cache" value="false"/>
 		</properties>
 
 	</persistence-unit>

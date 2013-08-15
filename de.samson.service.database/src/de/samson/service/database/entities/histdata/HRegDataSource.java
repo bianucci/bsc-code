@@ -1,5 +1,6 @@
 package de.samson.service.database.entities.histdata;
 
+import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -24,7 +25,7 @@ public class HRegDataSource extends HistDataSource {
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	HRegDesc hrd;
 
-	@OneToOne(mappedBy = "dataSource")
+	@OneToOne(mappedBy = "dataSource", cascade=CascadeType.REFRESH)
 	RegisterData data;
 
 	public HRegDesc getHrd() {
@@ -58,17 +59,21 @@ public class HRegDataSource extends HistDataSource {
 	@Transient
 	@Override
 	public double getLastHistoricalValue() {
-		if (getHistoricalValues().size() > 0)
-			return historicalValues.get(historicalValues.size() - 1)
-					.getYValue();
-		else
-			return -99999999;
+		return historicalValues.get(historicalValues.size() - 1).getYValue();
 	}
 
 	@Transient
 	@Override
 	public double getCurrentValue() {
 		return data.getsWert();
+	}
+
+	public RegisterData getData() {
+		return data;
+	}
+
+	public void setData(RegisterData data) {
+		this.data = data;
 	}
 
 }
