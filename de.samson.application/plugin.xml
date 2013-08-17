@@ -136,7 +136,7 @@
             <command
                   commandId="de.samson.service.histDataCollector.handler.HistDataCollection"
                   label="Hist Data"
-                  style="push">
+                  style="toggle">
                <visibleWhen>
                </visibleWhen>
             </command>

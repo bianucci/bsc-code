@@ -68,5 +68,4 @@ public class WmwData {
 	public void setEinheit(int einheit) {
 		this.einheit = einheit;
 	}
-
 }

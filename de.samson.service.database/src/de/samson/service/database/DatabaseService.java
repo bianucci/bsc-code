@@ -34,6 +34,7 @@ import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.HRegDescID;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 import de.samson.service.database.entities.histdata.HRegDataSource;
+import de.samson.service.database.entities.histdata.HistDataSet;
 import de.samson.service.database.entities.histdata.HistDataSource;
 import de.samson.service.database.util.DefaultEntityFactory;
 
@@ -282,15 +283,15 @@ public class DatabaseService extends Observable {
 		rd.setDataSource(ds);
 		ds.setData(rd);
 
-		//create default hist value for later comparison
+		// create default hist value for later comparison
 		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
-
-		//store the new Entity instances
+		
+		// store the new Entity instances
 		persistEntity(rd);
 	}
 
 	public static void addNewDataSourceForCoil(CoilData cd) {
-		//Set description for coil datasource
+		// Set description for coil datasource
 		CoilDescID id = new CoilDescID();
 		id.setGeraeteKennung(cd.getReglerData().getReglerConfig().getsTyp());
 		id.setClnr(cd.getnCoilnr());
@@ -298,22 +299,32 @@ public class DatabaseService extends Observable {
 				.getDescFileRevision()));
 		CoilDesc desc = (CoilDesc) findEntityByID(CoilDesc.class, id);
 		CoilDataSource ds = DefaultEntityFactory.createNewCoilDataSource(desc);
-		
-		//establish references between datasource and coil data
+
+		// establish references between datasource and coil data
 		cd.setDataSource(ds);
 		ds.setData(cd);
-		
-		//create default historical value for later comparison
+
+		// create default historical value for later comparison
 		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
 
-		//store the new Entity instances
+		// store the new Entity instances
 		persistEntity(cd);
 	}
-
+	
 	public static List<HistDataSource> getAllDataSources() {
 		// EntityManager tempEM = emf.createEntityManager(props2);
 		TypedQuery<HistDataSource> q = em.createQuery(
 				"Select s from HistDataSource s", HistDataSource.class);
 		return q.getResultList();
+	}
+
+	public static HistDataSet getHistDataSetByID(int id) {
+		return (HistDataSet) findEntityByID(HistDataSet.class, id);
+
+	}
+
+	public static HistDataSource getDataSourceByID(int id) {
+		return (HistDataSource) findEntityByID(HistDataSource.class, id);
+		
 	}
 }

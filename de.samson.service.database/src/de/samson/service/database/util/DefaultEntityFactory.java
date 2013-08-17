@@ -146,7 +146,7 @@ public class DefaultEntityFactory {
 		rd.setnRegisternr(rc.getnRegisternr());
 		rd.setnRegler_id(rc.getReglerConfig().getnId());
 		rd.setReglerData(rc.getReglerConfig().getReglerData());
-		rd.setsWert(new byte[] { Byte.MIN_VALUE, Byte.MIN_VALUE });
+		rd.setsWert(new byte[] { Byte.decode("0x00"), Byte.decode("0x00") });
 		return rd;
 	}
 

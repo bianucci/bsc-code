@@ -51,4 +51,15 @@ public class WmwDataSource extends HistDataSource {
 		this.data = data;
 	}
 
+	@Transient
+	@Override
+	public String getyAxisName() {
+		String einheitKey = String.valueOf(this.getData().getEinheit());
+		for (int i = 0; i < description.getMasseinheiten().size(); i++)
+			if (description.getMasseinheiten().get(i).getKeyEinheit()
+					.equals(einheitKey))
+				return description.getMasseinheiten().get(i).getValueEinheit();
+		return this.bezeichnung;
+	}
+
 }

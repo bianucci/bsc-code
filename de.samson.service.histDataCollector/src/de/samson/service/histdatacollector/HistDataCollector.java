@@ -33,7 +33,7 @@ public class HistDataCollector {
 				HistValue newHistVal = new HistValue();
 
 				newHistVal.setValue(0);
-				if ((last < currLo) || (last > currHi)) {
+				if ((last <= currLo) || (last >= currHi)) {
 					newHistVal.setData_source(source);
 					newHistVal
 							.setRec_time(new Date(System.currentTimeMillis()));

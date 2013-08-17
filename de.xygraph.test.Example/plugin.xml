@@ -12,49 +12,26 @@
       </application>
    </extension>
    <extension
-         point="org.eclipse.ui.perspectives">
-      <perspective
-            class="de.xygraph.test.example.PerspectiveFactory"
-            id="de.xygraph.test.Example.perspective"
-            name="Perspective">
-      </perspective>
-   </extension>
-   <extension
-         point="org.eclipse.ui.views">
-      <view
-            allowMultiple="false"
-            class="de.xygraph.test.example.TestView"
-            id="de.xygraph.test.Example.view"
-            name="Test"
-            restorable="true">
-      </view>
-   </extension>
-   <extension
-         point="org.eclipse.ui.perspectiveExtensions">
-      <perspectiveExtension
-            targetID="de.xygraph.test.Example.perspective">
-         <view
-               closeable="false"
-               id="de.xygraph.test.Example.view"
-               minimized="false"
-               moveable="true"
-               ratio="0.5f"
-               relationship="left"
-               relative="org.eclipse.ui.editorss"
-               showTitle="true"
-               standalone="true"
-               visible="true">
-         </view>
-      </perspectiveExtension>
-   </extension>
-   <extension
          point="org.eclipse.ui.editors">
       <editor
-            class="de.samson.histdata.ui.editor.HistDataEditor"
+            class="de.samson.histdata.ui.editor.HistDataSetEditor"
             default="false"
-            id="de.samson.ui.dataVisualizer.hsitDataEditor"
+            id="de.samson.ui.dataVisualizer.histDataSetEditor"
             name="Historical Data Editor">
       </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="de.samson.histdata.ui.editor.OpenEditorHandler"
+            id="de.samson.ui.dataVisualizer.openHistDataSetEditor"
+            name="Open Editor">
+         <commandParameter
+               id="de.samson.ui.dataVisualizer.dataSourceId"
+               name="Id of the HistDataSet to visualize"
+               optional="false">
+         </commandParameter>
+      </command>
    </extension>
 
 </plugin>

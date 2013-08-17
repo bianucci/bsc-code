@@ -39,6 +39,7 @@
       <plugin id="de.samson.service.network"/>
       <plugin id="de.samson.ui.configViewer"/>
       <plugin id="de.samson.ui.dataViewer"/>
+      <plugin id="de.samson.ui.dataVisualizer"/>
       <plugin id="de.samson.ui.descfilemanager"/>
       <plugin id="de.samson.ui.modbusPHP"/>
       <plugin id="javax.servlet"/>
@@ -47,6 +48,7 @@
       <plugin id="library.net.wimpi.modbus"/>
       <plugin id="library.org.apache.commons.lang"/>
       <plugin id="library.org.eclipse.persistence.EclipseLink"/>
+      <plugin id="org.csstudio.swt.widgets.source"/>
       <plugin id="org.csstudio.swt.xygraph.source"/>
       <plugin id="org.eclipse.core.commands"/>
       <plugin id="org.eclipse.core.contenttype"/>

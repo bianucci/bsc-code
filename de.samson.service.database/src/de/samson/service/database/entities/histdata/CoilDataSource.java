@@ -1,5 +1,6 @@
 package de.samson.service.database.entities.histdata;
 
+import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -7,6 +8,8 @@ import javax.persistence.JoinColumns;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
+
+import org.csstudio.swt.xygraph.linearscale.Range;
 
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.CoilDesc;
@@ -23,7 +26,7 @@ public class CoilDataSource extends HistDataSource {
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	CoilDesc cd;
 
-	@OneToOne(mappedBy = "dataSource")
+	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.REFRESH)
 	CoilData data;
 
 	public CoilDesc getCd() {
@@ -75,6 +78,18 @@ public class CoilDataSource extends HistDataSource {
 
 	public void setData(CoilData data) {
 		this.data = data;
+	}
+
+	@Transient
+	@Override
+	public String getyAxisName() {
+		return "";
+	}
+
+	@Override
+	@Transient
+	public Range getYDataMinMax() {
+		return new Range(0, 1);
 	}
 
 }

@@ -1,5 +1,6 @@
 package de.samson.service.database.entities.histdata;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.CascadeType;
@@ -44,18 +45,24 @@ public abstract class HistDataSource implements IDataProvider {
 	List<HistValue> historicalValues;
 
 	@ManyToMany
-	@JoinTable(name = "hist_data_set_has_data_source", schema="hist_data", joinColumns = @JoinColumn(name = "data_source_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "hist_data_set_id", referencedColumnName = "id"))
+	@JoinTable(name = "hist_data_set_has_data_source", schema = "hist_data", joinColumns = @JoinColumn(name = "data_source_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "hist_data_set_id", referencedColumnName = "id"))
 	List<HistDataSet> dataSets;
 
 	@Transient
 	@Override
 	public int getSize() {
-		return historicalValues.size();
+		return historicalValues.size() + 1;
 	}
 
 	@Transient
 	@Override
 	public ISample getSample(int index) {
+		if (index == historicalValues.size()) {
+			HistValue v = new HistValue();
+			v.setRec_time(new Date(System.currentTimeMillis()));
+			v.setValue(getSample(index - 1).getYValue());
+			return v;
+		}
 		return historicalValues.get(index);
 	}
 
@@ -63,17 +70,23 @@ public abstract class HistDataSource implements IDataProvider {
 	@Override
 	public Range getXDataMinMax() {
 		HistValue start = historicalValues.get(0);
-		HistValue end = historicalValues.get(historicalValues.size() - 1);
-		Range r = new Range(start.getXValue(), end.getXValue());
+		Range r = new Range(start.getXValue(), System.currentTimeMillis());
 		return r;
 	}
 
 	@Transient
 	@Override
 	public Range getYDataMinMax() {
-		HistValue start = historicalValues.get(0);
-		HistValue end = historicalValues.get(historicalValues.size() - 1);
-		Range r = new Range(start.getYValue(), end.getYValue());
+		double max = 0;
+		double min = 0;
+		for (int i = 0; i < historicalValues.size(); i++) {
+			double d = historicalValues.get(i).getYValue();
+			if (d < min)
+				min = d;
+			else if (d > max)
+				max = d;
+		}
+		Range r = new Range(min, max);
 		return r;
 	}
 
@@ -138,5 +151,7 @@ public abstract class HistDataSource implements IDataProvider {
 	public abstract double getLastHistoricalValue();
 
 	public abstract double getCurrentValue();
+	
+	public abstract String getyAxisName();
 
 }

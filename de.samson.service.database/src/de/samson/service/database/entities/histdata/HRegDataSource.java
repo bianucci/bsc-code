@@ -12,6 +12,7 @@ import javax.persistence.Transient;
 
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.util.DataConverterUtil;
 
 @Entity
 @DiscriminatorValue("hreg")
@@ -25,7 +26,7 @@ public class HRegDataSource extends HistDataSource {
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	HRegDesc hrd;
 
-	@OneToOne(mappedBy = "dataSource", cascade=CascadeType.REFRESH)
+	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.REFRESH)
 	RegisterData data;
 
 	public HRegDesc getHrd() {
@@ -65,7 +66,11 @@ public class HRegDataSource extends HistDataSource {
 	@Transient
 	@Override
 	public double getCurrentValue() {
-		return data.getsWert();
+		int raw = data.getsWert();
+		double d = raw
+				/ DataConverterUtil.getRegisterDescForData(data)
+						.getSkalierungsfaktor();
+		return d;
 	}
 
 	public RegisterData getData() {
@@ -76,4 +81,9 @@ public class HRegDataSource extends HistDataSource {
 		this.data = data;
 	}
 
+	@Transient
+	@Override
+	public String getyAxisName() {
+		return this.hrd.getEinheit();
+	}
 }
