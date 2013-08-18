@@ -6,10 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import de.samson.service.database.entities.config.RegisterConfig;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 
 @Entity
@@ -28,9 +30,15 @@ public class RegisterData {
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
 
-	@OneToOne(cascade=CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id", nullable = true)
 	HRegDataSource dataSource;
+
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumns(value = {
+			@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id", insertable = false, updatable = false),
+			@JoinColumn(name = "nRegisternr", referencedColumnName = "nRegisternr", insertable = false, updatable = false), })
+	RegisterConfig config;
 
 	private byte[] sWert;
 	private int nIntervall;
@@ -123,6 +131,14 @@ public class RegisterData {
 
 	public void setDataSource(HRegDataSource dataSource) {
 		this.dataSource = dataSource;
+	}
+
+	public RegisterConfig getConfig() {
+		return config;
+	}
+
+	public void setConfig(RegisterConfig config) {
+		this.config = config;
 	}
 
 }

@@ -38,6 +38,7 @@ import de.samson.service.database.entities.config.RegisterConfig;
 import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.entities.description.WmwDesc;
 
 public class ReglerConfEditor extends EditorPart {
 	public ReglerConfEditor() {
@@ -153,16 +154,21 @@ public class ReglerConfEditor extends EditorPart {
 				firePropertyChange(IEditorPart.PROP_DIRTY);
 				Object o = event.getElement();
 
-				if (event.getChecked()) {
-					if (toDel.contains(o))
-						toDel.remove(o);
-					else
-						toAdd.add(o);
-				} else {
-					if (toAdd.contains(o))
-						toAdd.remove(o);
-					else
-						toDel.add(o);
+				if (o instanceof HRegDesc) {
+
+					if (((HRegDesc) o).hasWmwDesc()) {
+
+						WmwDesc linkedWmwDesc = ((HRegDesc) o)
+								.getLinkedWmwDesc();
+
+						setLinkedRegistersForWMW(linkedWmwDesc,
+								event.getChecked());
+
+						regTV.refresh();
+					} else
+						setDataPointForRegler(o, event.getChecked());
+				} else if (o instanceof CoilDesc) {
+					setDataPointForRegler(o, event.getChecked());
 				}
 			}
 		};
@@ -178,6 +184,33 @@ public class ReglerConfEditor extends EditorPart {
 		coilGroup.setText("Coils");
 
 		selectCheckBoxes();
+	}
+
+	public void setDataPointForRegler(Object dp, boolean addDatapoint) {
+		if (addDatapoint) {
+			if (toDel.contains(dp))
+				toDel.remove(dp);
+			else
+				toAdd.add(dp);
+		} else {
+			if (toAdd.contains(dp))
+				toAdd.remove(dp);
+			else
+				toDel.add(dp);
+		}
+	}
+
+	public void setLinkedRegistersForWMW(WmwDesc w, boolean shouldBeAdded) {
+		List<HRegDesc> v = w.getWerteRegister();
+
+		for (int i = 0; i < v.size(); i++) {
+			setDataPointForRegler(v.get(i), shouldBeAdded);
+			regTV.setChecked(v.get(i), shouldBeAdded);
+		}
+
+		HRegDesc e = w.getRegisterEinheitIsStoredIn();
+		setDataPointForRegler(e, shouldBeAdded);
+		regTV.setChecked(e, shouldBeAdded);
 	}
 
 	private void selectCheckBoxes() {

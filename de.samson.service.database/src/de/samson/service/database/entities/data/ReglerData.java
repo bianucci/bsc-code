@@ -33,10 +33,10 @@ public class ReglerData {
 	@JoinColumn(name = "nGateway_id", referencedColumnName = "nGateway_id")
 	GatewayData gatewayData;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerData")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerData", orphanRemoval = true)
 	List<RegisterData> registerData;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerData")
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "reglerData", orphanRemoval = true)
 	List<CoilData> coilDatas;
 
 	public ReglerData() {

@@ -188,24 +188,45 @@ public class DatabaseService extends Observable {
 		return added;
 	}
 
+	private static void addRegisterConfigWithDataForReglerConfig(HRegDesc desc,
+			ReglerConfig rc) {
+
+		RegisterConfig c = DefaultEntityFactory.createNewRegisterConfig(rc,
+				desc);
+		rc.getRegisterConfigs().add(c);
+
+		RegisterData d = DefaultEntityFactory.createNewRegisterData(c);
+		rc.getReglerData().getRegisterData().add(d);
+
+		c.setData(d);
+		d.setConfig(c);
+	}
+
+	private static void addCoilConfigWithDataForReglerConfig(CoilDesc desc,
+			ReglerConfig rc) {
+
+		CoilConfig c = DefaultEntityFactory.createNewCoilConfig(rc, desc);
+		rc.getCoilsConfigs().add(c);
+
+		CoilData d = DefaultEntityFactory.createNewCoilData(c);
+		rc.getReglerData().getCoilsData().add(d);
+
+		c.setData(d);
+		d.setConfig(c);
+	}
+
 	public static void updateReglerConfig(ReglerConfig rc, List<Object> toAdd,
 			List<Object> toDelete, String statNR, String revNR, String reglerTyp) {
+
+		refreshEntity(rc);
 		EntityTransaction transaction = em.getTransaction();
 		transaction.begin();
 
 		for (Object o : toAdd) {
 			if (o instanceof HRegDesc) {
-				RegisterConfig c = DefaultEntityFactory
-						.createNewRegisterConfig(rc, (HRegDesc) o);
-				rc.getRegisterConfigs().add(c);
-				RegisterData d = DefaultEntityFactory.createNewRegisterData(c);
-				rc.getReglerData().getRegisterData().add(d);
+				addRegisterConfigWithDataForReglerConfig((HRegDesc) o, rc);
 			} else if (o instanceof CoilDesc) {
-				CoilConfig c = DefaultEntityFactory.createNewCoilConfig(rc,
-						(CoilDesc) o);
-				rc.getCoilsConfigs().add(c);
-				CoilData d = DefaultEntityFactory.createNewCoilData(c);
-				rc.getReglerData().getCoilsData().add(d);
+				addCoilConfigWithDataForReglerConfig((CoilDesc) o, rc);
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().add((RegisterConfig) o);
 			} else if (o instanceof CoilConfig) {
@@ -233,7 +254,8 @@ public class DatabaseService extends Observable {
 		if (rc.getnDeviceid() != Integer.valueOf(statNR))
 			rc.setnDeviceid(Integer.valueOf(statNR));
 
-		if ((rc.getDescFileRevision() != revNR) || (rc.getsTyp() != reglerTyp)) {
+		if (!(rc.getDescFileRevision().equals(revNR))
+				|| !(rc.getsTyp().equals(reglerTyp))) {
 			GeraeteDesc s = (GeraeteDesc) findEntityByID(GeraeteDesc.class,
 					new GeraeteDescID(reglerTyp, Integer.valueOf(revNR)));
 
@@ -285,7 +307,7 @@ public class DatabaseService extends Observable {
 
 		// create default hist value for later comparison
 		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
-		
+
 		// store the new Entity instances
 		persistEntity(rd);
 	}
@@ -310,7 +332,7 @@ public class DatabaseService extends Observable {
 		// store the new Entity instances
 		persistEntity(cd);
 	}
-	
+
 	public static List<HistDataSource> getAllDataSources() {
 		// EntityManager tempEM = emf.createEntityManager(props2);
 		TypedQuery<HistDataSource> q = em.createQuery(
@@ -325,6 +347,6 @@ public class DatabaseService extends Observable {
 
 	public static HistDataSource getDataSourceByID(int id) {
 		return (HistDataSource) findEntityByID(HistDataSource.class, id);
-		
+
 	}
 }

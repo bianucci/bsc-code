@@ -6,10 +6,12 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import de.samson.service.database.entities.config.CoilConfig;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 
 @Entity
@@ -34,6 +36,12 @@ public class CoilData {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	CoilDataSource dataSource;
+
+	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+	@JoinColumns(value = {
+			@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id", insertable = false, updatable = false),
+			@JoinColumn(name = "nCoilnr", referencedColumnName = "nCoilnr", insertable = false, updatable = false), })
+	CoilConfig config;
 
 	public CoilData() {
 	}
@@ -124,5 +132,15 @@ public class CoilData {
 	public boolean isbWert() {
 		return bWert;
 	}
+
+	public CoilConfig getConfig() {
+		return config;
+	}
+
+	public void setConfig(CoilConfig config) {
+		this.config = config;
+	}
+	
+	
 
 }

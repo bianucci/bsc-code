@@ -1,12 +1,16 @@
 package de.samson.service.database.entities.config;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
+
+import de.samson.service.database.entities.data.CoilData;
 
 @Entity
 @Table(name = "Coils", schema = "s_modbusphp_cfg")
@@ -25,6 +29,9 @@ public class CoilConfig {
 	@ManyToOne
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nId")
 	ReglerConfig reglerConfig;
+
+	@OneToOne(mappedBy = "config", cascade = CascadeType.ALL, orphanRemoval = true)
+	CoilData data;
 
 	public CoilConfig() {
 	}
@@ -69,4 +76,21 @@ public class CoilConfig {
 	public void setReglerConfig(ReglerConfig reglerConfig) {
 		this.reglerConfig = reglerConfig;
 	}
+
+	public int getnRegler_id() {
+		return nRegler_id;
+	}
+
+	public void setnRegler_id(int nRegler_id) {
+		this.nRegler_id = nRegler_id;
+	}
+
+	public CoilData getData() {
+		return data;
+	}
+
+	public void setData(CoilData data) {
+		this.data = data;
+	}
+
 }

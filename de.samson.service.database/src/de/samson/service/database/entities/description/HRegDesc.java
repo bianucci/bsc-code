@@ -218,4 +218,18 @@ public class HRegDesc {
 		return uB / aB;
 	}
 
+	public boolean hasWmwDesc() {
+		return this.wmwThisRegisterStoresMasseinheitKeyFor != null
+				|| this.wmwThisRegisterStoresValueFor != null;
+	}
+
+	public WmwDesc getLinkedWmwDesc() {
+		if (this.wmwThisRegisterStoresMasseinheitKeyFor != null)
+			return this.wmwThisRegisterStoresMasseinheitKeyFor;
+		if (this.wmwThisRegisterStoresValueFor != null)
+			return this.wmwThisRegisterStoresValueFor;
+		return null;
+
+	}
+
 }

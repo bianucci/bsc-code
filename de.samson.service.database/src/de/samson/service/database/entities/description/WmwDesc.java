@@ -26,7 +26,7 @@ public class WmwDesc {
 
 	String category;
 
-	@ManyToOne
+	@ManyToOne(cascade= CascadeType.ALL)
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzDesc wmz;
 
