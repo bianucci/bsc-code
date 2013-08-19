@@ -1,5 +1,6 @@
 package de.samson.service.database.entities.histdata;
 
+import javax.persistence.CascadeType;
 import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
@@ -20,7 +21,7 @@ public class WmwDataSource extends HistDataSource {
 	@JoinColumn(name = "wmw_desc_id", referencedColumnName = "id")
 	WmwDesc description;
 
-	@OneToOne(mappedBy = "dataSource")
+	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.REFRESH)
 	WmwData data;
 
 	@Transient

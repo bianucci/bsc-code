@@ -13,6 +13,7 @@ import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.WmwDesc;
 import de.samson.service.database.entities.histdata.WmwDataSource;
 
@@ -32,7 +33,7 @@ public class WmwData {
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzData wmz;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.MERGE)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	WmwDataSource dataSource;
 
@@ -60,6 +61,27 @@ public class WmwData {
 	}
 
 	public double getValue() {
+		double v = 0;
+		List<RegisterData> rd2 = getRd();
+		List<HRegDesc> werteRegister = description.getWerteRegister();
+
+		for (int i = 0; i < rd2.size(); i++) {
+
+			for (int j = 0; j < werteRegister.size(); j++) {
+
+				int getnRegisternr = rd.get(i).getnRegisternr();
+				int k = description.getWerteRegister().get(j).getHrnr() - 40000;
+
+				if (getnRegisternr == k) {
+					RegisterData registerData = rd.get(i);
+					int getsWert = registerData.getsWert();
+					double faktor = description.getWerteRegister().get(j)
+							.getFaktor();
+					v += getsWert * faktor;
+				}
+			}
+		}
+		setValue(v);
 		return value;
 	}
 

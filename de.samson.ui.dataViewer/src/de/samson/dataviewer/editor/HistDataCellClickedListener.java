@@ -18,6 +18,7 @@ import org.eclipse.ui.handlers.IHandlerService;
 import de.samson.dataviewer.PartID;
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.RegisterData;
+import de.samson.service.database.entities.data.WmwData;
 import de.samson.service.database.entities.histdata.HistDataSource;
 
 public class HistDataCellClickedListener implements Listener {
@@ -67,7 +68,12 @@ public class HistDataCellClickedListener implements Listener {
 				if (item.getData() instanceof CoilData) {
 					ds = ((CoilData) item.getData()).getDataSource();
 				} else if (item.getData() instanceof RegisterData) {
-					ds = ((RegisterData) item.getData()).getDataSource();
+					WmwData wmw = ((RegisterData) item.getData()).getWmw();
+					if (wmw != null) {
+						if (wmw.getDataSource() != null)
+							ds = wmw.getDataSource();
+					} else
+						ds = ((RegisterData) item.getData()).getDataSource();
 				}
 
 				// fire command to open hist data editor

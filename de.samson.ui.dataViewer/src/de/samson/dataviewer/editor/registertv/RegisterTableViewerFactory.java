@@ -67,12 +67,17 @@ public class RegisterTableViewerFactory {
 			public String getText(Object element) {
 				RegisterData rd = (RegisterData) element;
 				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
+				String v = "n.a.";
 
 				double s = sr.getSkalierungsfaktor();
+
+				if (rd.getWmw() != null)
+					return String.valueOf(rd.getWmw().getValue());
+
 				if (s == 1) {
 					return String.valueOf((int) rd.getsWert());
 				} else {
-					String v = String.valueOf(rd.getsWert() / s);
+					v = String.valueOf(rd.getsWert() / s);
 
 					String[] split = v.split("\\.");
 					if ((s == 100) && (split[1].length() < 2))
@@ -97,7 +102,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public Image getImage(Object element) {
 				RegisterData rd = (RegisterData) element;
-				if (rd.getDataSource() != null) {
+				if ((rd.getDataSource() != null) || (rd.getWmw() != null)) {
 					return HIST_DATA_AVAILABLE;
 				}
 				return null;
