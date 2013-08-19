@@ -26,6 +26,7 @@ import de.samson.service.database.entities.histdata.HRegDataSource;
 import de.samson.service.database.entities.histdata.HistDataSet;
 import de.samson.service.database.entities.histdata.HistDataSource;
 import de.samson.service.database.entities.histdata.HistValue;
+import de.samson.service.database.entities.histdata.WmwDataSource;
 
 public class DefaultEntityFactory {
 
@@ -198,5 +199,18 @@ public class DefaultEntityFactory {
 		v.setRec_time(new Date(System.currentTimeMillis()));
 		v.setValue(0);
 		return v;
+	}
+
+	public static WmwDataSource createNewWmwDataSource(WmwDesc wmw,
+			WmwData wmwData) {
+		WmwDataSource ds = new WmwDataSource();
+		ds.setBezeichnung("WMW der Kategorie " + wmw.getCategory() + " am WMZ "
+				+ wmwData.getWmz().getDescription().getBezeichnung());
+		ds.setData(wmwData);
+		ds.setDescription(wmw);
+		ds.setHistoricalValues(new ArrayList<HistValue>());
+		ds.setDataSets(new ArrayList<HistDataSet>());
+		ds.setTotband(1);
+		return ds;
 	}
 }

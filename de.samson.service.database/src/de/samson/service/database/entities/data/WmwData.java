@@ -1,5 +1,7 @@
 package de.samson.service.database.entities.data;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -32,6 +35,9 @@ public class WmwData {
 	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	WmwDataSource dataSource;
+
+	@OneToMany(mappedBy = "wmw", cascade = CascadeType.ALL)
+	List<RegisterData> rd;
 
 	double value;
 
@@ -68,4 +74,29 @@ public class WmwData {
 	public void setEinheit(int einheit) {
 		this.einheit = einheit;
 	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public WmwDataSource getDataSource() {
+		return dataSource;
+	}
+
+	public void setDataSource(WmwDataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	public List<RegisterData> getRd() {
+		return rd;
+	}
+
+	public void setRd(List<RegisterData> rd) {
+		this.rd = rd;
+	}
+
 }

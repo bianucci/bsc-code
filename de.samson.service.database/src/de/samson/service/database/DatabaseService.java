@@ -25,17 +25,23 @@ import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.config.Standort;
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.RegisterData;
+import de.samson.service.database.entities.data.RegisterDataID;
 import de.samson.service.database.entities.data.ReglerData;
+import de.samson.service.database.entities.data.WmwData;
+import de.samson.service.database.entities.data.WmzData;
 import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.entities.description.CoilDescID;
 import de.samson.service.database.entities.description.GeraeteDesc;
 import de.samson.service.database.entities.description.GeraeteDescID;
 import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.HRegDescID;
+import de.samson.service.database.entities.description.WmwDesc;
+import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 import de.samson.service.database.entities.histdata.HistDataSet;
 import de.samson.service.database.entities.histdata.HistDataSource;
+import de.samson.service.database.entities.histdata.WmwDataSource;
 import de.samson.service.database.util.DefaultEntityFactory;
 
 public class DatabaseService extends Observable {
@@ -331,6 +337,61 @@ public class DatabaseService extends Observable {
 
 		// store the new Entity instances
 		persistEntity(cd);
+	}
+
+	public static void addNewDataSourceForWMW(RegisterData rd, WmwDesc wmwDesc) {
+		WmwDataSource ds = null;
+
+		List<WmzData> allWmz = rd.getReglerData().getReglerConfig().getAllWmz();
+		for (int i = 0; i < allWmz.size(); i++) {
+
+			WmzDesc tempWmzDesc = allWmz.get(i).getDescription();
+			if (tempWmzDesc.equals(wmwDesc.getWmz())) {
+
+				List<WmwData> tempAllWmw = allWmz.get(i).getAllWMW();
+				for (int j = 0; j < tempAllWmw.size(); j++) {
+
+					WmwData data = tempAllWmw.get(j);
+					if (data.getDescription().equals(wmwDesc)) {
+
+						ds = DefaultEntityFactory.createNewWmwDataSource(
+								wmwDesc, data);
+
+						// create default historical value for later comparison
+						ds.addHistVal(DefaultEntityFactory
+								.createNewHistValue(ds));
+						System.out.println();
+
+						data.setDataSource(ds);
+						data.setEinheit(0);
+
+						HRegDesc registerEinheitIsStoredIn = wmwDesc
+								.getRegisterEinheitIsStoredIn();
+						List<HRegDesc> werteRegister = wmwDesc
+								.getWerteRegister();
+
+						RegisterData registerData = (RegisterData) findEntityByID(
+								RegisterData.class,
+								new RegisterDataID(
+										allWmz.get(i).getReglerConfig()
+												.getnId(),
+										registerEinheitIsStoredIn.getHrnr() - 40000));
+						registerData.setWmw(data);
+
+						for (int l = 0; l < werteRegister.size(); l++) {
+							registerData = (RegisterData) findEntityByID(
+									RegisterData.class, new RegisterDataID(
+											allWmz.get(i).getReglerConfig()
+													.getnId(), werteRegister
+													.get(l).getHrnr() - 40000));
+							registerData.setWmw(data);
+						}
+						persistEntity(data);
+						return;
+					}
+				}
+			}
+		}
 	}
 
 	public static List<HistDataSource> getAllDataSources() {

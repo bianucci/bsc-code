@@ -40,6 +40,10 @@ public class RegisterData {
 			@JoinColumn(name = "nRegisternr", referencedColumnName = "nRegisternr", insertable = false, updatable = false), })
 	RegisterConfig config;
 
+	@ManyToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "wmw_id", referencedColumnName = "id")
+	WmwData wmw;
+
 	private byte[] sWert;
 	private int nIntervall;
 	private int nGruppe;
@@ -139,6 +143,14 @@ public class RegisterData {
 
 	public void setConfig(RegisterConfig config) {
 		this.config = config;
+	}
+
+	public WmwData getWmw() {
+		return wmw;
+	}
+
+	public void setWmw(WmwData wmw) {
+		this.wmw = wmw;
 	}
 
 }

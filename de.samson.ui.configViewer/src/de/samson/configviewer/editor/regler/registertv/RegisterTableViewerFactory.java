@@ -1,6 +1,7 @@
 package de.samson.configviewer.editor.regler.registertv;
 
 import java.net.URL;
+import java.util.ArrayList;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
@@ -25,7 +26,9 @@ import de.samson.service.database.DatabaseService;
 import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.data.RegisterDataID;
+import de.samson.service.database.entities.data.WmwData;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.entities.description.WmwDesc;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 
 public class RegisterTableViewerFactory {
@@ -55,14 +58,16 @@ public class RegisterTableViewerFactory {
 		@Override
 		protected Object getValue(Object element) {
 			HRegDesc desc = (HRegDesc) element;
+
 			RegisterDataID id = new RegisterDataID(rc.getnId(),
 					desc.getHrnr() - 40000);
 			RegisterData rd = (RegisterData) DatabaseService.findEntityByID(
 					RegisterData.class, id);
 			if (rd != null) {
-				return rd.getDataSource() != null;
-			} else
-				return false;
+				if ((rd.getDataSource() != null) || (rd.getWmw() != null))
+					return true;
+			}
+			return false;
 		}
 
 		@Override
@@ -74,7 +79,27 @@ public class RegisterTableViewerFactory {
 					RegisterData.class, id);
 			if (rd != null)
 				if (rd.getDataSource() == null) {
-					DatabaseService.addNewDataSourceForHoldingReg(rd);
+
+					if (desc.hasWmwDesc()) {
+						if (rd.getWmw() == null) {
+							WmwDesc wmw = desc.getLinkedWmwDesc();
+							DatabaseService.addNewDataSourceForWMW(rd, wmw);
+						} else {
+							WmwData wmw = rd.getWmw();
+							Object[] array = wmw.getRd().toArray();
+
+							wmw.setRd(new ArrayList<RegisterData>());
+							DatabaseService.persistEntity(wmw);
+
+							for (int i = 0; i < array.length; i++) {
+								((RegisterData) array[i]).setWmw(null);
+								DatabaseService.persistEntity(array[i]);
+							}
+
+						}
+					} else {
+						DatabaseService.addNewDataSourceForHoldingReg(rd);
+					}
 				} else {
 					HRegDataSource dataSource = rd.getDataSource();
 					rd.setDataSource(null);
@@ -82,7 +107,6 @@ public class RegisterTableViewerFactory {
 				}
 			viewer.refresh();
 		}
-
 	}
 
 	private static final Image CHECKED = getImage("checked.gif");
@@ -165,7 +189,7 @@ public class RegisterTableViewerFactory {
 				RegisterData rd = (RegisterData) DatabaseService
 						.findEntityByID(RegisterData.class, id);
 				if (rd != null) {
-					if (rd.getDataSource() != null)
+					if ((rd.getDataSource() != null) || (rd.getWmw() != null))
 						return CHECKED;
 				}
 				return UNCHECKED;
