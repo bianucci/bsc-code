@@ -326,7 +326,6 @@ public class ReglerConfEditor extends EditorPart {
 
 			regTV.getTable().setEnabled(true);
 			coilTV.getTable().setEnabled(true);
-
 			noComboChange = true;
 		}
 

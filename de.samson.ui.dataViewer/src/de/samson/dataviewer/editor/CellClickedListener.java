@@ -21,7 +21,7 @@ import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.data.WmwData;
 import de.samson.service.database.entities.histdata.HistDataSource;
 
-public class HistDataCellClickedListener implements Listener {
+public class CellClickedListener implements Listener {
 
 	private static final String openHistDataEditorCommandParameterID = "de.samson.ui.dataVisualizer.dataSourceId";
 
@@ -32,12 +32,15 @@ public class HistDataCellClickedListener implements Listener {
 	private TableViewer regTV;
 	private int histDataColumnIndex;
 
-	public HistDataCellClickedListener(TableViewer coilTV, TableViewer regTV,
-			int histDataColumnIndex) {
+	private int valueColumnIndex;
+
+	public CellClickedListener(TableViewer coilTV, TableViewer regTV,
+			int histDataColumnIndex, int valueColumnIndex) {
 		super();
 		this.coilTV = coilTV;
 		this.regTV = regTV;
 		this.histDataColumnIndex = histDataColumnIndex;
+		this.valueColumnIndex = valueColumnIndex;
 
 		commandService = (ICommandService) PlatformUI.getWorkbench()
 				.getService(ICommandService.class);
@@ -80,6 +83,18 @@ public class HistDataCellClickedListener implements Listener {
 				if (ds != null) {
 					fireOpenEditorCommand(ds);
 				}
+			}
+			
+			rect = item.getBounds(this.valueColumnIndex);
+			if (rect.contains(pt)) {
+
+				// check if hist data source is available for selected data
+				if (item.getData() instanceof CoilData) {
+					
+				} else if (item.getData() instanceof RegisterData) {
+					
+				}
+
 			}
 		}
 	}

@@ -43,8 +43,13 @@ public class DescFileManagerView extends ViewPart {
 			public void widgetSelected(SelectionEvent e) {
 				List<GeraeteDesc> toPersist = v2.getCheckedElements();
 				for (GeraeteDesc s : toPersist) {
-					DatabaseService.addEntity(s);
+					try {
+						DatabaseService.addEntity(s);
+					} catch (Exception anyExc) {
+						System.out.println();
+					}
 				}
+//				DatabaseService.refreshData();
 				v1.refreshTreeViewer();
 			}
 		});

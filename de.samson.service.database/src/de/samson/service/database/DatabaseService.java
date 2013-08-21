@@ -268,6 +268,16 @@ public class DatabaseService extends Observable {
 			rc.setReglerDescription(s);
 			rc.setsTyp(reglerTyp);
 			rc.setDescFileRevision(revNR);
+
+			List<WmzData> allWmz = DefaultEntityFactory
+					.createAllWmzStoredInWmzDescription(s);
+			for (int i = 0; i < allWmz.size(); i++) {
+				WmzData wmzData = allWmz.get(i);
+				wmzData.setReglerConfig(rc);
+				rc.setAllWmz(allWmz);
+			}
+			rc.setAllWmz(allWmz);
+
 		}
 		transaction.commit();
 	}
@@ -346,7 +356,8 @@ public class DatabaseService extends Observable {
 		for (int i = 0; i < allWmz.size(); i++) {
 
 			WmzDesc tempWmzDesc = allWmz.get(i).getDescription();
-			if (tempWmzDesc.equals(wmwDesc.getWmz())) {
+			WmzDesc wmz = wmwDesc.getWmz();
+			if (tempWmzDesc.equals(wmz)) {
 
 				List<WmwData> tempAllWmw = allWmz.get(i).getAllWMW();
 				for (int j = 0; j < tempAllWmw.size(); j++) {

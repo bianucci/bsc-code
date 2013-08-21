@@ -33,7 +33,7 @@ public class WmwData {
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzData wmz;
 
-	@OneToOne(cascade = CascadeType.MERGE)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	WmwDataSource dataSource;
 

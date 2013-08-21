@@ -127,8 +127,8 @@ public class ReglerDataEditor extends EditorPart {
 		// Set Hist Data Cell Clicked Listener to fire Open Editor Command if
 		// user clicked on a cell in the hist data column of the register table
 		// and the coil table
-		HistDataCellClickedListener histDataColumnClickedListener = new HistDataCellClickedListener(
-				coilTV, regTV, 3);
+		CellClickedListener histDataColumnClickedListener = new CellClickedListener(
+				coilTV, regTV, 3, 2);
 		coilTV.getTable().addListener(SWT.MouseDown,
 				histDataColumnClickedListener);
 		regTV.getTable().addListener(SWT.MouseDown,

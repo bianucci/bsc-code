@@ -23,6 +23,7 @@ public class RegisterTableViewerFactory {
 
 	private static TableViewer tv;
 	protected static Image HIST_DATA_AVAILABLE = getImage("hist_data_available.gif");
+	protected static Image EDITABLE = getImage("editable.gif");
 
 	public static TableViewer createTV(Group g) {
 		tv = new TableViewer(g, SWT.MULTI | SWT.H_SCROLL | SWT.V_SCROLL
@@ -88,6 +89,17 @@ public class RegisterTableViewerFactory {
 							v += "=";
 					return v;
 				}
+			}
+
+			@Override
+			public Image getImage(Object element) {
+				RegisterData rd = (RegisterData) element;
+				HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
+
+				if (sr.isRo())
+					return null;
+				else
+					return EDITABLE;
 			}
 		});
 		c.setEditingSupport(new RegValueEditingSupport(tv));

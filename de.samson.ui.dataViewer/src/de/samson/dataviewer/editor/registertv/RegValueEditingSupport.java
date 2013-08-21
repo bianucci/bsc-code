@@ -33,6 +33,8 @@ public class RegValueEditingSupport extends EditingSupport {
 	@Override
 	protected boolean canEdit(Object element) {
 		RegisterData rd = (RegisterData) element;
+		if (rd.getWmw() != null)
+			return false;
 		HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 		return !sr.isRo();
 	}
@@ -43,7 +45,7 @@ public class RegValueEditingSupport extends EditingSupport {
 		int w = rd.getsWert();
 		String rawdata = String.valueOf(w);
 
-			HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
+		HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
 		double f = sr.getSkalierungsfaktor();
 
 		if (f == 1) {
@@ -56,9 +58,9 @@ public class RegValueEditingSupport extends EditingSupport {
 				scaledValue += "0";
 
 			else if ((f == 1000) && (split[1].length() < 3))
-				for(int i=0;i<3-split[1].length();i++)
-					scaledValue+="=";
-			
+				for (int i = 0; i < 3 - split[1].length(); i++)
+					scaledValue += "=";
+
 			System.out.println("getScaledValue " + scaledValue);
 			return scaledValue;
 		}
