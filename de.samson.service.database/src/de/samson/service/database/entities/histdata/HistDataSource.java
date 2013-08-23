@@ -151,7 +151,7 @@ public abstract class HistDataSource implements IDataProvider {
 	public abstract double getLastHistoricalValue();
 
 	public abstract double getCurrentValue();
-	
+
 	public abstract String getyAxisName();
 
 }

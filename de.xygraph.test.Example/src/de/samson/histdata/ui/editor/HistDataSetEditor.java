@@ -27,7 +27,8 @@ public class HistDataSetEditor extends EditorPart {
 	private HistDataSet dataSet;
 	private LightweightSystem lws;
 	private XYGraph xyGraph;
-	private static Color RED;
+	private static Color RED = XYGraphMediaFactory.getInstance().getColor(
+			XYGraphMediaFactory.COLOR_RED);;
 
 	@Override
 	public void doSave(IProgressMonitor monitor) {
@@ -50,9 +51,6 @@ public class HistDataSetEditor extends EditorPart {
 
 		dataSet = this.input.getDataSet();
 		setPartName(dataSet.getName());
-
-		RED = XYGraphMediaFactory.getInstance().getColor(
-				XYGraphMediaFactory.COLOR_RED);
 	}
 
 	@Override
@@ -82,12 +80,13 @@ public class HistDataSetEditor extends EditorPart {
 		xyGraph.primaryYAxis.setTitle(dataSet.getyAxisName());
 		xyGraph.primaryYAxis.setAutoScale(true);
 		xyGraph.primaryYAxis.setShowMajorGrid(true);
-		xyGraph.primaryYAxis.setAutoScaleThreshold(0);
+		xyGraph.primaryYAxis.setAutoScaleThreshold(0.1);
 
 		ToolbarArmedXYGraph toolbarArmedXYGraph = new ToolbarArmedXYGraph(
 				xyGraph);
 
 		xyGraph.setTitle(dataSet.getName());
+
 		// set it as the content of LightwightSystem
 		lws.setContents(toolbarArmedXYGraph);
 
@@ -97,12 +96,9 @@ public class HistDataSetEditor extends EditorPart {
 		// add the trace to xyGraph
 		for (int i = 0; i < dataSet.getData_sources().size(); i++) {
 			HistDataSource ds = dataSet.getData_sources().get(i);
-			Trace t = createTraceForDataSource(ds, RED, TraceType.AREA,
-					PointStyle.BAR);
+			Trace t = createTraceForDataSource(ds, HistDataSetEditor.RED,
+					TraceType.AREA, PointStyle.FILLED_DIAMOND);
 			xyGraph.addTrace(t);
-			if ((ds.getYDataMinMax().getUpper() == 1)
-					&& (ds.getYDataMinMax().getLower() == 0))
-				t.setTraceType(TraceType.STEP_HORIZONTALLY);
 		}
 	}
 
@@ -113,8 +109,16 @@ public class HistDataSetEditor extends EditorPart {
 		t.setLineWidth(2);
 		t.setAntiAliasing(true);
 		t.setTraceType(tt);
+		t.setPointStyle(ps);
 		t.setAntiAliasing(true);
-		t.setBackgroundColor(bg);
+		t.setTraceColor(bg);
+
+		if ((ds.getYDataMinMax().getUpper() == 1)
+				&& (ds.getYDataMinMax().getLower() == 0)) {
+			t.setTraceType(TraceType.STEP_HORIZONTALLY);
+			t.setPointStyle(PointStyle.NONE);
+		}
+
 		return t;
 	}
 

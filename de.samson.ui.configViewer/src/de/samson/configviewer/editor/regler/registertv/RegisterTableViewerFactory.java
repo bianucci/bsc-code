@@ -72,19 +72,28 @@ public class RegisterTableViewerFactory {
 
 		@Override
 		protected void setValue(Object element, Object value) {
+			
 			HRegDesc desc = (HRegDesc) element;
+			
 			RegisterDataID id = new RegisterDataID(rc.getnId(),
 					desc.getHrnr() - 40000);
+			
 			RegisterData rd = (RegisterData) DatabaseService.findEntityByID(
 					RegisterData.class, id);
+			
 			if (rd != null)
+				
 				if (rd.getDataSource() == null) {
-
+					
 					if (desc.hasWmwDesc()) {
+						
 						if (rd.getWmw() == null) {
+							//add new wmw 
 							WmwDesc wmw = desc.getLinkedWmwDesc();
 							DatabaseService.addNewDataSourceForWMW(rd, wmw);
+							
 						} else {
+							// remove wmw 
 							WmwData wmw = rd.getWmw();
 							Object[] array = wmw.getRd().toArray();
 

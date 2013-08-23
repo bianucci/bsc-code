@@ -27,7 +27,9 @@ public class HistDataCollector {
 				DatabaseService.refreshEntity(source);
 
 				double last = source.getLastHistoricalValue();
-				double currLo = source.getCurrentValue() - source.getTotband();
+				double currLo;
+				currLo = source.getCurrentValue() - source.getTotband();
+
 				double currHi = source.getCurrentValue() + source.getTotband();
 
 				HistValue newHistVal = new HistValue();
@@ -38,9 +40,8 @@ public class HistDataCollector {
 					newHistVal
 							.setRec_time(new Date(System.currentTimeMillis()));
 
-					source.getHistoricalValues().add(newHistVal);
-
 					newHistVal.setValue(source.getCurrentValue());
+					source.getHistoricalValues().add(newHistVal);
 
 					DatabaseService.persistEntity(source);
 					System.out.println("New hist value "

@@ -26,7 +26,7 @@ public class HRegDataSource extends HistDataSource {
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	HRegDesc hrd;
 
-	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.REFRESH)
+	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.REFRESH )
 	RegisterData data;
 
 	public HRegDesc getHrd() {
