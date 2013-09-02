@@ -17,6 +17,7 @@ Export-Package: de.samson.service.database,
  de.samson.service.database.entities.data,
  de.samson.service.database.entities.description,
  de.samson.service.database.entities.histdata,
+ de.samson.service.database.ientities.histdata,
  de.samson.service.database.impl,
  de.samson.service.database.listener,
  de.samson.service.database.util

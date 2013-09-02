@@ -19,7 +19,7 @@ import de.samson.dataviewer.PartID;
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.data.WmwData;
-import de.samson.service.database.entities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 
 public class CellClickedListener implements Listener {
 

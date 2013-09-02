@@ -5,6 +5,7 @@ import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
@@ -13,6 +14,7 @@ import org.csstudio.swt.xygraph.linearscale.Range;
 
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.CoilDesc;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 
 @Entity
 @DiscriminatorValue("coil")
@@ -26,7 +28,12 @@ public class CoilDataSource extends HistDataSource {
 			@JoinColumn(name = "desc_revision", referencedColumnName = "revision") })
 	CoilDesc cd;
 
-	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.REFRESH)
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinTable(name = "coil_datasrc_has_coildata",schema="s_modbusphp_data", joinColumns = { 
+			@JoinColumn(name = "coil_data_source_id", referencedColumnName = "id") }, 
+			inverseJoinColumns = {
+			@JoinColumn(name = "coils_nRegler_id", referencedColumnName = "nRegler_id"),
+			@JoinColumn(name = "coils_nCoilnr", referencedColumnName = "nCoilnr") })
 	CoilData data;
 
 	public CoilDesc getCd() {

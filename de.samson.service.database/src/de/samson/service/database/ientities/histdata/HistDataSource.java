@@ -1,4 +1,4 @@
-package de.samson.service.database.entities.histdata;
+package de.samson.service.database.ientities.histdata;
 
 import java.util.Date;
 import java.util.List;
@@ -24,6 +24,9 @@ import org.csstudio.swt.xygraph.dataprovider.IDataProviderListener;
 import org.csstudio.swt.xygraph.dataprovider.ISample;
 import org.csstudio.swt.xygraph.linearscale.Range;
 
+import de.samson.service.database.entities.histdata.HistDataSet;
+import de.samson.service.database.entities.histdata.HistValue;
+
 @Entity
 @Table(name = "hist_data.data_source")
 @Inheritance(strategy = InheritanceType.JOINED)
@@ -41,12 +44,12 @@ public abstract class HistDataSource implements IDataProvider {
 
 	double totband;
 
-	@OneToMany(cascade = CascadeType.ALL, mappedBy = "data_source")
-	List<HistValue> historicalValues;
+	@OneToMany(cascade = CascadeType.ALL, mappedBy = "data_source", targetEntity = HistValue.class)
+	protected List<IHistValue> historicalValues;
 
 	@ManyToMany
 	@JoinTable(name = "hist_data_set_has_data_source", schema = "hist_data", joinColumns = @JoinColumn(name = "data_source_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "hist_data_set_id", referencedColumnName = "id"))
-	List<HistDataSet> dataSets;
+	protected List<HistDataSet> dataSets;
 
 	@Transient
 	@Override
@@ -69,7 +72,7 @@ public abstract class HistDataSource implements IDataProvider {
 	@Transient
 	@Override
 	public Range getXDataMinMax() {
-		HistValue start = historicalValues.get(0);
+		IHistValue start = historicalValues.get(0);
 		Range r = new Range(start.getXValue(), System.currentTimeMillis());
 		return r;
 	}
@@ -120,11 +123,11 @@ public abstract class HistDataSource implements IDataProvider {
 		this.bezeichnung = bezeichnung;
 	}
 
-	public List<HistValue> getHistoricalValues() {
+	public List<IHistValue> getHistoricalValues() {
 		return historicalValues;
 	}
 
-	public void setHistoricalValues(List<HistValue> historicalValues) {
+	public void setHistoricalValues(List<IHistValue> historicalValues) {
 		this.historicalValues = historicalValues;
 	}
 

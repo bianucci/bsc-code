@@ -24,8 +24,9 @@
 		<class>de.samson.service.database.entities.data.WmzData</class>
 		<class>de.samson.service.database.entities.data.WmwData</class>
 
+		<class>de.samson.service.database.ientities.histdata.HistDataSource</class>
+		
 		<class>de.samson.service.database.entities.histdata.HistDataSet</class>
-		<class>de.samson.service.database.entities.histdata.HistDataSource</class>
 		<class>de.samson.service.database.entities.histdata.HistValue</class>
 		<class>de.samson.service.database.entities.histdata.CoilDataSource</class>
 		<class>de.samson.service.database.entities.histdata.HRegDataSource</class>

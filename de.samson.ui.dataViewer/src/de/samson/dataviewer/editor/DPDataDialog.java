@@ -160,4 +160,5 @@ public class DPDataDialog extends Dialog {
 		write(tValue.getText());
 		super.okPressed();
 	}
+
 }

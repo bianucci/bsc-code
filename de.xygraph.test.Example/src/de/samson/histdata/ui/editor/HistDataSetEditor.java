@@ -18,13 +18,13 @@ import org.eclipse.ui.IEditorSite;
 import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.part.EditorPart;
 
-import de.samson.service.database.entities.histdata.HistDataSet;
-import de.samson.service.database.entities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.IHistDataSet;
 
 public class HistDataSetEditor extends EditorPart {
 
 	private HistDataEditorInput input;
-	private HistDataSet dataSet;
+	private IHistDataSet dataSet;
 	private LightweightSystem lws;
 	private XYGraph xyGraph;
 	private static Color RED = XYGraphMediaFactory.getInstance().getColor(

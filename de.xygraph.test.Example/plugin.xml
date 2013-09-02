@@ -28,7 +28,7 @@
             name="Open Editor">
          <commandParameter
                id="de.samson.ui.dataVisualizer.dataSourceId"
-               name="Id of the HistDataSet to visualize"
+               name="IdOfHistdatasetToVisualize"
                optional="false">
          </commandParameter>
       </command>

@@ -7,17 +7,20 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import de.samson.service.database.entities.config.CoilConfig;
 import de.samson.service.database.entities.histdata.CoilDataSource;
+import de.samson.service.database.ientities.histdata.IDataProvider;
 
 @Entity
 @Table(name = "Coils", schema = "s_modbusphp_data")
 @IdClass(value = CoilDataID.class)
-public class CoilData {
+public class CoilData implements IDataProvider {
 	@Id
 	private int nCoilnr;
 	private boolean bWert;
@@ -34,7 +37,10 @@ public class CoilData {
 	ReglerData reglerData;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
+	@JoinTable(name = "coil_datasrc_has_coildata", schema = "s_modbusphp_data", joinColumns = {
+			@JoinColumn(name = "coils_nRegler_id", referencedColumnName = "nRegler_id"),
+			@JoinColumn(name = "coils_nCoilnr", referencedColumnName = "nCoilnr") }, 
+			inverseJoinColumns = { @JoinColumn(name = "coil_data_source_id", referencedColumnName = "id") })
 	CoilDataSource dataSource;
 
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
@@ -140,7 +146,13 @@ public class CoilData {
 	public void setConfig(CoilConfig config) {
 		this.config = config;
 	}
-	
-	
 
+	@Transient
+	@Override
+	public double getCurrentValue() {
+		if (getWert())
+			return 1;
+		else
+			return 0;
+	}
 }

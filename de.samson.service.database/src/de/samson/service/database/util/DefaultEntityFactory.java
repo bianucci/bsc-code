@@ -24,9 +24,10 @@ import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 import de.samson.service.database.entities.histdata.HistDataSet;
-import de.samson.service.database.entities.histdata.HistDataSource;
 import de.samson.service.database.entities.histdata.HistValue;
 import de.samson.service.database.entities.histdata.WmwDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.IHistValue;
 
 public class DefaultEntityFactory {
 
@@ -177,7 +178,7 @@ public class DefaultEntityFactory {
 		HRegDataSource ds = new HRegDataSource();
 		ds.setBezeichnung("Register " + desc.getHrnr());
 		ds.setDataSets(new ArrayList<HistDataSet>());
-		ds.setHistoricalValues(new ArrayList<HistValue>());
+		ds.setHistoricalValues(new ArrayList<IHistValue>());
 		ds.setHrd(desc);
 		ds.setTotband(1);
 		return ds;
@@ -187,7 +188,7 @@ public class DefaultEntityFactory {
 		CoilDataSource ds = new CoilDataSource();
 		ds.setBezeichnung("Coil " + desc.getClnr());
 		ds.setDataSets(new ArrayList<HistDataSet>());
-		ds.setHistoricalValues(new ArrayList<HistValue>());
+		ds.setHistoricalValues(new ArrayList<IHistValue>());
 		ds.setCd(desc);
 		ds.setTotband(1);
 		return ds;
@@ -208,7 +209,7 @@ public class DefaultEntityFactory {
 				+ wmwData.getWmz().getDescription().getBezeichnung());
 		ds.setData(wmwData);
 		ds.setDescription(wmw);
-		ds.setHistoricalValues(new ArrayList<HistValue>());
+		ds.setHistoricalValues(new ArrayList<IHistValue>());
 		ds.setDataSets(new ArrayList<HistDataSet>());
 		ds.setTotband(1);
 		return ds;

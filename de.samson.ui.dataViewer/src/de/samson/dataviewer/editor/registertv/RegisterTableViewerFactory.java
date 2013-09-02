@@ -17,6 +17,7 @@ import org.osgi.framework.FrameworkUtil;
 
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.HRegDesc;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class RegisterTableViewerFactory {
@@ -114,7 +115,7 @@ public class RegisterTableViewerFactory {
 			@Override
 			public Image getImage(Object element) {
 				RegisterData rd = (RegisterData) element;
-				if ((rd.getDataSource() != null) || (rd.getWmw() != null)) {
+				if ((((HistDataSource)rd.getDataSource()) != null) || (rd.getWmw() != null)) {
 					return HIST_DATA_AVAILABLE;
 				}
 				return null;

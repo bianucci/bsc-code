@@ -12,10 +12,16 @@
    <extension
          point="org.eclipse.ui.preferencePages">
       <page
-            class="de.samson.service.histdatacollector.WorkbenchPreferencePage1"
+            class="de.samson.service.histdatacollector.CollectorPreferencePage"
             id="de.samson.service.histDataCollector.page1"
             name="Hist Data Collector">
       </page>
+   </extension>
+   <extension
+         point="org.eclipse.core.runtime.preferences">
+      <initializer
+            class="de.samson.service.histdatacollector.CollectorInitializer">
+      </initializer>
    </extension>
 
 

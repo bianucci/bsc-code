@@ -7,17 +7,21 @@ import javax.persistence.Id;
 import javax.persistence.IdClass;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import de.samson.service.database.entities.config.RegisterConfig;
 import de.samson.service.database.entities.histdata.HRegDataSource;
+import de.samson.service.database.ientities.histdata.IDataProvider;
+import de.samson.service.database.util.DataConverterUtil;
 
 @Entity
 @Table(name = "Register", schema = "s_modbusphp_data")
 @IdClass(value = RegisterDataID.class)
-public class RegisterData {
+public class RegisterData implements IDataProvider {
 
 	@Id
 	private int nRegisternr;
@@ -31,7 +35,10 @@ public class RegisterData {
 	ReglerData reglerData;
 
 	@OneToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "data_source_id", referencedColumnName = "id", nullable = true)
+	@JoinTable(name = "hreg_datasrc_has_hregdata",schema="s_modbusphp_data", joinColumns = {
+			@JoinColumn(name = "register_nRegler_id", referencedColumnName = "nRegler_id"),
+			@JoinColumn(name = "register_nRegisternr", referencedColumnName = "nRegisternr") }, 
+			inverseJoinColumns = { @JoinColumn(name = "hreg_data_source_id", referencedColumnName = "id") })
 	HRegDataSource dataSource;
 
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
@@ -41,7 +48,10 @@ public class RegisterData {
 	RegisterConfig config;
 
 	@ManyToOne(cascade = CascadeType.ALL)
-	@JoinColumn(name = "wmw_id", referencedColumnName = "id")
+	@JoinTable(name = "wmw_consists_of_hregdata",schema="s_modbusphp_data", joinColumns = {
+			@JoinColumn(name = "register_nRegler_id", referencedColumnName = "nRegler_id"),
+			@JoinColumn(name = "register_nRegisternr", referencedColumnName = "nRegisternr") }, 
+			inverseJoinColumns = { @JoinColumn(name = "wmw_id", referencedColumnName = "id") })
 	WmwData wmw;
 
 	private byte[] sWert;
@@ -151,6 +161,16 @@ public class RegisterData {
 
 	public void setWmw(WmwData wmw) {
 		this.wmw = wmw;
+	}
+
+	@Transient
+	@Override
+	public double getCurrentValue() {
+		int raw = getsWert();
+		double d = raw
+				/ DataConverterUtil.getRegisterDescForData(this)
+						.getSkalierungsfaktor();
+		return d;
 	}
 
 }

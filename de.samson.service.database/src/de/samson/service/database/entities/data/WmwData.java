@@ -8,18 +8,21 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.WmwDesc;
 import de.samson.service.database.entities.histdata.WmwDataSource;
+import de.samson.service.database.ientities.histdata.IDataProvider;
 
 @Entity
 @Table(name = "wmw", schema = "s_modbusphp_data")
-public class WmwData {
+public class WmwData implements IDataProvider{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -37,7 +40,12 @@ public class WmwData {
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	WmwDataSource dataSource;
 
-	@OneToMany(mappedBy = "wmw", cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.ALL)
+	@JoinTable(name = "wmw_consists_of_hregdata", schema = "s_modbusphp_data" , joinColumns = { 
+			@JoinColumn(name = "wmw_id", referencedColumnName = "id") }, 
+			inverseJoinColumns = {
+			@JoinColumn(name = "register_nRegler_id", referencedColumnName = "nRegler_id"),
+			@JoinColumn(name = "register_nRegisternr", referencedColumnName = "nRegisternr") })
 	List<RegisterData> rd;
 
 	double value;
@@ -59,6 +67,7 @@ public class WmwData {
 	public void setWmz(WmzData wmz) {
 		this.wmz = wmz;
 	}
+
 
 	public double getValue() {
 		double v = 0;
@@ -121,4 +130,9 @@ public class WmwData {
 		this.rd = rd;
 	}
 
+	@Transient
+	@Override
+	public double getCurrentValue() {
+		return getValue();
+	}
 }

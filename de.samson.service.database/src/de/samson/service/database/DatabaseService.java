@@ -1,6 +1,7 @@
 package de.samson.service.database;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -40,8 +41,9 @@ import de.samson.service.database.entities.description.WmzDesc;
 import de.samson.service.database.entities.histdata.CoilDataSource;
 import de.samson.service.database.entities.histdata.HRegDataSource;
 import de.samson.service.database.entities.histdata.HistDataSet;
-import de.samson.service.database.entities.histdata.HistDataSource;
+import de.samson.service.database.entities.histdata.HistValue;
 import de.samson.service.database.entities.histdata.WmwDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 import de.samson.service.database.util.DefaultEntityFactory;
 
 public class DatabaseService extends Observable {
@@ -319,7 +321,9 @@ public class DatabaseService extends Observable {
 
 		// establish references between datasource and register data
 		rd.setDataSource(ds);
-		ds.setData(rd);
+		// ds.setData(rd); causes duplicate entry exceptions
+
+		persistEntity(ds);
 
 		// create default hist value for later comparison
 		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
@@ -340,7 +344,7 @@ public class DatabaseService extends Observable {
 
 		// establish references between datasource and coil data
 		cd.setDataSource(ds);
-		ds.setData(cd);
+		// ds.setData(cd);causes duplicate entry exceptions
 
 		// create default historical value for later comparison
 		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
@@ -419,6 +423,30 @@ public class DatabaseService extends Observable {
 
 	public static HistDataSource getDataSourceByID(int id) {
 		return (HistDataSource) findEntityByID(HistDataSource.class, id);
+	}
 
+	public static void addHistValue(HistDataSource source) {
+		HistValue newHistVal = new HistValue();
+
+		newHistVal.setData_source(source);
+		newHistVal.setRec_time(new Date(System.currentTimeMillis()));
+
+		newHistVal.setValue(source.getCurrentValue());
+		source.getHistoricalValues().add(newHistVal);
+
+		System.out.println("New hist value " + newHistVal.getValue()
+				+ " added for HistDataSource " + source.getId());
+	}
+
+	public static void removeWmwDataSource(WmwData wmwData) {
+		Object[] array = wmwData.getRd().toArray();
+
+		wmwData.setRd(new ArrayList<RegisterData>());
+		DatabaseService.persistEntity(wmwData);
+
+		for (int i = 0; i < array.length; i++) {
+			((RegisterData) array[i]).setWmw(null);
+			DatabaseService.persistEntity(array[i]);
+		}
 	}
 }

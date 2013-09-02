@@ -17,6 +17,7 @@ import org.osgi.framework.FrameworkUtil;
 
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.CoilDesc;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class CoilTableViewerFactory {
@@ -85,7 +86,7 @@ public class CoilTableViewerFactory {
 			@Override
 			public Image getImage(Object element) {
 				CoilData cd = (CoilData) element;
-				if (cd.getDataSource() != null) {
+				if (((HistDataSource)cd.getDataSource()) != null) {
 					return HIST_DATA_AVAILABLE;
 				}
 				return null;

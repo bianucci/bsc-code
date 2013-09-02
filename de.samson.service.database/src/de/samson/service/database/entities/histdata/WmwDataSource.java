@@ -11,6 +11,7 @@ import javax.persistence.Transient;
 
 import de.samson.service.database.entities.data.WmwData;
 import de.samson.service.database.entities.description.WmwDesc;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 
 @Entity
 @DiscriminatorValue("wmw")
@@ -33,7 +34,7 @@ public class WmwDataSource extends HistDataSource {
 	@Transient
 	@Override
 	public double getCurrentValue() {
-		return data.getValue();
+		return data.getCurrentValue();
 	}
 
 	public WmwDesc getDescription() {
@@ -60,7 +61,7 @@ public class WmwDataSource extends HistDataSource {
 			if (description.getMasseinheiten().get(i).getKeyEinheit()
 					.equals(einheitKey))
 				return description.getMasseinheiten().get(i).getValueEinheit();
-		return this.bezeichnung;
+		return this.getBezeichnung();
 	}
 
 }

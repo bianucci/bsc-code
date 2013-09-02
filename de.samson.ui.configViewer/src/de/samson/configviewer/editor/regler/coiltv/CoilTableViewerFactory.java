@@ -26,7 +26,7 @@ import de.samson.service.database.entities.config.ReglerConfig;
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.CoilDataID;
 import de.samson.service.database.entities.description.CoilDesc;
-import de.samson.service.database.entities.histdata.CoilDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 
 public class CoilTableViewerFactory {
 
@@ -74,7 +74,7 @@ public class CoilTableViewerFactory {
 				if (cd.getDataSource() == null) {
 					DatabaseService.addNewDataSourceForCoil(cd);
 				} else {
-					CoilDataSource dataSource = cd.getDataSource();
+					HistDataSource dataSource = cd.getDataSource();
 					cd.setDataSource(null);
 					DatabaseService.removeEntity(dataSource);
 				}

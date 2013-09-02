@@ -12,6 +12,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import de.samson.service.database.ientities.histdata.HistDataSource;
+
 @Entity
 @Table(name = "hist_data.hist_data_set")
 public class HistDataSet {

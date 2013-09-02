@@ -1,38 +1,56 @@
 package de.samson.histdata.ui.editor;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.ui.IEditorInput;
 import org.eclipse.ui.IPersistableElement;
 
-import de.samson.service.database.entities.histdata.HistDataSet;
-import de.samson.service.database.entities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.IHistDataSet;
 
 public class HistDataEditorInput implements IEditorInput {
 
-	HistDataSet dataSet;
+	IHistDataSet mockedDataSet;
 	boolean dataSetTemporallyGenerated;
 
-	public HistDataEditorInput(HistDataSet toVisualize) {
+	public HistDataEditorInput(IHistDataSet toVisualize) {
 		super();
-		this.dataSet = toVisualize;
+		this.mockedDataSet = toVisualize;
 		dataSetTemporallyGenerated = false;
 	}
 
-	public HistDataEditorInput(HistDataSource toVisualize, String dataSetName,
-			String xAxisName, String yAxisName) {
+	public HistDataEditorInput(HistDataSource toVisualize, final String dataSetName,
+			final String xAxisName, final String yAxisName) {
 		super();
-		ArrayList<HistDataSource> data_sources = new ArrayList<HistDataSource>();
+		final ArrayList<HistDataSource> data_sources = new ArrayList<HistDataSource>();
 		data_sources.add(toVisualize);
 
-		dataSet = new HistDataSet();
+		mockedDataSet = new IHistDataSet(){
+			@Override
+			public int getId() {return 0;}
+			@Override
+			public void setId(int id) {}
+			@Override
+			public String getName() {return dataSetName;}
+			@Override
+			public void setName(String name) {}
+			@Override
+			public List<HistDataSource> getData_sources() {return data_sources;}
+			@Override
+			public void setData_sources(List<HistDataSource> data_sources) {}
+			@Override
+			public String getxAxisName() {return xAxisName;}
+			@Override
+			public void setxAxisName(String xAxisName) {}
+			@Override
+			public String getyAxisName() {return yAxisName;}
+			@Override
+			public void setyAxisName(String yAxisName) {}
+			
+		};
 		dataSetTemporallyGenerated = true;
-
-		dataSet.setData_sources(data_sources);
-		dataSet.setName(dataSetName);
-		dataSet.setxAxisName(xAxisName);
-		dataSet.setyAxisName(yAxisName);
 	}
 
 	@Override
@@ -52,7 +70,7 @@ public class HistDataEditorInput implements IEditorInput {
 
 	@Override
 	public String getName() {
-		return dataSet.getName();
+		return mockedDataSet.getName();
 	}
 
 	@Override
@@ -69,8 +87,8 @@ public class HistDataEditorInput implements IEditorInput {
 		return dataSetTemporallyGenerated;
 	}
 
-	public HistDataSet getDataSet() {
-		return dataSet;
+	public IHistDataSet getDataSet() {
+		return mockedDataSet;
 	}
 
 }

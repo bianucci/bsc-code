@@ -1,7 +1,6 @@
 package de.samson.configviewer.editor.regler.registertv;
 
 import java.net.URL;
-import java.util.ArrayList;
 
 import org.eclipse.core.runtime.FileLocator;
 import org.eclipse.core.runtime.Path;
@@ -29,7 +28,7 @@ import de.samson.service.database.entities.data.RegisterDataID;
 import de.samson.service.database.entities.data.WmwData;
 import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.entities.description.WmwDesc;
-import de.samson.service.database.entities.histdata.HRegDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 
 public class RegisterTableViewerFactory {
 
@@ -78,40 +77,31 @@ public class RegisterTableViewerFactory {
 			RegisterDataID id = new RegisterDataID(rc.getnId(),
 					desc.getHrnr() - 40000);
 			
-			RegisterData rd = (RegisterData) DatabaseService.findEntityByID(
+			RegisterData register = (RegisterData) DatabaseService.findEntityByID(
 					RegisterData.class, id);
 			
-			if (rd != null)
+			if (register != null)
 				
-				if (rd.getDataSource() == null) {
+				if (register.getDataSource() == null) {
 					
 					if (desc.hasWmwDesc()) {
 						
-						if (rd.getWmw() == null) {
+						if (register.getWmw() == null) {
 							//add new wmw 
-							WmwDesc wmw = desc.getLinkedWmwDesc();
-							DatabaseService.addNewDataSourceForWMW(rd, wmw);
+							WmwDesc wmwDesc = desc.getLinkedWmwDesc();
+							DatabaseService.addNewDataSourceForWMW(register, wmwDesc);
 							
 						} else {
 							// remove wmw 
-							WmwData wmw = rd.getWmw();
-							Object[] array = wmw.getRd().toArray();
-
-							wmw.setRd(new ArrayList<RegisterData>());
-							DatabaseService.persistEntity(wmw);
-
-							for (int i = 0; i < array.length; i++) {
-								((RegisterData) array[i]).setWmw(null);
-								DatabaseService.persistEntity(array[i]);
-							}
-
+							WmwData wmwData = register.getWmw();
+							DatabaseService.removeWmwDataSource(wmwData);
 						}
 					} else {
-						DatabaseService.addNewDataSourceForHoldingReg(rd);
+						DatabaseService.addNewDataSourceForHoldingReg(register);
 					}
 				} else {
-					HRegDataSource dataSource = rd.getDataSource();
-					rd.setDataSource(null);
+					HistDataSource dataSource = register.getDataSource();
+					register.setDataSource(null);
 					DatabaseService.removeEntity(dataSource);
 				}
 			viewer.refresh();

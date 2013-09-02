@@ -9,7 +9,7 @@ import org.eclipse.ui.PartInitException;
 import org.eclipse.ui.handlers.HandlerUtil;
 
 import de.samson.service.database.DatabaseService;
-import de.samson.service.database.entities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.HistDataSource;
 
 public class OpenEditorHandler extends AbstractHandler {
 
@@ -42,5 +42,4 @@ public class OpenEditorHandler extends AbstractHandler {
 
 		return null;
 	}
-
 }

@@ -1,4 +1,4 @@
-package de.samson.service.database.entities.histdata;
+ package de.samson.service.database.entities.histdata;
 
 import java.util.Date;
 
@@ -15,9 +15,12 @@ import javax.persistence.Transient;
 
 import org.csstudio.swt.xygraph.dataprovider.ISample;
 
+import de.samson.service.database.ientities.histdata.HistDataSource;
+import de.samson.service.database.ientities.histdata.IHistValue;
+
 @Entity
 @Table(name = "hist_data.hist_value")
-public class HistValue implements ISample {
+public class HistValue implements IHistValue {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,7 +42,8 @@ public class HistValue implements ISample {
 		this.data_source = data_source;
 	}
 
-	public Date getRec_time() {
+	@Override
+	public Date getRecordTime() {
 		return rec_time;
 	}
 
