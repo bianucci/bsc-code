@@ -73,8 +73,13 @@ public class RegisterTableViewerFactory {
 
 				double s = sr.getSkalierungsfaktor();
 
-				if (rd.getWmw() != null)
-					return String.valueOf(rd.getWmw().getValue());
+				if (sr.hasWmwDesc()) {
+					if (rd.getWmw() != null) {
+						return String.valueOf(rd.getWmw().getValue());
+					}else{
+						//Calculate value TODO
+					}
+				}
 
 				if (s == 1) {
 					return String.valueOf((int) rd.getsWert());
@@ -87,7 +92,7 @@ public class RegisterTableViewerFactory {
 
 					else if ((s == 1000) && (split[1].length() < 3))
 						for (int i = 0; i < 3 - split[1].length(); i++)
-							v += "=";
+							v += "0";
 					return v;
 				}
 			}
@@ -115,7 +120,8 @@ public class RegisterTableViewerFactory {
 			@Override
 			public Image getImage(Object element) {
 				RegisterData rd = (RegisterData) element;
-				if ((((HistDataSource)rd.getDataSource()) != null) || (rd.getWmw() != null)) {
+				if ((((HistDataSource) rd.getDataSource()) != null)
+						|| (rd.getWmw() != null)) {
 					return HIST_DATA_AVAILABLE;
 				}
 				return null;
