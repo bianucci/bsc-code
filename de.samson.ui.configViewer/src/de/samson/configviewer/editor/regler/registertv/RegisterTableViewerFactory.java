@@ -63,36 +63,40 @@ public class RegisterTableViewerFactory {
 			RegisterData rd = (RegisterData) DatabaseService.findEntityByID(
 					RegisterData.class, id);
 			if (rd != null) {
-				if ((rd.getDataSource() != null) || (rd.getWmw() != null))
+				if (rd.getDataSource() != null)
 					return true;
+				else if (rd.getWmw() != null)
+					if (rd.getWmw().getDataSource() != null)
+						return true;
 			}
 			return false;
 		}
 
 		@Override
 		protected void setValue(Object element, Object value) {
-			
+
 			HRegDesc desc = (HRegDesc) element;
-			
+
 			RegisterDataID id = new RegisterDataID(rc.getnId(),
 					desc.getHrnr() - 40000);
-			
-			RegisterData register = (RegisterData) DatabaseService.findEntityByID(
-					RegisterData.class, id);
-			
+
+			RegisterData register = (RegisterData) DatabaseService
+					.findEntityByID(RegisterData.class, id);
+
 			if (register != null)
-				
+
 				if (register.getDataSource() == null) {
-					
-					if (desc.hasWmwDesc()) {
-						
-						if (register.getWmw() == null) {
-							//add new wmw 
+
+					if (register.getWmw() != null) {
+
+						if (register.getWmw().getDataSource() == null) {
+							// add new wmw
 							WmwDesc wmwDesc = desc.getLinkedWmwDesc();
-							DatabaseService.addNewDataSourceForWMW(register, wmwDesc);
-							
+							DatabaseService.addNewDataSourceForWMW(register,
+									wmwDesc);
+
 						} else {
-							// remove wmw 
+							// remove wmw
 							WmwData wmwData = register.getWmw();
 							DatabaseService.removeWmwDataSource(wmwData);
 						}
@@ -188,8 +192,11 @@ public class RegisterTableViewerFactory {
 				RegisterData rd = (RegisterData) DatabaseService
 						.findEntityByID(RegisterData.class, id);
 				if (rd != null) {
-					if ((rd.getDataSource() != null) || (rd.getWmw() != null))
+					if (rd.getDataSource() != null)
 						return CHECKED;
+					else if (rd.getWmw() != null)
+						if (rd.getWmw().getDataSource() != null)
+							return CHECKED;
 				}
 				return UNCHECKED;
 			}

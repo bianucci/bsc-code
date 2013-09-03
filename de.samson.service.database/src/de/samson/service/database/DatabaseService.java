@@ -343,19 +343,7 @@ public class DatabaseService extends Observable {
 			rc.setsTyp(reglerTyp);
 			rc.setDescFileRevision(revNR);
 			persistEntity(rc);
-
-			List<WmzData> allWmz = DefaultEntityFactory
-					.createAllWmzStoredInWmzDescription(s);
-			for (int i = 0; i < allWmz.size(); i++) {
-				WmzData wmzData = allWmz.get(i);
-				wmzData.setReglerConfig(rc);
-				rc.setAllWmz(allWmz);
-			}
-			rc.setAllWmz(allWmz);
-			persistEntity(rc);
-
 		}
-		// transaction.commit();
 	}
 
 	public static void refreshEntity(Object o) {
@@ -542,16 +530,8 @@ public class DatabaseService extends Observable {
 	}
 
 	public static void removeWmwDataSource(WmwData wmwData) {
-		Object[] array = wmwData.getRd().toArray();
-
-		wmwData.setRd(new ArrayList<RegisterData>());
-		DatabaseService.persistEntity(wmwData);
-
-		for (int i = 0; i < array.length; i++) {
-			((RegisterData) array[i]).setWmw(null);
-			DatabaseService.persistEntity(array[i]);
-		}
-
-		removeEntity(wmwData.getDataSource());
+		WmwDataSource dataSource = wmwData.getDataSource();
+		removeEntity(dataSource);
+		refreshEntity(wmwData);
 	}
 }

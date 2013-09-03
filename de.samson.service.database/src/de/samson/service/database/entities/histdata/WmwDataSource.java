@@ -22,7 +22,7 @@ public class WmwDataSource extends HistDataSource {
 	@JoinColumn(name = "wmw_desc_id", referencedColumnName = "id")
 	WmwDesc description;
 
-	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.ALL)
+	@OneToOne(mappedBy = "dataSource", cascade = CascadeType.PERSIST)
 	WmwData data;
 
 	@Transient

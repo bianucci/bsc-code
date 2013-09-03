@@ -36,11 +36,11 @@ public class WmwData implements IDataProvider{
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzData wmz;
 
-	@OneToOne(cascade = CascadeType.PERSIST)
+	@OneToOne(cascade = CascadeType.ALL)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	WmwDataSource dataSource;
 
-	@OneToMany(cascade = CascadeType.ALL)
+	@OneToMany(cascade = CascadeType.PERSIST)
 	@JoinTable(name = "wmw_consists_of_hregdata", schema = "s_modbusphp_data" , joinColumns = { 
 			@JoinColumn(name = "wmw_id", referencedColumnName = "id") }, 
 			inverseJoinColumns = {
