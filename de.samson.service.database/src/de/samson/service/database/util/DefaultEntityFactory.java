@@ -56,14 +56,7 @@ public class DefaultEntityFactory {
 		rd.setReglerConfig(rc);
 		rc.setReglerData(rd);
 		gwc.getRegler().add(rc);
-
-		List<WmzData> allWmz = createAllWmzStoredInWmzDescription(str);
-		for (int i = 0; i < allWmz.size(); i++) {
-			WmzData wmzData = allWmz.get(i);
-			wmzData.setReglerConfig(rc);
-			rc.setAllWmz(allWmz);
-		}
-
+		
 		return rc;
 	}
 

@@ -11,6 +11,7 @@ import java.util.Vector;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 
 import org.eclipse.jface.preference.IPreferenceStore;
@@ -208,6 +209,7 @@ public class DatabaseService extends Observable {
 
 		c.setData(d);
 		d.setConfig(c);
+		persistEntity(c);
 	}
 
 	private static void addCoilConfigWithDataForReglerConfig(CoilDesc desc,
@@ -221,25 +223,73 @@ public class DatabaseService extends Observable {
 
 		c.setData(d);
 		d.setConfig(c);
+		persistEntity(c);
 	}
 
 	public static void updateReglerConfig(ReglerConfig rc, List<Object> toAdd,
 			List<Object> toDelete, String statNR, String revNR, String reglerTyp) {
 
 		refreshEntity(rc);
-		EntityTransaction transaction = em.getTransaction();
-		transaction.begin();
+
+		List<WmwData> wmwDataAdded = new ArrayList<WmwData>();
 
 		for (Object o : toAdd) {
 			if (o instanceof HRegDesc) {
+
 				addRegisterConfigWithDataForReglerConfig((HRegDesc) o, rc);
+				if (((HRegDesc) o).hasWmwDesc()) {
+
+					RegisterData rd = em.find(
+							RegisterData.class,
+							new RegisterDataID(rc.getnId(), ((HRegDesc) o)
+									.getHrnr() - 40000));
+
+					WmzData wmz = findWmzAndCreateIfNotExisting(rd,
+							((HRegDesc) o).getLinkedWmwDesc());
+
+					WmwData wmw = findWmwAndCreateIfNotExisting(
+							((HRegDesc) o).getLinkedWmwDesc(), wmz);
+					if (!wmwDataAdded.contains(wmw))
+						wmwDataAdded.add(wmw);
+				}
+
 			} else if (o instanceof CoilDesc) {
 				addCoilConfigWithDataForReglerConfig((CoilDesc) o, rc);
 			} else if (o instanceof RegisterConfig) {
+
+				HRegDescID id = new HRegDescID();
+				id.setGeraeteKennung(String.valueOf(rc.getnDeviceid()));
+				id.setHrnr(((RegisterConfig) o).getnRegisternr() + 40000);
+				id.setRevision(Integer.valueOf(((RegisterConfig) o)
+						.getReglerConfig().getDescFileRevision()));
+				HRegDesc desc = (HRegDesc) findEntityByID(HRegDesc.class, id);
+
 				rc.getRegisterConfigs().add((RegisterConfig) o);
+				persistEntity(rc);
+
+				if (desc.hasWmwDesc()) {
+					RegisterData rd = em.find(
+							RegisterData.class,
+							new RegisterDataID(rc.getnId(), ((HRegDesc) o)
+									.getHrnr() - 40000));
+
+					WmzData wmz = findWmzAndCreateIfNotExisting(rd,
+							((HRegDesc) o).getLinkedWmwDesc());
+
+					WmwData wmw = findWmwAndCreateIfNotExisting(
+							((HRegDesc) o).getLinkedWmwDesc(), wmz);
+					if (!wmwDataAdded.contains(wmw))
+						wmwDataAdded.add(wmw);
+				}
+
 			} else if (o instanceof CoilConfig) {
 				rc.getCoilsConfigs().add((CoilConfig) o);
+				persistEntity(rc);
 			}
+		}
+
+		for (int i = 0; i < wmwDataAdded.size(); i++) {
+			setDataRegister(wmwDataAdded.get(i));
 		}
 
 		for (Object o : toDelete) {
@@ -247,43 +297,42 @@ public class DatabaseService extends Observable {
 				RegisterConfig c = (RegisterConfig) findEntityByID(
 						RegisterConfig.class, new RegisterConfigID(rc.getnId(),
 								((HRegDesc) o).getHrnr() - 40000));
-				rc.getRegisterConfigs().remove(c);
-
-				//////////////////REMOVE
-				if (c.getData().getDataSource() != null) {
-					em.remove(c.getData().getDataSource());
+				if (c != null) {
+					removeEntity(c);
+					if (c.getData().getDataSource() != null) {
+						removeEntity(c.getData().getDataSource());
+					}
 				}
-				
+
 			} else if (o instanceof CoilDesc) {
 				CoilConfig c = (CoilConfig) findEntityByID(CoilConfig.class,
 						new CoilConfigID(rc.getnId(), ((CoilDesc) o).getClnr()));
-				rc.getCoilsConfigs().remove(c);
+				if (c != null) {
+					removeEntity(c);
+					if (c.getData().getDataSource() != null) {
+						removeEntity(c.getData().getDataSource());
+					}
+				}
 
-				//////////////////REMOVE
-				if (c.getData().getDataSource() != null) {
-					em.remove(c.getData().getDataSource());
-				}
-				
 			} else if (o instanceof RegisterConfig) {
-				rc.getRegisterConfigs().remove(o);
-				
-				//////////////////REMOVE
+				removeEntity(o);
 				if (((RegisterConfig) o).getData().getDataSource() != null) {
-					em.remove(((RegisterConfig) o).getData().getDataSource());
+					removeEntity(((RegisterConfig) o).getData().getDataSource());
 				}
-				
+
 			} else if (o instanceof CoilConfig) {
-				rc.getCoilsConfigs().remove(o);
-				
-				//////////////////REMOVE
+				removeEntity(o);
 				if (((CoilConfig) o).getData().getDataSource() != null) {
-					em.remove(((CoilConfig) o).getData().getDataSource());
+					removeEntity(((CoilConfig) o).getData().getDataSource());
 				}
 			}
+			refreshEntity(rc);
 		}
 
-		if (rc.getnDeviceid() != Integer.valueOf(statNR))
+		if (rc.getnDeviceid() != Integer.valueOf(statNR)) {
 			rc.setnDeviceid(Integer.valueOf(statNR));
+			persistEntity(rc);
+		}
 
 		if (!(rc.getDescFileRevision().equals(revNR))
 				|| !(rc.getsTyp().equals(reglerTyp))) {
@@ -293,6 +342,7 @@ public class DatabaseService extends Observable {
 			rc.setReglerDescription(s);
 			rc.setsTyp(reglerTyp);
 			rc.setDescFileRevision(revNR);
+			persistEntity(rc);
 
 			List<WmzData> allWmz = DefaultEntityFactory
 					.createAllWmzStoredInWmzDescription(s);
@@ -302,9 +352,10 @@ public class DatabaseService extends Observable {
 				rc.setAllWmz(allWmz);
 			}
 			rc.setAllWmz(allWmz);
+			persistEntity(rc);
 
 		}
-		transaction.commit();
+		// transaction.commit();
 	}
 
 	public static void refreshEntity(Object o) {
@@ -377,59 +428,88 @@ public class DatabaseService extends Observable {
 	}
 
 	public static void addNewDataSourceForWMW(RegisterData rd, WmwDesc wmwDesc) {
-		WmwDataSource ds = null;
+		// create WMZ DATA if not available
+		WmzData wmz = findWmzAndCreateIfNotExisting(rd, wmwDesc);
 
-		List<WmzData> allWmz = rd.getReglerData().getReglerConfig().getAllWmz();
-		for (int i = 0; i < allWmz.size(); i++) {
+		// create WMW Data and set data regsiter
+		WmwData data = findWmwAndCreateIfNotExisting(wmwDesc, wmz);
+		// setDataRegister(data);
 
-			WmzDesc tempWmzDesc = allWmz.get(i).getDescription();
-			WmzDesc wmz = wmwDesc.getWmz();
-			if (tempWmzDesc.equals(wmz)) {
+		// create datasource with default histval
+		WmwDataSource ds = DefaultEntityFactory.createNewWmwDataSource(wmwDesc,
+				data);
+		ds.addHistVal(DefaultEntityFactory.createNewHistValue(ds));
+		data.setDataSource(ds);
+		persistEntity(data);
+		return;
+	}
 
-				List<WmwData> tempAllWmw = allWmz.get(i).getAllWMW();
-				for (int j = 0; j < tempAllWmw.size(); j++) {
+	private static WmwData setDataRegister(WmwData data) {
+		HRegDesc registerEinheitIsStoredIn = data.getDescription()
+				.getRegisterEinheitIsStoredIn();
+		List<HRegDesc> werteRegister = data.getDescription().getWerteRegister();
 
-					WmwData data = tempAllWmw.get(j);
-					if (data.getDescription().equals(wmwDesc)) {
+		RegisterDataID id = new RegisterDataID(data.getWmz().getReglerConfig()
+				.getnId(), registerEinheitIsStoredIn.getHrnr() - 40000);
+		RegisterData registerData = (RegisterData) findEntityByID(
+				RegisterData.class, id);
+		if (registerData != null)
+			registerData.setWmw(data);
 
-						ds = DefaultEntityFactory.createNewWmwDataSource(
-								wmwDesc, data);
-
-						// create default historical value for later comparison
-						ds.addHistVal(DefaultEntityFactory
-								.createNewHistValue(ds));
-						System.out.println();
-
-						data.setDataSource(ds);
-						data.setEinheit(0);
-
-						HRegDesc registerEinheitIsStoredIn = wmwDesc
-								.getRegisterEinheitIsStoredIn();
-						List<HRegDesc> werteRegister = wmwDesc
-								.getWerteRegister();
-
-						RegisterData registerData = (RegisterData) findEntityByID(
-								RegisterData.class,
-								new RegisterDataID(
-										allWmz.get(i).getReglerConfig()
-												.getnId(),
-										registerEinheitIsStoredIn.getHrnr() - 40000));
-						registerData.setWmw(data);
-
-						for (int l = 0; l < werteRegister.size(); l++) {
-							registerData = (RegisterData) findEntityByID(
-									RegisterData.class, new RegisterDataID(
-											allWmz.get(i).getReglerConfig()
-													.getnId(), werteRegister
-													.get(l).getHrnr() - 40000));
-							registerData.setWmw(data);
-						}
-						persistEntity(data);
-						return;
-					}
-				}
-			}
+		for (int l = 0; l < werteRegister.size(); l++) {
+			id = new RegisterDataID(data.getWmz().getReglerConfig().getnId(),
+					werteRegister.get(l).getHrnr() - 40000);
+			registerData = (RegisterData) findEntityByID(RegisterData.class, id);
+			if (registerData != null)
+				registerData.setWmw(data);
 		}
+		persistEntity(data);
+		return data;
+	}
+
+	private static WmzData findWmzAndCreateIfNotExisting(RegisterData rd,
+			WmwDesc wmwDesc) {
+		WmzDesc wmzDesc = wmwDesc.getWmz();
+		ReglerConfig reglerConfig = rd.getReglerData().getReglerConfig();
+		Query q = em
+				.createQuery("SELECT wmz FROM WmzData wmz WHERE "
+						+ "wmz.reglerConfig = :reglerConf AND wmz.description = :wmzDesc");
+		q.setParameter("reglerConf", reglerConfig);
+		q.setParameter("wmzDesc", wmzDesc);
+		WmzData wmz = null;
+		if (q.getResultList().size() == 0) {
+			wmz = new WmzData();
+			wmz.setAllWMW(new ArrayList<WmwData>());
+			wmz.setDescription(wmzDesc);
+			wmz.setReglerConfig(reglerConfig);
+			persistEntity(wmz);
+		} else if (q.getResultList().size() == 1) {
+			wmz = (WmzData) q.getSingleResult();
+		}
+		return wmz;
+	}
+
+	private static WmwData findWmwAndCreateIfNotExisting(WmwDesc wmwDesc,
+			WmzData wmz) {
+
+		Query q = em.createQuery("SELECT wmw FROM WmwData wmw WHERE "
+				+ "wmw.description = :description AND wmw.wmz = :wmzData");
+		q.setParameter("description", wmwDesc);
+		q.setParameter("wmzData", wmz);
+
+		WmwData data = null;
+		if (q.getResultList().size() == 0) {
+			data = new WmwData();
+			data.setDescription(wmwDesc);
+			data.setEinheit(0);
+			data.setRd(new ArrayList<RegisterData>());
+			data.setValue(0);
+			data.setWmz(wmz);
+			persistEntity(data);
+		} else if (q.getResultList().size() == 1) {
+			data = (WmwData) q.getSingleResult();
+		}
+		return data;
 	}
 
 	public static List<HistDataSource> getAllDataSources() {
@@ -471,5 +551,7 @@ public class DatabaseService extends Observable {
 			((RegisterData) array[i]).setWmw(null);
 			DatabaseService.persistEntity(array[i]);
 		}
+
+		removeEntity(wmwData.getDataSource());
 	}
 }

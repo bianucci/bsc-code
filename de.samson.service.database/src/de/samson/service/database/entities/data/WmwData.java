@@ -36,7 +36,7 @@ public class WmwData implements IDataProvider{
 	@JoinColumn(name = "wmz_id", referencedColumnName = "id")
 	WmzData wmz;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinColumn(name = "data_source_id", referencedColumnName = "id")
 	WmwDataSource dataSource;
 
