@@ -248,14 +248,37 @@ public class DatabaseService extends Observable {
 						RegisterConfig.class, new RegisterConfigID(rc.getnId(),
 								((HRegDesc) o).getHrnr() - 40000));
 				rc.getRegisterConfigs().remove(c);
+
+				//////////////////REMOVE
+				if (c.getData().getDataSource() != null) {
+					em.remove(c.getData().getDataSource());
+				}
+				
 			} else if (o instanceof CoilDesc) {
 				CoilConfig c = (CoilConfig) findEntityByID(CoilConfig.class,
 						new CoilConfigID(rc.getnId(), ((CoilDesc) o).getClnr()));
 				rc.getCoilsConfigs().remove(c);
+
+				//////////////////REMOVE
+				if (c.getData().getDataSource() != null) {
+					em.remove(c.getData().getDataSource());
+				}
+				
 			} else if (o instanceof RegisterConfig) {
 				rc.getRegisterConfigs().remove(o);
+				
+				//////////////////REMOVE
+				if (((RegisterConfig) o).getData().getDataSource() != null) {
+					em.remove(((RegisterConfig) o).getData().getDataSource());
+				}
+				
 			} else if (o instanceof CoilConfig) {
 				rc.getCoilsConfigs().remove(o);
+				
+				//////////////////REMOVE
+				if (((CoilConfig) o).getData().getDataSource() != null) {
+					em.remove(((CoilConfig) o).getData().getDataSource());
+				}
 			}
 		}
 

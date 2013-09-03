@@ -335,6 +335,9 @@ public class ReglerConfEditor extends EditorPart {
 		toDel.clear();
 		treeView.getTv().refresh();
 
+		this.regTV.refresh();
+		this.coilTV.refresh();
+		
 		String s = "";
 		s += "Gerät " + rc.getsTyp();
 		setPartName(s);

@@ -34,7 +34,7 @@ public class RegisterData implements IDataProvider {
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinTable(name = "hreg_datasrc_has_hregdata",schema="s_modbusphp_data", joinColumns = {
 			@JoinColumn(name = "register_nRegler_id", referencedColumnName = "nRegler_id"),
 			@JoinColumn(name = "register_nRegisternr", referencedColumnName = "nRegisternr") }, 

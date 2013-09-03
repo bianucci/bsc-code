@@ -36,7 +36,7 @@ public class CoilData implements IDataProvider {
 	@JoinColumn(name = "nRegler_id", referencedColumnName = "nRegler_id")
 	ReglerData reglerData;
 
-	@OneToOne(cascade = CascadeType.ALL)
+	@OneToOne(cascade = CascadeType.PERSIST)
 	@JoinTable(name = "coil_datasrc_has_coildata", schema = "s_modbusphp_data", joinColumns = {
 			@JoinColumn(name = "coils_nRegler_id", referencedColumnName = "nRegler_id"),
 			@JoinColumn(name = "coils_nCoilnr", referencedColumnName = "nCoilnr") }, 
