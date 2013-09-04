@@ -1,46 +1,29 @@
 package de.samson.dataviewer.editor.coiltv;
 
-import org.eclipse.core.runtime.IStatus;
-import org.eclipse.core.runtime.Status;
-import org.eclipse.jface.dialogs.ErrorDialog;
-import org.eclipse.jface.viewers.ArrayContentProvider;
 import org.eclipse.jface.viewers.CellEditor;
-import org.eclipse.jface.viewers.ComboBoxViewerCellEditor;
+import org.eclipse.jface.viewers.CheckboxCellEditor;
 import org.eclipse.jface.viewers.EditingSupport;
-import org.eclipse.jface.viewers.LabelProvider;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.widgets.Composite;
-import org.eclipse.swt.widgets.Display;
 
-import de.samson.dataviewer.PartID;
-import de.samson.modbusphp.datapointwriter.DataPointWriterService;
-import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
+import de.samson.dataviewer.editor.EditCoilDataDialog;
 import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.util.DataConverterUtil;
 
 public class CoilValueEditingSupport extends EditingSupport {
 
-	private ComboBoxViewerCellEditor cellEditor = null;
+	private TableViewer viewer;
 
 	public CoilValueEditingSupport(TableViewer viewer) {
 		super(viewer);
-		cellEditor = new ComboBoxViewerCellEditor((Composite) getViewer()
-				.getControl(), SWT.READ_ONLY);
-
-		cellEditor.setLabelProvider(new LabelProvider());
-		cellEditor.setContentProvider(new ArrayContentProvider());
+		this.viewer = viewer;
 	}
 
 	@Override
 	protected CellEditor getCellEditor(Object element) {
-		CoilData cd = (CoilData) element;
-		CoilDesc coilDesc = DataConverterUtil.getCoilDescForData(cd);
-		String[] input = new String[] { coilDesc.getText0(),
-				coilDesc.getText1() };
-		cellEditor.setInput(input);
-		return cellEditor;
+		return new CheckboxCellEditor(viewer.getTable(), SWT.CHECK
+				| SWT.READ_ONLY);
 	}
 
 	@Override
@@ -52,40 +35,14 @@ public class CoilValueEditingSupport extends EditingSupport {
 
 	@Override
 	protected Object getValue(Object element) {
-		CoilData cd = (CoilData) element;
-		CoilDesc coilDesc = DataConverterUtil.getCoilDescForData(cd);
-
-		if (cd.getWert() == true)
-			return coilDesc.getText1();
-		else
-			return coilDesc.getText0();
+		return false;
 	}
 
 	@Override
 	protected void setValue(Object element, Object value) {
 		CoilData cd = (CoilData) element;
-		String s = (String) value;
-		boolean v = s.contains("(1)");
-
-		String ip = cd.getRegler().getGatewayData().getGatewayConfig().getsIP();
-
-		String station = String.valueOf(cd.getRegler().getReglerConfig()
-				.getnDeviceid());
-
-		String dpNr = String.valueOf(cd.getnCoilnr());
-
-		try {
-			DataPointWriterService.writeCoilValue(ip, station, dpNr, v);
-		} catch (WriteDatapointFailedException e) {
-			Status status = new Status(IStatus.ERROR, PartID.PLUGIN_ID, 0,
-					"Wert " + v + "konnte nicht in Register " + dpNr
-							+ "geschrieben werden.", null);
-			ErrorDialog.openError(Display.getCurrent().getActiveShell(),
-					"Datenpunkt Schreiber Fehler",
-					"Datenpunkt konnte nicht beschrieben werden", status);
-			e.printStackTrace();
-		}
-
+		CoilDesc coilDesc = DataConverterUtil.getCoilDescForData(cd);
+		new EditCoilDataDialog(viewer.getControl().getShell(), cd, coilDesc).open();
 		getViewer().refresh();
 	}
 }

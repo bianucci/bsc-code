@@ -1,9 +1,8 @@
 Manifest-Version: 1.0
-Eclipse-SourceBundle: org.csstudio.swt.widgets;version="2.1.0.20120912
- 1549";roots:="."
-Bundle-Version: 2.1.0.201209121549
+Eclipse-SourceBundle: org.csstudio.swt.widgets;version="2.1.0";roots:="."
+Bundle-Version: 2.1.0
 Bundle-Localization: plugin
-Bundle-Name: %pluginName
+Bundle-Name: swtwidgets
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.csstudio.swt.widgets.source
 Require-Bundle: org.eclipse.swt;bundle-version="3.7.2",

@@ -171,4 +171,24 @@
             name="switchPerspective">
       </command>
    </extension>
+   <extension
+         id="SRC_Stable_0409"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="de.samson.application.application"
+            name="Samson Rich Client">
+         <property
+               name="startupProgressRect"
+               value="0,0,0,0">
+         </property>
+         <property
+               name="appName"
+               value="Samson Rich Client">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
 </plugin>

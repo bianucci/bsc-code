@@ -6,7 +6,7 @@ import org.eclipse.jface.viewers.EditingSupport;
 import org.eclipse.jface.viewers.TableViewer;
 import org.eclipse.swt.SWT;
 
-import de.samson.dataviewer.editor.DPDataDialog;
+import de.samson.dataviewer.editor.EditRegisterDataDialog;
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.HRegDesc;
 import de.samson.service.database.util.DataConverterUtil;
@@ -44,9 +44,7 @@ public class RegValueEditingSupport extends EditingSupport {
 	protected void setValue(Object element, Object value) {
 		RegisterData rd = (RegisterData) element;
 		HRegDesc sr = DataConverterUtil.getRegisterDescForData(rd);
-		
-		new DPDataDialog(viewer.getControl().getShell(), rd, sr).open();
-		
+		new EditRegisterDataDialog(viewer.getControl().getShell(), rd, sr).open();
 		this.viewer.refresh();
 	}
 }

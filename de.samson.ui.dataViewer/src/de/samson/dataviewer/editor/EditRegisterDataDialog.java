@@ -5,14 +5,13 @@ import org.eclipse.core.runtime.Status;
 import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.ErrorDialog;
 import org.eclipse.swt.SWT;
-import org.eclipse.swt.events.SelectionAdapter;
-import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.graphics.Point;
 import org.eclipse.swt.layout.GridData;
-import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Control;
 import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
 
@@ -21,16 +20,14 @@ import de.samson.modbusphp.datapointwriter.DataPointWriterService;
 import de.samson.modbusphp.datapointwriter.exception.WriteDatapointFailedException;
 import de.samson.service.database.entities.data.RegisterData;
 import de.samson.service.database.entities.description.HRegDesc;
-import org.eclipse.swt.layout.GridLayout;
-import org.eclipse.swt.widgets.Label;
 
-public class DPDataDialog extends Dialog {
+public class EditRegisterDataDialog extends Dialog {
 
 	private RegisterData rd;
 	private HRegDesc sr;
 	private Text tValue;
 
-	public DPDataDialog(Shell parentShell, RegisterData rd, HRegDesc sr) {
+	public EditRegisterDataDialog(Shell parentShell, RegisterData rd, HRegDesc sr) {
 		super(parentShell);
 		this.rd = rd;
 		this.sr = sr;

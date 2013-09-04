@@ -1,9 +1,8 @@
 Manifest-Version: 1.0
-Eclipse-SourceBundle: org.csstudio.swt.xygraph;version="2.1.0.20120912
- 1540";roots:="."
-Bundle-Version: 2.1.0.201209121540
+Eclipse-SourceBundle: org.csstudio.swt.xygraph;version="2.1.0";roots:="."
+Bundle-Version: 2.1.0
 Bundle-Localization: plugin
-Bundle-Name: %pluginName
+Bundle-Name: swtxygraph
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: org.csstudio.swt.xygraph.source
 Require-Bundle: org.eclipse.swt;bundle-version="3.7.2",
