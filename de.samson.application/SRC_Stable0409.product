@@ -15,10 +15,19 @@
 
    <splash
       startupProgressRect="0,0,0,0" />
+   <launcher name="Samson Rich Client">
+      <solaris/>
+      <win useIco="false">
+         <bmp/>
+      </win>
+   </launcher>
+
+   <vm>
+   </vm>
+
    <plugins>
       <plugin id="com.ibm.icu"/>
       <plugin id="de.samson.application"/>
-      <plugin id="de.samson.libraries"/>
       <plugin id="de.samson.service.database"/>
       <plugin id="de.samson.service.directregleraccess"/>
       <plugin id="de.samson.service.histDataCollector"/>
@@ -33,9 +42,10 @@
       <plugin id="library.com.sun.comm"/>
       <plugin id="library.net.wimpi.modbus"/>
       <plugin id="library.org.apache.commons.lang"/>
+      <plugin id="library.org.codehouse.jackson"/>
+      <plugin id="library.org.cssstudio.swtxygraph"/>
+      <plugin id="library.org.cssstudio.widgets"/>
       <plugin id="library.org.eclipse.persistence.EclipseLink"/>
-      <plugin id="org.csstudio.swt.widgets.source"/>
-      <plugin id="org.csstudio.swt.xygraph.source"/>
       <plugin id="org.eclipse.core.commands"/>
       <plugin id="org.eclipse.core.contenttype"/>
       <plugin id="org.eclipse.core.databinding"/>

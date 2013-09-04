@@ -9,8 +9,8 @@ Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.draw2d;bundle-version="3.9.0",
  org.eclipse.swt;bundle-version="3.7.2",
  org.eclipse.jface;bundle-version="3.7.0",
- org.csstudio.swt.widgets.source;bundle-version="2.1.0",
- org.csstudio.swt.xygraph.source;bundle-version="2.1.0",
- de.samson.service.database;bundle-version="1.0.0"
+ de.samson.service.database;bundle-version="1.0.0",
+ library.org.cssstudio.swtxygraph;bundle-version="1.0.0",
+ library.org.cssstudio.widgets;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7

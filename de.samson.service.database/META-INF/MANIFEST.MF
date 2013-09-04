@@ -9,7 +9,7 @@ Require-Bundle: org.eclipse.ui,
  library.com.mysql.JDBC;bundle-version="5.1.24",
  library.org.eclipse.persistence.EclipseLink;bundle-version="1.0.0",
  org.junit,
- org.csstudio.swt.xygraph.source;bundle-version="2.1.0"
+ library.org.cssstudio.swtxygraph;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: de.samson.service.database,
