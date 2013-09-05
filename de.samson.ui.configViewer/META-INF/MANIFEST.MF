@@ -7,7 +7,8 @@ Bundle-Activator: de.samson.configviewer.Activator
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.runtime,
  de.samson.service.database;bundle-version="1.0.0",
- de.samson.service.network;bundle-version="1.0.0"
+ de.samson.service.network;bundle-version="1.0.0",
+ de.samson.service.histDataCollector;bundle-version="1.0.0"
 Bundle-ActivationPolicy: lazy
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Export-Package: de.samson.configviewer.editor.regler

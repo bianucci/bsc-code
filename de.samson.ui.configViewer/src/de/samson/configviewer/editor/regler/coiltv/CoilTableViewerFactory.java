@@ -3,7 +3,10 @@ package de.samson.configviewer.editor.regler.coiltv;
 import java.net.URL;
 
 import org.eclipse.core.runtime.FileLocator;
+import org.eclipse.core.runtime.IStatus;
 import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.Status;
+import org.eclipse.jface.dialogs.ErrorDialog;
 import org.eclipse.jface.resource.ImageDescriptor;
 import org.eclipse.jface.viewers.CellEditor;
 import org.eclipse.jface.viewers.CheckboxCellEditor;
@@ -15,11 +18,13 @@ import org.eclipse.jface.viewers.TableViewerColumn;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Table;
 import org.eclipse.swt.widgets.TableColumn;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.FrameworkUtil;
 
+import de.samson.configviewer.PartID;
 import de.samson.configviewer.view.View;
 import de.samson.service.database.DatabaseService;
 import de.samson.service.database.entities.config.ReglerConfig;
@@ -27,6 +32,7 @@ import de.samson.service.database.entities.data.CoilData;
 import de.samson.service.database.entities.data.CoilDataID;
 import de.samson.service.database.entities.description.CoilDesc;
 import de.samson.service.database.ientities.histdata.HistDataSource;
+import de.samson.service.histdatacollector.HistDataCollector;
 
 public class CoilTableViewerFactory {
 
@@ -70,7 +76,21 @@ public class CoilTableViewerFactory {
 			CoilDataID id = new CoilDataID(rc.getnId(), desc.getClnr());
 			CoilData cd = (CoilData) DatabaseService.findEntityByID(
 					CoilData.class, id);
-			if (cd != null)
+			if (cd != null) {
+				if (HistDataCollector.getInstance().isCollecting()) {
+					Status status = new Status(
+							IStatus.ERROR,
+							PartID.PLUGIN_ID,
+							0,
+							"Sie müssen die Historische Datenerfassung erst ausschalten, bevor Sie neue "
+									+ "Datenquellen hinzufügen oder entfernen können.",
+							null);
+					ErrorDialog.openError(
+							Display.getCurrent().getActiveShell(),
+							"Historische Erfassung Fehler",
+							"Dieser Datenpunkt kann momentan nicht konfiguriert werden.", status);
+					return;
+				}
 				if (cd.getDataSource() == null) {
 					DatabaseService.addNewDataSourceForCoil(cd);
 				} else {
@@ -78,7 +98,19 @@ public class CoilTableViewerFactory {
 					cd.setDataSource(null);
 					DatabaseService.removeEntity(dataSource);
 				}
-			viewer.refresh();
+				viewer.refresh();
+			} else {
+				Status status = new Status(
+						IStatus.ERROR,
+						PartID.PLUGIN_ID,
+						0,
+						"Sie müssen einen Datenpunkt erst von Modbus PHP erfassen lassen, bevor Sie neue "
+								+ "Datenquellen hinzufügen können.", null);
+				ErrorDialog.openError(Display.getCurrent().getActiveShell(),
+						"Historische Erfassung Fehler",
+						"Dieser Datenpunkt kann momentan nicht konfiguriert werden.", status);
+				return;
+			}
 		}
 
 	}

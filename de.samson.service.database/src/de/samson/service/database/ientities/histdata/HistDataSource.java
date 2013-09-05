@@ -47,9 +47,9 @@ public abstract class HistDataSource implements IDataProvider {
 	@OneToMany(cascade = CascadeType.ALL, mappedBy = "data_source", targetEntity = HistValue.class)
 	protected List<IHistValue> historicalValues;
 
-	@ManyToMany
+	@ManyToMany(targetEntity = HistDataSet.class)
 	@JoinTable(name = "hist_data_set_has_data_source", schema = "hist_data", joinColumns = @JoinColumn(name = "data_source_id", referencedColumnName = "id"), inverseJoinColumns = @JoinColumn(name = "hist_data_set_id", referencedColumnName = "id"))
-	protected List<HistDataSet> dataSets;
+	protected List<IHistDataSet> dataSets;
 
 	@Transient
 	@Override
@@ -131,11 +131,11 @@ public abstract class HistDataSource implements IDataProvider {
 		this.historicalValues = historicalValues;
 	}
 
-	public List<HistDataSet> getDataSets() {
+	public List<IHistDataSet> getDataSets() {
 		return dataSets;
 	}
 
-	public void setDataSets(List<HistDataSet> dataSets) {
+	public void setDataSets(List<IHistDataSet> dataSets) {
 		this.dataSets = dataSets;
 	}
 
